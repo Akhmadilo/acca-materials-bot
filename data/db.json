@@ -1,0 +1,367 @@
+{
+  "settings": {
+    "bot_token": "8723520559:AAFM108x6EzYIMg_bsHtLShCEwCZKj3gb50",
+    "admin_password": "admin",
+    "webhook_url": ""
+  },
+  "subscribers": [
+    {
+      "id": 557976703,
+      "first_name": "Ahmadillo",
+      "last_name": "Ibrohimov",
+      "username": "Ibrohimov_Ahmadillo",
+      "joined_at": "2026-07-27T12:00:09.564Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": "cat_acca",
+      "title": "🔴 ACCA 🔴",
+      "parentId": null,
+      "order": 1,
+      "resources": []
+    },
+    {
+      "id": "cat_cfa",
+      "title": "📊 CFA Exam",
+      "parentId": null,
+      "order": 2,
+      "resources": []
+    },
+    {
+      "id": "cat_feedback",
+      "title": "💬 Feedback",
+      "parentId": null,
+      "order": 3,
+      "resources": [],
+      "isFeedback": true
+    },
+    {
+      "id": "cat_applied_knowledge",
+      "title": "📘 Applied Knowledge",
+      "parentId": "cat_acca",
+      "order": 1,
+      "resources": []
+    },
+    {
+      "id": "cat_applied_skills",
+      "title": "📊 Applied Skills",
+      "parentId": "cat_acca",
+      "order": 2,
+      "resources": []
+    },
+    {
+      "id": "cat_strategic_professional",
+      "title": "🏆 Strategic Professional",
+      "parentId": "cat_acca",
+      "order": 3,
+      "resources": []
+    },
+    {
+      "id": "cat_f1",
+      "title": "📘 F1 - Business & Technology",
+      "parentId": "cat_applied_knowledge",
+      "order": 1,
+      "resources": []
+    },
+    {
+      "id": "cat_f2",
+      "title": "📗 F2 - Management Accounting",
+      "parentId": "cat_applied_knowledge",
+      "order": 2,
+      "resources": []
+    },
+    {
+      "id": "cat_f3",
+      "title": "📙 F3 - Financial Accounting",
+      "parentId": "cat_applied_knowledge",
+      "order": 3,
+      "resources": []
+    },
+    {
+      "id": "cat_f4",
+      "title": "📕 F4 - Corporate & Business Law",
+      "parentId": "cat_applied_knowledge",
+      "order": 4,
+      "resources": []
+    },
+    {
+      "id": "cat_f5",
+      "title": "📘 F5 - Performance Management",
+      "parentId": "cat_applied_skills",
+      "order": 1,
+      "resources": []
+    },
+    {
+      "id": "cat_f6",
+      "title": "📗 F6 - Taxation",
+      "parentId": "cat_applied_skills",
+      "order": 2,
+      "resources": []
+    },
+    {
+      "id": "cat_f7",
+      "title": "📙 F7 - Financial Reporting",
+      "parentId": "cat_applied_skills",
+      "order": 3,
+      "resources": []
+    },
+    {
+      "id": "cat_f8",
+      "title": "📕 F8 - Audit & Assurance",
+      "parentId": "cat_applied_skills",
+      "order": 4,
+      "resources": []
+    },
+    {
+      "id": "cat_f9",
+      "title": "📔 F9 - Financial Management",
+      "parentId": "cat_applied_skills",
+      "order": 5,
+      "resources": []
+    },
+    {
+      "id": "cat_sbl",
+      "title": "🏆 SBL - Strategic Business Leader",
+      "parentId": "cat_strategic_professional",
+      "order": 1,
+      "resources": []
+    },
+    {
+      "id": "cat_sbr",
+      "title": "📊 SBR - Strategic Business Reporting",
+      "parentId": "cat_strategic_professional",
+      "order": 2,
+      "resources": []
+    },
+    {
+      "id": "cat_p4",
+      "title": "📘 P4 - Advanced Financial Management",
+      "parentId": "cat_strategic_professional",
+      "order": 3,
+      "resources": []
+    },
+    {
+      "id": "cat_p5",
+      "title": "📗 P5 - Advanced Performance Management",
+      "parentId": "cat_strategic_professional",
+      "order": 4,
+      "resources": []
+    },
+    {
+      "id": "cat_p6",
+      "title": "📙 P6 - Advanced Taxation",
+      "parentId": "cat_strategic_professional",
+      "order": 5,
+      "resources": []
+    },
+    {
+      "id": "cat_p7",
+      "title": "📕 P7 - Advanced Audit & Assurance",
+      "parentId": "cat_strategic_professional",
+      "order": 6,
+      "resources": []
+    },
+    {
+      "id": "cat_cfa_l1",
+      "title": "📘 CFA Level 1",
+      "parentId": "cat_cfa",
+      "order": 1,
+      "resources": []
+    },
+    {
+      "id": "cat_cfa_l2",
+      "title": "📊 CFA Level 2",
+      "parentId": "cat_cfa",
+      "order": 2,
+      "resources": []
+    },
+    {
+      "id": "cat_cfa_l3",
+      "title": "🏆 CFA Level 3",
+      "parentId": "cat_cfa",
+      "order": 3,
+      "resources": []
+    },
+    {
+      "id": "cat_f1_channels",
+      "title": "📊 Telegram Channels: ACCA F1",
+      "parentId": "cat_f1",
+      "order": 1,
+      "resources": []
+    },
+    {
+      "id": "cat_f1_books",
+      "title": "📗 F1 Study Books",
+      "parentId": "cat_f1",
+      "order": 2,
+      "resources": [
+        {
+          "id": "res_f1_b1",
+          "title": "📖 F1 Kaplan Study Text 2026",
+          "type": "link",
+          "value": "https://t.me/acca_materials_official/101",
+          "description": "Kaplan nashri Study Text kitobi"
+        },
+        {
+          "id": "res_f1_b2",
+          "title": "📖 F1 BPP Exam Revision Kit 2026",
+          "type": "link",
+          "value": "https://t.me/acca_materials_official/102",
+          "description": "BPP nashri savollar to'plami"
+        }
+      ]
+    },
+    {
+      "id": "cat_f1_videos",
+      "title": "🎥 Video Lessons for F1",
+      "parentId": "cat_f1",
+      "order": 3,
+      "resources": [
+        {
+          "id": "res_f1_v1",
+          "title": "🎥 F1 Complete Video Course Playlist",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "F1 barcha mavzular videodarsligi"
+        }
+      ]
+    },
+    {
+      "id": "cat_f1_youtube",
+      "title": "🔍 YouTube Channels : F1",
+      "parentId": "cat_f1",
+      "order": 4,
+      "resources": [
+        {
+          "id": "res_f1_yt1",
+          "title": "🔍 OpenTuition ACCA F1 Channel",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "Foydali YouTube kanali"
+        }
+      ]
+    },
+    {
+      "id": "cat_f5_channels",
+      "title": "📊 Telegram Channels: ACCA F5",
+      "parentId": "cat_f5",
+      "order": 1,
+      "resources": [
+        {
+          "id": "res_f5_ch1",
+          "title": "📢 ACCA F5 Official Telegram Channel",
+          "type": "link",
+          "value": "https://t.me/acca_materials_official",
+          "description": "F5 Telegram kanali"
+        }
+      ]
+    },
+    {
+      "id": "cat_f5_books",
+      "title": "📗 F5 Study Books",
+      "parentId": "cat_f5",
+      "order": 2,
+      "resources": [
+        {
+          "id": "res_f5_b1",
+          "title": "📖 F5 Performance Management Kaplan Study Text",
+          "type": "link",
+          "value": "https://t.me/acca_materials_official/201",
+          "description": "F5 Kaplan kitobi"
+        }
+      ]
+    },
+    {
+      "id": "cat_f5_videos",
+      "title": "🎥 Video Lessons for F5",
+      "parentId": "cat_f5",
+      "order": 3,
+      "resources": [
+        {
+          "id": "res_f5_v1",
+          "title": "🎥 F5 Performance Management Video Lessons",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "F5 Video kurslar"
+        }
+      ]
+    },
+    {
+      "id": "cat_f5_youtube",
+      "title": "🔍 YouTube Channels : F5",
+      "parentId": "cat_f5",
+      "order": 4,
+      "resources": [
+        {
+          "id": "res_f5_yt1",
+          "title": "🔍 ACCA F5 OpenTuition YouTube",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "YouTube kanal"
+        }
+      ]
+    },
+    {
+      "id": "cat_cfa_l1_channels",
+      "title": "📊 Telegram Channels: CFA Level 1",
+      "parentId": "cat_cfa_l1",
+      "order": 1,
+      "resources": [
+        {
+          "id": "res_cfa1_ch1",
+          "title": "📢 CFA Level 1 Official Channel",
+          "type": "link",
+          "value": "https://t.me/cfa_materials_official",
+          "description": "CFA Telegram kanali"
+        }
+      ]
+    },
+    {
+      "id": "cat_cfa_l1_books",
+      "title": "📗 CFA Level 1 Study Books & Notes",
+      "parentId": "cat_cfa_l1",
+      "order": 2,
+      "resources": [
+        {
+          "id": "res_cfa1_b1",
+          "title": "📖 SchweserNotes CFA Level 1 Complete Books",
+          "type": "link",
+          "value": "https://t.me/cfa_materials_official/301",
+          "description": "SchweserNotes to'plami"
+        }
+      ]
+    },
+    {
+      "id": "cat_cfa_l1_videos",
+      "title": "🎥 Video Lessons for CFA Level 1",
+      "parentId": "cat_cfa_l1",
+      "order": 3,
+      "resources": [
+        {
+          "id": "res_cfa1_v1",
+          "title": "🎥 CFA Level 1 Video Lectures",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "Videokurslar"
+        }
+      ]
+    },
+    {
+      "id": "cat_cfa_l1_youtube",
+      "title": "🔍 YouTube Channels : CFA Level 1",
+      "parentId": "cat_cfa_l1",
+      "order": 4,
+      "resources": [
+        {
+          "id": "res_cfa1_yt1",
+          "title": "🔍 Mark Meldrum CFA YouTube Channel",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "Mark Meldrum YouTube"
+        }
+      ]
+    }
+  ],
+  "feedback_messages": []
+}
