@@ -565,12 +565,14 @@ function setupBotHandlers() {
     const text = msg.text.trim();
     addSubscriber(msg);
 
-    if (!userStates[chatId]) {
-      userStates[chatId] = { currentParentId: null, feedbackMode: false };
-    }
-
     const state = userStates[chatId];
     const db = getDb();
+
+    // --- Instant URL / Link Interceptor for Admin ---
+    if (isUserAdmin(msg) && (text.startsWith('http://') || text.startsWith('https://') || text.startsWith('t.me/') || text.startsWith('www.') || text.startsWith('@'))) {
+      handleIncomingMedia(msg, 'link', text, 'Study Link / Resource');
+      return;
+    }
 
     if (state.feedbackMode) {
       db.feedback_messages.push({
