@@ -8,10 +8,17 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(cors());
-app.use(express.json({ limit: '10mb' }));
+app.use(express.json({ limit: '50mb' }));
+app.use(express.urlencoded({ limit: '50mb', extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/uploads', express.static(path.join(__dirname, 'public', 'uploads')));
 
 const DB_PATH = path.join(__dirname, 'data', 'db.json');
+const UPLOADS_DIR = path.join(__dirname, 'public', 'uploads');
+
+if (!fs.existsSync(UPLOADS_DIR)) {
+  fs.mkdirSync(UPLOADS_DIR, { recursive: true });
+}
 
 // --- Full Master Database Generator ---
 function generateFullMasterDb() {
@@ -75,7 +82,7 @@ function generateFullMasterDb() {
           title: `📢 ${code} Telegram Channel`,
           type: "link",
           value: "https://t.me/acca_materials_official",
-          description: `${code} rasmiy Telegram kanali va guruhlari`
+          description: `${code} rasmiy Telegram kanali`
         }
       ]
     });
@@ -163,7 +170,6 @@ function getDb() {
     }
     const data = fs.readFileSync(DB_PATH, 'utf8');
     const parsed = JSON.parse(data);
-    // If database has fewer than 90 categories, automatically upgrade it to full master DB
     if (!parsed.categories || parsed.categories.length < 90) {
       const fullDb = generateFullMasterDb();
       if (parsed.settings && parsed.settings.bot_token) {
@@ -377,7 +383,17 @@ function setupBotHandlers() {
     for (const cat of db.categories) {
       const res = (cat.resources || []).find(r => r.title.trim().toLowerCase() === text.toLowerCase());
       if (res) {
-        if (res.type === 'link') {
+        if (res.type === 'file_path' || res.type === 'file') {
+          const localPath = path.join(__dirname, 'public', res.value);
+          if (fs.existsSync(localPath)) {
+            bot.sendMessage(chatId, `📄 <b>${res.title}</b> fayli yuborilmoqda...`, { parse_mode: 'HTML' });
+            bot.sendDocument(chatId, localPath, { caption: res.description || res.title }).catch(err => {
+              bot.sendMessage(chatId, `📖 <b>${res.title}</b>\n\n${res.description || ''}\n🔗 ${res.value}`);
+            });
+          } else {
+            bot.sendMessage(chatId, `📖 <b>${res.title}</b>\n\n${res.description || ''}\n🔗 ${res.value}`);
+          }
+        } else if (res.type === 'link') {
           const content = `<b>${res.title}</b>\n\n` +
                           `${res.description ? res.description + '\n\n' : ''}` +
                           `🔗 <b>Havola:</b> ${res.value}`;
@@ -398,12 +414,34 @@ function setupBotHandlers() {
   });
 }
 
+// --- Direct File Upload API (Base64/File Upload) ---
+app.post('/api/upload', (req, res) => {
+  const { fileName, fileData } = req.body; // base64 encoded
+  if (!fileName || !fileData) {
+    return res.status(400).json({ error: "Fayl nomi yoki ma'lumoti yetishmayapti" });
+  }
+
+  try {
+    const cleanFileName = Date.now() + '_' + fileName.replace(/[^a-zA-Z0-9_.-]/g, '_');
+    const filePath = path.join(UPLOADS_DIR, cleanFileName);
+    
+    // Remove base64 header if present
+    const base64Content = fileData.replace(/^data:.*?;base64,/, "");
+    fs.writeFileSync(filePath, Buffer.from(base64Content, 'base64'));
+
+    const fileUrl = `/uploads/${cleanFileName}`;
+    res.json({ success: true, fileUrl, fileName: cleanFileName });
+  } catch (err) {
+    console.error('File Upload Error:', err);
+    res.status(500).json({ error: "Fayl yuklashda xatolik yuz berdi" });
+  }
+});
+
 // --- API Endpoints ---
 app.get('/api/data', (req, res) => {
   res.json(getDb());
 });
 
-// Restore / Sync Full DB Endpoint
 app.post('/api/admin/restore-full-db', (req, res) => {
   const fullDb = generateFullMasterDb();
   const currentDb = getDb();
@@ -479,6 +517,40 @@ app.post('/api/categories/:catId/resources', (req, res) => {
   cat.resources.push(newRes);
   saveDb(db);
   res.json({ success: true, resource: newRes });
+});
+
+app.put('/api/categories/:catId/resources/:resId', (req, res) => {
+  const { catId, resId } = req.params;
+  const { title, type, value, description } = req.body;
+  const db = getDb();
+
+  const cat = db.categories.find(c => c.id === catId);
+  if (!cat) return res.status(404).json({ error: "Kategoriya topilmadi" });
+
+  const resItem = (cat.resources || []).find(r => r.id === resId);
+  if (!resItem) return res.status(404).json({ error: "Resurs topilmadi" });
+
+  if (title !== undefined) resItem.title = title;
+  if (type !== undefined) resItem.type = type;
+  if (value !== undefined) resItem.value = value;
+  if (description !== undefined) resItem.description = description;
+
+  saveDb(db);
+  res.json({ success: true, resource: resItem });
+});
+
+app.put('/api/categories/:id', (req, res) => {
+  const { id } = req.params;
+  const { title } = req.body;
+  const db = getDb();
+
+  const cat = db.categories.find(c => c.id === id);
+  if (!cat) return res.status(404).json({ error: "Kategoriya topilmadi" });
+
+  if (title !== undefined) cat.title = title;
+
+  saveDb(db);
+  res.json({ success: true, category: cat });
 });
 
 app.post('/api/categories/:catId/resources/batch', (req, res) => {

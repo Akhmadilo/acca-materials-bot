@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ACCA & CFA Materials - File Manager Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Navbar -->
+  <header class="navbar">
+    <div class="brand">
+      <div class="logo-box">
+        <i class="fa-solid fa-folder-tree"></i>
+      </div>
+      <div>
+        <h1>Fayl va Resurslar Menejeri</h1>
+        <p class="subtitle">Papkalarga kirib fayl, video va linklarni boshqarish</p>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <div class="stat-pill">
+        <i class="fa-solid fa-hard-drive"></i> <span id="totalResourcesBadge">0</span> resurs saqlangan
+      </div>
+      <div class="bot-status-badge" id="botStatus">
+        <span class="status-dot"></span>
+        <span id="botStatusText">Bot Faol (24/7)</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="main-layout">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <nav class="side-nav">
+        <button class="nav-item active" data-tab="tab-content">
+          <i class="fa-solid fa-folder-open"></i>
+          <span>Fayl Menejeri (Explorer)</span>
+        </button>
+        <button class="nav-item" data-tab="tab-broadcast">
+          <i class="fa-solid fa-paper-plane"></i>
+          <span>Post Yuborish (Broadcast)</span>
+        </button>
+        <button class="nav-item" data-tab="tab-subscribers">
+          <i class="fa-solid fa-users"></i>
+          <span>Bot Obunachilari</span>
+        </button>
+        <button class="nav-item" data-tab="tab-feedback">
+          <i class="fa-solid fa-comments"></i>
+          <span>Fikrlar</span>
+        </button>
+        <button class="nav-item" data-tab="tab-settings">
+          <i class="fa-solid fa-gear"></i>
+          <span>Bot Sozlamalari</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-help">
+        <i class="fa-solid fa-mouse-pointer"></i>
+        <p><strong>Fayl Menejeri:</strong> Papkalar ustiga bosing, uning ichiga kiring va fayllarni kompyuterdegidek joylang!</p>
+      </div>
+    </aside>
+
+    <!-- Main Explorer Content -->
+    <main class="content-area">
+
+      <!-- TAB 1: File Manager Explorer -->
+      <section id="tab-content" class="tab-pane active">
+
+        <!-- File Manager Header Bar -->
+        <div class="explorer-bar">
+          <div class="explorer-actions-left">
+            <button class="btn btn-secondary" onclick="navigateUpFolder()" id="backFolderBtn" disabled>
+              <i class="fa-solid fa-arrow-left"></i> Orqaga
+            </button>
+            
+            <!-- Breadcrumbs Path Navigator -->
+            <div class="breadcrumbs" id="breadcrumbsContainer">
+              <span class="breadcrumb-item active" onclick="navigateToFolder(null)"><i class="fa-solid fa-house"></i> Asosiy Papka</span>
+            </div>
+          </div>
+
+          <div class="explorer-actions-right">
+            <button class="btn btn-primary" onclick="openAddResourceCurrentFolder()">
+              <i class="fa-solid fa-plus"></i> Ushbu Papkaga Fayl/Link Qo'shish
+            </button>
+            <button class="btn btn-secondary" onclick="openBatchAddModal()">
+              <i class="fa-solid fa-bolt"></i> Ko'plab Kitoblar (Batch)
+            </button>
+            <button class="btn btn-secondary" onclick="openAddCategoryModalCurrent()">
+              <i class="fa-solid fa-folder-plus"></i> Yangi Papka
+            </button>
+            <button class="btn btn-success" onclick="restoreFullMasterDb()" title="Barcha 96 ta papkalarni 100% qayta yaratish">
+              <i class="fa-solid fa-rotate"></i> Barcha Papkalarni Tiklash
+            </button>
+          </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-box-explorer">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="searchInput" placeholder="Shu papkadan va barcha papkalardan izlash (masalan: F1, Kaplan, Tax, Video...)" oninput="renderFileManager()">
+        </div>
+
+        <!-- Explorer Main Grid Display -->
+        <div class="explorer-view" id="explorerContainer">
+          <!-- Dynamically populated folders & files -->
+        </div>
+
+      </section>
+
+      <!-- TAB 2: Broadcast -->
+      <section id="tab-broadcast" class="tab-pane">
+        <div class="section-header">
+          <h2><i class="fa-solid fa-bullhorn"></i> Obunachilarga Post Yuborish</h2>
+          <p>Bot a'zolariga e'lon va resurslar haqida xabar tarqating</p>
+        </div>
+
+        <div class="card broadcast-card">
+          <div class="form-group">
+            <label for="broadcastMessage">Xabar Matni (HTML formatida):</label>
+            <textarea id="broadcastMessage" rows="6" placeholder="Barchaga salom! Yangi ACCA va CFA resurslari papkalarga joylandi!"></textarea>
+          </div>
+          <button class="btn btn-success btn-lg" onclick="sendBroadcast()">
+            <i class="fa-solid fa-paper-plane"></i> Barchaga Yuborish
+          </button>
+          <div id="broadcastResult" class="result-box hidden"></div>
+        </div>
+      </section>
+
+      <!-- TAB 3: Obunachilar -->
+      <section id="tab-subscribers" class="tab-pane">
+        <div class="section-header">
+          <h2><i class="fa-solid fa-users"></i> Bot Obunachilari</h2>
+        </div>
+
+        <div class="card">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>User ID</th>
+                <th>Ism-Familiya</th>
+                <th>Username</th>
+                <th>Qo'shilgan vaqti</th>
+              </tr>
+            </thead>
+            <tbody id="subscribersTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- TAB 4: Feedback -->
+      <section id="tab-feedback" class="tab-pane">
+        <div class="section-header">
+          <h2><i class="fa-solid fa-comments"></i> Kelgan Fikrlar</h2>
+        </div>
+        <div class="feedback-grid" id="feedbackContainer"></div>
+      </section>
+
+      <!-- TAB 5: Sozlamalar -->
+      <section id="tab-settings" class="tab-pane">
+        <div class="section-header">
+          <h2><i class="fa-solid fa-sliders"></i> Bot Sozlamalari</h2>
+        </div>
+
+        <div class="card settings-card">
+          <div class="form-group">
+            <label for="botTokenInput">Telegram Bot API Token:</label>
+            <input type="text" id="botTokenInput" placeholder="8723520559:AAFM108x6EzYIMg_bsHtLShCEwCZKj3gb50">
+          </div>
+          <button class="btn btn-primary" onclick="saveSettings()">
+            <i class="fa-solid fa-floppy-disk"></i> Saqlash
+          </button>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Modal 1: Single Resource Add inside active folder -->
+  <div class="modal-overlay" id="resourceModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="resModalHeader">Papkaga Fayl yoki Resurs Qo'shish</h3>
+        <button class="close-btn" onclick="closeModal('resourceModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="modalResCatId">
+        <input type="hidden" id="modalEditingResId">
+
+        <div class="form-group">
+          <label for="resTitleInput">Fayl / Video / Resurs Nomi:</label>
+          <input type="text" id="resTitleInput" placeholder="masalan: 📗 F1 Kaplan Study Text 2026 yoki 🎥 1-Dars Video">
+        </div>
+
+        <div class="form-group">
+          <label for="resTypeSelect">Resurs Turi:</label>
+          <select id="resTypeSelect" onchange="toggleResValuePlaceholder()">
+            <option value="link">Havola (Telegram / Web / YouTube Link)</option>
+            <option value="file_upload">📁 Kompyuterdan Fayl / PDF Yuklash (Upload)</option>
+            <option value="text">Matnli Ko'rsatma / Kitob Ma'lumoti</option>
+            <option value="file_id">Telegram File ID (PDF / Hujjat)</option>
+          </select>
+        </div>
+
+        <div class="form-group" id="fileUploadContainer" style="display:none;">
+          <label for="resFileInput">Kompyuterdan Faylni Tanlang (PDF / Doc / Video):</label>
+          <input type="file" id="resFileInput" onchange="handleFileUpload(event)">
+          <small id="uploadStatusText" style="color:var(--success); display:block; margin-top:4px;"></small>
+        </div>
+
+        <div class="form-group" id="resValueContainer">
+          <label for="resValueInput" id="resValueLabel">Havola (URL):</label>
+          <textarea id="resValueInput" rows="3" placeholder="https://t.me/acca_materials_official/123"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="resDescInput">Izoh (Qo'shimcha tavsif):</label>
+          <input type="text" id="resDescInput" placeholder="Kaplan nashri kitobi">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="closeModal('resourceModal')">Bekor qilish</button>
+        <button class="btn btn-primary" onclick="saveResource()">Joylash</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Batch Add Modal -->
+  <div class="modal-overlay" id="batchModal">
+    <div class="modal-card modal-lg">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-bolt"></i> Birvaqtda Ko'plab Kitob va Linklarni Joylash</h3>
+        <button class="close-btn" onclick="closeModal('batchModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="batchSubjectSelect">Qaysi Papkaga Joylanadi?</label>
+          <select id="batchSubjectSelect"></select>
+        </div>
+
+        <div class="batch-help-box">
+          <i class="fa-solid fa-circle-info"></i>
+          <span>Har bir satrga nomi va havolasini yozing (Nomi | Havola):</span>
+        </div>
+
+        <div class="form-group">
+          <label for="batchTextInput">Kitoblar va Linklar Ro'yxati:</label>
+          <textarea id="batchTextInput" rows="8" placeholder="F1 Kaplan Study Text 2026 | https://t.me/acca/101
+F1 Video Darslik 1 | https://youtube.com/watch?v=xyz
+F1 Revision Kit | https://t.me/acca/102"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="closeModal('batchModal')">Bekor qilish</button>
+        <button class="btn btn-success" onclick="saveBatchResources()">
+          <i class="fa-solid fa-plus"></i> Barchasini Joylash
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: Add Category/Folder Modal -->
+  <div class="modal-overlay" id="categoryModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Yangi Papka Yaratish</h3>
+        <button class="close-btn" onclick="closeModal('categoryModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="modalParentId">
+        <div class="form-group">
+          <label for="categoryTitleInput">Papka Nomi va Emojisi:</label>
+          <input type="text" id="categoryTitleInput" placeholder="masalan: 📁 Kaplan Kitoblari 2026">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="closeModal('categoryModal')">Bekor qilish</button>
+        <button class="btn btn-primary" onclick="saveCategory()">Papka Yaratish</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
