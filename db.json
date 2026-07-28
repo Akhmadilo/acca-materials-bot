@@ -1,0 +1,1268 @@
+{
+  "settings": {
+    "bot_token": "8723520559:AAFM108x6EzYIMg_bsHtLShCEwCZKj3gb50",
+    "admin_password": "admin",
+    "webhook_url": ""
+  },
+  "subscribers": [
+    {
+      "id": 557976703,
+      "first_name": "Ahmadillo",
+      "last_name": "Ibrohimov",
+      "username": "Ibrohimov_Ahmadillo",
+      "joined_at": "2026-07-27T12:00:09.564Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": "cat_acca",
+      "title": "🔴 ACCA 🔴",
+      "parentId": null,
+      "order": 1,
+      "resources": []
+    },
+    {
+      "id": "cat_cfa",
+      "title": "📊 CFA Exam",
+      "parentId": null,
+      "order": 2,
+      "resources": []
+    },
+    {
+      "id": "cat_feedback",
+      "title": "💬 Feedback",
+      "parentId": null,
+      "order": 3,
+      "resources": [],
+      "isFeedback": true
+    },
+    {
+      "id": "cat_applied_knowledge",
+      "title": "📘 Applied Knowledge",
+      "parentId": "cat_acca",
+      "order": 1,
+      "resources": []
+    },
+    {
+      "id": "cat_applied_skills",
+      "title": "📊 Applied Skills",
+      "parentId": "cat_acca",
+      "order": 2,
+      "resources": []
+    },
+    {
+      "id": "cat_strategic_professional",
+      "title": "🏆 Strategic Professional",
+      "parentId": "cat_acca",
+      "order": 3,
+      "resources": []
+    },
+    {
+      "id": "cat_f1",
+      "title": "📘 F1 - Business & Technology",
+      "parentId": "cat_applied_knowledge",
+      "order": 1,
+      "resources": []
+    },
+    {
+      "id": "cat_f1_channels",
+      "title": "📊 Telegram Channels: F1",
+      "parentId": "cat_f1",
+      "order": 1,
+      "resources": [
+        {
+          "id": "res_cat_f1_ch1",
+          "title": "📢 F1 Telegram Channel",
+          "type": "link",
+          "value": "https://t.me/acca_materials_official",
+          "description": "F1 rasmiy Telegram kanali va guruhlari"
+        }
+      ]
+    },
+    {
+      "id": "cat_f1_books",
+      "title": "📗 F1 Study Books",
+      "parentId": "cat_f1",
+      "order": 2,
+      "resources": [
+        {
+          "id": "res_cat_f1_b1",
+          "title": "📖 F1 Kaplan Study Text & Revision Kit",
+          "type": "link",
+          "value": "https://t.me/acca_materials_official",
+          "description": "F1 Kaplan va BPP nashri kitoblari"
+        }
+      ]
+    },
+    {
+      "id": "cat_f1_videos",
+      "title": "🎥 Video Lessons for F1",
+      "parentId": "cat_f1",
+      "order": 3,
+      "resources": [
+        {
+          "id": "res_cat_f1_v1",
+          "title": "🎥 F1 Complete Video Course",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "F1 videodarsliklar to'plami"
+        }
+      ]
+    },
+    {
+      "id": "cat_f1_youtube",
+      "title": "🔍 YouTube Channels : F1",
+      "parentId": "cat_f1",
+      "order": 4,
+      "resources": [
+        {
+          "id": "res_cat_f1_yt1",
+          "title": "🔍 F1 YouTube Channel",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "F1 faniga bag'ishlangan YouTube kanallar"
+        }
+      ]
+    },
+    {
+      "id": "cat_f2",
+      "title": "📗 F2 - Management Accounting",
+      "parentId": "cat_applied_knowledge",
+      "order": 2,
+      "resources": []
+    },
+    {
+      "id": "cat_f2_channels",
+      "title": "📊 Telegram Channels: F2",
+      "parentId": "cat_f2",
+      "order": 1,
+      "resources": [
+        {
+          "id": "res_cat_f2_ch1",
+          "title": "📢 F2 Telegram Channel",
+          "type": "link",
+          "value": "https://t.me/acca_materials_official",
+          "description": "F2 rasmiy Telegram kanali va guruhlari"
+        }
+      ]
+    },
+    {
+      "id": "cat_f2_books",
+      "title": "📗 F2 Study Books",
+      "parentId": "cat_f2",
+      "order": 2,
+      "resources": [
+        {
+          "id": "res_cat_f2_b1",
+          "title": "📖 F2 Kaplan Study Text & Revision Kit",
+          "type": "link",
+          "value": "https://t.me/acca_materials_official",
+          "description": "F2 Kaplan va BPP nashri kitoblari"
+        }
+      ]
+    },
+    {
+      "id": "cat_f2_videos",
+      "title": "🎥 Video Lessons for F2",
+      "parentId": "cat_f2",
+      "order": 3,
+      "resources": [
+        {
+          "id": "res_cat_f2_v1",
+          "title": "🎥 F2 Complete Video Course",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "F2 videodarsliklar to'plami"
+        }
+      ]
+    },
+    {
+      "id": "cat_f2_youtube",
+      "title": "🔍 YouTube Channels : F2",
+      "parentId": "cat_f2",
+      "order": 4,
+      "resources": [
+        {
+          "id": "res_cat_f2_yt1",
+          "title": "🔍 F2 YouTube Channel",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "F2 faniga bag'ishlangan YouTube kanallar"
+        }
+      ]
+    },
+    {
+      "id": "cat_f3",
+      "title": "📙 F3 - Financial Accounting",
+      "parentId": "cat_applied_knowledge",
+      "order": 3,
+      "resources": []
+    },
+    {
+      "id": "cat_f3_channels",
+      "title": "📊 Telegram Channels: F3",
+      "parentId": "cat_f3",
+      "order": 1,
+      "resources": [
+        {
+          "id": "res_cat_f3_ch1",
+          "title": "📢 F3 Telegram Channel",
+          "type": "link",
+          "value": "https://t.me/acca_materials_official",
+          "description": "F3 rasmiy Telegram kanali va guruhlari"
+        }
+      ]
+    },
+    {
+      "id": "cat_f3_books",
+      "title": "📗 F3 Study Books",
+      "parentId": "cat_f3",
+      "order": 2,
+      "resources": [
+        {
+          "id": "res_cat_f3_b1",
+          "title": "📖 F3 Kaplan Study Text & Revision Kit",
+          "type": "link",
+          "value": "https://t.me/acca_materials_official",
+          "description": "F3 Kaplan va BPP nashri kitoblari"
+        }
+      ]
+    },
+    {
+      "id": "cat_f3_videos",
+      "title": "🎥 Video Lessons for F3",
+      "parentId": "cat_f3",
+      "order": 3,
+      "resources": [
+        {
+          "id": "res_cat_f3_v1",
+          "title": "🎥 F3 Complete Video Course",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "F3 videodarsliklar to'plami"
+        }
+      ]
+    },
+    {
+      "id": "cat_f3_youtube",
+      "title": "🔍 YouTube Channels : F3",
+      "parentId": "cat_f3",
+      "order": 4,
+      "resources": [
+        {
+          "id": "res_cat_f3_yt1",
+          "title": "🔍 F3 YouTube Channel",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "F3 faniga bag'ishlangan YouTube kanallar"
+        }
+      ]
+    },
+    {
+      "id": "cat_f4",
+      "title": "📕 F4 - Corporate & Business Law",
+      "parentId": "cat_applied_knowledge",
+      "order": 4,
+      "resources": []
+    },
+    {
+      "id": "cat_f4_channels",
+      "title": "📊 Telegram Channels: F4",
+      "parentId": "cat_f4",
+      "order": 1,
+      "resources": [
+        {
+          "id": "res_cat_f4_ch1",
+          "title": "📢 F4 Telegram Channel",
+          "type": "link",
+          "value": "https://t.me/acca_materials_official",
+          "description": "F4 rasmiy Telegram kanali va guruhlari"
+        }
+      ]
+    },
+    {
+      "id": "cat_f4_books",
+      "title": "📗 F4 Study Books",
+      "parentId": "cat_f4",
+      "order": 2,
+      "resources": [
+        {
+          "id": "res_cat_f4_b1",
+          "title": "📖 F4 Kaplan Study Text & Revision Kit",
+          "type": "link",
+          "value": "https://t.me/acca_materials_official",
+          "description": "F4 Kaplan va BPP nashri kitoblari"
+        }
+      ]
+    },
+    {
+      "id": "cat_f4_videos",
+      "title": "🎥 Video Lessons for F4",
+      "parentId": "cat_f4",
+      "order": 3,
+      "resources": [
+        {
+          "id": "res_cat_f4_v1",
+          "title": "🎥 F4 Complete Video Course",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "F4 videodarsliklar to'plami"
+        }
+      ]
+    },
+    {
+      "id": "cat_f4_youtube",
+      "title": "🔍 YouTube Channels : F4",
+      "parentId": "cat_f4",
+      "order": 4,
+      "resources": [
+        {
+          "id": "res_cat_f4_yt1",
+          "title": "🔍 F4 YouTube Channel",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "F4 faniga bag'ishlangan YouTube kanallar"
+        }
+      ]
+    },
+    {
+      "id": "cat_f5",
+      "title": "📘 F5 - Performance Management",
+      "parentId": "cat_applied_skills",
+      "order": 1,
+      "resources": []
+    },
+    {
+      "id": "cat_f5_channels",
+      "title": "📊 Telegram Channels: F5",
+      "parentId": "cat_f5",
+      "order": 1,
+      "resources": [
+        {
+          "id": "res_cat_f5_ch1",
+          "title": "📢 F5 Telegram Channel",
+          "type": "link",
+          "value": "https://t.me/acca_materials_official",
+          "description": "F5 rasmiy Telegram kanali va guruhlari"
+        }
+      ]
+    },
+    {
+      "id": "cat_f5_books",
+      "title": "📗 F5 Study Books",
+      "parentId": "cat_f5",
+      "order": 2,
+      "resources": [
+        {
+          "id": "res_cat_f5_b1",
+          "title": "📖 F5 Kaplan Study Text & Revision Kit",
+          "type": "link",
+          "value": "https://t.me/acca_materials_official",
+          "description": "F5 Kaplan va BPP nashri kitoblari"
+        }
+      ]
+    },
+    {
+      "id": "cat_f5_videos",
+      "title": "🎥 Video Lessons for F5",
+      "parentId": "cat_f5",
+      "order": 3,
+      "resources": [
+        {
+          "id": "res_cat_f5_v1",
+          "title": "🎥 F5 Complete Video Course",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "F5 videodarsliklar to'plami"
+        }
+      ]
+    },
+    {
+      "id": "cat_f5_youtube",
+      "title": "🔍 YouTube Channels : F5",
+      "parentId": "cat_f5",
+      "order": 4,
+      "resources": [
+        {
+          "id": "res_cat_f5_yt1",
+          "title": "🔍 F5 YouTube Channel",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "F5 faniga bag'ishlangan YouTube kanallar"
+        }
+      ]
+    },
+    {
+      "id": "cat_f6",
+      "title": "📗 F6 - Taxation",
+      "parentId": "cat_applied_skills",
+      "order": 2,
+      "resources": []
+    },
+    {
+      "id": "cat_f6_channels",
+      "title": "📊 Telegram Channels: F6",
+      "parentId": "cat_f6",
+      "order": 1,
+      "resources": [
+        {
+          "id": "res_cat_f6_ch1",
+          "title": "📢 F6 Telegram Channel",
+          "type": "link",
+          "value": "https://t.me/acca_materials_official",
+          "description": "F6 rasmiy Telegram kanali va guruhlari"
+        }
+      ]
+    },
+    {
+      "id": "cat_f6_books",
+      "title": "📗 F6 Study Books",
+      "parentId": "cat_f6",
+      "order": 2,
+      "resources": [
+        {
+          "id": "res_cat_f6_b1",
+          "title": "📖 F6 Kaplan Study Text & Revision Kit",
+          "type": "link",
+          "value": "https://t.me/acca_materials_official",
+          "description": "F6 Kaplan va BPP nashri kitoblari"
+        }
+      ]
+    },
+    {
+      "id": "cat_f6_videos",
+      "title": "🎥 Video Lessons for F6",
+      "parentId": "cat_f6",
+      "order": 3,
+      "resources": [
+        {
+          "id": "res_cat_f6_v1",
+          "title": "🎥 F6 Complete Video Course",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "F6 videodarsliklar to'plami"
+        }
+      ]
+    },
+    {
+      "id": "cat_f6_youtube",
+      "title": "🔍 YouTube Channels : F6",
+      "parentId": "cat_f6",
+      "order": 4,
+      "resources": [
+        {
+          "id": "res_cat_f6_yt1",
+          "title": "🔍 F6 YouTube Channel",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "F6 faniga bag'ishlangan YouTube kanallar"
+        }
+      ]
+    },
+    {
+      "id": "cat_f7",
+      "title": "📙 F7 - Financial Reporting",
+      "parentId": "cat_applied_skills",
+      "order": 3,
+      "resources": []
+    },
+    {
+      "id": "cat_f7_channels",
+      "title": "📊 Telegram Channels: F7",
+      "parentId": "cat_f7",
+      "order": 1,
+      "resources": [
+        {
+          "id": "res_cat_f7_ch1",
+          "title": "📢 F7 Telegram Channel",
+          "type": "link",
+          "value": "https://t.me/acca_materials_official",
+          "description": "F7 rasmiy Telegram kanali va guruhlari"
+        }
+      ]
+    },
+    {
+      "id": "cat_f7_books",
+      "title": "📗 F7 Study Books",
+      "parentId": "cat_f7",
+      "order": 2,
+      "resources": [
+        {
+          "id": "res_cat_f7_b1",
+          "title": "📖 F7 Kaplan Study Text & Revision Kit",
+          "type": "link",
+          "value": "https://t.me/acca_materials_official",
+          "description": "F7 Kaplan va BPP nashri kitoblari"
+        }
+      ]
+    },
+    {
+      "id": "cat_f7_videos",
+      "title": "🎥 Video Lessons for F7",
+      "parentId": "cat_f7",
+      "order": 3,
+      "resources": [
+        {
+          "id": "res_cat_f7_v1",
+          "title": "🎥 F7 Complete Video Course",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "F7 videodarsliklar to'plami"
+        }
+      ]
+    },
+    {
+      "id": "cat_f7_youtube",
+      "title": "🔍 YouTube Channels : F7",
+      "parentId": "cat_f7",
+      "order": 4,
+      "resources": [
+        {
+          "id": "res_cat_f7_yt1",
+          "title": "🔍 F7 YouTube Channel",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "F7 faniga bag'ishlangan YouTube kanallar"
+        }
+      ]
+    },
+    {
+      "id": "cat_f8",
+      "title": "📕 F8 - Audit & Assurance",
+      "parentId": "cat_applied_skills",
+      "order": 4,
+      "resources": []
+    },
+    {
+      "id": "cat_f8_channels",
+      "title": "📊 Telegram Channels: F8",
+      "parentId": "cat_f8",
+      "order": 1,
+      "resources": [
+        {
+          "id": "res_cat_f8_ch1",
+          "title": "📢 F8 Telegram Channel",
+          "type": "link",
+          "value": "https://t.me/acca_materials_official",
+          "description": "F8 rasmiy Telegram kanali va guruhlari"
+        }
+      ]
+    },
+    {
+      "id": "cat_f8_books",
+      "title": "📗 F8 Study Books",
+      "parentId": "cat_f8",
+      "order": 2,
+      "resources": [
+        {
+          "id": "res_cat_f8_b1",
+          "title": "📖 F8 Kaplan Study Text & Revision Kit",
+          "type": "link",
+          "value": "https://t.me/acca_materials_official",
+          "description": "F8 Kaplan va BPP nashri kitoblari"
+        }
+      ]
+    },
+    {
+      "id": "cat_f8_videos",
+      "title": "🎥 Video Lessons for F8",
+      "parentId": "cat_f8",
+      "order": 3,
+      "resources": [
+        {
+          "id": "res_cat_f8_v1",
+          "title": "🎥 F8 Complete Video Course",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "F8 videodarsliklar to'plami"
+        }
+      ]
+    },
+    {
+      "id": "cat_f8_youtube",
+      "title": "🔍 YouTube Channels : F8",
+      "parentId": "cat_f8",
+      "order": 4,
+      "resources": [
+        {
+          "id": "res_cat_f8_yt1",
+          "title": "🔍 F8 YouTube Channel",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "F8 faniga bag'ishlangan YouTube kanallar"
+        }
+      ]
+    },
+    {
+      "id": "cat_f9",
+      "title": "📔 F9 - Financial Management",
+      "parentId": "cat_applied_skills",
+      "order": 5,
+      "resources": []
+    },
+    {
+      "id": "cat_f9_channels",
+      "title": "📊 Telegram Channels: F9",
+      "parentId": "cat_f9",
+      "order": 1,
+      "resources": [
+        {
+          "id": "res_cat_f9_ch1",
+          "title": "📢 F9 Telegram Channel",
+          "type": "link",
+          "value": "https://t.me/acca_materials_official",
+          "description": "F9 rasmiy Telegram kanali va guruhlari"
+        }
+      ]
+    },
+    {
+      "id": "cat_f9_books",
+      "title": "📗 F9 Study Books",
+      "parentId": "cat_f9",
+      "order": 2,
+      "resources": [
+        {
+          "id": "res_cat_f9_b1",
+          "title": "📖 F9 Kaplan Study Text & Revision Kit",
+          "type": "link",
+          "value": "https://t.me/acca_materials_official",
+          "description": "F9 Kaplan va BPP nashri kitoblari"
+        }
+      ]
+    },
+    {
+      "id": "cat_f9_videos",
+      "title": "🎥 Video Lessons for F9",
+      "parentId": "cat_f9",
+      "order": 3,
+      "resources": [
+        {
+          "id": "res_cat_f9_v1",
+          "title": "🎥 F9 Complete Video Course",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "F9 videodarsliklar to'plami"
+        }
+      ]
+    },
+    {
+      "id": "cat_f9_youtube",
+      "title": "🔍 YouTube Channels : F9",
+      "parentId": "cat_f9",
+      "order": 4,
+      "resources": [
+        {
+          "id": "res_cat_f9_yt1",
+          "title": "🔍 F9 YouTube Channel",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "F9 faniga bag'ishlangan YouTube kanallar"
+        }
+      ]
+    },
+    {
+      "id": "cat_sbl",
+      "title": "🏆 SBL - Strategic Business Leader",
+      "parentId": "cat_strategic_professional",
+      "order": 1,
+      "resources": []
+    },
+    {
+      "id": "cat_sbl_channels",
+      "title": "📊 Telegram Channels: SBL",
+      "parentId": "cat_sbl",
+      "order": 1,
+      "resources": [
+        {
+          "id": "res_cat_sbl_ch1",
+          "title": "📢 SBL Telegram Channel",
+          "type": "link",
+          "value": "https://t.me/acca_materials_official",
+          "description": "SBL rasmiy Telegram kanali va guruhlari"
+        }
+      ]
+    },
+    {
+      "id": "cat_sbl_books",
+      "title": "📗 SBL Study Books",
+      "parentId": "cat_sbl",
+      "order": 2,
+      "resources": [
+        {
+          "id": "res_cat_sbl_b1",
+          "title": "📖 SBL Kaplan Study Text & Revision Kit",
+          "type": "link",
+          "value": "https://t.me/acca_materials_official",
+          "description": "SBL Kaplan va BPP nashri kitoblari"
+        }
+      ]
+    },
+    {
+      "id": "cat_sbl_videos",
+      "title": "🎥 Video Lessons for SBL",
+      "parentId": "cat_sbl",
+      "order": 3,
+      "resources": [
+        {
+          "id": "res_cat_sbl_v1",
+          "title": "🎥 SBL Complete Video Course",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "SBL videodarsliklar to'plami"
+        }
+      ]
+    },
+    {
+      "id": "cat_sbl_youtube",
+      "title": "🔍 YouTube Channels : SBL",
+      "parentId": "cat_sbl",
+      "order": 4,
+      "resources": [
+        {
+          "id": "res_cat_sbl_yt1",
+          "title": "🔍 SBL YouTube Channel",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "SBL faniga bag'ishlangan YouTube kanallar"
+        }
+      ]
+    },
+    {
+      "id": "cat_sbr",
+      "title": "📊 SBR - Strategic Business Reporting",
+      "parentId": "cat_strategic_professional",
+      "order": 2,
+      "resources": []
+    },
+    {
+      "id": "cat_sbr_channels",
+      "title": "📊 Telegram Channels: SBR",
+      "parentId": "cat_sbr",
+      "order": 1,
+      "resources": [
+        {
+          "id": "res_cat_sbr_ch1",
+          "title": "📢 SBR Telegram Channel",
+          "type": "link",
+          "value": "https://t.me/acca_materials_official",
+          "description": "SBR rasmiy Telegram kanali va guruhlari"
+        }
+      ]
+    },
+    {
+      "id": "cat_sbr_books",
+      "title": "📗 SBR Study Books",
+      "parentId": "cat_sbr",
+      "order": 2,
+      "resources": [
+        {
+          "id": "res_cat_sbr_b1",
+          "title": "📖 SBR Kaplan Study Text & Revision Kit",
+          "type": "link",
+          "value": "https://t.me/acca_materials_official",
+          "description": "SBR Kaplan va BPP nashri kitoblari"
+        }
+      ]
+    },
+    {
+      "id": "cat_sbr_videos",
+      "title": "🎥 Video Lessons for SBR",
+      "parentId": "cat_sbr",
+      "order": 3,
+      "resources": [
+        {
+          "id": "res_cat_sbr_v1",
+          "title": "🎥 SBR Complete Video Course",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "SBR videodarsliklar to'plami"
+        }
+      ]
+    },
+    {
+      "id": "cat_sbr_youtube",
+      "title": "🔍 YouTube Channels : SBR",
+      "parentId": "cat_sbr",
+      "order": 4,
+      "resources": [
+        {
+          "id": "res_cat_sbr_yt1",
+          "title": "🔍 SBR YouTube Channel",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "SBR faniga bag'ishlangan YouTube kanallar"
+        }
+      ]
+    },
+    {
+      "id": "cat_p4",
+      "title": "📘 P4 - Advanced Financial Management",
+      "parentId": "cat_strategic_professional",
+      "order": 3,
+      "resources": []
+    },
+    {
+      "id": "cat_p4_channels",
+      "title": "📊 Telegram Channels: P4",
+      "parentId": "cat_p4",
+      "order": 1,
+      "resources": [
+        {
+          "id": "res_cat_p4_ch1",
+          "title": "📢 P4 Telegram Channel",
+          "type": "link",
+          "value": "https://t.me/acca_materials_official",
+          "description": "P4 rasmiy Telegram kanali va guruhlari"
+        }
+      ]
+    },
+    {
+      "id": "cat_p4_books",
+      "title": "📗 P4 Study Books",
+      "parentId": "cat_p4",
+      "order": 2,
+      "resources": [
+        {
+          "id": "res_cat_p4_b1",
+          "title": "📖 P4 Kaplan Study Text & Revision Kit",
+          "type": "link",
+          "value": "https://t.me/acca_materials_official",
+          "description": "P4 Kaplan va BPP nashri kitoblari"
+        }
+      ]
+    },
+    {
+      "id": "cat_p4_videos",
+      "title": "🎥 Video Lessons for P4",
+      "parentId": "cat_p4",
+      "order": 3,
+      "resources": [
+        {
+          "id": "res_cat_p4_v1",
+          "title": "🎥 P4 Complete Video Course",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "P4 videodarsliklar to'plami"
+        }
+      ]
+    },
+    {
+      "id": "cat_p4_youtube",
+      "title": "🔍 YouTube Channels : P4",
+      "parentId": "cat_p4",
+      "order": 4,
+      "resources": [
+        {
+          "id": "res_cat_p4_yt1",
+          "title": "🔍 P4 YouTube Channel",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "P4 faniga bag'ishlangan YouTube kanallar"
+        }
+      ]
+    },
+    {
+      "id": "cat_p5",
+      "title": "📗 P5 - Advanced Performance Management",
+      "parentId": "cat_strategic_professional",
+      "order": 4,
+      "resources": []
+    },
+    {
+      "id": "cat_p5_channels",
+      "title": "📊 Telegram Channels: P5",
+      "parentId": "cat_p5",
+      "order": 1,
+      "resources": [
+        {
+          "id": "res_cat_p5_ch1",
+          "title": "📢 P5 Telegram Channel",
+          "type": "link",
+          "value": "https://t.me/acca_materials_official",
+          "description": "P5 rasmiy Telegram kanali va guruhlari"
+        }
+      ]
+    },
+    {
+      "id": "cat_p5_books",
+      "title": "📗 P5 Study Books",
+      "parentId": "cat_p5",
+      "order": 2,
+      "resources": [
+        {
+          "id": "res_cat_p5_b1",
+          "title": "📖 P5 Kaplan Study Text & Revision Kit",
+          "type": "link",
+          "value": "https://t.me/acca_materials_official",
+          "description": "P5 Kaplan va BPP nashri kitoblari"
+        }
+      ]
+    },
+    {
+      "id": "cat_p5_videos",
+      "title": "🎥 Video Lessons for P5",
+      "parentId": "cat_p5",
+      "order": 3,
+      "resources": [
+        {
+          "id": "res_cat_p5_v1",
+          "title": "🎥 P5 Complete Video Course",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "P5 videodarsliklar to'plami"
+        }
+      ]
+    },
+    {
+      "id": "cat_p5_youtube",
+      "title": "🔍 YouTube Channels : P5",
+      "parentId": "cat_p5",
+      "order": 4,
+      "resources": [
+        {
+          "id": "res_cat_p5_yt1",
+          "title": "🔍 P5 YouTube Channel",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "P5 faniga bag'ishlangan YouTube kanallar"
+        }
+      ]
+    },
+    {
+      "id": "cat_p6",
+      "title": "📙 P6 - Advanced Taxation",
+      "parentId": "cat_strategic_professional",
+      "order": 5,
+      "resources": []
+    },
+    {
+      "id": "cat_p6_channels",
+      "title": "📊 Telegram Channels: P6",
+      "parentId": "cat_p6",
+      "order": 1,
+      "resources": [
+        {
+          "id": "res_cat_p6_ch1",
+          "title": "📢 P6 Telegram Channel",
+          "type": "link",
+          "value": "https://t.me/acca_materials_official",
+          "description": "P6 rasmiy Telegram kanali va guruhlari"
+        }
+      ]
+    },
+    {
+      "id": "cat_p6_books",
+      "title": "📗 P6 Study Books",
+      "parentId": "cat_p6",
+      "order": 2,
+      "resources": [
+        {
+          "id": "res_cat_p6_b1",
+          "title": "📖 P6 Kaplan Study Text & Revision Kit",
+          "type": "link",
+          "value": "https://t.me/acca_materials_official",
+          "description": "P6 Kaplan va BPP nashri kitoblari"
+        }
+      ]
+    },
+    {
+      "id": "cat_p6_videos",
+      "title": "🎥 Video Lessons for P6",
+      "parentId": "cat_p6",
+      "order": 3,
+      "resources": [
+        {
+          "id": "res_cat_p6_v1",
+          "title": "🎥 P6 Complete Video Course",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "P6 videodarsliklar to'plami"
+        }
+      ]
+    },
+    {
+      "id": "cat_p6_youtube",
+      "title": "🔍 YouTube Channels : P6",
+      "parentId": "cat_p6",
+      "order": 4,
+      "resources": [
+        {
+          "id": "res_cat_p6_yt1",
+          "title": "🔍 P6 YouTube Channel",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "P6 faniga bag'ishlangan YouTube kanallar"
+        }
+      ]
+    },
+    {
+      "id": "cat_p7",
+      "title": "📕 P7 - Advanced Audit & Assurance",
+      "parentId": "cat_strategic_professional",
+      "order": 6,
+      "resources": []
+    },
+    {
+      "id": "cat_p7_channels",
+      "title": "📊 Telegram Channels: P7",
+      "parentId": "cat_p7",
+      "order": 1,
+      "resources": [
+        {
+          "id": "res_cat_p7_ch1",
+          "title": "📢 P7 Telegram Channel",
+          "type": "link",
+          "value": "https://t.me/acca_materials_official",
+          "description": "P7 rasmiy Telegram kanali va guruhlari"
+        }
+      ]
+    },
+    {
+      "id": "cat_p7_books",
+      "title": "📗 P7 Study Books",
+      "parentId": "cat_p7",
+      "order": 2,
+      "resources": [
+        {
+          "id": "res_cat_p7_b1",
+          "title": "📖 P7 Kaplan Study Text & Revision Kit",
+          "type": "link",
+          "value": "https://t.me/acca_materials_official",
+          "description": "P7 Kaplan va BPP nashri kitoblari"
+        }
+      ]
+    },
+    {
+      "id": "cat_p7_videos",
+      "title": "🎥 Video Lessons for P7",
+      "parentId": "cat_p7",
+      "order": 3,
+      "resources": [
+        {
+          "id": "res_cat_p7_v1",
+          "title": "🎥 P7 Complete Video Course",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "P7 videodarsliklar to'plami"
+        }
+      ]
+    },
+    {
+      "id": "cat_p7_youtube",
+      "title": "🔍 YouTube Channels : P7",
+      "parentId": "cat_p7",
+      "order": 4,
+      "resources": [
+        {
+          "id": "res_cat_p7_yt1",
+          "title": "🔍 P7 YouTube Channel",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "P7 faniga bag'ishlangan YouTube kanallar"
+        }
+      ]
+    },
+    {
+      "id": "cat_cfa_l1",
+      "title": "📘 CFA Level 1",
+      "parentId": "cat_cfa",
+      "order": 1,
+      "resources": []
+    },
+    {
+      "id": "cat_cfa_l1_channels",
+      "title": "📊 Telegram Channels: CFA Level 1",
+      "parentId": "cat_cfa_l1",
+      "order": 1,
+      "resources": [
+        {
+          "id": "res_cat_cfa_l1_ch1",
+          "title": "📢 CFA Level 1 Telegram Channel",
+          "type": "link",
+          "value": "https://t.me/acca_materials_official",
+          "description": "CFA Level 1 rasmiy Telegram kanali va guruhlari"
+        }
+      ]
+    },
+    {
+      "id": "cat_cfa_l1_books",
+      "title": "📗 CFA Level 1 Study Books",
+      "parentId": "cat_cfa_l1",
+      "order": 2,
+      "resources": [
+        {
+          "id": "res_cat_cfa_l1_b1",
+          "title": "📖 CFA Level 1 Kaplan Study Text & Revision Kit",
+          "type": "link",
+          "value": "https://t.me/acca_materials_official",
+          "description": "CFA Level 1 Kaplan va BPP nashri kitoblari"
+        }
+      ]
+    },
+    {
+      "id": "cat_cfa_l1_videos",
+      "title": "🎥 Video Lessons for CFA Level 1",
+      "parentId": "cat_cfa_l1",
+      "order": 3,
+      "resources": [
+        {
+          "id": "res_cat_cfa_l1_v1",
+          "title": "🎥 CFA Level 1 Complete Video Course",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "CFA Level 1 videodarsliklar to'plami"
+        }
+      ]
+    },
+    {
+      "id": "cat_cfa_l1_youtube",
+      "title": "🔍 YouTube Channels : CFA Level 1",
+      "parentId": "cat_cfa_l1",
+      "order": 4,
+      "resources": [
+        {
+          "id": "res_cat_cfa_l1_yt1",
+          "title": "🔍 CFA Level 1 YouTube Channel",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "CFA Level 1 faniga bag'ishlangan YouTube kanallar"
+        }
+      ]
+    },
+    {
+      "id": "cat_cfa_l2",
+      "title": "📊 CFA Level 2",
+      "parentId": "cat_cfa",
+      "order": 2,
+      "resources": []
+    },
+    {
+      "id": "cat_cfa_l2_channels",
+      "title": "📊 Telegram Channels: CFA Level 2",
+      "parentId": "cat_cfa_l2",
+      "order": 1,
+      "resources": [
+        {
+          "id": "res_cat_cfa_l2_ch1",
+          "title": "📢 CFA Level 2 Telegram Channel",
+          "type": "link",
+          "value": "https://t.me/acca_materials_official",
+          "description": "CFA Level 2 rasmiy Telegram kanali va guruhlari"
+        }
+      ]
+    },
+    {
+      "id": "cat_cfa_l2_books",
+      "title": "📗 CFA Level 2 Study Books",
+      "parentId": "cat_cfa_l2",
+      "order": 2,
+      "resources": [
+        {
+          "id": "res_cat_cfa_l2_b1",
+          "title": "📖 CFA Level 2 Kaplan Study Text & Revision Kit",
+          "type": "link",
+          "value": "https://t.me/acca_materials_official",
+          "description": "CFA Level 2 Kaplan va BPP nashri kitoblari"
+        }
+      ]
+    },
+    {
+      "id": "cat_cfa_l2_videos",
+      "title": "🎥 Video Lessons for CFA Level 2",
+      "parentId": "cat_cfa_l2",
+      "order": 3,
+      "resources": [
+        {
+          "id": "res_cat_cfa_l2_v1",
+          "title": "🎥 CFA Level 2 Complete Video Course",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "CFA Level 2 videodarsliklar to'plami"
+        }
+      ]
+    },
+    {
+      "id": "cat_cfa_l2_youtube",
+      "title": "🔍 YouTube Channels : CFA Level 2",
+      "parentId": "cat_cfa_l2",
+      "order": 4,
+      "resources": [
+        {
+          "id": "res_cat_cfa_l2_yt1",
+          "title": "🔍 CFA Level 2 YouTube Channel",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "CFA Level 2 faniga bag'ishlangan YouTube kanallar"
+        }
+      ]
+    },
+    {
+      "id": "cat_cfa_l3",
+      "title": "🏆 CFA Level 3",
+      "parentId": "cat_cfa",
+      "order": 3,
+      "resources": []
+    },
+    {
+      "id": "cat_cfa_l3_channels",
+      "title": "📊 Telegram Channels: CFA Level 3",
+      "parentId": "cat_cfa_l3",
+      "order": 1,
+      "resources": [
+        {
+          "id": "res_cat_cfa_l3_ch1",
+          "title": "📢 CFA Level 3 Telegram Channel",
+          "type": "link",
+          "value": "https://t.me/acca_materials_official",
+          "description": "CFA Level 3 rasmiy Telegram kanali va guruhlari"
+        }
+      ]
+    },
+    {
+      "id": "cat_cfa_l3_books",
+      "title": "📗 CFA Level 3 Study Books",
+      "parentId": "cat_cfa_l3",
+      "order": 2,
+      "resources": [
+        {
+          "id": "res_cat_cfa_l3_b1",
+          "title": "📖 CFA Level 3 Kaplan Study Text & Revision Kit",
+          "type": "link",
+          "value": "https://t.me/acca_materials_official",
+          "description": "CFA Level 3 Kaplan va BPP nashri kitoblari"
+        }
+      ]
+    },
+    {
+      "id": "cat_cfa_l3_videos",
+      "title": "🎥 Video Lessons for CFA Level 3",
+      "parentId": "cat_cfa_l3",
+      "order": 3,
+      "resources": [
+        {
+          "id": "res_cat_cfa_l3_v1",
+          "title": "🎥 CFA Level 3 Complete Video Course",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "CFA Level 3 videodarsliklar to'plami"
+        }
+      ]
+    },
+    {
+      "id": "cat_cfa_l3_youtube",
+      "title": "🔍 YouTube Channels : CFA Level 3",
+      "parentId": "cat_cfa_l3",
+      "order": 4,
+      "resources": [
+        {
+          "id": "res_cat_cfa_l3_yt1",
+          "title": "🔍 CFA Level 3 YouTube Channel",
+          "type": "link",
+          "value": "https://youtube.com",
+          "description": "CFA Level 3 faniga bag'ishlangan YouTube kanallar"
+        }
+      ]
+    }
+  ],
+  "feedback_messages": []
+}
