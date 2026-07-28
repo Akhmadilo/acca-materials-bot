@@ -54,9 +54,9 @@ function updateBotBadge() {
   const badgeText = document.getElementById('botStatusText');
   const token = dbData.settings?.bot_token;
   if (token && token.trim() !== "") {
-    badgeText.textContent = "Bot Faol (24/7)";
+    badgeText.textContent = "Bot Active (24/7)";
   } else {
-    badgeText.textContent = "Token Kiritilmagan";
+    badgeText.textContent = "Token Not Set";
   }
 }
 
@@ -103,7 +103,7 @@ function renderBreadcrumbs() {
 
   if (!currentFolderId) {
     backBtn.disabled = true;
-    container.innerHTML = `<span class="breadcrumb-item active"><i class="fa-solid fa-house"></i> Asosiy Papka</span>`;
+    container.innerHTML = `<span class="breadcrumb-item active"><i class="fa-solid fa-house"></i> Root Folder</span>`;
     return;
   }
 
@@ -116,7 +116,7 @@ function renderBreadcrumbs() {
     curr = dbData.categories.find(c => c.id === curr.parentId);
   }
 
-  let html = `<span class="breadcrumb-item" onclick="navigateToFolder(null)"><i class="fa-solid fa-house"></i> Asosiy</span>`;
+  let html = `<span class="breadcrumb-item" onclick="navigateToFolder(null)"><i class="fa-solid fa-house"></i> Root</span>`;
 
   trail.forEach((item, index) => {
     html += `<span class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></span>`;
@@ -152,19 +152,19 @@ function renderFileManager() {
   const currentFiles = currentCategory ? (currentCategory.resources || []) : [];
 
   if (subFolders.length === 0 && currentFiles.length === 0) {
-    const currentName = currentCategory ? currentCategory.title : 'Ushbu papka';
+    const currentName = currentCategory ? currentCategory.title : 'This folder';
     container.innerHTML = `
-      <div style="grid-column: 1/-1; text-align:center; padding: 3rem 1rem; background: var(--panel-bg); border-radius: var(--radius); border: 1px dashed var(--panel-border);">
-        <i class="fa-solid fa-folder-open" style="font-size:3.5rem; color:#60a5fa; margin-bottom:1rem;"></i>
-        <h3 style="color:#fff;">"${currentName}" papkasi hozircha bo'sh</h3>
-        <p style="margin-top:6px; font-size:0.9rem; color:#94a3b8;">Ushbu papkaga kitoblar, fayllar, videodarsliklar yoki linklar joylashingiz mumkin!</p>
+      <div style="grid-column: 1/-1; text-align:center; padding: 3.5rem 1rem; background: var(--panel-bg); border-radius: var(--radius); border: 1px dashed var(--panel-border);">
+        <i class="fa-solid fa-folder-open" style="font-size:3.8rem; color:#60a5fa; margin-bottom:1rem;"></i>
+        <h3 style="color:#fff; font-weight:700;">"${currentName}" is currently empty</h3>
+        <p style="margin-top:8px; font-size:0.92rem; color:#94a3b8;">Upload textbooks, PDF documents, video lectures, or Telegram links into this folder!</p>
         
-        <div style="display:flex; gap:12px; justify-content:center; margin-top:1.5rem; flex-wrap:wrap;">
+        <div style="display:flex; gap:14px; justify-content:center; margin-top:1.8rem; flex-wrap:wrap;">
           <button class="btn btn-primary" onclick="openAddResourceCurrentFolder()">
-            <i class="fa-solid fa-plus"></i> + Shu Papkaga Fayl / Link Joylash
+            <i class="fa-solid fa-plus"></i> + Add Resource / File to this folder
           </button>
           <button class="btn btn-success" onclick="openBatchAddModal()">
-            <i class="fa-solid fa-bolt"></i> ⚡ 1-Daqiqada 50 ta Kitob Joylash (Batch)
+            <i class="fa-solid fa-bolt"></i> ⚡ Batch Upload 50 Books
           </button>
         </div>
       </div>
@@ -187,22 +187,22 @@ function renderFileManager() {
           <i class="fa-solid ${folder.isFeedback ? 'fa-comment-dots' : 'fa-folder'} folder-icon"></i>
           <div>
             <span class="folder-title-text">${folder.title}</span>
-            <small style="display:block; color:#94a3b8; font-size:0.78rem; margin-top:2px;">(Bosib ichiga kiring ➔)</small>
+            <small style="display:block; color:#94a3b8; font-size:0.8rem; margin-top:4px;">(Click to open folder ➔)</small>
           </div>
         </div>
       </div>
       <div class="folder-footer">
         <span style="color:#60a5fa; font-weight:500;">
-          <i class="fa-solid fa-folder-open"></i> ${childFoldersCount > 0 ? childFoldersCount + ' ta ichki papka' : resCount + ' ta resurs saqlangan'}
+          <i class="fa-solid fa-folder-open"></i> ${childFoldersCount > 0 ? childFoldersCount + ' subfolders' : resCount + ' items saved'}
         </span>
         <div style="display:flex; gap:4px;">
           <button class="btn btn-primary btn-sm" onclick="event.stopPropagation(); navigateToFolder('${folder.id}')">
-            <i class="fa-solid fa-folder-open"></i> Kirish
+            <i class="fa-solid fa-folder-open"></i> Open
           </button>
-          <button class="btn btn-secondary btn-sm" onclick="event.stopPropagation(); openEditCategoryModal('${folder.id}', '${folder.title.replace(/'/g, "\\'")}')" title="Papkani nomini o'zgartirish">
+          <button class="btn btn-secondary btn-sm" onclick="event.stopPropagation(); openEditCategoryModal('${folder.id}', '${folder.title.replace(/'/g, "\\'")}')" title="Rename folder">
             <i class="fa-solid fa-pen"></i>
           </button>
-          <button class="btn btn-danger btn-sm" onclick="event.stopPropagation(); deleteCategory('${folder.id}')" title="Papkani o'chirish">
+          <button class="btn btn-danger btn-sm" onclick="event.stopPropagation(); deleteCategory('${folder.id}')" title="Delete folder">
             <i class="fa-solid fa-trash"></i>
           </button>
         </div>
@@ -218,7 +218,7 @@ function renderFileManager() {
     fileEl.className = 'file-item';
 
     let iconClass = 'fa-file-lines pdf-icon';
-    let typeLabel = 'Matn';
+    let typeLabel = 'Document';
 
     if (file.type === 'link') {
       if (file.value.includes('youtube.com') || file.value.includes('youtu.be')) {
@@ -226,11 +226,11 @@ function renderFileManager() {
         typeLabel = 'Video';
       } else {
         iconClass = 'fa-link link-icon';
-        typeLabel = 'Havola';
+        typeLabel = 'Link';
       }
     } else if (file.type === 'file_id' || file.type === 'file') {
       iconClass = 'fa-file-pdf pdf-icon';
-      typeLabel = 'Fayl';
+      typeLabel = 'PDF File';
     }
 
     fileEl.innerHTML = `
@@ -244,11 +244,11 @@ function renderFileManager() {
         </div>
       </div>
       <div class="file-actions">
-        ${file.type === 'link' || file.value.startsWith('http') || file.value.startsWith('/uploads') ? `<a href="${file.value}" target="_blank" class="btn btn-secondary btn-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i> Ochish</a>` : ''}
-        <button class="btn btn-secondary btn-sm" onclick="openEditResourceModal('${currentFolderId}', '${file.id}')" title="Faylni tahrirlash">
-          <i class="fa-solid fa-pen"></i> Tahrirlash
+        ${file.type === 'link' || file.value.startsWith('http') || file.value.startsWith('/uploads') ? `<a href="${file.value}" target="_blank" class="btn btn-secondary btn-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open</a>` : ''}
+        <button class="btn btn-secondary btn-sm" onclick="openEditResourceModal('${currentFolderId}', '${file.id}')" title="Edit resource">
+          <i class="fa-solid fa-pen"></i> Edit
         </button>
-        <button class="btn btn-danger btn-sm" onclick="deleteResource('${currentFolderId}', '${file.id}')" title="Faylni o'chirish">
+        <button class="btn btn-danger btn-sm" onclick="deleteResource('${currentFolderId}', '${file.id}')" title="Delete resource">
           <i class="fa-solid fa-trash"></i>
         </button>
       </div>
@@ -276,8 +276,8 @@ function renderSearchResults(query) {
   });
 
   if (results.length === 0) {
-    container.innerHTML = `<div style="grid-column:1/-1; text-align:center; padding:3rem; color:#94a3b8;">
-      <p>"${query}" bo'yicha hech qanday fayl yoki papka topilmadi.</p>
+    container.innerHTML = `<div style="grid-column:1/-1; text-align:center; padding:3.5rem; color:#94a3b8;">
+      <p>No study materials or folders found matching "${query}".</p>
     </div>`;
     return;
   }
@@ -296,8 +296,8 @@ function renderSearchResults(query) {
           <span class="folder-title-text">${res.item.title}</span>
         </div>
         <div class="folder-footer">
-          <span>Qidiruv natijasi (Papka)</span>
-          <button class="btn btn-primary btn-sm">Kirish ➔</button>
+          <span>Folder Search Result</span>
+          <button class="btn btn-primary btn-sm">Open Folder ➔</button>
         </div>
       `;
       container.appendChild(folderEl);
@@ -309,11 +309,11 @@ function renderSearchResults(query) {
           <i class="fa-solid fa-file-lines file-icon"></i>
           <div class="file-details">
             <strong>${res.item.title}</strong>
-            <p>Joylashgan papkasi: <b>${res.folder.title}</b></p>
+            <p>Folder: <b>${res.folder.title}</b></p>
           </div>
         </div>
         <div class="file-actions">
-          <button class="btn btn-secondary btn-sm" onclick="navigateToFolder('${res.folder.id}')">Papkaga o'tish ➔</button>
+          <button class="btn btn-secondary btn-sm" onclick="navigateToFolder('${res.folder.id}')">Go to Folder ➔</button>
           <button class="btn btn-danger btn-sm" onclick="deleteResource('${res.folder.id}', '${res.item.id}')"><i class="fa-solid fa-trash"></i></button>
         </div>
       `;
@@ -324,17 +324,17 @@ function renderSearchResults(query) {
 
 // RESTORE MASTER FULL DB
 async function restoreFullMasterDb() {
-  if (!confirm("Barcha ACCA (F1-P7) va CFA (L1-L3) paperlarining 4 talik papkalarini 100% qayta sinxronlashni tasdiqlaysizmi?")) return;
+  if (!confirm("Are you sure you want to restore and resync all 96 ACCA and CFA master category folders?")) return;
 
   try {
     const res = await fetch('/api/admin/restore-full-db', { method: 'POST' });
     const data = await res.json();
     if (res.ok && data.success) {
-      alert(`✅ Muvaffaqiyatli! Barcha ${data.categoriesCount} ta papkalar qayta yaratildi va tiklandi!`);
+      alert(`✅ Success! All ${data.categoriesCount} master folders resynced successfully.`);
       loadData();
     }
   } catch (err) {
-    alert("Xatolik!");
+    alert("Error restoring database!");
   }
 }
 
@@ -342,7 +342,7 @@ function openAddResourceCurrentFolder() {
   if (!currentFolderId) {
     const leaf = dbData.categories.find(c => c.parentId !== null) || dbData.categories[0];
     if (leaf) openAddResourceModal(leaf.id);
-    else alert('Avval papka yarating!');
+    else alert('Please create a folder first!');
   } else {
     openAddResourceModal(currentFolderId);
   }
@@ -363,7 +363,7 @@ async function saveBatchResources() {
   const rawText = document.getElementById('batchTextInput').value.trim();
 
   if (!catId || !rawText) {
-    alert("Iltimos, papkani va ma'lumotlarni kiriting!");
+    alert("Please select a target folder and paste study items!");
     return;
   }
 
@@ -382,7 +382,7 @@ async function saveBatchResources() {
         title: title,
         type: type,
         value: value,
-        description: 'Fayl menejeri orqali joylangan'
+        description: 'Uploaded via Batch Uploader'
       });
     }
   });
@@ -395,12 +395,12 @@ async function saveBatchResources() {
     });
     const data = await res.json();
     if (res.ok && data.success) {
-      alert(`✅ ${data.addedCount} ta resurs papkaga muvaffaqiyatli joylandi!`);
+      alert(`✅ Successfully uploaded ${data.addedCount} study items to the folder!`);
       closeModal('batchModal');
       loadData();
     }
   } catch (err) {
-    alert('Xatolik!');
+    alert('Error during batch upload!');
   }
 }
 
@@ -412,7 +412,7 @@ function openAddResourceModal(catId) {
   document.getElementById('resDescInput').value = '';
   document.getElementById('resFileInput').value = '';
   document.getElementById('uploadStatusText').textContent = '';
-  document.getElementById('resModalHeader').textContent = "Papkaga Fayl yoki Resurs Qo'shish";
+  document.getElementById('resModalHeader').textContent = "Add Study Material / File";
   uploadedFileUrl = "";
 
   document.getElementById('resTypeSelect').value = 'link';
@@ -435,7 +435,7 @@ function openEditResourceModal(catId, resId) {
   document.getElementById('resDescInput').value = resItem.description || '';
   document.getElementById('resFileInput').value = '';
   document.getElementById('uploadStatusText').textContent = '';
-  document.getElementById('resModalHeader').textContent = "Faylni Tahrirlash";
+  document.getElementById('resModalHeader').textContent = "Edit Study Resource";
 
   const type = resItem.type === 'file' ? 'file_upload' : (resItem.type || 'link');
   document.getElementById('resTypeSelect').value = type;
@@ -445,7 +445,7 @@ function openEditResourceModal(catId, resId) {
 }
 
 function openEditCategoryModal(catId, currentTitle) {
-  const newTitle = prompt("Papkaning yangi nomini kiriting:", currentTitle);
+  const newTitle = prompt("Enter new folder name:", currentTitle);
   if (newTitle && newTitle.trim() !== "" && newTitle !== currentTitle) {
     fetch(`/api/categories/${catId}`, {
       method: 'PUT',
@@ -472,14 +472,14 @@ function toggleResValuePlaceholder() {
     valueContainer.style.display = 'block';
 
     if (type === 'link') {
-      label.textContent = "Havola (URL / Telegram / YouTube):";
+      label.textContent = "Resource Link (URL / Telegram / YouTube):";
       input.placeholder = "https://t.me/acca_materials_official/123";
     } else if (type === 'file_id') {
       label.textContent = "Telegram File ID:";
       input.placeholder = "BQACAgQAAxkBAAE...";
     } else {
-      label.textContent = "Matnli Ma'lumot / Izoh:";
-      input.placeholder = "Batafsil matn kiritishingiz mumkin...";
+      label.textContent = "Text Notes / Instructions:";
+      input.placeholder = "Enter detailed notes here...";
     }
   }
 }
@@ -519,7 +519,7 @@ function processSingleFile(file) {
 
   const statusEl = document.getElementById('uploadStatusText');
   statusEl.style.color = '#3b82f6';
-  statusEl.textContent = `⏳ "${file.name}" kompyuterdan yuklanmoqda...`;
+  statusEl.textContent = `⏳ Uploading "${file.name}"...`;
 
   const reader = new FileReader();
   reader.onload = async function(e) {
@@ -536,18 +536,18 @@ function processSingleFile(file) {
       if (res.ok && data.success) {
         uploadedFileUrl = data.fileUrl;
         statusEl.style.color = '#10b981';
-        statusEl.textContent = `✅ "${file.name}" yuklandi!`;
+        statusEl.textContent = `✅ "${file.name}" uploaded successfully!`;
 
         if (!document.getElementById('resTitleInput').value) {
           document.getElementById('resTitleInput').value = file.name;
         }
       } else {
         statusEl.style.color = '#ef4444';
-        statusEl.textContent = `❌ Upload xatoligi: ${data.error}`;
+        statusEl.textContent = `❌ Upload error: ${data.error}`;
       }
     } catch (err) {
       statusEl.style.color = '#ef4444';
-      statusEl.textContent = `❌ Yuklashda xatolik yuz berdi!`;
+      statusEl.textContent = `❌ File upload failed!`;
     }
   };
 
@@ -570,7 +570,7 @@ async function saveResource() {
 
   if (selectType === 'file_upload') {
     if (!uploadedFileUrl && !editingResId) {
-      alert('Iltimos, avval kompyuteringizdan faylni tanlang!');
+      alert('Please select or drop a file first!');
       return;
     }
     if (uploadedFileUrl) {
@@ -580,7 +580,7 @@ async function saveResource() {
   }
 
   if (!title || !value) {
-    alert('Iltimos, sarlavha va fayl/havolani kiriting!');
+    alert('Please enter resource title and link/file!');
     return;
   }
 
@@ -599,17 +599,17 @@ async function saveResource() {
       loadData();
     }
   } catch (err) {
-    alert('Xatolik!');
+    alert('Error saving resource!');
   }
 }
 
 async function deleteResource(catId, resId) {
-  if (!confirm("Ushbu faylni o'chirishni tasdiqlaysizmi?")) return;
+  if (!confirm("Are you sure you want to delete this resource?")) return;
   try {
     const res = await fetch(`/api/categories/${catId}/resources/${resId}`, { method: 'DELETE' });
     if (res.ok) loadData();
   } catch (err) {
-    alert('Xatolik!');
+    alert('Error deleting resource!');
   }
 }
 
@@ -624,7 +624,7 @@ async function saveCategory() {
   const parentId = document.getElementById('modalParentId').value || null;
 
   if (!title) {
-    alert('Papka nomini kiriting!');
+    alert('Please enter folder name!');
     return;
   }
 
@@ -639,17 +639,17 @@ async function saveCategory() {
       loadData();
     }
   } catch (err) {
-    alert('Xatolik!');
+    alert('Error creating folder!');
   }
 }
 
 async function deleteCategory(id) {
-  if (!confirm("Ushbu papka va undagi barcha fayllarni o'chirishni tasdiqlaysizmi?")) return;
+  if (!confirm("Are you sure you want to delete this folder and all items inside it?")) return;
   try {
     const res = await fetch(`/api/categories/${id}`, { method: 'DELETE' });
     if (res.ok) loadData();
   } catch (err) {
-    alert('Xatolik!');
+    alert('Error deleting folder!');
   }
 }
 
@@ -659,7 +659,7 @@ function renderSubscribers() {
   const subs = dbData.subscribers || [];
 
   if (subs.length === 0) {
-    tbody.innerHTML = `<tr><td colspan="4" style="text-align:center; color:#94a3b8;">Hali a'zolar yo'q</td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="4" style="text-align:center; color:#94a3b8;">No registered subscribers yet</td></tr>`;
     return;
   }
 
@@ -681,7 +681,7 @@ function renderFeedback() {
   const list = dbData.feedback_messages || [];
 
   if (list.length === 0) {
-    container.innerHTML = `<div class="card"><p style="text-align:center; color:#94a3b8;">Hali hech qanday fikr bildirilmagan.</p></div>`;
+    container.innerHTML = `<div class="card"><p style="text-align:center; color:#94a3b8;">No feedback messages received yet.</p></div>`;
     return;
   }
 
@@ -691,7 +691,7 @@ function renderFeedback() {
     item.style.marginBottom = '1rem';
     item.innerHTML = `
       <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
-        <strong><i class="fa-solid fa-user"></i> ${fb.userName || 'Foydalanuvchi'} ${fb.username ? '(@' + fb.username + ')' : ''}</strong>
+        <strong><i class="fa-solid fa-user"></i> ${fb.userName || 'Member'} ${fb.username ? '(@' + fb.username + ')' : ''}</strong>
         <small style="color:#94a3b8;">${new Date(fb.date).toLocaleString()}</small>
       </div>
       <p style="background:rgba(0,0,0,0.3); padding:10px; border-radius:6px;">"${fb.message}"</p>
@@ -705,11 +705,11 @@ async function sendBroadcast() {
   const resultBox = document.getElementById('broadcastResult');
 
   if (!msgText) {
-    alert('Xabar matnini kiriting!');
+    alert('Please enter announcement message text!');
     return;
   }
 
-  if (!confirm('Barcha obunachilarga yuborilsinmi?')) return;
+  if (!confirm('Send this announcement to all subscribers now?')) return;
 
   try {
     const res = await fetch('/api/broadcast', {
@@ -721,13 +721,13 @@ async function sendBroadcast() {
     resultBox.classList.remove('hidden');
 
     if (res.ok && data.success) {
-      resultBox.innerHTML = `✅ Yuborildi: ${data.sent} ta obunachiga (Xatolik: ${data.failed})`;
+      resultBox.innerHTML = `✅ Successfully sent to ${data.sent} subscribers (Failed: ${data.failed})`;
       document.getElementById('broadcastMessage').value = '';
     } else {
-      resultBox.innerHTML = `❌ Xatolik: ${data.error}`;
+      resultBox.innerHTML = `❌ Error sending broadcast: ${data.error}`;
     }
   } catch (err) {
-    alert('Xatolik!');
+    alert('Error sending broadcast!');
   }
 }
 
@@ -740,11 +740,11 @@ async function saveSettings() {
       body: JSON.stringify({ bot_token: token })
     });
     if (res.ok) {
-      alert('Sozlamalar saqlandi!');
+      alert('Settings saved successfully!');
       loadData();
     }
   } catch (err) {
-    alert('Xatolik!');
+    alert('Error saving settings!');
   }
 }
 

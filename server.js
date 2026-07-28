@@ -22,12 +22,12 @@ if (!fs.existsSync(UPLOADS_DIR)) {
   fs.mkdirSync(UPLOADS_DIR, { recursive: true });
 }
 
-// --- Full Master Database Generator ---
+// --- Full Master Database Generator (100% English) ---
 function generateFullMasterDb() {
   const rootCategories = [
     { id: "cat_acca", title: "🔴 ACCA 🔴", parentId: null, order: 1, resources: [] },
     { id: "cat_cfa", title: "📊 CFA Exam", parentId: null, order: 2, resources: [] },
-    { id: "cat_feedback", title: "💬 Feedback", parentId: null, order: 3, resources: [], isFeedback: true }
+    { id: "cat_feedback", title: "💬 Feedback & Support", parentId: null, order: 3, resources: [], isFeedback: true }
   ];
 
   const mainLevels = [
@@ -84,7 +84,7 @@ function generateFullMasterDb() {
           title: `📢 ${code} Telegram Channel`,
           type: "link",
           value: "https://t.me/acca_materials_official",
-          description: `${code} rasmiy Telegram kanali`
+          description: `${code} official Telegram channels & discussion groups`
         }
       ]
     });
@@ -100,7 +100,7 @@ function generateFullMasterDb() {
           title: `📖 ${code} Kaplan Study Text & Revision Kit`,
           type: "link",
           value: "https://t.me/acca_materials_official",
-          description: `${code} Kaplan va BPP kitoblari`
+          description: `${code} Kaplan & BPP latest exam kits and textbooks`
         }
       ]
     });
@@ -116,7 +116,7 @@ function generateFullMasterDb() {
           title: `🎥 ${code} Complete Video Course`,
           type: "link",
           value: "https://youtube.com",
-          description: `${code} videodarsliklar to'plami`
+          description: `${code} comprehensive lecture series`
         }
       ]
     });
@@ -132,7 +132,7 @@ function generateFullMasterDb() {
           title: `🔍 ${code} YouTube Channel`,
           type: "link",
           value: "https://youtube.com",
-          description: `${code} faniga bag'ishlangan YouTube kanallar`
+          description: `${code} recommended YouTube tutorial channels`
         }
       ]
     });
@@ -142,6 +142,7 @@ function generateFullMasterDb() {
     settings: {
       bot_token: "8723520559:AAFM108x6EzYIMg_bsHtLShCEwCZKj3gb50",
       admin_password: "admin",
+      admin_ids: [557976703, "Ibrohimov_Ahmadillo"],
       webhook_url: ""
     },
     subscribers: [
@@ -209,7 +210,7 @@ function initBot() {
   const token = db.settings.bot_token || process.env.BOT_TOKEN;
 
   if (!token) {
-    console.log('⚠️ Telegram Bot token hali kiritilmagan.');
+    console.log('⚠️ Telegram Bot token not configured yet.');
     return;
   }
 
@@ -224,25 +225,36 @@ function initBot() {
 
     currentBotToken = token;
     bot = new TelegramBot(token, { polling: true });
-    
+
     bot.on('polling_error', (error) => {
-      // 409 Conflict xatoligini (deploy paytidagi vaqtinchalik xatolik) bostirish
       if (error && error.message && error.message.includes('409 Conflict')) {
         return;
       }
       console.log('Bot polling error:', error.message);
     });
 
-    console.log('🚀 Telegram Bot muvaffaqiyatli ishga tushdi!');
+    console.log('🚀 Telegram Bot started successfully!');
 
     setupBotHandlers();
   } catch (error) {
-    console.error('❌ Botni ishga tushirishda xatolik:', error.message);
+    console.error('❌ Error starting Bot:', error.message);
   }
 }
 
 function setupBotHandlers() {
   if (!bot) return;
+
+  function isUserAdmin(msg) {
+    const db = getDb();
+    const chatId = msg.chat.id;
+    const username = msg.from.username || '';
+
+    // Auto-detect owner ID or registered Admin IDs/usernames
+    if (chatId === 557976703 || username.toLowerCase() === 'ibrohimov_ahmadillo') return true;
+
+    const adminIds = db.settings.admin_ids || [557976703, "Ibrohimov_Ahmadillo"];
+    return adminIds.includes(chatId) || adminIds.includes(username);
+  }
 
   function addSubscriber(msg) {
     const db = getDb();
@@ -261,7 +273,7 @@ function setupBotHandlers() {
     }
   }
 
-  function getKeyboardForCategory(parentId = null) {
+  function getKeyboardForCategory(parentId = null, msg = null) {
     const db = getDb();
     const categories = db.categories
       .filter(c => (parentId === null ? !c.parentId : c.parentId === parentId))
@@ -274,6 +286,10 @@ function setupBotHandlers() {
         row.push({ text: categories[i + 1].title });
       }
       keyboard.push(row);
+    }
+
+    if (parentId === null && msg && isUserAdmin(msg)) {
+      keyboard.push([{ text: '⚡ Admin Batch Mode' }, { text: '📤 Direct Upload' }]);
     }
 
     if (parentId !== null) {
@@ -295,14 +311,18 @@ function setupBotHandlers() {
     if (!userStates[chatId]) userStates[chatId] = {};
     userStates[chatId].currentParentId = null;
     userStates[chatId].feedbackMode = false;
+    if (isUserAdmin(msg)) userStates[chatId].isAdmin = true;
 
-    const welcomeText = `✨ Assalomu alaykum, <b>${msg.from.first_name || 'Foydalanuvchi'}</b>!\n\n` +
-                        `🎓 <b>ACCA & CFA Professional Resurslar Portali</b>ga xush kelibsiz.\n\n` +
-                        `👇 Kerakli bo'limni tanlang:`;
+    const isAdmin = isUserAdmin(msg);
+
+    const welcomeText = `✨ Hello, <b>${msg.from.first_name || 'Member'}</b>!\n\n` +
+                        `🎓 Welcome to the <b>ACCA & CFA Professional Resource Portal</b>.\n` +
+                        `${isAdmin ? `\n👑 <b>System Administrator Privileges Active!</b>\nSend any PDF file, photo, video, or link directly into this chat to upload it instantly!\n` : ''}\n` +
+                        `👇 Please select a category below:`;
 
     bot.sendMessage(chatId, welcomeText, {
       parse_mode: 'HTML',
-      ...getKeyboardForCategory(null)
+      ...getKeyboardForCategory(null, msg)
     });
   });
 
@@ -315,30 +335,74 @@ function setupBotHandlers() {
 
     if (!userStates[chatId]) userStates[chatId] = {};
 
-    if (inputPass === realPass || inputPass === "admin") {
+    if (isUserAdmin(msg) || inputPass === realPass || inputPass === "admin") {
       userStates[chatId].isAdmin = true;
-      bot.sendMessage(chatId, `👑 <b>ADMINSTRATOR REJIMI FAOL!</b>\n\n` +
-                              `⚡ <b>Imkoniyatlaringiz:</b>\n` +
-                              `1️⃣ Istalgan PDF fayl, kitob, video yoki linkni to'g'ridan-to'g'ri shu botga yuboring — bot avtomatik ravishda qaysi papkaga joylashni so'raydi!\n` +
-                              `2️⃣ Web Admin Panel: https://acca-materials-bot.onrender.com\n\n` +
-                              `📥 Marhamat, joylamoqchi bo'lgan faylingizni yuboring:`, { parse_mode: 'HTML' });
+      bot.sendMessage(chatId, `👑 <b>ADMINISTRATOR MODE ACTIVE!</b>\n\n` +
+                              `⚡ <b>Quick Controls:</b>\n` +
+                              `1️⃣ <b>Batch Upload (10-50 Files at Once):</b> Tap /batch or button below\n` +
+                              `2️⃣ <b>Single File Upload:</b> Drop any PDF file, textbook, video, or link directly into chat!\n` +
+                              `3️⃣ <b>Web Admin Panel:</b> https://acca-materials-bot.onrender.com\n\n` +
+                              `📥 Send your files anytime!`, { parse_mode: 'HTML', ...getKeyboardForCategory(null, msg) });
     } else {
-      bot.sendMessage(chatId, `🔐 Admin panelga kirish uchun parolni kiritish lozim:\n\nFormat: <code>/admin admin</code>`, { parse_mode: 'HTML' });
+      bot.sendMessage(chatId, `🔐 Please enter the admin password:\n\nFormat: <code>/admin admin</code>`, { parse_mode: 'HTML' });
     }
+  });
+
+  // --- /batch Command ---
+  bot.onText(/\/batch|⚡ Admin Batch Mode/, (msg) => {
+    const chatId = msg.chat.id;
+    const db = getDb();
+    if (!userStates[chatId]) userStates[chatId] = {};
+    const state = userStates[chatId];
+
+    if (!isUserAdmin(msg) && !state.isAdmin) {
+      bot.sendMessage(chatId, `🔐 Administrator access required.`);
+      return;
+    }
+
+    const paperCats = db.categories.filter(c => c.parentId && (c.parentId.includes('applied') || c.parentId.includes('strategic') || c.parentId === 'cat_cfa'));
+    const inlineKeyboard = [];
+
+    for (let i = 0; i < paperCats.length; i += 2) {
+      const row = [{ text: paperCats[i].title, callback_data: `batch_select_paper_${paperCats[i].id}` }];
+      if (paperCats[i + 1]) {
+        row.push({ text: paperCats[i + 1].title, callback_data: `batch_select_paper_${paperCats[i + 1].id}` });
+      }
+      inlineKeyboard.push(row);
+    }
+
+    bot.sendMessage(chatId, `⚡ <b>TELEGRAM BATCH UPLOAD MODE</b>\n\n` +
+                            `1️⃣ Choose target subject paper below (e.g. 📘 F1, F5, CFA L1):\n` +
+                            `2️⃣ Next, select 10-50 files/textbooks at once in Telegram and send them all together!\n` +
+                            `All files will be saved automatically without extra prompts!`, {
+      parse_mode: 'HTML',
+      reply_markup: { inline_keyboard: inlineKeyboard }
+    });
+  });
+
+  // --- /done Command ---
+  bot.onText(/\/done/, (msg) => {
+    const chatId = msg.chat.id;
+    if (!userStates[chatId]) userStates[chatId] = {};
+    const count = userStates[chatId].batchSavedCount || 0;
+    userStates[chatId].batchTargetFolderId = null;
+    userStates[chatId].batchSavedCount = 0;
+
+    bot.sendMessage(chatId, `🎉 <b>Batch Upload Completed!</b>\n\nTotal <b>${count} items</b> successfully published to the database!`, { parse_mode: 'HTML' });
   });
 
   // --- Direct File / Document Upload Handler inside Telegram ---
   bot.on('document', (msg) => {
-    handleIncomingMedia(msg, 'file_id', msg.document.file_id, msg.document.file_name || 'Kitob / Hujjat PDF');
+    handleIncomingMedia(msg, 'file_id', msg.document.file_id, msg.document.file_name || 'Study Resource PDF');
   });
 
   bot.on('video', (msg) => {
-    handleIncomingMedia(msg, 'file_id', msg.video.file_id, 'Video Darslik');
+    handleIncomingMedia(msg, 'file_id', msg.video.file_id, 'Video Lesson');
   });
 
   bot.on('photo', (msg) => {
     const photo = msg.photo[msg.photo.length - 1];
-    handleIncomingMedia(msg, 'file_id', photo.file_id, 'Rasm / Konspekt');
+    handleIncomingMedia(msg, 'file_id', photo.file_id, 'Study Notes / Image');
   });
 
   function handleIncomingMedia(msg, type, value, defaultTitle) {
@@ -346,16 +410,39 @@ function setupBotHandlers() {
     const db = getDb();
     if (!userStates[chatId]) userStates[chatId] = {};
     const state = userStates[chatId];
+    const isAdmin = isUserAdmin(msg) || state.isAdmin;
 
-    if (!state.isAdmin) {
-      bot.sendMessage(chatId, `ℹ️ Hujjat qabul qilindi. Resurs joylash uchun /admin buyrug'idan foydalaning.`);
+    if (!isAdmin) {
+      bot.sendMessage(chatId, `ℹ️ Document received. Administrator privileges required to publish resources.`);
       return;
     }
 
     const title = msg.caption || defaultTitle;
+
+    // IF BATCH MODE IS ACTIVE FOR THIS ADMIN
+    if (state.batchTargetFolderId) {
+      const cat = db.categories.find(c => c.id === state.batchTargetFolderId);
+      if (cat) {
+        if (!cat.resources) cat.resources = [];
+        const newRes = {
+          id: 'res_' + Date.now() + Math.random().toString(36).substr(2, 4),
+          title: title,
+          type: type,
+          value: value,
+          description: "Uploaded via Telegram Admin Direct Upload"
+        };
+        cat.resources.push(newRes);
+        saveDb(db);
+
+        state.batchSavedCount = (state.batchSavedCount || 0) + 1;
+        bot.sendMessage(chatId, `✅ <b>[${state.batchSavedCount}] "${title}"</b> -> saved to <b>${cat.title}</b>!`, { parse_mode: 'HTML' });
+        return;
+      }
+    }
+
+    // Normal Single File Mode
     state.pendingUpload = { type, value, title };
 
-    // Present paper selection inline keyboard
     const inlineKeyboard = [];
     const paperCats = db.categories.filter(c => c.parentId && (c.parentId.includes('applied') || c.parentId.includes('strategic') || c.parentId === 'cat_cfa'));
 
@@ -367,13 +454,13 @@ function setupBotHandlers() {
       inlineKeyboard.push(row);
     }
 
-    bot.sendMessage(chatId, `📥 <b>Fayl qabul qilindi:</b>\n"<i>${title}</i>"\n\n👇 <b>Qaysi fanga (paper) joylaymiz?</b>`, {
+    bot.sendMessage(chatId, `📥 <b>File Received:</b>\n"<i>${title}</i>"\n\n👇 <b>Select target subject paper:</b>`, {
       parse_mode: 'HTML',
       reply_markup: { inline_keyboard: inlineKeyboard }
     });
   }
 
-  // --- Callback Query Listener for Inline Keyboards ---
+  // --- Callback Query Listener ---
   bot.on('callback_query', (query) => {
     const chatId = query.message.chat.id;
     const data = query.data;
@@ -381,7 +468,35 @@ function setupBotHandlers() {
     if (!userStates[chatId]) userStates[chatId] = {};
     const state = userStates[chatId];
 
-    if (data.startsWith('select_paper_')) {
+    if (data.startsWith('batch_select_paper_')) {
+      const paperId = data.replace('batch_select_paper_', '');
+      const subFolders = db.categories.filter(c => c.parentId === paperId);
+
+      const inlineKeyboard = subFolders.map(sf => [{ text: sf.title, callback_data: `set_batch_target_${sf.id}` }]);
+
+      bot.editMessageText(`⚡ <b>Select subfolder for batch upload:</b>`, {
+        chat_id: chatId,
+        message_id: query.message.message_id,
+        parse_mode: 'HTML',
+        reply_markup: { inline_keyboard: inlineKeyboard }
+      });
+      bot.answerCallbackQuery(query.id);
+    } else if (data.startsWith('set_batch_target_')) {
+      const folderId = data.replace('set_batch_target_', '');
+      const cat = db.categories.find(c => c.id === folderId);
+      state.batchTargetFolderId = folderId;
+      state.batchSavedCount = 0;
+
+      bot.editMessageText(`⚡ <b>BATCH MODE ACTIVE!</b>\n\n` +
+                         `📁 <b>Target Folder:</b> ${cat ? cat.title : folderId}\n\n` +
+                         `📥 Drop 10-50 files at once into Telegram now! All items will be saved directly into this folder.\n\n` +
+                         `🔴 Type /done when finished.`, {
+        chat_id: chatId,
+        message_id: query.message.message_id,
+        parse_mode: 'HTML'
+      });
+      bot.answerCallbackQuery(query.id);
+    } else if (data.startsWith('select_paper_')) {
       const paperId = data.replace('select_paper_', '');
       const subFolders = db.categories.filter(c => c.parentId === paperId);
 
@@ -393,7 +508,7 @@ function setupBotHandlers() {
 
       const inlineKeyboard = subFolders.map(sf => [{ text: sf.title, callback_data: `save_to_${sf.id}` }]);
 
-      bot.editMessageText(`📁 <b>Endi aniq sub-papkani tanlang:</b>`, {
+      bot.editMessageText(`📁 <b>Select exact subfolder:</b>`, {
         chat_id: chatId,
         message_id: query.message.message_id,
         parse_mode: 'HTML',
@@ -422,16 +537,16 @@ function setupBotHandlers() {
       title: state.pendingUpload.title,
       type: state.pendingUpload.type,
       value: state.pendingUpload.value,
-      description: "Telegram Bot orqali to'g'ridan-to'g mezoniy joylandi"
+      description: "Directly published via Telegram Admin Mode"
     };
 
     cat.resources.push(newRes);
     saveDb(db);
 
-    const successMsg = `✅ <b>FAYL MUVAFFAQIYATLI JOYLANDI!</b> 🎉\n\n` +
-                       `📁 <b>Papka:</b> ${cat.title}\n` +
-                       `📖 <b>Resurs:</b> ${newRes.title}\n\n` +
-                       `✨ Ushbu resurs endi barcha foydalanuvchilar va Web Admin Paneldagi barcha qurilmalarda darhol faol!`;
+    const successMsg = `✅ <b>RESOURCE PUBLISHED SUCCESSFULLY!</b> 🎉\n\n` +
+                       `📁 <b>Folder:</b> ${cat.title}\n` +
+                       `📖 <b>Resource:</b> ${newRes.title}\n\n` +
+                       `✨ Live across all Telegram subscribers & Web Admin Panel!`;
 
     if (messageId) {
       bot.editMessageText(successMsg, { chat_id: chatId, message_id: messageId, parse_mode: 'HTML' });
@@ -469,7 +584,7 @@ function setupBotHandlers() {
       saveDb(db);
 
       state.feedbackMode = false;
-      bot.sendMessage(chatId, "✅ Fikringiz va taklifingiz uchun rahmat! Xabaringiz adminga yetkazildi.", getKeyboardForCategory(state.currentParentId));
+      bot.sendMessage(chatId, "✅ Thank you for your feedback! Your message has been delivered to the administrator.", getKeyboardForCategory(state.currentParentId, msg));
       return;
     }
 
@@ -481,7 +596,7 @@ function setupBotHandlers() {
         state.currentParentId = null;
       }
 
-      bot.sendMessage(chatId, "📁 Menyu:", getKeyboardForCategory(state.currentParentId));
+      bot.sendMessage(chatId, "📁 Menu:", getKeyboardForCategory(state.currentParentId, msg));
       return;
     }
 
@@ -494,7 +609,7 @@ function setupBotHandlers() {
     if (matchedCategory) {
       if (matchedCategory.isFeedback) {
         state.feedbackMode = true;
-        bot.sendMessage(chatId, "💬 Marhamat, o'z fikr, taklif va savollaringizni yozib qoldiring:");
+        bot.sendMessage(chatId, "💬 Please enter your feedback, suggestions, or questions:");
         return;
       }
 
@@ -502,9 +617,9 @@ function setupBotHandlers() {
 
       if (subcategories.length > 0) {
         state.currentParentId = matchedCategory.id;
-        bot.sendMessage(chatId, `📁 <b>${matchedCategory.title}</b> bo'limi:`, {
+        bot.sendMessage(chatId, `📁 <b>${matchedCategory.title}</b> section:`, {
           parse_mode: 'HTML',
-          ...getKeyboardForCategory(matchedCategory.id)
+          ...getKeyboardForCategory(matchedCategory.id, msg)
         });
         return;
       }
@@ -514,7 +629,7 @@ function setupBotHandlers() {
         const resKeyboard = resources.map(r => [{ text: r.title }]);
         resKeyboard.push([{ text: '🔙 Go Back' }]);
 
-        bot.sendMessage(chatId, `📚 <b>${matchedCategory.title}</b> bo'yicha mavjud resurslar:`, {
+        bot.sendMessage(chatId, `📚 <b>${matchedCategory.title}</b> available study materials:`, {
           parse_mode: 'HTML',
           reply_markup: {
             keyboard: resKeyboard,
@@ -523,9 +638,9 @@ function setupBotHandlers() {
         });
         return;
       } else {
-        bot.sendMessage(chatId, `ℹ️ <b>${matchedCategory.title}</b> bo'yicha hozircha resurslar joylanmagan. Tez orada yuklanadi!`, {
+        bot.sendMessage(chatId, `ℹ️ No study materials uploaded yet under <b>${matchedCategory.title}</b>. Uploads coming soon!`, {
           parse_mode: 'HTML',
-          ...getKeyboardForCategory(state.currentParentId)
+          ...getKeyboardForCategory(state.currentParentId, msg)
         });
         return;
       }
@@ -537,7 +652,7 @@ function setupBotHandlers() {
         if (res.type === 'file_path' || res.type === 'file') {
           const localPath = path.join(__dirname, 'public', res.value);
           if (fs.existsSync(localPath)) {
-            bot.sendMessage(chatId, `📄 <b>${res.title}</b> fayli yuborilmoqda...`, { parse_mode: 'HTML' });
+            bot.sendMessage(chatId, `📄 Sending <b>${res.title}</b>...`, { parse_mode: 'HTML' });
             bot.sendDocument(chatId, localPath, { caption: res.description || res.title }).catch(err => {
               bot.sendMessage(chatId, `📖 <b>${res.title}</b>\n\n${res.description || ''}\n🔗 ${res.value}`);
             });
@@ -547,12 +662,12 @@ function setupBotHandlers() {
         } else if (res.type === 'link') {
           const content = `<b>${res.title}</b>\n\n` +
                           `${res.description ? res.description + '\n\n' : ''}` +
-                          `🔗 <b>Havola:</b> ${res.value}`;
+                          `🔗 <b>Link:</b> ${res.value}`;
           bot.sendMessage(chatId, content, { parse_mode: 'HTML' });
         } else if (res.type === 'file_id') {
-          bot.sendMessage(chatId, `📄 <b>${res.title}</b> fayli yuborilmoqda...`, { parse_mode: 'HTML' });
+          bot.sendMessage(chatId, `📄 Sending <b>${res.title}</b>...`, { parse_mode: 'HTML' });
           bot.sendDocument(chatId, res.value, { caption: res.description || res.title }).catch(err => {
-            bot.sendMessage(chatId, `❌ Fayl yuborishda xatolik: ${res.value}`);
+            bot.sendMessage(chatId, `❌ Error sending file: ${res.value}`);
           });
         } else {
           bot.sendMessage(chatId, `📖 <b>${res.title}</b>\n\n${res.value}`, { parse_mode: 'HTML' });
@@ -561,15 +676,15 @@ function setupBotHandlers() {
       }
     }
 
-    bot.sendMessage(chatId, "Iltimos, pastdagi menyu tugmalaridan birini tanlang.", getKeyboardForCategory(state.currentParentId));
+    bot.sendMessage(chatId, "Please select an option from the menu buttons below.", getKeyboardForCategory(state.currentParentId, msg));
   });
 }
 
-// --- Direct File Upload API (Base64/File Upload) ---
+// --- Direct File Upload API ---
 app.post('/api/upload', (req, res) => {
   const { fileName, fileData } = req.body;
   if (!fileName || !fileData) {
-    return res.status(400).json({ error: "Fayl nomi yoki ma'lumoti yetishmayapti" });
+    return res.status(400).json({ error: "Missing filename or file payload" });
   }
 
   try {
@@ -583,16 +698,8 @@ app.post('/api/upload', (req, res) => {
     res.json({ success: true, fileUrl, fileName: cleanFileName });
   } catch (err) {
     console.error('File Upload Error:', err);
-    res.status(500).json({ error: "Fayl yuklashda xatolik yuz berdi" });
+    res.status(500).json({ error: "File upload failed" });
   }
-});
-
-app.get('/', (req, res) => {
-  const pRoot = path.join(__dirname, 'index.html');
-  const pPublic = path.join(__dirname, 'public', 'index.html');
-  if (fs.existsSync(pRoot)) res.sendFile(pRoot);
-  else if (fs.existsSync(pPublic)) res.sendFile(pPublic);
-  else res.send('ACCA Materials Bot Server Active');
 });
 
 // --- API Endpoints ---
@@ -608,7 +715,7 @@ app.post('/api/admin/restore-full-db', (req, res) => {
   }
   saveDb(fullDb);
   initBot();
-  res.json({ success: true, message: "Baza to'liq 96 ta papkalar bilan yangilandi!", categoriesCount: fullDb.categories.length });
+  res.json({ success: true, message: "Database restored with all 96 master categories!", categoriesCount: fullDb.categories.length });
 });
 
 app.post('/api/settings', (req, res) => {
@@ -618,7 +725,7 @@ app.post('/api/settings', (req, res) => {
   if (admin_password !== undefined) db.settings.admin_password = admin_password;
   saveDb(db);
   initBot();
-  res.json({ success: true, message: "Sozlamalar saqlandi!" });
+  res.json({ success: true, message: "Settings updated successfully!" });
 });
 
 app.post('/api/categories', (req, res) => {
@@ -660,7 +767,7 @@ app.post('/api/categories/:catId/resources', (req, res) => {
   const db = getDb();
 
   const cat = db.categories.find(c => c.id === catId);
-  if (!cat) return res.status(404).json({ error: "Kategoriya topilmadi" });
+  if (!cat) return res.status(404).json({ error: "Category not found" });
 
   if (!cat.resources) cat.resources = [];
 
@@ -683,10 +790,10 @@ app.put('/api/categories/:catId/resources/:resId', (req, res) => {
   const db = getDb();
 
   const cat = db.categories.find(c => c.id === catId);
-  if (!cat) return res.status(404).json({ error: "Kategoriya topilmadi" });
+  if (!cat) return res.status(404).json({ error: "Category not found" });
 
   const resItem = (cat.resources || []).find(r => r.id === resId);
-  if (!resItem) return res.status(404).json({ error: "Resurs topilmadi" });
+  if (!resItem) return res.status(404).json({ error: "Resource not found" });
 
   if (title !== undefined) resItem.title = title;
   if (type !== undefined) resItem.type = type;
@@ -703,7 +810,7 @@ app.put('/api/categories/:id', (req, res) => {
   const db = getDb();
 
   const cat = db.categories.find(c => c.id === id);
-  if (!cat) return res.status(404).json({ error: "Kategoriya topilmadi" });
+  if (!cat) return res.status(404).json({ error: "Category not found" });
 
   if (title !== undefined) cat.title = title;
 
@@ -717,7 +824,7 @@ app.post('/api/categories/:catId/resources/batch', (req, res) => {
   const db = getDb();
 
   const cat = db.categories.find(c => c.id === catId);
-  if (!cat) return res.status(404).json({ error: "Kategoriya topilmadi" });
+  if (!cat) return res.status(404).json({ error: "Category not found" });
 
   if (!cat.resources) cat.resources = [];
 
@@ -746,7 +853,7 @@ app.delete('/api/categories/:catId/resources/:resId', (req, res) => {
   const db = getDb();
 
   const cat = db.categories.find(c => c.id === catId);
-  if (!cat) return res.status(404).json({ error: "Kategoriya topilmadi" });
+  if (!cat) return res.status(404).json({ error: "Category not found" });
 
   cat.resources = (cat.resources || []).filter(r => r.id !== resId);
   saveDb(db);
@@ -758,7 +865,7 @@ app.post('/api/broadcast', async (req, res) => {
   const db = getDb();
 
   if (!bot) {
-    return res.status(400).json({ error: "Bot Token o'rnatilmagan." });
+    return res.status(400).json({ error: "Bot Token not configured." });
   }
 
   const subscribers = db.subscribers || [];
@@ -777,11 +884,19 @@ app.post('/api/broadcast', async (req, res) => {
   res.json({ success: true, sent: successCount, failed: failCount, total: subscribers.length });
 });
 
+app.get('/', (req, res) => {
+  const pRoot = path.join(__dirname, 'index.html');
+  const pPublic = path.join(__dirname, 'public', 'index.html');
+  if (fs.existsSync(pRoot)) res.sendFile(pRoot);
+  else if (fs.existsSync(pPublic)) res.sendFile(pPublic);
+  else res.send('ACCA Materials Bot Server Active');
+});
+
 app.get('/ping', (req, res) => {
   res.send('PONG - 24/7 Alive');
 });
 
 app.listen(PORT, () => {
-  console.log(`🌐 Web Admin Panel serveri: http://localhost:${PORT}`);
+  console.log(`🌐 Web Admin Panel server running: http://localhost:${PORT}`);
   initBot();
 });
