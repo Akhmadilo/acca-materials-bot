@@ -249,7 +249,6 @@ function setupBotHandlers() {
     const chatId = msg.chat.id;
     const username = msg.from.username || '';
 
-    // Auto-detect owner ID or registered Admin IDs/usernames
     if (chatId === 557976703 || username.toLowerCase() === 'ibrohimov_ahmadillo') return true;
 
     const adminIds = db.settings.admin_ids || [557976703, "Ibrohimov_Ahmadillo"];
@@ -293,7 +292,7 @@ function setupBotHandlers() {
     }
 
     if (parentId !== null) {
-      keyboard.push([{ text: '🔙 Go Back' }]);
+      keyboard.push([{ text: '🏠 Main Menu' }, { text: '🔙 Go Back' }]);
     }
 
     return {
@@ -317,14 +316,68 @@ function setupBotHandlers() {
 
     const welcomeText = `✨ Hello, <b>${msg.from.first_name || 'Member'}</b>!\n\n` +
                         `🎓 Welcome to the <b>ACCA & CFA Professional Resource Portal</b>.\n` +
-                        `${isAdmin ? `\n👑 <b>System Administrator Privileges Active!</b>\nSend any PDF file, photo, video, or link directly into this chat to upload it instantly!\n` : ''}\n` +
-                        `👇 Please select a category below:`;
+                        `${isAdmin ? `\n👑 <b>System Administrator Mode Active!</b>\nSend any PDF textbook, video, link, or drop 10-50 files at once!\n` : ''}\n` +
+                        `🔍 <i>Tip: Type any paper code (e.g. F1, F5, CFA) or textbook name anytime to search instantly!</i>\n\n` +
+                        `👇 Select a category below:`;
 
     bot.sendMessage(chatId, welcomeText, {
       parse_mode: 'HTML',
       ...getKeyboardForCategory(null, msg)
     });
   });
+
+  // --- /search Command ---
+  bot.onText(/\/search(.*)/, (msg, match) => {
+    const chatId = msg.chat.id;
+    const query = match[1] ? match[1].trim().toLowerCase() : "";
+    if (!query) {
+      bot.sendMessage(chatId, "🔍 Please enter search query. Example: <code>/search F1</code> or <code>/search Kaplan</code>", { parse_mode: 'HTML' });
+      return;
+    }
+    performSearch(chatId, query, msg);
+  });
+
+  function performSearch(chatId, query, msg) {
+    const db = getDb();
+    const results = [];
+
+    db.categories.forEach(cat => {
+      if (cat.resources) {
+        cat.resources.forEach(r => {
+          if (r.title.toLowerCase().includes(query) || (r.description && r.description.toLowerCase().includes(query)) || (cat.title && cat.title.toLowerCase().includes(query))) {
+            results.push({ resource: r, folder: cat });
+          }
+        });
+      }
+    });
+
+    if (results.length === 0) {
+      bot.sendMessage(chatId, `🔍 No study resources found matching "<b>${query}</b>".`, { parse_mode: 'HTML' });
+      return;
+    }
+
+    let text = `🔍 <b>Search Results for "${query}" (${results.length} found):</b>\n\n`;
+    results.slice(0, 15).forEach((item, index) => {
+      text += `<b>${index + 1}. ${item.resource.title}</b>\n`;
+      text += `📁 Folder: <i>${item.folder.title}</i>\n`;
+      if (item.resource.value.startsWith('http')) {
+        text += `🔗 Link: ${item.resource.value}\n\n`;
+      } else {
+        text += `📄 File Available\n\n`;
+      }
+    });
+
+    const keyboard = results.slice(0, 10).map(item => [{ text: item.resource.title }]);
+    keyboard.push([{ text: '🏠 Main Menu' }]);
+
+    bot.sendMessage(chatId, text, {
+      parse_mode: 'HTML',
+      reply_markup: {
+        keyboard: keyboard,
+        resize_keyboard: true
+      }
+    });
+  }
 
   // --- /admin Login Command ---
   bot.onText(/\/admin(.*)/, (msg, match) => {
@@ -339,10 +392,10 @@ function setupBotHandlers() {
       userStates[chatId].isAdmin = true;
       bot.sendMessage(chatId, `👑 <b>ADMINISTRATOR MODE ACTIVE!</b>\n\n` +
                               `⚡ <b>Quick Controls:</b>\n` +
-                              `1️⃣ <b>Batch Upload (10-50 Files at Once):</b> Tap /batch or button below\n` +
-                              `2️⃣ <b>Single File Upload:</b> Drop any PDF file, textbook, video, or link directly into chat!\n` +
+                              `1️⃣ <b>Batch Upload (10-50 Files at Once):</b> Tap /batch\n` +
+                              `2️⃣ <b>Single File / Link Upload:</b> Send any link or PDF into chat!\n` +
                               `3️⃣ <b>Web Admin Panel:</b> https://acca-materials-bot.onrender.com\n\n` +
-                              `📥 Send your files anytime!`, { parse_mode: 'HTML', ...getKeyboardForCategory(null, msg) });
+                              `📥 Drop your study materials anytime!`, { parse_mode: 'HTML', ...getKeyboardForCategory(null, msg) });
     } else {
       bot.sendMessage(chatId, `🔐 Please enter the admin password:\n\nFormat: <code>/admin admin</code>`, { parse_mode: 'HTML' });
     }
@@ -419,7 +472,6 @@ function setupBotHandlers() {
 
     const title = msg.caption || defaultTitle;
 
-    // IF BATCH MODE IS ACTIVE FOR THIS ADMIN
     if (state.batchTargetFolderId) {
       const cat = db.categories.find(c => c.id === state.batchTargetFolderId);
       if (cat) {
@@ -440,7 +492,6 @@ function setupBotHandlers() {
       }
     }
 
-    // Normal Single File Mode
     state.pendingUpload = { type, value, title };
 
     const inlineKeyboard = [];
@@ -454,7 +505,7 @@ function setupBotHandlers() {
       inlineKeyboard.push(row);
     }
 
-    bot.sendMessage(chatId, `📥 <b>File Received:</b>\n"<i>${title}</i>"\n\n👇 <b>Select target subject paper:</b>`, {
+    bot.sendMessage(chatId, `📥 <b>Resource Received:</b>\n"<i>${title}</i>"\n\n👇 <b>Select target subject paper:</b>`, {
       parse_mode: 'HTML',
       reply_markup: { inline_keyboard: inlineKeyboard }
     });
@@ -565,12 +616,25 @@ function setupBotHandlers() {
     const text = msg.text.trim();
     addSubscriber(msg);
 
+    if (!userStates[chatId]) {
+      userStates[chatId] = { currentParentId: null, feedbackMode: false };
+    }
+
     const state = userStates[chatId];
     const db = getDb();
 
     // --- Instant URL / Link Interceptor for Admin ---
     if (isUserAdmin(msg) && (text.startsWith('http://') || text.startsWith('https://') || text.startsWith('t.me/') || text.startsWith('www.') || text.startsWith('@'))) {
       handleIncomingMedia(msg, 'link', text, 'Study Link / Resource');
+      return;
+    }
+
+    if (text === '🏠 Main Menu') {
+      state.currentParentId = null;
+      bot.sendMessage(chatId, "🏠 <b>Main Menu:</b>", {
+        parse_mode: 'HTML',
+        ...getKeyboardForCategory(null, msg)
+      });
       return;
     }
 
@@ -629,7 +693,7 @@ function setupBotHandlers() {
       const resources = matchedCategory.resources || [];
       if (resources.length > 0) {
         const resKeyboard = resources.map(r => [{ text: r.title }]);
-        resKeyboard.push([{ text: '🔙 Go Back' }]);
+        resKeyboard.push([{ text: '🏠 Main Menu' }, { text: '🔙 Go Back' }]);
 
         bot.sendMessage(chatId, `📚 <b>${matchedCategory.title}</b> available study materials:`, {
           parse_mode: 'HTML',
@@ -648,6 +712,7 @@ function setupBotHandlers() {
       }
     }
 
+    // Direct Resource Item Click
     for (const cat of db.categories) {
       const res = (cat.resources || []).find(r => r.title.trim().toLowerCase() === text.toLowerCase());
       if (res) {
@@ -678,7 +743,8 @@ function setupBotHandlers() {
       }
     }
 
-    bot.sendMessage(chatId, "Please select an option from the menu buttons below.", getKeyboardForCategory(state.currentParentId, msg));
+    // Fallback: Perform instant query search across entire database!
+    performSearch(chatId, text.toLowerCase(), msg);
   });
 }
 
@@ -718,6 +784,12 @@ app.post('/api/admin/restore-full-db', (req, res) => {
   saveDb(fullDb);
   initBot();
   res.json({ success: true, message: "Database restored with all 96 master categories!", categoriesCount: fullDb.categories.length });
+});
+
+app.get('/api/admin/export-db', (req, res) => {
+  res.setHeader('Content-Type', 'application/json');
+  res.setHeader('Content-Disposition', 'attachment; filename=db.json');
+  res.send(JSON.stringify(getDb(), null, 2));
 });
 
 app.post('/api/settings', (req, res) => {
