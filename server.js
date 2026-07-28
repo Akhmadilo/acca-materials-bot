@@ -8,29 +8,183 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(cors());
-app.use(express.json());
+app.use(express.json({ limit: '10mb' }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 const DB_PATH = path.join(__dirname, 'data', 'db.json');
 
-// --- Helper Database Functions ---
+// --- Full Master Database Generator ---
+function generateFullMasterDb() {
+  const rootCategories = [
+    { id: "cat_acca", title: "🔴 ACCA 🔴", parentId: null, order: 1, resources: [] },
+    { id: "cat_cfa", title: "📊 CFA Exam", parentId: null, order: 2, resources: [] },
+    { id: "cat_feedback", title: "💬 Feedback", parentId: null, order: 3, resources: [], isFeedback: true }
+  ];
+
+  const mainLevels = [
+    { id: "cat_applied_knowledge", title: "📘 Applied Knowledge", parentId: "cat_acca", order: 1, resources: [] },
+    { id: "cat_applied_skills", title: "📊 Applied Skills", parentId: "cat_acca", order: 2, resources: [] },
+    { id: "cat_strategic_professional", title: "🏆 Strategic Professional", parentId: "cat_acca", order: 3, resources: [] }
+  ];
+
+  const papers = [
+    { id: "cat_f1", title: "📘 F1 - Business & Technology", parentId: "cat_applied_knowledge", code: "F1", order: 1 },
+    { id: "cat_f2", title: "📗 F2 - Management Accounting", parentId: "cat_applied_knowledge", code: "F2", order: 2 },
+    { id: "cat_f3", title: "📙 F3 - Financial Accounting", parentId: "cat_applied_knowledge", code: "F3", order: 3 },
+    { id: "cat_f4", title: "📕 F4 - Corporate & Business Law", parentId: "cat_applied_knowledge", code: "F4", order: 4 },
+
+    { id: "cat_f5", title: "📘 F5 - Performance Management", parentId: "cat_applied_skills", code: "F5", order: 1 },
+    { id: "cat_f6", title: "📗 F6 - Taxation", parentId: "cat_applied_skills", code: "F6", order: 2 },
+    { id: "cat_f7", title: "📙 F7 - Financial Reporting", parentId: "cat_applied_skills", code: "F7", order: 3 },
+    { id: "cat_f8", title: "📕 F8 - Audit & Assurance", parentId: "cat_applied_skills", code: "F8", order: 4 },
+    { id: "cat_f9", title: "📔 F9 - Financial Management", parentId: "cat_applied_skills", code: "F9", order: 5 },
+
+    { id: "cat_sbl", title: "🏆 SBL - Strategic Business Leader", parentId: "cat_strategic_professional", code: "SBL", order: 1 },
+    { id: "cat_sbr", title: "📊 SBR - Strategic Business Reporting", parentId: "cat_strategic_professional", code: "SBR", order: 2 },
+    { id: "cat_p4", title: "📘 P4 - Advanced Financial Management", parentId: "cat_strategic_professional", code: "P4", order: 3 },
+    { id: "cat_p5", title: "📗 P5 - Advanced Performance Management", parentId: "cat_strategic_professional", code: "P5", order: 4 },
+    { id: "cat_p6", title: "📙 P6 - Advanced Taxation", parentId: "cat_strategic_professional", code: "P6", order: 5 },
+    { id: "cat_p7", title: "📕 P7 - Advanced Audit & Assurance", parentId: "cat_strategic_professional", code: "P7", order: 6 },
+
+    { id: "cat_cfa_l1", title: "📘 CFA Level 1", parentId: "cat_cfa", code: "CFA Level 1", order: 1 },
+    { id: "cat_cfa_l2", title: "📊 CFA Level 2", parentId: "cat_cfa", code: "CFA Level 2", order: 2 },
+    { id: "cat_cfa_l3", title: "🏆 CFA Level 3", parentId: "cat_cfa", code: "CFA Level 3", order: 3 }
+  ];
+
+  const categories = [...rootCategories, ...mainLevels];
+
+  papers.forEach((paper) => {
+    categories.push({
+      id: paper.id,
+      title: paper.title,
+      parentId: paper.parentId,
+      order: paper.order,
+      resources: []
+    });
+
+    const code = paper.code;
+
+    categories.push({
+      id: `${paper.id}_channels`,
+      title: `📊 Telegram Channels: ${code}`,
+      parentId: paper.id,
+      order: 1,
+      resources: [
+        {
+          id: `res_${paper.id}_ch1`,
+          title: `📢 ${code} Telegram Channel`,
+          type: "link",
+          value: "https://t.me/acca_materials_official",
+          description: `${code} rasmiy Telegram kanali va guruhlari`
+        }
+      ]
+    });
+
+    categories.push({
+      id: `${paper.id}_books`,
+      title: `📗 ${code} Study Books`,
+      parentId: paper.id,
+      order: 2,
+      resources: [
+        {
+          id: `res_${paper.id}_b1`,
+          title: `📖 ${code} Kaplan Study Text & Revision Kit`,
+          type: "link",
+          value: "https://t.me/acca_materials_official",
+          description: `${code} Kaplan va BPP kitoblari`
+        }
+      ]
+    });
+
+    categories.push({
+      id: `${paper.id}_videos`,
+      title: `🎥 Video Lessons for ${code}`,
+      parentId: paper.id,
+      order: 3,
+      resources: [
+        {
+          id: `res_${paper.id}_v1`,
+          title: `🎥 ${code} Complete Video Course`,
+          type: "link",
+          value: "https://youtube.com",
+          description: `${code} videodarsliklar to'plami`
+        }
+      ]
+    });
+
+    categories.push({
+      id: `${paper.id}_youtube`,
+      title: `🔍 YouTube Channels : ${code}`,
+      parentId: paper.id,
+      order: 4,
+      resources: [
+        {
+          id: `res_${paper.id}_yt1`,
+          title: `🔍 ${code} YouTube Channel`,
+          type: "link",
+          value: "https://youtube.com",
+          description: `${code} faniga bag'ishlangan YouTube kanallar`
+        }
+      ]
+    });
+  });
+
+  return {
+    settings: {
+      bot_token: "8723520559:AAFM108x6EzYIMg_bsHtLShCEwCZKj3gb50",
+      admin_password: "admin",
+      webhook_url: ""
+    },
+    subscribers: [
+      {
+        id: 557976703,
+        first_name: "Ahmadillo",
+        last_name: "Ibrohimov",
+        username: "Ibrohimov_Ahmadillo",
+        joined_at: "2026-07-27T12:00:09.564Z"
+      }
+    ],
+    categories: categories,
+    feedback_messages: []
+  };
+}
+
 function getDb() {
   try {
+    const dataDir = path.join(__dirname, 'data');
+    if (!fs.existsSync(dataDir)) {
+      fs.mkdirSync(dataDir, { recursive: true });
+    }
+
     if (!fs.existsSync(DB_PATH)) {
-      const initialDb = { settings: { bot_token: "", admin_password: "admin" }, subscribers: [], categories: [], feedback_messages: [] };
+      const initialDb = generateFullMasterDb();
       fs.writeFileSync(DB_PATH, JSON.stringify(initialDb, null, 2));
       return initialDb;
     }
     const data = fs.readFileSync(DB_PATH, 'utf8');
-    return JSON.parse(data);
+    const parsed = JSON.parse(data);
+    // If database has fewer than 90 categories, automatically upgrade it to full master DB
+    if (!parsed.categories || parsed.categories.length < 90) {
+      const fullDb = generateFullMasterDb();
+      if (parsed.settings && parsed.settings.bot_token) {
+        fullDb.settings.bot_token = parsed.settings.bot_token;
+      }
+      fs.writeFileSync(DB_PATH, JSON.stringify(fullDb, null, 2));
+      return fullDb;
+    }
+    return parsed;
   } catch (err) {
     console.error('Error reading DB:', err);
-    return { settings: {}, subscribers: [], categories: [], feedback_messages: [] };
+    return generateFullMasterDb();
   }
 }
 
 function saveDb(db) {
   try {
+    const dataDir = path.join(__dirname, 'data');
+    if (!fs.existsSync(dataDir)) {
+      fs.mkdirSync(dataDir, { recursive: true });
+    }
     fs.writeFileSync(DB_PATH, JSON.stringify(db, null, 2));
   } catch (err) {
     console.error('Error writing DB:', err);
@@ -40,7 +194,7 @@ function saveDb(db) {
 // --- Telegram Bot Engine ---
 let bot = null;
 let currentBotToken = "";
-let userStates = {}; // chatId -> { categoryId, feedbackMode }
+let userStates = {};
 
 function initBot() {
   const db = getDb();
@@ -249,6 +403,18 @@ app.get('/api/data', (req, res) => {
   res.json(getDb());
 });
 
+// Restore / Sync Full DB Endpoint
+app.post('/api/admin/restore-full-db', (req, res) => {
+  const fullDb = generateFullMasterDb();
+  const currentDb = getDb();
+  if (currentDb.settings && currentDb.settings.bot_token) {
+    fullDb.settings.bot_token = currentDb.settings.bot_token;
+  }
+  saveDb(fullDb);
+  initBot();
+  res.json({ success: true, message: "Baza to'liq 96 ta papkalar bilan yangilandi!", categoriesCount: fullDb.categories.length });
+});
+
 app.post('/api/settings', (req, res) => {
   const { bot_token, admin_password } = req.body;
   const db = getDb();
@@ -259,7 +425,6 @@ app.post('/api/settings', (req, res) => {
   res.json({ success: true, message: "Sozlamalar saqlandi!" });
 });
 
-// Category CRUD
 app.post('/api/categories', (req, res) => {
   const { title, parentId, isFeedback } = req.body;
   const db = getDb();
@@ -293,7 +458,6 @@ app.delete('/api/categories/:id', (req, res) => {
   res.json({ success: true });
 });
 
-// Resource Single Add
 app.post('/api/categories/:catId/resources', (req, res) => {
   const { catId } = req.params;
   const { title, type, value, description } = req.body;
@@ -317,10 +481,9 @@ app.post('/api/categories/:catId/resources', (req, res) => {
   res.json({ success: true, resource: newRes });
 });
 
-// Resource BATCH / BULK Add (Ko'plab kitoblarni birvarakay yuklash)
 app.post('/api/categories/:catId/resources/batch', (req, res) => {
   const { catId } = req.params;
-  const { items } = req.body; // Array of { title, type, value, description }
+  const { items } = req.body;
   const db = getDb();
 
   const cat = db.categories.find(c => c.id === catId);
@@ -348,7 +511,6 @@ app.post('/api/categories/:catId/resources/batch', (req, res) => {
   res.json({ success: true, addedCount });
 });
 
-// Resource Delete
 app.delete('/api/categories/:catId/resources/:resId', (req, res) => {
   const { catId, resId } = req.params;
   const db = getDb();
@@ -361,7 +523,6 @@ app.delete('/api/categories/:catId/resources/:resId', (req, res) => {
   res.json({ success: true });
 });
 
-// Broadcast
 app.post('/api/broadcast', async (req, res) => {
   const { message } = req.body;
   const db = getDb();
