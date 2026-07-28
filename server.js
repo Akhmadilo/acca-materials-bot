@@ -224,6 +224,15 @@ function initBot() {
 
     currentBotToken = token;
     bot = new TelegramBot(token, { polling: true });
+    
+    bot.on('polling_error', (error) => {
+      // 409 Conflict xatoligini (deploy paytidagi vaqtinchalik xatolik) bostirish
+      if (error && error.message && error.message.includes('409 Conflict')) {
+        return;
+      }
+      console.log('Bot polling error:', error.message);
+    });
+
     console.log('🚀 Telegram Bot muvaffaqiyatli ishga tushdi!');
 
     setupBotHandlers();
