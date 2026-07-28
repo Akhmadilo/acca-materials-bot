@@ -211,9 +211,14 @@
         </div>
 
         <div class="form-group" id="fileUploadContainer" style="display:none;">
-          <label for="resFileInput">Kompyuterdan Faylni Tanlang (PDF / Doc / Video):</label>
-          <input type="file" id="resFileInput" onchange="handleFileUpload(event)">
-          <small id="uploadStatusText" style="color:var(--success); display:block; margin-top:4px;"></small>
+          <label>Kompyuterdan Faylni Tanlang yoki Tashlang (PDF / Doc / Video):</label>
+          <div id="dropZone" style="border: 2px dashed #3b82f6; border-radius: 12px; padding: 1.5rem; text-align: center; background: rgba(59,130,246,0.05); cursor: pointer;" onclick="document.getElementById('resFileInput').click()">
+            <i class="fa-solid fa-cloud-arrow-up" style="font-size: 2.5rem; color: #60a5fa; margin-bottom: 8px;"></i>
+            <p style="color: #fff; font-weight: 500;">Faylni shu yerga bosing yoki kompyuterdan ushlab tashlang (Drag & Drop)</p>
+            <small style="color: #94a3b8; font-size: 0.8rem;">PDF, DOCX, MP4, ZIP (500 MB gacha)</small>
+            <input type="file" id="resFileInput" style="display:none;" onchange="handleFileUpload(event)">
+          </div>
+          <small id="uploadStatusText" style="color:var(--success); display:block; margin-top:8px; font-weight:600; font-size:0.9rem;"></small>
         </div>
 
         <div class="form-group" id="resValueContainer">

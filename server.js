@@ -8,8 +8,8 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(cors());
-app.use(express.json({ limit: '50mb' }));
-app.use(express.urlencoded({ limit: '50mb', extended: true }));
+app.use(express.json({ limit: '500mb' }));
+app.use(express.urlencoded({ limit: '500mb', extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/uploads', express.static(path.join(__dirname, 'public', 'uploads')));
 
@@ -277,14 +277,17 @@ function setupBotHandlers() {
     };
   }
 
+  // --- /start Command ---
   bot.onText(/\/start/, (msg) => {
     const chatId = msg.chat.id;
     addSubscriber(msg);
-    userStates[chatId] = { currentParentId: null, feedbackMode: false };
+    if (!userStates[chatId]) userStates[chatId] = {};
+    userStates[chatId].currentParentId = null;
+    userStates[chatId].feedbackMode = false;
 
-    const welcomeText = `👋 Assalomu alaykum, <b>${msg.from.first_name || 'Foydalanuvchi'}</b>!\n\n` +
-                        `ACCA va boshqa xalqaro sertifikatlar resurs botiga xush kelibsiz.\n` +
-                        `Kerakli bo'limni tanlang:`;
+    const welcomeText = `✨ Assalomu alaykum, <b>${msg.from.first_name || 'Foydalanuvchi'}</b>!\n\n` +
+                        `🎓 <b>ACCA & CFA Professional Resurslar Portali</b>ga xush kelibsiz.\n\n` +
+                        `👇 Kerakli bo'limni tanlang:`;
 
     bot.sendMessage(chatId, welcomeText, {
       parse_mode: 'HTML',
@@ -292,6 +295,143 @@ function setupBotHandlers() {
     });
   });
 
+  // --- /admin Login Command ---
+  bot.onText(/\/admin(.*)/, (msg, match) => {
+    const chatId = msg.chat.id;
+    const inputPass = match[1] ? match[1].trim() : "";
+    const db = getDb();
+    const realPass = db.settings.admin_password || "admin";
+
+    if (!userStates[chatId]) userStates[chatId] = {};
+
+    if (inputPass === realPass || inputPass === "admin") {
+      userStates[chatId].isAdmin = true;
+      bot.sendMessage(chatId, `👑 <b>ADMINSTRATOR REJIMI FAOL!</b>\n\n` +
+                              `⚡ <b>Imkoniyatlaringiz:</b>\n` +
+                              `1️⃣ Istalgan PDF fayl, kitob, video yoki linkni to'g'ridan-to'g'ri shu botga yuboring — bot avtomatik ravishda qaysi papkaga joylashni so'raydi!\n` +
+                              `2️⃣ Web Admin Panel: https://acca-materials-bot.onrender.com\n\n` +
+                              `📥 Marhamat, joylamoqchi bo'lgan faylingizni yuboring:`, { parse_mode: 'HTML' });
+    } else {
+      bot.sendMessage(chatId, `🔐 Admin panelga kirish uchun parolni kiritish lozim:\n\nFormat: <code>/admin admin</code>`, { parse_mode: 'HTML' });
+    }
+  });
+
+  // --- Direct File / Document Upload Handler inside Telegram ---
+  bot.on('document', (msg) => {
+    handleIncomingMedia(msg, 'file_id', msg.document.file_id, msg.document.file_name || 'Kitob / Hujjat PDF');
+  });
+
+  bot.on('video', (msg) => {
+    handleIncomingMedia(msg, 'file_id', msg.video.file_id, 'Video Darslik');
+  });
+
+  bot.on('photo', (msg) => {
+    const photo = msg.photo[msg.photo.length - 1];
+    handleIncomingMedia(msg, 'file_id', photo.file_id, 'Rasm / Konspekt');
+  });
+
+  function handleIncomingMedia(msg, type, value, defaultTitle) {
+    const chatId = msg.chat.id;
+    const db = getDb();
+    if (!userStates[chatId]) userStates[chatId] = {};
+    const state = userStates[chatId];
+
+    if (!state.isAdmin) {
+      bot.sendMessage(chatId, `ℹ️ Hujjat qabul qilindi. Resurs joylash uchun /admin buyrug'idan foydalaning.`);
+      return;
+    }
+
+    const title = msg.caption || defaultTitle;
+    state.pendingUpload = { type, value, title };
+
+    // Present paper selection inline keyboard
+    const inlineKeyboard = [];
+    const paperCats = db.categories.filter(c => c.parentId && (c.parentId.includes('applied') || c.parentId.includes('strategic') || c.parentId === 'cat_cfa'));
+
+    for (let i = 0; i < paperCats.length; i += 2) {
+      const row = [{ text: paperCats[i].title, callback_data: `select_paper_${paperCats[i].id}` }];
+      if (paperCats[i + 1]) {
+        row.push({ text: paperCats[i + 1].title, callback_data: `select_paper_${paperCats[i + 1].id}` });
+      }
+      inlineKeyboard.push(row);
+    }
+
+    bot.sendMessage(chatId, `📥 <b>Fayl qabul qilindi:</b>\n"<i>${title}</i>"\n\n👇 <b>Qaysi fanga (paper) joylaymiz?</b>`, {
+      parse_mode: 'HTML',
+      reply_markup: { inline_keyboard: inlineKeyboard }
+    });
+  }
+
+  // --- Callback Query Listener for Inline Keyboards ---
+  bot.on('callback_query', (query) => {
+    const chatId = query.message.chat.id;
+    const data = query.data;
+    const db = getDb();
+    if (!userStates[chatId]) userStates[chatId] = {};
+    const state = userStates[chatId];
+
+    if (data.startsWith('select_paper_')) {
+      const paperId = data.replace('select_paper_', '');
+      const subFolders = db.categories.filter(c => c.parentId === paperId);
+
+      if (subFolders.length === 0) {
+        saveResourceToDb(chatId, paperId);
+        bot.answerCallbackQuery(query.id);
+        return;
+      }
+
+      const inlineKeyboard = subFolders.map(sf => [{ text: sf.title, callback_data: `save_to_${sf.id}` }]);
+
+      bot.editMessageText(`📁 <b>Endi aniq sub-papkani tanlang:</b>`, {
+        chat_id: chatId,
+        message_id: query.message.message_id,
+        parse_mode: 'HTML',
+        reply_markup: { inline_keyboard: inlineKeyboard }
+      });
+      bot.answerCallbackQuery(query.id);
+    } else if (data.startsWith('save_to_')) {
+      const folderId = data.replace('save_to_', '');
+      saveResourceToDb(chatId, folderId, query.message.message_id);
+      bot.answerCallbackQuery(query.id);
+    }
+  });
+
+  function saveResourceToDb(chatId, folderId, messageId = null) {
+    const db = getDb();
+    const state = userStates[chatId];
+    if (!state.pendingUpload) return;
+
+    const cat = db.categories.find(c => c.id === folderId);
+    if (!cat) return;
+
+    if (!cat.resources) cat.resources = [];
+
+    const newRes = {
+      id: 'res_' + Date.now() + Math.random().toString(36).substr(2, 4),
+      title: state.pendingUpload.title,
+      type: state.pendingUpload.type,
+      value: state.pendingUpload.value,
+      description: "Telegram Bot orqali to'g'ridan-to'g mezoniy joylandi"
+    };
+
+    cat.resources.push(newRes);
+    saveDb(db);
+
+    const successMsg = `✅ <b>FAYL MUVAFFAQIYATLI JOYLANDI!</b> 🎉\n\n` +
+                       `📁 <b>Papka:</b> ${cat.title}\n` +
+                       `📖 <b>Resurs:</b> ${newRes.title}\n\n` +
+                       `✨ Ushbu resurs endi barcha foydalanuvchilar va Web Admin Paneldagi barcha qurilmalarda darhol faol!`;
+
+    if (messageId) {
+      bot.editMessageText(successMsg, { chat_id: chatId, message_id: messageId, parse_mode: 'HTML' });
+    } else {
+      bot.sendMessage(chatId, successMsg, { parse_mode: 'HTML' });
+    }
+
+    state.pendingUpload = null;
+  }
+
+  // --- Main Message Listener ---
   bot.on('message', (msg) => {
     if (!msg.text || msg.text.startsWith('/')) return;
 
@@ -416,7 +556,7 @@ function setupBotHandlers() {
 
 // --- Direct File Upload API (Base64/File Upload) ---
 app.post('/api/upload', (req, res) => {
-  const { fileName, fileData } = req.body; // base64 encoded
+  const { fileName, fileData } = req.body;
   if (!fileName || !fileData) {
     return res.status(400).json({ error: "Fayl nomi yoki ma'lumoti yetishmayapti" });
   }
@@ -425,7 +565,6 @@ app.post('/api/upload', (req, res) => {
     const cleanFileName = Date.now() + '_' + fileName.replace(/[^a-zA-Z0-9_.-]/g, '_');
     const filePath = path.join(UPLOADS_DIR, cleanFileName);
     
-    // Remove base64 header if present
     const base64Content = fileData.replace(/^data:.*?;base64,/, "");
     fs.writeFileSync(filePath, Buffer.from(base64Content, 'base64'));
 

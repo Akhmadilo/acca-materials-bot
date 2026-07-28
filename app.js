@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initTabs();
   loadData();
+  setupDropZone();
 });
 
 let dbData = { categories: [], subscribers: [], settings: {}, feedback_messages: [] };
@@ -483,9 +484,37 @@ function toggleResValuePlaceholder() {
   }
 }
 
-// Handle Direct File Upload from Computer
-async function handleFileUpload(event) {
-  const file = event.target.files[0];
+function setupDropZone() {
+  const dropZone = document.getElementById('dropZone');
+  if (!dropZone) return;
+
+  ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+    dropZone.addEventListener(eventName, preventDefaults, false);
+  });
+
+  function preventDefaults(e) {
+    e.preventDefault();
+    e.stopPropagation();
+  }
+
+  ['dragenter', 'dragover'].forEach(eventName => {
+    dropZone.addEventListener(eventName, () => dropZone.style.background = 'rgba(59,130,246,0.15)', false);
+  });
+
+  ['dragleave', 'drop'].forEach(eventName => {
+    dropZone.addEventListener(eventName, () => dropZone.style.background = 'rgba(59,130,246,0.05)', false);
+  });
+
+  dropZone.addEventListener('drop', (e) => {
+    const dt = e.dataTransfer;
+    const files = dt.files;
+    if (files.length > 0) {
+      processSingleFile(files[0]);
+    }
+  }, false);
+}
+
+function processSingleFile(file) {
   if (!file) return;
 
   const statusEl = document.getElementById('uploadStatusText');
@@ -523,6 +552,11 @@ async function handleFileUpload(event) {
   };
 
   reader.readAsDataURL(file);
+}
+
+function handleFileUpload(event) {
+  const file = event.target.files[0];
+  processSingleFile(file);
 }
 
 async function saveResource() {
