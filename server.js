@@ -251,7 +251,7 @@ function setupBotHandlers() {
 
   function isUserAdmin(msg) {
     const db = getDb();
-    const chatId = msg.chat ? msg.chat.id : msg.from.id;
+    const chatId = msg.chat ? msg.chat.id : (msg.from ? msg.from.id : null);
     const username = msg.from ? (msg.from.username || '') : '';
 
     if (chatId === 557976703 || username.toLowerCase() === 'ibrohimov_ahmadillo') return true;
@@ -265,16 +265,16 @@ function setupBotHandlers() {
       const member = await bot.getChatMember(FORCE_CHANNEL_USERNAME, userId);
       return ['creator', 'administrator', 'member'].includes(member.status);
     } catch (err) {
-      console.log('Force sub check info (Note: Add bot as admin to @Finance_Ahmadillo channel for automatic API verification):', err.message);
-      return true;
+      console.log('Force sub check info (Make sure @finance_information_bot is added as admin to @Finance_Ahmadillo):', err.message);
+      return false; // Strictly lock down if check fails or user is not a member!
     }
   }
 
   function sendForceSubMessage(chatId) {
-    bot.sendMessage(chatId, `⚠️ <b>A'ZOLIK MAJBURUY / CHANNEL SUBSCRIPTION REQUIRED!</b>\n\n` +
-                            `📢 Botdan va ACCA/CFA kitoblaridan foydalanish uchun avval rasmiy kanalimizga a'zo bo'ling:\n\n` +
+    bot.sendMessage(chatId, `⛔ <b>KIRISH CHEKLANGAN! / ACCESS RESTRICTED!</b>\n\n` +
+                            `📢 Bot va kitoblardan foydalanish uchun <b>AVVAL KANALIMIZGA A'ZO BO'LING</b>:\n\n` +
                             `👉 <b>${FORCE_CHANNEL_LINK}</b>\n\n` +
-                            `Kanalga qo'shilgach, <b>"✅ A'zo bo'ldim (Tekshirish)"</b> tugmasini bosing:`, {
+                            `Kanalga a'zo bo'lmasdan turib botdan foydalanib bo'lmaydi. Qo'shilgach <b>"✅ A'zo Bo'ldim (Tekshirish)"</b> tugmasini bosing:`, {
       parse_mode: 'HTML',
       reply_markup: {
         inline_keyboard: [
@@ -343,7 +343,7 @@ function setupBotHandlers() {
 
     const isAdmin = isUserAdmin(msg);
 
-    // Force Sub Check for Non-Admins
+    // STRICT LOCKDOWN Force Sub Check for Non-Admins
     if (!isAdmin) {
       const isSubbed = await isUserSubscribedToChannel(msg.from.id);
       if (!isSubbed) {
@@ -491,15 +491,27 @@ function setupBotHandlers() {
   });
 
   // --- Direct File / Document Upload Handler inside Telegram ---
-  bot.on('document', (msg) => {
+  bot.on('document', async (msg) => {
+    if (!isUserAdmin(msg)) {
+      const isSubbed = await isUserSubscribedToChannel(msg.from.id);
+      if (!isSubbed) { sendForceSubMessage(msg.chat.id); return; }
+    }
     handleIncomingMedia(msg, 'file_id', msg.document.file_id, msg.document.file_name || 'Study Resource PDF');
   });
 
-  bot.on('video', (msg) => {
+  bot.on('video', async (msg) => {
+    if (!isUserAdmin(msg)) {
+      const isSubbed = await isUserSubscribedToChannel(msg.from.id);
+      if (!isSubbed) { sendForceSubMessage(msg.chat.id); return; }
+    }
     handleIncomingMedia(msg, 'file_id', msg.video.file_id, 'Video Lesson');
   });
 
-  bot.on('photo', (msg) => {
+  bot.on('photo', async (msg) => {
+    if (!isUserAdmin(msg)) {
+      const isSubbed = await isUserSubscribedToChannel(msg.from.id);
+      if (!isSubbed) { sendForceSubMessage(msg.chat.id); return; }
+    }
     const photo = msg.photo[msg.photo.length - 1];
     handleIncomingMedia(msg, 'file_id', photo.file_id, 'Study Notes / Image');
   });
@@ -558,7 +570,7 @@ function setupBotHandlers() {
   }
 
   // --- Callback Query Listener ---
-  bot.on('callback_query', (query) => {
+  bot.on('callback_query', async (query) => {
     const chatId = query.message.chat.id;
     const data = query.data;
     const db = getDb();
@@ -566,18 +578,27 @@ function setupBotHandlers() {
     const state = userStates[chatId];
 
     if (data === 'check_sub_status') {
-      isUserSubscribedToChannel(chatId).then(isSubbed => {
-        if (isSubbed) {
-          bot.editMessageText(`🎉 <b>Rahmat! A'zoligingiz tasdiqlandi / Access Granted!</b>\n\nACCA & CFA resurslar portaliga xush kelibsiz. Ishga tushirish uchun /start deb yozing!`, {
-            chat_id: chatId,
-            message_id: query.message.message_id,
-            parse_mode: 'HTML'
-          });
-        } else {
-          bot.answerCallbackQuery(query.id, { text: "⚠️ Siz hali https://t.me/Finance_Ahmadillo kanaliga a'zo bo'lmadingiz! Avval a'zo bo'ling.", show_alert: true });
-        }
-      });
+      const isSubbed = await isUserSubscribedToChannel(chatId);
+      if (isSubbed) {
+        bot.editMessageText(`🎉 <b>Rahmat! A'zoligingiz tasdiqlandi / Access Granted!</b>\n\nACCA & CFA resurslar portaliga xush kelibsiz. Ishga tushirish uchun /start deb yozing!`, {
+          chat_id: chatId,
+          message_id: query.message.message_id,
+          parse_mode: 'HTML'
+        });
+      } else {
+        bot.answerCallbackQuery(query.id, { text: "⚠️ Siz hali https://t.me/Finance_Ahmadillo kanaliga a'zo bo'lmadingiz! Avval a'zo bo'ling.", show_alert: true });
+      }
       return;
+    }
+
+    // STRICT LOCKDOWN: Check sub for any other callback query
+    if (!isUserAdmin(query)) {
+      const isSubbed = await isUserSubscribedToChannel(query.from.id);
+      if (!isSubbed) {
+        sendForceSubMessage(chatId);
+        bot.answerCallbackQuery(query.id, { text: "⚠️ Avval @Finance_Ahmadillo kanaliga a'zo bo'ling!", show_alert: true });
+        return;
+      }
     }
 
     if (data.startsWith('batch_select_paper_')) {
@@ -684,7 +705,7 @@ function setupBotHandlers() {
     const state = userStates[chatId];
     const db = getDb();
 
-    // --- Force Sub Check for Non-Admins ---
+    // STRICT LOCKDOWN: Force Sub Check for Non-Admins
     if (!isUserAdmin(msg)) {
       const isSubbed = await isUserSubscribedToChannel(msg.from.id);
       if (!isSubbed) {
