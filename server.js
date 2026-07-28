@@ -10,8 +10,8 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json({ limit: '500mb' }));
 app.use(express.urlencoded({ limit: '500mb', extended: true }));
-app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use('/uploads', express.static(path.join(__dirname, 'public', 'uploads')));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
@@ -579,10 +579,10 @@ app.post('/api/upload', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  const p1 = path.join(__dirname, 'public', 'index.html');
-  const p2 = path.join(__dirname, 'index.html');
-  if (fs.existsSync(p1)) res.sendFile(p1);
-  else if (fs.existsSync(p2)) res.sendFile(p2);
+  const pRoot = path.join(__dirname, 'index.html');
+  const pPublic = path.join(__dirname, 'public', 'index.html');
+  if (fs.existsSync(pRoot)) res.sendFile(pRoot);
+  else if (fs.existsSync(pPublic)) res.sendFile(pPublic);
   else res.send('ACCA Materials Bot Server Active');
 });
 
