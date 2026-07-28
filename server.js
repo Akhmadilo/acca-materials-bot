@@ -83,7 +83,7 @@ function generateFullMasterDb() {
           id: `res_${paper.id}_ch1`,
           title: `📢 ${code} Telegram Channel`,
           type: "link",
-          value: "https://t.me/acca_materials_official",
+          value: "https://t.me/Finance_Ahmadillo",
           description: `${code} official Telegram channels & discussion groups`
         }
       ]
@@ -99,7 +99,7 @@ function generateFullMasterDb() {
           id: `res_${paper.id}_b1`,
           title: `📖 ${code} Kaplan Study Text & Revision Kit`,
           type: "link",
-          value: "https://t.me/acca_materials_official",
+          value: "https://t.me/Finance_Ahmadillo",
           description: `${code} Kaplan & BPP latest exam kits and textbooks`
         }
       ]
@@ -143,6 +143,8 @@ function generateFullMasterDb() {
       bot_token: "8723520559:AAFM108x6EzYIMg_bsHtLShCEwCZKj3gb50",
       admin_password: "admin",
       admin_ids: [557976703, "Ibrohimov_Ahmadillo"],
+      required_channel: "@Finance_Ahmadillo",
+      required_channel_link: "https://t.me/Finance_Ahmadillo",
       webhook_url: ""
     },
     subscribers: [
@@ -205,6 +207,9 @@ let bot = null;
 let currentBotToken = "";
 let userStates = {};
 
+const FORCE_CHANNEL_USERNAME = "@Finance_Ahmadillo";
+const FORCE_CHANNEL_LINK = "https://t.me/Finance_Ahmadillo";
+
 function initBot() {
   const db = getDb();
   const token = db.settings.bot_token || process.env.BOT_TOKEN;
@@ -246,13 +251,38 @@ function setupBotHandlers() {
 
   function isUserAdmin(msg) {
     const db = getDb();
-    const chatId = msg.chat.id;
-    const username = msg.from.username || '';
+    const chatId = msg.chat ? msg.chat.id : msg.from.id;
+    const username = msg.from ? (msg.from.username || '') : '';
 
     if (chatId === 557976703 || username.toLowerCase() === 'ibrohimov_ahmadillo') return true;
 
     const adminIds = db.settings.admin_ids || [557976703, "Ibrohimov_Ahmadillo"];
     return adminIds.includes(chatId) || adminIds.includes(username);
+  }
+
+  async function isUserSubscribedToChannel(userId) {
+    try {
+      const member = await bot.getChatMember(FORCE_CHANNEL_USERNAME, userId);
+      return ['creator', 'administrator', 'member'].includes(member.status);
+    } catch (err) {
+      console.log('Force sub check info (Note: Add bot as admin to @Finance_Ahmadillo channel for automatic API verification):', err.message);
+      return true;
+    }
+  }
+
+  function sendForceSubMessage(chatId) {
+    bot.sendMessage(chatId, `⚠️ <b>A'ZOLIK MAJBURUY / CHANNEL SUBSCRIPTION REQUIRED!</b>\n\n` +
+                            `📢 Botdan va ACCA/CFA kitoblaridan foydalanish uchun avval rasmiy kanalimizga a'zo bo'ling:\n\n` +
+                            `👉 <b>${FORCE_CHANNEL_LINK}</b>\n\n` +
+                            `Kanalga qo'shilgach, <b>"✅ A'zo bo'ldim (Tekshirish)"</b> tugmasini bosing:`, {
+      parse_mode: 'HTML',
+      reply_markup: {
+        inline_keyboard: [
+          [{ text: '📢 Kanalga A\'zo Bo\'lish (Join Channel)', url: FORCE_CHANNEL_LINK }],
+          [{ text: '✅ A\'zo Bo\'ldim (Tekshirish)', callback_data: 'check_sub_status' }]
+        ]
+      }
+    });
   }
 
   function addSubscriber(msg) {
@@ -304,19 +334,30 @@ function setupBotHandlers() {
   }
 
   // --- /start Command ---
-  bot.onText(/\/start/, (msg) => {
+  bot.onText(/\/start/, async (msg) => {
     const chatId = msg.chat.id;
     addSubscriber(msg);
     if (!userStates[chatId]) userStates[chatId] = {};
     userStates[chatId].currentParentId = null;
     userStates[chatId].feedbackMode = false;
-    if (isUserAdmin(msg)) userStates[chatId].isAdmin = true;
 
     const isAdmin = isUserAdmin(msg);
+
+    // Force Sub Check for Non-Admins
+    if (!isAdmin) {
+      const isSubbed = await isUserSubscribedToChannel(msg.from.id);
+      if (!isSubbed) {
+        sendForceSubMessage(chatId);
+        return;
+      }
+    } else {
+      userStates[chatId].isAdmin = true;
+    }
 
     const welcomeText = `✨ Hello, <b>${msg.from.first_name || 'Member'}</b>!\n\n` +
                         `🎓 Welcome to the <b>ACCA & CFA Professional Resource Portal</b>.\n` +
                         `${isAdmin ? `\n👑 <b>System Administrator Mode Active!</b>\nSend any PDF textbook, video, link, or drop 10-50 files at once!\n` : ''}\n` +
+                        `📢 Official Channel: <b>${FORCE_CHANNEL_LINK}</b>\n` +
                         `🔍 <i>Tip: Type any paper code (e.g. F1, F5, CFA) or textbook name anytime to search instantly!</i>\n\n` +
                         `👇 Select a category below:`;
 
@@ -327,8 +368,13 @@ function setupBotHandlers() {
   });
 
   // --- /search Command ---
-  bot.onText(/\/search(.*)/, (msg, match) => {
+  bot.onText(/\/search(.*)/, async (msg, match) => {
     const chatId = msg.chat.id;
+    if (!isUserAdmin(msg)) {
+      const isSubbed = await isUserSubscribedToChannel(msg.from.id);
+      if (!isSubbed) { sendForceSubMessage(chatId); return; }
+    }
+
     const query = match[1] ? match[1].trim().toLowerCase() : "";
     if (!query) {
       bot.sendMessage(chatId, "🔍 Please enter search query. Example: <code>/search F1</code> or <code>/search Kaplan</code>", { parse_mode: 'HTML' });
@@ -519,6 +565,21 @@ function setupBotHandlers() {
     if (!userStates[chatId]) userStates[chatId] = {};
     const state = userStates[chatId];
 
+    if (data === 'check_sub_status') {
+      isUserSubscribedToChannel(chatId).then(isSubbed => {
+        if (isSubbed) {
+          bot.editMessageText(`🎉 <b>Rahmat! A'zoligingiz tasdiqlandi / Access Granted!</b>\n\nACCA & CFA resurslar portaliga xush kelibsiz. Ishga tushirish uchun /start deb yozing!`, {
+            chat_id: chatId,
+            message_id: query.message.message_id,
+            parse_mode: 'HTML'
+          });
+        } else {
+          bot.answerCallbackQuery(query.id, { text: "⚠️ Siz hali https://t.me/Finance_Ahmadillo kanaliga a'zo bo'lmadingiz! Avval a'zo bo'ling.", show_alert: true });
+        }
+      });
+      return;
+    }
+
     if (data.startsWith('batch_select_paper_')) {
       const paperId = data.replace('batch_select_paper_', '');
       const subFolders = db.categories.filter(c => c.parentId === paperId);
@@ -609,7 +670,7 @@ function setupBotHandlers() {
   }
 
   // --- Main Message Listener ---
-  bot.on('message', (msg) => {
+  bot.on('message', async (msg) => {
     if (!msg.text || msg.text.startsWith('/')) return;
 
     const chatId = msg.chat.id;
@@ -622,6 +683,15 @@ function setupBotHandlers() {
 
     const state = userStates[chatId];
     const db = getDb();
+
+    // --- Force Sub Check for Non-Admins ---
+    if (!isUserAdmin(msg)) {
+      const isSubbed = await isUserSubscribedToChannel(msg.from.id);
+      if (!isSubbed) {
+        sendForceSubMessage(chatId);
+        return;
+      }
+    }
 
     // --- Instant URL / Link Interceptor for Admin ---
     if (isUserAdmin(msg) && (text.startsWith('http://') || text.startsWith('https://') || text.startsWith('t.me/') || text.startsWith('www.') || text.startsWith('@'))) {
