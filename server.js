@@ -11,7 +11,9 @@ app.use(cors());
 app.use(express.json({ limit: '500mb' }));
 app.use(express.urlencoded({ limit: '500mb', extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname));
 app.use('/uploads', express.static(path.join(__dirname, 'public', 'uploads')));
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 const DB_PATH = path.join(__dirname, 'data', 'db.json');
 const UPLOADS_DIR = path.join(__dirname, 'public', 'uploads');
@@ -574,6 +576,14 @@ app.post('/api/upload', (req, res) => {
     console.error('File Upload Error:', err);
     res.status(500).json({ error: "Fayl yuklashda xatolik yuz berdi" });
   }
+});
+
+app.get('/', (req, res) => {
+  const p1 = path.join(__dirname, 'public', 'index.html');
+  const p2 = path.join(__dirname, 'index.html');
+  if (fs.existsSync(p1)) res.sendFile(p1);
+  else if (fs.existsSync(p2)) res.sendFile(p2);
+  else res.send('ACCA Materials Bot Server Active');
 });
 
 // --- API Endpoints ---
