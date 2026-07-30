@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
+  if (window.Telegram && window.Telegram.WebApp) {
+    try {
+      window.Telegram.WebApp.ready();
+      window.Telegram.WebApp.expand();
+    } catch (e) {}
+  }
   initTabs();
   loadData();
   setupDropZone();

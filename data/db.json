@@ -8,7 +8,20 @@
     ],
     "required_channel": "@Finance_Ahmadillo",
     "required_channel_link": "https://t.me/Finance_Ahmadillo",
-    "webhook_url": ""
+    "webhook_url": "",
+    "donation": {
+      "card_number": "8600 0000 0000 0000",
+      "card_holder": "Ahmadillo Ibrohimov",
+      "bank_name": "Uzcard / Humo",
+      "note": "Loyiha va bot rivojiga hissa qo'shganingiz uchun rahmat!"
+    },
+    "required_channels": [
+      {
+        "username": "@Finance_Ahmadillo",
+        "title": "Finance Ahmadillo Channel",
+        "link": "https://t.me/Finance_Ahmadillo"
+      }
+    ]
   },
   "subscribers": [
     {

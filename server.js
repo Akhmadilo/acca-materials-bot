@@ -150,7 +150,7 @@ function generateFullMasterDb() {
         card_number: "8600 0000 0000 0000",
         card_holder: "Ahmadillo Ibrohimov",
         bank_name: "Uzcard / Humo",
-        note: "Loyiha va bot rivojiga hissa qo'shganingiz uchun rahmat!"
+        note: "Thank you for supporting the development of this learning portal!"
       },
       webhook_url: ""
     },
@@ -195,7 +195,7 @@ function getDb() {
         card_number: "8600 0000 0000 0000",
         card_holder: "Ahmadillo Ibrohimov",
         bank_name: "Uzcard / Humo",
-        note: "Loyiha va bot rivojiga hissa qo'shganingiz uchun rahmat!"
+        note: "Thank you for supporting the development of this learning portal!"
       };
       fs.writeFileSync(DB_PATH, JSON.stringify(parsed, null, 2));
     }
@@ -305,7 +305,6 @@ function setupBotHandlers() {
           unSubbed.push(ch);
         }
       } catch (err) {
-        // If check API errors (e.g. bot not admin in channel), do not block
         console.log('Channel sub check info:', err.message);
       }
     }
@@ -322,11 +321,11 @@ function setupBotHandlers() {
       const link = ch.link || (ch.username.startsWith('http') ? ch.username : `https://t.me/${ch.username.replace('@', '')}`);
       inlineKeyboard.push([{ text: `📢 ${ch.title || ch.username}`, url: link }]);
     });
-    inlineKeyboard.push([{ text: '✅ A\'zo Bo\'ldim (Tekshirish)', callback_data: 'check_sub_status' }]);
+    inlineKeyboard.push([{ text: '✅ I Have Joined (Verify)', callback_data: 'check_sub_status' }]);
 
-    bot.sendMessage(chatId, `⛔ <b>KIRISH CHEKLANGAN! / ACCESS RESTRICTED!</b>\n\n` +
-                            `📢 Bot va kitoblardan foydalanish uchun <b>AVVAL KANAL(LAR)IMIZGA A'ZO BO'LING</b>:\n\n` +
-                            `Kanalga a'zo bo'lmasdan turib botdan foydalanib bo'lmaydi. Qo'shilgach <b>"✅ A'zo Bo'ldim (Tekshirish)"</b> tugmasini bosing:`, {
+    bot.sendMessage(chatId, `⛔ <b>ACCESS RESTRICTED!</b>\n\n` +
+                            `📢 To access study materials, textbooks, and videos, <b>please join our official channel(s) first</b>:\n\n` +
+                            `After joining, tap <b>"✅ I Have Joined (Verify)"</b> below:`, {
       parse_mode: 'HTML',
       reply_markup: { inline_keyboard: inlineKeyboard }
     });
@@ -363,6 +362,7 @@ function setupBotHandlers() {
     });
 
     if (parentId === null) {
+      keyboard.unshift([{ text: '📱 Open Materials Web App', web_app: { url: 'https://acca-materials-bot.onrender.com' } }]);
       keyboard.push([{ text: '💳 Donation & Support' }]);
       if (msg && isUserAdmin(msg)) {
         keyboard.push([{ text: '⚡ Admin Batch Mode' }]);
@@ -421,17 +421,30 @@ function setupBotHandlers() {
       card_number: "8600 0000 0000 0000",
       card_holder: "Ahmadillo Ibrohimov",
       bank_name: "Uzcard / Humo",
-      note: "Loyiha va bot rivojiga hissa qo'shganingiz uchun rahmat!"
+      note: "Thank you for supporting the development of this learning portal!"
     };
 
-    const text = `💳 <b>LOYIHA VA BOT RIVOJINI QO'LLAB-QUVVATLASH (DONATION)</b>\n\n` +
-                 `Loyiha va botimizdan foydalanayotganingizdan xursandmiz! Agar loyihamiz rivojiga o'z hissangizni qo'shmoqchi bo'lsangiz:\n\n` +
-                 `💳 <b>Karta Raqami:</b> <code>${don.card_number}</code> <i>(Nusxalash uchun ustiga bosing)</i>\n` +
-                 `👤 <b>Egasining Ismi:</b> ${don.card_holder}\n` +
-                 `${don.bank_name ? `🏦 <b>Tizim / Bank:</b> ${don.bank_name}\n` : ''}\n` +
-                 `✨ <i>${don.note || "Har bir qo'llab-quvvatlovingiz yangi kitob va resurslar yuklanishiga xizmat qiladi!"}</i>`;
+    const text = `💳 <b>PROJECT DONATION & SUPPORT</b>\n\n` +
+                 `We appreciate your support for the ACCA & CFA Materials Learning Portal!\n\n` +
+                 `💳 <b>Card Number:</b> <code>${don.card_number}</code> <i>(Tap to copy)</i>\n` +
+                 `👤 <b>Cardholder Name:</b> ${don.card_holder}\n` +
+                 `${don.bank_name ? `🏦 <b>Network / Bank:</b> ${don.bank_name}\n` : ''}\n` +
+                 `✨ <i>${don.note || "Thank you for supporting the development of this learning portal!"}</i>`;
 
     bot.sendMessage(chatId, text, { parse_mode: 'HTML' });
+  });
+
+  // --- /app Command & Web App Handler ---
+  bot.onText(/\/app|📱 Open Materials Web App/, (msg) => {
+    const chatId = msg.chat.id;
+    bot.sendMessage(chatId, `📱 <b>ACCA & CFA INTERACTIVE WEB APP</b>\n\nTap below to open full-screen interactive File Explorer directly inside Telegram:`, {
+      parse_mode: 'HTML',
+      reply_markup: {
+        inline_keyboard: [
+          [{ text: '📱 Launch ACCA & CFA Web App', web_app: { url: 'https://acca-materials-bot.onrender.com' } }]
+        ]
+      }
+    });
   });
 
   // --- /search Command ---
@@ -647,13 +660,13 @@ function setupBotHandlers() {
     if (data === 'check_sub_status') {
       const unSubbed = await getUnsubscribedChannels(chatId);
       if (unSubbed.length === 0) {
-        bot.editMessageText(`🎉 <b>Rahmat! A'zoligingiz tasdiqlandi / Access Granted!</b>\n\nACCA & CFA resurslar portaliga xush kelibsiz. Ishga tushirish uchun /start deb yozing!`, {
+        bot.editMessageText(`🎉 <b>Thank you! Subscription Verified / Access Granted!</b>\n\nWelcome to the ACCA & CFA Resource Portal. Type /start to explore study materials!`, {
           chat_id: chatId,
           message_id: query.message.message_id,
           parse_mode: 'HTML'
         });
       } else {
-        bot.answerCallbackQuery(query.id, { text: "⚠️ Siz hali barcha kanallarga a'zo bo'lmadingiz! Avval a'zo bo'ling.", show_alert: true });
+        bot.answerCallbackQuery(query.id, { text: "⚠️ You have not joined all required channels yet! Please join to proceed.", show_alert: true });
       }
       return;
     }
@@ -663,7 +676,7 @@ function setupBotHandlers() {
       const unSubbed = await getUnsubscribedChannels(query.from.id);
       if (unSubbed.length > 0) {
         sendForceSubMessage(chatId, query.from.id);
-        bot.answerCallbackQuery(query.id, { text: "⚠️ Avval kanallarga a'zo bo'ling!", show_alert: true });
+        bot.answerCallbackQuery(query.id, { text: "⚠️ Please join required channel(s) first!", show_alert: true });
         return;
       }
     }
