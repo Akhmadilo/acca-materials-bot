@@ -222,8 +222,11 @@ function renderFileManager() {
 
     const titleLower = (file.title || '').toLowerCase();
     const valLower = (file.value || '').toLowerCase();
+    const valStr = (file.value || '').trim();
+    const isTelegramVideoId = valStr.startsWith('BAAC') || valStr.startsWith('BAAD');
+    const isVideoFolder = currentFolderId && currentFolderId.includes('_videos');
 
-    if (file.type === 'video' || valLower.includes('youtube.com') || valLower.includes('youtu.be') || valLower.includes('vimeo') || valLower.endsWith('.mp4') || valLower.endsWith('.mkv') || titleLower.includes('video') || titleLower.includes('lecture') || titleLower.includes('course') || titleLower.includes('lesson')) {
+    if (file.type === 'video' || isTelegramVideoId || isVideoFolder || valLower.includes('youtube.com') || valLower.includes('youtu.be') || valLower.includes('vimeo') || valLower.endsWith('.mp4') || valLower.endsWith('.mkv') || titleLower.includes('video') || titleLower.includes('lecture') || titleLower.includes('course') || titleLower.includes('lesson') || titleLower.includes('accountant in business')) {
       iconClass = 'fa-circle-play video-icon';
       typeLabel = 'Video Lecture';
     } else if (file.type === 'link' || valLower.startsWith('http://') || valLower.startsWith('https://') || valLower.startsWith('t.me/')) {
@@ -309,11 +312,31 @@ function renderSearchResults(query) {
       `;
       container.appendChild(folderEl);
     } else {
+      const file = res.item;
+      let iconClass = 'fa-file-lines pdf-icon';
+      const titleLower = (file.title || '').toLowerCase();
+      const valLower = (file.value || '').toLowerCase();
+      const valStr = (file.value || '').trim();
+      const isTelegramVideoId = valStr.startsWith('BAAC') || valStr.startsWith('BAAD');
+      const isVideoFolder = res.folder && res.folder.id && res.folder.id.includes('_videos');
+
+      if (file.type === 'video' || isTelegramVideoId || isVideoFolder || valLower.includes('youtube.com') || valLower.includes('youtu.be') || valLower.includes('vimeo') || valLower.endsWith('.mp4') || valLower.endsWith('.mkv') || titleLower.includes('video') || titleLower.includes('lecture') || titleLower.includes('course') || titleLower.includes('lesson') || titleLower.includes('accountant in business')) {
+        iconClass = 'fa-circle-play video-icon';
+      } else if (file.type === 'link' || valLower.startsWith('http://') || valLower.startsWith('https://') || valLower.startsWith('t.me/')) {
+        iconClass = 'fa-link link-icon';
+      } else if (titleLower.endsWith('.docx') || titleLower.endsWith('.doc')) {
+        iconClass = 'fa-file-word word-icon';
+      } else if (titleLower.endsWith('.xlsx') || titleLower.endsWith('.xls')) {
+        iconClass = 'fa-file-excel excel-icon';
+      } else {
+        iconClass = 'fa-file-pdf pdf-icon';
+      }
+
       const fileEl = document.createElement('div');
       fileEl.className = 'file-item';
       fileEl.innerHTML = `
         <div class="file-header">
-          <i class="fa-solid fa-file-lines file-icon"></i>
+          <i class="fa-solid ${iconClass} file-icon"></i>
           <div class="file-details">
             <strong>${res.item.title}</strong>
             <p>Folder: <b>${res.folder.title}</b></p>

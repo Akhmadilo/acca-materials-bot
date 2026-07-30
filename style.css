@@ -188,8 +188,10 @@ body {
 .file-header { display: flex; align-items: flex-start; gap: 1rem; }
 .file-icon { font-size: 2rem; margin-top: 2px; }
 .pdf-icon { color: #f43f5e; }
-.link-icon { color: #3b82f6; }
+.link-icon { color: #06b6d4; }
 .video-icon { color: #a855f7; }
+.word-icon { color: #38bdf8; }
+.excel-icon { color: #34d399; }
 
 .file-details strong { font-size: 1.05rem; color: #fff; font-weight: 600; display: block; margin-bottom: 4px; }
 .file-details p { font-size: 0.86rem; color: var(--text-muted); word-break: break-all; }

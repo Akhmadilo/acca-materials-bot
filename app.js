@@ -220,17 +220,27 @@ function renderFileManager() {
     let iconClass = 'fa-file-lines pdf-icon';
     let typeLabel = 'Document';
 
-    if (file.type === 'link') {
-      if (file.value.includes('youtube.com') || file.value.includes('youtu.be')) {
-        iconClass = 'fa-circle-play video-icon';
-        typeLabel = 'Video';
-      } else {
-        iconClass = 'fa-link link-icon';
-        typeLabel = 'Link';
-      }
-    } else if (file.type === 'file_id' || file.type === 'file') {
+    const titleLower = (file.title || '').toLowerCase();
+    const valLower = (file.value || '').toLowerCase();
+    const valStr = (file.value || '').trim();
+    const isTelegramVideoId = valStr.startsWith('BAAC') || valStr.startsWith('BAAD');
+    const isVideoFolder = currentFolderId && currentFolderId.includes('_videos');
+
+    if (file.type === 'video' || isTelegramVideoId || isVideoFolder || valLower.includes('youtube.com') || valLower.includes('youtu.be') || valLower.includes('vimeo') || valLower.endsWith('.mp4') || valLower.endsWith('.mkv') || titleLower.includes('video') || titleLower.includes('lecture') || titleLower.includes('course') || titleLower.includes('lesson') || titleLower.includes('accountant in business')) {
+      iconClass = 'fa-circle-play video-icon';
+      typeLabel = 'Video Lecture';
+    } else if (file.type === 'link' || valLower.startsWith('http://') || valLower.startsWith('https://') || valLower.startsWith('t.me/')) {
+      iconClass = 'fa-link link-icon';
+      typeLabel = 'Web / Telegram Link';
+    } else if (titleLower.endsWith('.docx') || titleLower.endsWith('.doc')) {
+      iconClass = 'fa-file-word word-icon';
+      typeLabel = 'Word Document';
+    } else if (titleLower.endsWith('.xlsx') || titleLower.endsWith('.xls')) {
+      iconClass = 'fa-file-excel excel-icon';
+      typeLabel = 'Excel Spreadsheet';
+    } else {
       iconClass = 'fa-file-pdf pdf-icon';
-      typeLabel = 'PDF File';
+      typeLabel = 'PDF Document';
     }
 
     fileEl.innerHTML = `
@@ -302,11 +312,31 @@ function renderSearchResults(query) {
       `;
       container.appendChild(folderEl);
     } else {
+      const file = res.item;
+      let iconClass = 'fa-file-lines pdf-icon';
+      const titleLower = (file.title || '').toLowerCase();
+      const valLower = (file.value || '').toLowerCase();
+      const valStr = (file.value || '').trim();
+      const isTelegramVideoId = valStr.startsWith('BAAC') || valStr.startsWith('BAAD');
+      const isVideoFolder = res.folder && res.folder.id && res.folder.id.includes('_videos');
+
+      if (file.type === 'video' || isTelegramVideoId || isVideoFolder || valLower.includes('youtube.com') || valLower.includes('youtu.be') || valLower.includes('vimeo') || valLower.endsWith('.mp4') || valLower.endsWith('.mkv') || titleLower.includes('video') || titleLower.includes('lecture') || titleLower.includes('course') || titleLower.includes('lesson') || titleLower.includes('accountant in business')) {
+        iconClass = 'fa-circle-play video-icon';
+      } else if (file.type === 'link' || valLower.startsWith('http://') || valLower.startsWith('https://') || valLower.startsWith('t.me/')) {
+        iconClass = 'fa-link link-icon';
+      } else if (titleLower.endsWith('.docx') || titleLower.endsWith('.doc')) {
+        iconClass = 'fa-file-word word-icon';
+      } else if (titleLower.endsWith('.xlsx') || titleLower.endsWith('.xls')) {
+        iconClass = 'fa-file-excel excel-icon';
+      } else {
+        iconClass = 'fa-file-pdf pdf-icon';
+      }
+
       const fileEl = document.createElement('div');
       fileEl.className = 'file-item';
       fileEl.innerHTML = `
         <div class="file-header">
-          <i class="fa-solid fa-file-lines file-icon"></i>
+          <i class="fa-solid ${iconClass} file-icon"></i>
           <div class="file-details">
             <strong>${res.item.title}</strong>
             <p>Folder: <b>${res.folder.title}</b></p>
@@ -577,6 +607,8 @@ async function saveResource() {
       value = uploadedFileUrl;
     }
     type = 'file';
+  } else if (value.startsWith('http://') || value.startsWith('https://') || value.startsWith('t.me/') || value.startsWith('www.')) {
+    type = 'link';
   }
 
   if (!title || !value) {

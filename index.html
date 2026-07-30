@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css?v=4.0">
+  <link rel="stylesheet" href="style.css?v=5.0">
 </head>
 <body>
 
@@ -100,6 +100,9 @@
             <button class="btn btn-success" onclick="restoreFullMasterDb()" title="Restore all 96 master categories">
               <i class="fa-solid fa-rotate"></i> Sync Full DB
             </button>
+            <a href="/api/admin/export-db" download="db.json" class="btn btn-secondary" title="Download latest database backup file to keep books permanent">
+              <i class="fa-solid fa-download"></i> Save Backup (db.json)
+            </a>
           </div>
         </div>
 
@@ -285,6 +288,6 @@
     </div>
   </div>
 
-  <script src="app.js?v=4.0"></script>
+  <script src="app.js?v=5.0"></script>
 </body>
 </html>
