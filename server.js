@@ -362,7 +362,6 @@ function setupBotHandlers() {
     });
 
     if (parentId === null) {
-      keyboard.unshift([{ text: '📱 Open Materials Web App', web_app: { url: 'https://acca-materials-bot.onrender.com' } }]);
       keyboard.push([{ text: '💳 Donation & Support' }]);
       if (msg && isUserAdmin(msg)) {
         keyboard.push([{ text: '⚡ Admin Batch Mode' }]);
@@ -432,19 +431,6 @@ function setupBotHandlers() {
                  `✨ <i>${don.note || "Thank you for supporting the development of this learning portal!"}</i>`;
 
     bot.sendMessage(chatId, text, { parse_mode: 'HTML' });
-  });
-
-  // --- /app Command & Web App Handler ---
-  bot.onText(/\/app|📱 Open Materials Web App/, (msg) => {
-    const chatId = msg.chat.id;
-    bot.sendMessage(chatId, `📱 <b>ACCA & CFA INTERACTIVE WEB APP</b>\n\nTap below to open full-screen interactive File Explorer directly inside Telegram:`, {
-      parse_mode: 'HTML',
-      reply_markup: {
-        inline_keyboard: [
-          [{ text: '📱 Launch ACCA & CFA Web App', web_app: { url: 'https://acca-materials-bot.onrender.com' } }]
-        ]
-      }
-    });
   });
 
   // --- /search Command ---
