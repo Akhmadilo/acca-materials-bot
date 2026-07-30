@@ -243,9 +243,12 @@ function renderFileManager() {
       typeLabel = 'PDF Document';
     }
 
+    const isChecked = selectedResourceIds.includes(file.id);
+
     fileEl.innerHTML = `
       <div>
-        <div class="file-header">
+        <div class="file-header" style="position:relative;">
+          <input type="checkbox" style="width:18px; height:18px; margin-top:6px; cursor:pointer;" ${isChecked ? 'checked' : ''} onchange="toggleResourceSelect('${file.id}')">
           <i class="fa-solid ${iconClass} file-icon"></i>
           <div class="file-details">
             <strong>${file.title}</strong>
@@ -255,6 +258,9 @@ function renderFileManager() {
       </div>
       <div class="file-actions">
         ${file.type === 'link' || file.value.startsWith('http') || file.value.startsWith('/uploads') ? `<a href="${file.value}" target="_blank" class="btn btn-secondary btn-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open</a>` : ''}
+        <button class="btn btn-primary btn-sm" onclick="openSingleMoveModal('${file.id}')" title="Move to another folder">
+          <i class="fa-solid fa-box-archive"></i> Move
+        </button>
         <button class="btn btn-secondary btn-sm" onclick="openEditResourceModal('${currentFolderId}', '${file.id}')" title="Edit resource">
           <i class="fa-solid fa-pen"></i> Edit
         </button>
@@ -782,4 +788,102 @@ async function saveSettings() {
 
 function closeModal(id) {
   document.getElementById(id).classList.remove('active');
+}
+
+// --- BULK SELECTION & RESOURCE MOVE ENGINE ---
+let selectedResourceIds = [];
+
+function toggleResourceSelect(resId) {
+  const index = selectedResourceIds.indexOf(resId);
+  if (index > -1) {
+    selectedResourceIds.splice(index, 1);
+  } else {
+    selectedResourceIds.push(resId);
+  }
+  updateBulkActionBar();
+}
+
+function updateBulkActionBar() {
+  const bar = document.getElementById('bulkActionBar');
+  const countText = document.getElementById('selectedCountText');
+  if (!bar) return;
+
+  if (selectedResourceIds.length > 0) {
+    bar.style.display = 'flex';
+    countText.textContent = `${selectedResourceIds.length} item(s) selected`;
+  } else {
+    bar.style.display = 'none';
+  }
+}
+
+function populateMoveTargetSelect() {
+  const select = document.getElementById('moveTargetSelect');
+  if (!select) return;
+  select.innerHTML = '';
+
+  const leafCategories = dbData.categories.filter(c => !c.isFeedback);
+  leafCategories.forEach(cat => {
+    const option = document.createElement('option');
+    option.value = cat.id;
+    option.textContent = cat.title;
+    if (currentFolderId === cat.id) option.disabled = true;
+    select.appendChild(option);
+  });
+}
+
+function openSingleMoveModal(resId) {
+  document.getElementById('moveResourceIds').value = JSON.stringify([resId]);
+  populateMoveTargetSelect();
+  document.getElementById('moveModal').classList.add('active');
+}
+
+function openBulkMoveModal() {
+  if (selectedResourceIds.length === 0) return;
+  document.getElementById('moveResourceIds').value = JSON.stringify(selectedResourceIds);
+  populateMoveTargetSelect();
+  document.getElementById('moveModal').classList.add('active');
+}
+
+async function confirmMoveResources() {
+  const raw = document.getElementById('moveResourceIds').value;
+  const targetCatId = document.getElementById('moveTargetSelect').value;
+
+  if (!raw || !targetCatId) {
+    alert("Please select destination folder!");
+    return;
+  }
+
+  const resourceIds = JSON.parse(raw);
+
+  try {
+    const res = await fetch('/api/resources/move', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ resourceIds, targetCatId })
+    });
+    const data = await res.json();
+
+    if (res.ok && data.success) {
+      alert(`✅ Successfully moved ${data.movedCount} item(s) to destination folder!`);
+      selectedResourceIds = [];
+      updateBulkActionBar();
+      closeModal('moveModal');
+      loadData();
+    }
+  } catch (err) {
+    alert("Error moving resources!");
+  }
+}
+
+async function bulkDeleteSelected() {
+  if (selectedResourceIds.length === 0) return;
+  if (!confirm(`Are you sure you want to delete ${selectedResourceIds.length} selected item(s)?`)) return;
+
+  for (const resId of selectedResourceIds) {
+    await fetch(`/api/categories/${currentFolderId}/resources/${resId}`, { method: 'DELETE' });
+  }
+
+  selectedResourceIds = [];
+  updateBulkActionBar();
+  loadData();
 }

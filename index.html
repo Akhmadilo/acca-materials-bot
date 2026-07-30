@@ -106,6 +106,22 @@
           </div>
         </div>
 
+        <!-- Bulk Selection Action Bar -->
+        <div id="bulkActionBar" style="display:none; background: linear-gradient(135deg, rgba(59,130,246,0.2) 0%, rgba(37,99,235,0.3) 100%); border: 1px solid rgba(59,130,246,0.4); border-radius: 12px; padding: 12px 20px; margin-bottom: 1rem; align-items: center; justify-content: space-between;">
+          <div style="display:flex; align-items:center; gap: 10px;">
+            <i class="fa-solid fa-check-double" style="color:#60a5fa; font-size:1.3rem;"></i>
+            <span id="selectedCountText" style="font-weight:700; color:#fff;">0 items selected</span>
+          </div>
+          <div style="display:flex; gap:10px;">
+            <button class="btn btn-primary btn-sm" onclick="openBulkMoveModal()">
+              <i class="fa-solid fa-box-archive"></i> Move Selected to Folder...
+            </button>
+            <button class="btn btn-danger btn-sm" onclick="bulkDeleteSelected()">
+              <i class="fa-solid fa-trash"></i> Delete Selected
+            </button>
+          </div>
+        </div>
+
         <!-- Search Bar -->
         <div class="search-box-explorer">
           <i class="fa-solid fa-magnifying-glass"></i>
@@ -284,6 +300,29 @@
       <div class="modal-footer">
         <button class="btn btn-secondary" onclick="closeModal('categoryModal')">Cancel</button>
         <button class="btn btn-primary" onclick="saveCategory()">Create Folder</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 4: Move Resources Modal -->
+  <div class="modal-overlay" id="moveModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-truck-ramp-box"></i> Move Selected Resource(s)</h3>
+        <button class="close-btn" onclick="closeModal('moveModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="moveResourceIds">
+        <div class="form-group">
+          <label for="moveTargetSelect">Select Destination Folder:</label>
+          <select id="moveTargetSelect" style="font-size: 1rem; padding: 12px;"></select>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="closeModal('moveModal')">Cancel</button>
+        <button class="btn btn-primary" onclick="confirmMoveResources()">
+          <i class="fa-solid fa-arrow-right-to-bracket"></i> Move Resources Now
+        </button>
       </div>
     </div>
   </div>

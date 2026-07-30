@@ -1014,6 +1014,40 @@ app.post('/api/categories/:catId/resources/batch', (req, res) => {
   res.json({ success: true, addedCount });
 });
 
+app.post('/api/resources/move', (req, res) => {
+  const { resourceIds, targetCatId } = req.body;
+  const db = getDb();
+
+  if (!targetCatId || !Array.isArray(resourceIds) || resourceIds.length === 0) {
+    return res.status(400).json({ error: "Target category and resource IDs required" });
+  }
+
+  const targetCat = db.categories.find(c => c.id === targetCatId);
+  if (!targetCat) return res.status(404).json({ error: "Target category not found" });
+
+  if (!targetCat.resources) targetCat.resources = [];
+
+  let movedCount = 0;
+
+  db.categories.forEach(cat => {
+    if (cat.resources && cat.id !== targetCatId) {
+      const remaining = [];
+      cat.resources.forEach(r => {
+        if (resourceIds.includes(r.id)) {
+          targetCat.resources.push(r);
+          movedCount++;
+        } else {
+          remaining.push(r);
+        }
+      });
+      cat.resources = remaining;
+    }
+  });
+
+  saveDb(db);
+  res.json({ success: true, movedCount });
+});
+
 app.delete('/api/categories/:catId/resources/:resId', (req, res) => {
   const { catId, resId } = req.params;
   const db = getDb();
