@@ -220,17 +220,24 @@ function renderFileManager() {
     let iconClass = 'fa-file-lines pdf-icon';
     let typeLabel = 'Document';
 
-    if (file.type === 'link') {
-      if (file.value.includes('youtube.com') || file.value.includes('youtu.be')) {
-        iconClass = 'fa-circle-play video-icon';
-        typeLabel = 'Video';
-      } else {
-        iconClass = 'fa-link link-icon';
-        typeLabel = 'Link';
-      }
-    } else if (file.type === 'file_id' || file.type === 'file') {
+    const titleLower = (file.title || '').toLowerCase();
+    const valLower = (file.value || '').toLowerCase();
+
+    if (file.type === 'video' || valLower.includes('youtube.com') || valLower.includes('youtu.be') || valLower.includes('vimeo') || valLower.endsWith('.mp4') || valLower.endsWith('.mkv') || titleLower.includes('video') || titleLower.includes('lecture') || titleLower.includes('course') || titleLower.includes('lesson')) {
+      iconClass = 'fa-circle-play video-icon';
+      typeLabel = 'Video Lecture';
+    } else if (file.type === 'link' || valLower.startsWith('http://') || valLower.startsWith('https://') || valLower.startsWith('t.me/')) {
+      iconClass = 'fa-link link-icon';
+      typeLabel = 'Web / Telegram Link';
+    } else if (titleLower.endsWith('.docx') || titleLower.endsWith('.doc')) {
+      iconClass = 'fa-file-word word-icon';
+      typeLabel = 'Word Document';
+    } else if (titleLower.endsWith('.xlsx') || titleLower.endsWith('.xls')) {
+      iconClass = 'fa-file-excel excel-icon';
+      typeLabel = 'Excel Spreadsheet';
+    } else {
       iconClass = 'fa-file-pdf pdf-icon';
-      typeLabel = 'PDF File';
+      typeLabel = 'PDF Document';
     }
 
     fileEl.innerHTML = `

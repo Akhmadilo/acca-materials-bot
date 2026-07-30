@@ -2,6 +2,12 @@
   "settings": {
     "bot_token": "8723520559:AAFM108x6EzYIMg_bsHtLShCEwCZKj3gb50",
     "admin_password": "admin",
+    "admin_ids": [
+      557976703,
+      "Ibrohimov_Ahmadillo"
+    ],
+    "required_channel": "@Finance_Ahmadillo",
+    "required_channel_link": "https://t.me/Finance_Ahmadillo",
     "webhook_url": ""
   },
   "subscribers": [
@@ -11,6 +17,13 @@
       "last_name": "Ibrohimov",
       "username": "Ibrohimov_Ahmadillo",
       "joined_at": "2026-07-27T12:00:09.564Z"
+    },
+    {
+      "id": 8847963662,
+      "first_name": "Akhmadillo",
+      "last_name": "",
+      "username": "Ahmadillo_o2",
+      "joined_at": "2026-07-28T11:04:38.964Z"
     }
   ],
   "categories": [
@@ -30,7 +43,7 @@
     },
     {
       "id": "cat_feedback",
-      "title": "💬 Feedback",
+      "title": "💬 Feedback & Support",
       "parentId": null,
       "order": 3,
       "resources": [],
@@ -72,10 +85,10 @@
       "resources": [
         {
           "id": "res_cat_f1_ch1",
-          "title": "📢 F1 Telegram Channel",
+          "title": "F1 Business and Technology",
           "type": "link",
-          "value": "https://t.me/acca_materials_official",
-          "description": "F1 rasmiy Telegram kanali va guruhlari"
+          "value": "https://t.me/business_technolog",
+          "description": "F1 official Telegram channels & discussion groups"
         }
       ]
     },
@@ -86,11 +99,256 @@
       "order": 2,
       "resources": [
         {
-          "id": "res_cat_f1_b1",
-          "title": "📖 F1 Kaplan Study Text & Revision Kit",
-          "type": "link",
-          "value": "https://t.me/acca_materials_official",
-          "description": "F1 Kaplan va BPP nashri kitoblari"
+          "id": "res_1785394077211trnp",
+          "title": "FBT Practice questions.docx",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIDE2pq85L0mh3xYKon7zskHwEGZC6_AAJClwACnBxIS9a-GhlMdMpjPQQ",
+          "description": "Directly published via Telegram Admin Mode"
+        },
+        {
+          "id": "res_1785394104591ectu",
+          "title": "BT Exam Kit 2024-25 ISDC.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIDDGpq85KKprmv_XVEMUxa0remj2N0AAI6lwACnBxIS2p-3EdVv9mZPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_17853941045936twb",
+          "title": "BT STUDY HUB TEXT-1.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIDDWpq85L0VVDhugXMYJCDcYhF_0WWAAI7lwACnBxIS-tOE15gje6BPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1785394104594i5n6",
+          "title": "BT Imp MCQs Compiled.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIDDmpq85K5X95j6JSBvvS56TKZFR_2AAI9lwACnBxIS3p1jR87QejiPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1785394104596aqud",
+          "title": "f1 Night before notes.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIDD2pq85Ir97bXNBhtu2oaSgpolD7fAAI-lwACnBxIS3nTawTjYAU4PQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1785394104597m5ke",
+          "title": "F1 BT Pokect Notes (1).pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIDEGpq85L5K_2juRZc10s_EoYhtJroAAI_lwACnBxIS3ZbiEzxiMGzPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1785394104599shme",
+          "title": "F1- BT ACCOUNTANCY HUB short notes-1.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIDEWpq85K_kv_pbg1d_aWGQjeoQDIbAAJAlwACnBxIS0IU8idNs5saPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1785394104600jf86",
+          "title": "F1 Full Book Notes-Summarized.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIDEmpq85KOjuuT3-IbqE1l78ZlNPaHAAJBlwACnBxIS5ql232r2opZPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_17853941046011lkx",
+          "title": "FBT Practice questions.docx",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIDE2pq85L0mh3xYKon7zskHwEGZC6_AAJClwACnBxIS9a-GhlMdMpjPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1785394442219og47",
+          "title": "Corporate governance and ethical considerations - ACCA Accountant in Business (AB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAIDXGpq9QkXm19neQLE8fRIDGYbUPqzAALODwACkh5ZSqIws-pCdHB_PQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1785394442221yd90",
+          "title": "Some legal obligations - ACCA Accountant in Business (AB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAIDXWpq9QlLOhNU9wIx8b8GOUtHNRUCAALQDwACkh5ZSu5Wa8Hia17xPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1785394442222zfy3",
+          "title": "Accountancy, accounts and auditors - ACCA Accountant in Business (AB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAIDXmpq9Qn9j2EVzHxsa77ZgXe4ilnyAALTDwACkh5ZSs_La1GHBsnVPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1785394442230k9wc",
+          "title": "Internal control, fraud - ACCA Accountant in Business (AB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAIDX2pq9Qn-H-mCV5yTLM2omINmYSSrAALUDwACkh5ZStt_JZOJ0AhuPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1785394442232ec3o",
+          "title": "Business use of computers and IT - ACCA Accountant in Business (AB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAIDYGpq9QmuB7K_8-CZj6H42_6GrhAHAALWDwACkh5ZSjg7JlXsZMu6PQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_17853944422337bgz",
+          "title": "Management - ACCA Accountant in Business (AB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAIDYWpq9QljApjrrBkKvwU2K03IFux3AALbDwACkh5ZSjUen1j0GLb2PQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1785394442235xogf",
+          "title": "Leadership - ACCA Accountant in Business (AB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAIDYmpq9QmJmjn2d09OAAFr8dkPdChj-AAC3Q8AApIeWUq3OgpJGtSCFz0E",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1785394442236h1o0",
+          "title": "An organisation’s stakeholders - ACCA Paper BT",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIDY2pq9Ql-wpmz4vILig1TK_bwsqviAAKCKwACvBUhUGD7IJA9yt6RPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_17853944422380ni0",
+          "title": "Organisational culture - ACCA Paper BT",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIDZGpq9QkNBJb3TEBymoqTdb5FvePIAAJMKwACvBUhUCP1p0LWusJxPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1785394442243i0pc",
+          "title": "Corporate governance and ethical considerations - ACCA Paper BT",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIDZWpq9QksL59tKfUQfs3gPPl8oQyPAAIrKwACvBUhUCp_AgNTKYJ5PQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_17853944422442gt5",
+          "title": "Some legal obligations - ACCA Paper BT",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIDZmpq9Qm8a7a017EtUqKm28k5xSasAALoKgACvBUhUPF9jVsfHVZ6PQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_17853944422466zuo",
+          "title": "Accountancy, accounts and auditors - ACCA Paper BT",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIDZ2pq9QnchvpJu7tt_QG2ZGP4B_dGAAIVKwACvBUhUGe91zHY08iqPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1785394442247vhkj",
+          "title": "Internal control, fraud - ACCA Paper BT",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIDaGpq9QnWuaq08fq7v6N9Fp4bBGaWAAIb7wACvBUZUECCX6BStGkbPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1785394442332gizb",
+          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 1 Introduction to F1, types of organisation\n\n✅",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAIDaWpq9Ql4Kd5hWc0lp-RyL74BTNaOAAIkBAACTmLZSPuxZ0TRC5EKPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1785394442334mvc6",
+          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 2 Planning, marketing, organisation structure\n\n✅",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAIDampq9QmBqLReOELGVE-mLkQrvfMOAAJ-BQACax7QSNwzCTPonOI_PQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1785394442336gt09",
+          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 3 Span of control, scalar chain, (de) centralisation\n\n✅",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAIDa2pq9QlzFD-rkc3ZYNi93dEj3lF2AAJfBAAC_0LYSA3QoKnguHwyPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1785394442337i2fb",
+          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 4 Culture\n\n✅",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAIDbGpq9QkhRr4TLyPfVP-GwWW9hMNHAAI4BAACTmLZSECVY_sSV5sEPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1785394442339463c",
+          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 5 Stakeholders\n\n✅",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAIDbWpq9QnkxOL3cF-n9aUrTXL1qyszAAI5BAACTmLZSEwH2iFmAAE-1j0E",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1785394442341v7i1",
+          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 6 Committees\n\n✅",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAIDbmpq9QmRy95UxqDZVs7jRlHLWCwqAAJ-BAACax7YSNEvjLVj3B-bPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_17853944423436782",
+          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 7 Information systems\n\n✅",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAIDb2pq9QmCqDU3SYjilTQDUCMh6J5UAAJ_BAACax7YSCxcbNqSjYbtPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1785394442344fcnn",
+          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 8 Ethics and corporate governance\n\n✅",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAIDcGpq9QkyYDYXud6qnrprLjwS3WIDAAJ2BAACTmLZSJtRkf582t1uPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1785394442432gyt5",
+          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 9 Environmental influences\n\n✅",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAIDcWpq9QkCxaMJFNNG5E1PQAkUjnfoAAJ3BAACTmLZSKz1uM46l7woPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1785394442434xxmu",
+          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 10 Role of accounting in business\n\n✅",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAIDcmpq9Ql60dY2Doy-JlHjkoQOxBZRAAKGBAAC_0LYSPAfV91qLDyhPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1785394442436pabe",
+          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 11 Functions of accounting and internal control\n\n✅",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAIDc2pq9Qkt433ACf71uYXFiyhePDOKAAJ4BAACTmLZSGmFi-8RsRjXPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1785394442438zmdc",
+          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 12 Leadership, management and teams\n\n✅",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAIDdGpq9Qn6unWxutVMAAEekzbdPx-UtgACeQQAAk5i2UgWN5boj0WPPT0E",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_17853944424395bu8",
+          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 13 Motivating individuals and groups\n\n✅",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAIDdWpq9QlC4psctYcBkekxWCTQP88QAAJ6BAACTmLZSAdLl2_pI-IbPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1785394442441s9gh",
+          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 14 Recruitment and development\n\n✅",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAIDdmpq9QnP1PEYrk8LKg6q7P91e5L9AAKIBAAC_0LYSL8NGJ7HHHrqPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
         }
       ]
     },
@@ -99,15 +357,7 @@
       "title": "🎥 Video Lessons for F1",
       "parentId": "cat_f1",
       "order": 3,
-      "resources": [
-        {
-          "id": "res_cat_f1_v1",
-          "title": "🎥 F1 Complete Video Course",
-          "type": "link",
-          "value": "https://youtube.com",
-          "description": "F1 videodarsliklar to'plami"
-        }
-      ]
+      "resources": []
     },
     {
       "id": "cat_f1_youtube",
@@ -119,8 +369,8 @@
           "id": "res_cat_f1_yt1",
           "title": "🔍 F1 YouTube Channel",
           "type": "link",
-          "value": "https://youtube.com",
-          "description": "F1 faniga bag'ishlangan YouTube kanallar"
+          "value": "https://youtube.com/playlist?list=PLETfu1oU9uLyYkKMpJflbxjBSnOatbcLh&si=vr4xfDI5BsvJbHZu",
+          "description": "F1 recommended YouTube tutorial channels"
         }
       ]
     },
@@ -141,8 +391,8 @@
           "id": "res_cat_f2_ch1",
           "title": "📢 F2 Telegram Channel",
           "type": "link",
-          "value": "https://t.me/acca_materials_official",
-          "description": "F2 rasmiy Telegram kanali va guruhlari"
+          "value": "https://t.me/Finance_Ahmadillo",
+          "description": "F2 official Telegram channels & discussion groups"
         }
       ]
     },
@@ -156,8 +406,8 @@
           "id": "res_cat_f2_b1",
           "title": "📖 F2 Kaplan Study Text & Revision Kit",
           "type": "link",
-          "value": "https://t.me/acca_materials_official",
-          "description": "F2 Kaplan va BPP nashri kitoblari"
+          "value": "https://t.me/Finance_Ahmadillo",
+          "description": "F2 Kaplan & BPP latest exam kits and textbooks"
         }
       ]
     },
@@ -172,7 +422,7 @@
           "title": "🎥 F2 Complete Video Course",
           "type": "link",
           "value": "https://youtube.com",
-          "description": "F2 videodarsliklar to'plami"
+          "description": "F2 comprehensive lecture series"
         }
       ]
     },
@@ -187,7 +437,7 @@
           "title": "🔍 F2 YouTube Channel",
           "type": "link",
           "value": "https://youtube.com",
-          "description": "F2 faniga bag'ishlangan YouTube kanallar"
+          "description": "F2 recommended YouTube tutorial channels"
         }
       ]
     },
@@ -208,8 +458,8 @@
           "id": "res_cat_f3_ch1",
           "title": "📢 F3 Telegram Channel",
           "type": "link",
-          "value": "https://t.me/acca_materials_official",
-          "description": "F3 rasmiy Telegram kanali va guruhlari"
+          "value": "https://t.me/Finance_Ahmadillo",
+          "description": "F3 official Telegram channels & discussion groups"
         }
       ]
     },
@@ -223,8 +473,8 @@
           "id": "res_cat_f3_b1",
           "title": "📖 F3 Kaplan Study Text & Revision Kit",
           "type": "link",
-          "value": "https://t.me/acca_materials_official",
-          "description": "F3 Kaplan va BPP nashri kitoblari"
+          "value": "https://t.me/Finance_Ahmadillo",
+          "description": "F3 Kaplan & BPP latest exam kits and textbooks"
         }
       ]
     },
@@ -239,7 +489,7 @@
           "title": "🎥 F3 Complete Video Course",
           "type": "link",
           "value": "https://youtube.com",
-          "description": "F3 videodarsliklar to'plami"
+          "description": "F3 comprehensive lecture series"
         }
       ]
     },
@@ -254,7 +504,7 @@
           "title": "🔍 F3 YouTube Channel",
           "type": "link",
           "value": "https://youtube.com",
-          "description": "F3 faniga bag'ishlangan YouTube kanallar"
+          "description": "F3 recommended YouTube tutorial channels"
         }
       ]
     },
@@ -275,8 +525,8 @@
           "id": "res_cat_f4_ch1",
           "title": "📢 F4 Telegram Channel",
           "type": "link",
-          "value": "https://t.me/acca_materials_official",
-          "description": "F4 rasmiy Telegram kanali va guruhlari"
+          "value": "https://t.me/Finance_Ahmadillo",
+          "description": "F4 official Telegram channels & discussion groups"
         }
       ]
     },
@@ -290,8 +540,8 @@
           "id": "res_cat_f4_b1",
           "title": "📖 F4 Kaplan Study Text & Revision Kit",
           "type": "link",
-          "value": "https://t.me/acca_materials_official",
-          "description": "F4 Kaplan va BPP nashri kitoblari"
+          "value": "https://t.me/Finance_Ahmadillo",
+          "description": "F4 Kaplan & BPP latest exam kits and textbooks"
         }
       ]
     },
@@ -306,7 +556,7 @@
           "title": "🎥 F4 Complete Video Course",
           "type": "link",
           "value": "https://youtube.com",
-          "description": "F4 videodarsliklar to'plami"
+          "description": "F4 comprehensive lecture series"
         }
       ]
     },
@@ -321,7 +571,7 @@
           "title": "🔍 F4 YouTube Channel",
           "type": "link",
           "value": "https://youtube.com",
-          "description": "F4 faniga bag'ishlangan YouTube kanallar"
+          "description": "F4 recommended YouTube tutorial channels"
         }
       ]
     },
@@ -342,8 +592,8 @@
           "id": "res_cat_f5_ch1",
           "title": "📢 F5 Telegram Channel",
           "type": "link",
-          "value": "https://t.me/acca_materials_official",
-          "description": "F5 rasmiy Telegram kanali va guruhlari"
+          "value": "https://t.me/Finance_Ahmadillo",
+          "description": "F5 official Telegram channels & discussion groups"
         }
       ]
     },
@@ -357,8 +607,8 @@
           "id": "res_cat_f5_b1",
           "title": "📖 F5 Kaplan Study Text & Revision Kit",
           "type": "link",
-          "value": "https://t.me/acca_materials_official",
-          "description": "F5 Kaplan va BPP nashri kitoblari"
+          "value": "https://t.me/Finance_Ahmadillo",
+          "description": "F5 Kaplan & BPP latest exam kits and textbooks"
         }
       ]
     },
@@ -373,7 +623,7 @@
           "title": "🎥 F5 Complete Video Course",
           "type": "link",
           "value": "https://youtube.com",
-          "description": "F5 videodarsliklar to'plami"
+          "description": "F5 comprehensive lecture series"
         }
       ]
     },
@@ -388,7 +638,7 @@
           "title": "🔍 F5 YouTube Channel",
           "type": "link",
           "value": "https://youtube.com",
-          "description": "F5 faniga bag'ishlangan YouTube kanallar"
+          "description": "F5 recommended YouTube tutorial channels"
         }
       ]
     },
@@ -409,8 +659,8 @@
           "id": "res_cat_f6_ch1",
           "title": "📢 F6 Telegram Channel",
           "type": "link",
-          "value": "https://t.me/acca_materials_official",
-          "description": "F6 rasmiy Telegram kanali va guruhlari"
+          "value": "https://t.me/Finance_Ahmadillo",
+          "description": "F6 official Telegram channels & discussion groups"
         }
       ]
     },
@@ -424,8 +674,8 @@
           "id": "res_cat_f6_b1",
           "title": "📖 F6 Kaplan Study Text & Revision Kit",
           "type": "link",
-          "value": "https://t.me/acca_materials_official",
-          "description": "F6 Kaplan va BPP nashri kitoblari"
+          "value": "https://t.me/Finance_Ahmadillo",
+          "description": "F6 Kaplan & BPP latest exam kits and textbooks"
         }
       ]
     },
@@ -440,7 +690,7 @@
           "title": "🎥 F6 Complete Video Course",
           "type": "link",
           "value": "https://youtube.com",
-          "description": "F6 videodarsliklar to'plami"
+          "description": "F6 comprehensive lecture series"
         }
       ]
     },
@@ -455,7 +705,7 @@
           "title": "🔍 F6 YouTube Channel",
           "type": "link",
           "value": "https://youtube.com",
-          "description": "F6 faniga bag'ishlangan YouTube kanallar"
+          "description": "F6 recommended YouTube tutorial channels"
         }
       ]
     },
@@ -476,8 +726,8 @@
           "id": "res_cat_f7_ch1",
           "title": "📢 F7 Telegram Channel",
           "type": "link",
-          "value": "https://t.me/acca_materials_official",
-          "description": "F7 rasmiy Telegram kanali va guruhlari"
+          "value": "https://t.me/Finance_Ahmadillo",
+          "description": "F7 official Telegram channels & discussion groups"
         }
       ]
     },
@@ -491,8 +741,8 @@
           "id": "res_cat_f7_b1",
           "title": "📖 F7 Kaplan Study Text & Revision Kit",
           "type": "link",
-          "value": "https://t.me/acca_materials_official",
-          "description": "F7 Kaplan va BPP nashri kitoblari"
+          "value": "https://t.me/Finance_Ahmadillo",
+          "description": "F7 Kaplan & BPP latest exam kits and textbooks"
         }
       ]
     },
@@ -507,7 +757,7 @@
           "title": "🎥 F7 Complete Video Course",
           "type": "link",
           "value": "https://youtube.com",
-          "description": "F7 videodarsliklar to'plami"
+          "description": "F7 comprehensive lecture series"
         }
       ]
     },
@@ -522,7 +772,7 @@
           "title": "🔍 F7 YouTube Channel",
           "type": "link",
           "value": "https://youtube.com",
-          "description": "F7 faniga bag'ishlangan YouTube kanallar"
+          "description": "F7 recommended YouTube tutorial channels"
         }
       ]
     },
@@ -543,8 +793,8 @@
           "id": "res_cat_f8_ch1",
           "title": "📢 F8 Telegram Channel",
           "type": "link",
-          "value": "https://t.me/acca_materials_official",
-          "description": "F8 rasmiy Telegram kanali va guruhlari"
+          "value": "https://t.me/Finance_Ahmadillo",
+          "description": "F8 official Telegram channels & discussion groups"
         }
       ]
     },
@@ -558,8 +808,8 @@
           "id": "res_cat_f8_b1",
           "title": "📖 F8 Kaplan Study Text & Revision Kit",
           "type": "link",
-          "value": "https://t.me/acca_materials_official",
-          "description": "F8 Kaplan va BPP nashri kitoblari"
+          "value": "https://t.me/Finance_Ahmadillo",
+          "description": "F8 Kaplan & BPP latest exam kits and textbooks"
         }
       ]
     },
@@ -574,7 +824,7 @@
           "title": "🎥 F8 Complete Video Course",
           "type": "link",
           "value": "https://youtube.com",
-          "description": "F8 videodarsliklar to'plami"
+          "description": "F8 comprehensive lecture series"
         }
       ]
     },
@@ -589,7 +839,7 @@
           "title": "🔍 F8 YouTube Channel",
           "type": "link",
           "value": "https://youtube.com",
-          "description": "F8 faniga bag'ishlangan YouTube kanallar"
+          "description": "F8 recommended YouTube tutorial channels"
         }
       ]
     },
@@ -610,8 +860,8 @@
           "id": "res_cat_f9_ch1",
           "title": "📢 F9 Telegram Channel",
           "type": "link",
-          "value": "https://t.me/acca_materials_official",
-          "description": "F9 rasmiy Telegram kanali va guruhlari"
+          "value": "https://t.me/Finance_Ahmadillo",
+          "description": "F9 official Telegram channels & discussion groups"
         }
       ]
     },
@@ -625,8 +875,8 @@
           "id": "res_cat_f9_b1",
           "title": "📖 F9 Kaplan Study Text & Revision Kit",
           "type": "link",
-          "value": "https://t.me/acca_materials_official",
-          "description": "F9 Kaplan va BPP nashri kitoblari"
+          "value": "https://t.me/Finance_Ahmadillo",
+          "description": "F9 Kaplan & BPP latest exam kits and textbooks"
         }
       ]
     },
@@ -641,7 +891,7 @@
           "title": "🎥 F9 Complete Video Course",
           "type": "link",
           "value": "https://youtube.com",
-          "description": "F9 videodarsliklar to'plami"
+          "description": "F9 comprehensive lecture series"
         }
       ]
     },
@@ -656,7 +906,7 @@
           "title": "🔍 F9 YouTube Channel",
           "type": "link",
           "value": "https://youtube.com",
-          "description": "F9 faniga bag'ishlangan YouTube kanallar"
+          "description": "F9 recommended YouTube tutorial channels"
         }
       ]
     },
@@ -677,8 +927,8 @@
           "id": "res_cat_sbl_ch1",
           "title": "📢 SBL Telegram Channel",
           "type": "link",
-          "value": "https://t.me/acca_materials_official",
-          "description": "SBL rasmiy Telegram kanali va guruhlari"
+          "value": "https://t.me/Finance_Ahmadillo",
+          "description": "SBL official Telegram channels & discussion groups"
         }
       ]
     },
@@ -692,8 +942,8 @@
           "id": "res_cat_sbl_b1",
           "title": "📖 SBL Kaplan Study Text & Revision Kit",
           "type": "link",
-          "value": "https://t.me/acca_materials_official",
-          "description": "SBL Kaplan va BPP nashri kitoblari"
+          "value": "https://t.me/Finance_Ahmadillo",
+          "description": "SBL Kaplan & BPP latest exam kits and textbooks"
         }
       ]
     },
@@ -708,7 +958,7 @@
           "title": "🎥 SBL Complete Video Course",
           "type": "link",
           "value": "https://youtube.com",
-          "description": "SBL videodarsliklar to'plami"
+          "description": "SBL comprehensive lecture series"
         }
       ]
     },
@@ -723,7 +973,7 @@
           "title": "🔍 SBL YouTube Channel",
           "type": "link",
           "value": "https://youtube.com",
-          "description": "SBL faniga bag'ishlangan YouTube kanallar"
+          "description": "SBL recommended YouTube tutorial channels"
         }
       ]
     },
@@ -744,8 +994,8 @@
           "id": "res_cat_sbr_ch1",
           "title": "📢 SBR Telegram Channel",
           "type": "link",
-          "value": "https://t.me/acca_materials_official",
-          "description": "SBR rasmiy Telegram kanali va guruhlari"
+          "value": "https://t.me/Finance_Ahmadillo",
+          "description": "SBR official Telegram channels & discussion groups"
         }
       ]
     },
@@ -759,8 +1009,8 @@
           "id": "res_cat_sbr_b1",
           "title": "📖 SBR Kaplan Study Text & Revision Kit",
           "type": "link",
-          "value": "https://t.me/acca_materials_official",
-          "description": "SBR Kaplan va BPP nashri kitoblari"
+          "value": "https://t.me/Finance_Ahmadillo",
+          "description": "SBR Kaplan & BPP latest exam kits and textbooks"
         }
       ]
     },
@@ -775,7 +1025,7 @@
           "title": "🎥 SBR Complete Video Course",
           "type": "link",
           "value": "https://youtube.com",
-          "description": "SBR videodarsliklar to'plami"
+          "description": "SBR comprehensive lecture series"
         }
       ]
     },
@@ -790,7 +1040,7 @@
           "title": "🔍 SBR YouTube Channel",
           "type": "link",
           "value": "https://youtube.com",
-          "description": "SBR faniga bag'ishlangan YouTube kanallar"
+          "description": "SBR recommended YouTube tutorial channels"
         }
       ]
     },
@@ -811,8 +1061,8 @@
           "id": "res_cat_p4_ch1",
           "title": "📢 P4 Telegram Channel",
           "type": "link",
-          "value": "https://t.me/acca_materials_official",
-          "description": "P4 rasmiy Telegram kanali va guruhlari"
+          "value": "https://t.me/Finance_Ahmadillo",
+          "description": "P4 official Telegram channels & discussion groups"
         }
       ]
     },
@@ -826,8 +1076,8 @@
           "id": "res_cat_p4_b1",
           "title": "📖 P4 Kaplan Study Text & Revision Kit",
           "type": "link",
-          "value": "https://t.me/acca_materials_official",
-          "description": "P4 Kaplan va BPP nashri kitoblari"
+          "value": "https://t.me/Finance_Ahmadillo",
+          "description": "P4 Kaplan & BPP latest exam kits and textbooks"
         }
       ]
     },
@@ -842,7 +1092,7 @@
           "title": "🎥 P4 Complete Video Course",
           "type": "link",
           "value": "https://youtube.com",
-          "description": "P4 videodarsliklar to'plami"
+          "description": "P4 comprehensive lecture series"
         }
       ]
     },
@@ -857,7 +1107,7 @@
           "title": "🔍 P4 YouTube Channel",
           "type": "link",
           "value": "https://youtube.com",
-          "description": "P4 faniga bag'ishlangan YouTube kanallar"
+          "description": "P4 recommended YouTube tutorial channels"
         }
       ]
     },
@@ -878,8 +1128,8 @@
           "id": "res_cat_p5_ch1",
           "title": "📢 P5 Telegram Channel",
           "type": "link",
-          "value": "https://t.me/acca_materials_official",
-          "description": "P5 rasmiy Telegram kanali va guruhlari"
+          "value": "https://t.me/Finance_Ahmadillo",
+          "description": "P5 official Telegram channels & discussion groups"
         }
       ]
     },
@@ -893,8 +1143,8 @@
           "id": "res_cat_p5_b1",
           "title": "📖 P5 Kaplan Study Text & Revision Kit",
           "type": "link",
-          "value": "https://t.me/acca_materials_official",
-          "description": "P5 Kaplan va BPP nashri kitoblari"
+          "value": "https://t.me/Finance_Ahmadillo",
+          "description": "P5 Kaplan & BPP latest exam kits and textbooks"
         }
       ]
     },
@@ -909,7 +1159,7 @@
           "title": "🎥 P5 Complete Video Course",
           "type": "link",
           "value": "https://youtube.com",
-          "description": "P5 videodarsliklar to'plami"
+          "description": "P5 comprehensive lecture series"
         }
       ]
     },
@@ -924,7 +1174,7 @@
           "title": "🔍 P5 YouTube Channel",
           "type": "link",
           "value": "https://youtube.com",
-          "description": "P5 faniga bag'ishlangan YouTube kanallar"
+          "description": "P5 recommended YouTube tutorial channels"
         }
       ]
     },
@@ -945,8 +1195,8 @@
           "id": "res_cat_p6_ch1",
           "title": "📢 P6 Telegram Channel",
           "type": "link",
-          "value": "https://t.me/acca_materials_official",
-          "description": "P6 rasmiy Telegram kanali va guruhlari"
+          "value": "https://t.me/Finance_Ahmadillo",
+          "description": "P6 official Telegram channels & discussion groups"
         }
       ]
     },
@@ -960,8 +1210,8 @@
           "id": "res_cat_p6_b1",
           "title": "📖 P6 Kaplan Study Text & Revision Kit",
           "type": "link",
-          "value": "https://t.me/acca_materials_official",
-          "description": "P6 Kaplan va BPP nashri kitoblari"
+          "value": "https://t.me/Finance_Ahmadillo",
+          "description": "P6 Kaplan & BPP latest exam kits and textbooks"
         }
       ]
     },
@@ -976,7 +1226,7 @@
           "title": "🎥 P6 Complete Video Course",
           "type": "link",
           "value": "https://youtube.com",
-          "description": "P6 videodarsliklar to'plami"
+          "description": "P6 comprehensive lecture series"
         }
       ]
     },
@@ -991,7 +1241,7 @@
           "title": "🔍 P6 YouTube Channel",
           "type": "link",
           "value": "https://youtube.com",
-          "description": "P6 faniga bag'ishlangan YouTube kanallar"
+          "description": "P6 recommended YouTube tutorial channels"
         }
       ]
     },
@@ -1012,8 +1262,8 @@
           "id": "res_cat_p7_ch1",
           "title": "📢 P7 Telegram Channel",
           "type": "link",
-          "value": "https://t.me/acca_materials_official",
-          "description": "P7 rasmiy Telegram kanali va guruhlari"
+          "value": "https://t.me/Finance_Ahmadillo",
+          "description": "P7 official Telegram channels & discussion groups"
         }
       ]
     },
@@ -1027,8 +1277,8 @@
           "id": "res_cat_p7_b1",
           "title": "📖 P7 Kaplan Study Text & Revision Kit",
           "type": "link",
-          "value": "https://t.me/acca_materials_official",
-          "description": "P7 Kaplan va BPP nashri kitoblari"
+          "value": "https://t.me/Finance_Ahmadillo",
+          "description": "P7 Kaplan & BPP latest exam kits and textbooks"
         }
       ]
     },
@@ -1043,7 +1293,7 @@
           "title": "🎥 P7 Complete Video Course",
           "type": "link",
           "value": "https://youtube.com",
-          "description": "P7 videodarsliklar to'plami"
+          "description": "P7 comprehensive lecture series"
         }
       ]
     },
@@ -1058,7 +1308,7 @@
           "title": "🔍 P7 YouTube Channel",
           "type": "link",
           "value": "https://youtube.com",
-          "description": "P7 faniga bag'ishlangan YouTube kanallar"
+          "description": "P7 recommended YouTube tutorial channels"
         }
       ]
     },
@@ -1079,8 +1329,8 @@
           "id": "res_cat_cfa_l1_ch1",
           "title": "📢 CFA Level 1 Telegram Channel",
           "type": "link",
-          "value": "https://t.me/acca_materials_official",
-          "description": "CFA Level 1 rasmiy Telegram kanali va guruhlari"
+          "value": "https://t.me/Finance_Ahmadillo",
+          "description": "CFA Level 1 official Telegram channels & discussion groups"
         }
       ]
     },
@@ -1094,8 +1344,8 @@
           "id": "res_cat_cfa_l1_b1",
           "title": "📖 CFA Level 1 Kaplan Study Text & Revision Kit",
           "type": "link",
-          "value": "https://t.me/acca_materials_official",
-          "description": "CFA Level 1 Kaplan va BPP nashri kitoblari"
+          "value": "https://t.me/Finance_Ahmadillo",
+          "description": "CFA Level 1 Kaplan & BPP latest exam kits and textbooks"
         }
       ]
     },
@@ -1110,7 +1360,7 @@
           "title": "🎥 CFA Level 1 Complete Video Course",
           "type": "link",
           "value": "https://youtube.com",
-          "description": "CFA Level 1 videodarsliklar to'plami"
+          "description": "CFA Level 1 comprehensive lecture series"
         }
       ]
     },
@@ -1125,7 +1375,7 @@
           "title": "🔍 CFA Level 1 YouTube Channel",
           "type": "link",
           "value": "https://youtube.com",
-          "description": "CFA Level 1 faniga bag'ishlangan YouTube kanallar"
+          "description": "CFA Level 1 recommended YouTube tutorial channels"
         }
       ]
     },
@@ -1146,8 +1396,8 @@
           "id": "res_cat_cfa_l2_ch1",
           "title": "📢 CFA Level 2 Telegram Channel",
           "type": "link",
-          "value": "https://t.me/acca_materials_official",
-          "description": "CFA Level 2 rasmiy Telegram kanali va guruhlari"
+          "value": "https://t.me/Finance_Ahmadillo",
+          "description": "CFA Level 2 official Telegram channels & discussion groups"
         }
       ]
     },
@@ -1161,8 +1411,8 @@
           "id": "res_cat_cfa_l2_b1",
           "title": "📖 CFA Level 2 Kaplan Study Text & Revision Kit",
           "type": "link",
-          "value": "https://t.me/acca_materials_official",
-          "description": "CFA Level 2 Kaplan va BPP nashri kitoblari"
+          "value": "https://t.me/Finance_Ahmadillo",
+          "description": "CFA Level 2 Kaplan & BPP latest exam kits and textbooks"
         }
       ]
     },
@@ -1177,7 +1427,7 @@
           "title": "🎥 CFA Level 2 Complete Video Course",
           "type": "link",
           "value": "https://youtube.com",
-          "description": "CFA Level 2 videodarsliklar to'plami"
+          "description": "CFA Level 2 comprehensive lecture series"
         }
       ]
     },
@@ -1192,7 +1442,7 @@
           "title": "🔍 CFA Level 2 YouTube Channel",
           "type": "link",
           "value": "https://youtube.com",
-          "description": "CFA Level 2 faniga bag'ishlangan YouTube kanallar"
+          "description": "CFA Level 2 recommended YouTube tutorial channels"
         }
       ]
     },
@@ -1213,8 +1463,8 @@
           "id": "res_cat_cfa_l3_ch1",
           "title": "📢 CFA Level 3 Telegram Channel",
           "type": "link",
-          "value": "https://t.me/acca_materials_official",
-          "description": "CFA Level 3 rasmiy Telegram kanali va guruhlari"
+          "value": "https://t.me/Finance_Ahmadillo",
+          "description": "CFA Level 3 official Telegram channels & discussion groups"
         }
       ]
     },
@@ -1228,8 +1478,8 @@
           "id": "res_cat_cfa_l3_b1",
           "title": "📖 CFA Level 3 Kaplan Study Text & Revision Kit",
           "type": "link",
-          "value": "https://t.me/acca_materials_official",
-          "description": "CFA Level 3 Kaplan va BPP nashri kitoblari"
+          "value": "https://t.me/Finance_Ahmadillo",
+          "description": "CFA Level 3 Kaplan & BPP latest exam kits and textbooks"
         }
       ]
     },
@@ -1244,7 +1494,7 @@
           "title": "🎥 CFA Level 3 Complete Video Course",
           "type": "link",
           "value": "https://youtube.com",
-          "description": "CFA Level 3 videodarsliklar to'plami"
+          "description": "CFA Level 3 comprehensive lecture series"
         }
       ]
     },
@@ -1259,7 +1509,7 @@
           "title": "🔍 CFA Level 3 YouTube Channel",
           "type": "link",
           "value": "https://youtube.com",
-          "description": "CFA Level 3 faniga bag'ishlangan YouTube kanallar"
+          "description": "CFA Level 3 recommended YouTube tutorial channels"
         }
       ]
     }

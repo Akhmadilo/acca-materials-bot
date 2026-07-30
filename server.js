@@ -265,8 +265,9 @@ function setupBotHandlers() {
       const member = await bot.getChatMember(FORCE_CHANNEL_USERNAME, userId);
       return ['creator', 'administrator', 'member'].includes(member.status);
     } catch (err) {
-      console.log('Force sub check info (Make sure @finance_information_bot is added as admin to @Finance_Ahmadillo):', err.message);
-      return false; // Strictly lock down if check fails or user is not a member!
+      console.log('Force sub check API info (Make sure @finance_information_bot is added as Administrator to @Finance_Ahmadillo):', err.message);
+      // If Telegram API returns error (e.g. bot not admin in channel yet), grant temporary access so users are not blocked!
+      return true;
     }
   }
 
