@@ -819,15 +819,59 @@ function updateBulkActionBar() {
 function populateMoveTargetSelect() {
   const select = document.getElementById('moveTargetSelect');
   if (!select) return;
-  select.innerHTML = '';
+  select.innerHTML = '<option value="">-- Choose Destination Folder --</option>';
 
-  const leafCategories = dbData.categories.filter(c => !c.isFeedback);
-  leafCategories.forEach(cat => {
-    const option = document.createElement('option');
-    option.value = cat.id;
-    option.textContent = cat.title;
-    if (currentFolderId === cat.id) option.disabled = true;
-    select.appendChild(option);
+  const roots = dbData.categories.filter(c => !c.parentId && !c.isFeedback);
+
+  roots.forEach(rootCat => {
+    const rootGroup = document.createElement('optgroup');
+    rootGroup.label = rootCat.title;
+
+    const mainLevels = dbData.categories.filter(c => c.parentId === rootCat.id);
+
+    mainLevels.forEach(levelCat => {
+      const papers = dbData.categories.filter(c => c.parentId === levelCat.id);
+
+      if (papers.length > 0) {
+        papers.forEach(paperCat => {
+          const subFolders = dbData.categories.filter(c => c.parentId === paperCat.id);
+          if (subFolders.length > 0) {
+            subFolders.forEach(sf => {
+              const opt = document.createElement('option');
+              opt.value = sf.id;
+              opt.textContent = `${paperCat.title} ➔ ${sf.title}`;
+              if (currentFolderId === sf.id) opt.disabled = true;
+              rootGroup.appendChild(opt);
+            });
+          } else {
+            const opt = document.createElement('option');
+            opt.value = paperCat.id;
+            opt.textContent = `${levelCat.title} ➔ ${paperCat.title}`;
+            if (currentFolderId === paperCat.id) opt.disabled = true;
+            rootGroup.appendChild(opt);
+          }
+        });
+      } else {
+        const subFolders = dbData.categories.filter(c => c.parentId === levelCat.id);
+        if (subFolders.length > 0) {
+          subFolders.forEach(sf => {
+            const opt = document.createElement('option');
+            opt.value = sf.id;
+            opt.textContent = `${levelCat.title} ➔ ${sf.title}`;
+            if (currentFolderId === sf.id) opt.disabled = true;
+            rootGroup.appendChild(opt);
+          });
+        } else {
+          const opt = document.createElement('option');
+          opt.value = levelCat.id;
+          opt.textContent = `${rootCat.title} ➔ ${levelCat.title}`;
+          if (currentFolderId === levelCat.id) opt.disabled = true;
+          rootGroup.appendChild(opt);
+        }
+      }
+    });
+
+    select.appendChild(rootGroup);
   });
 }
 
