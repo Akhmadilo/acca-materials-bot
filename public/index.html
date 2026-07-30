@@ -186,16 +186,57 @@
       <!-- TAB 5: Settings -->
       <section id="tab-settings" class="tab-pane">
         <div class="section-header">
-          <h2><i class="fa-solid fa-sliders"></i> Bot Settings & Integration</h2>
+          <h2><i class="fa-solid fa-sliders"></i> Bot Settings, Channels & Donation Portal</h2>
         </div>
 
-        <div class="card settings-card">
+        <div class="card settings-card" style="margin-bottom: 1.5rem;">
+          <h3 style="color:#fff; font-size:1.1rem; margin-bottom:1rem;"><i class="fa-solid fa-key"></i> Bot Token Settings</h3>
           <div class="form-group">
             <label for="botTokenInput">Telegram Bot API Token:</label>
             <input type="text" id="botTokenInput" placeholder="8723520559:AAFM108x6EzYIMg_bsHtLShCEwCZKj3gb50">
           </div>
           <button class="btn btn-primary" onclick="saveSettings()">
-            <i class="fa-solid fa-floppy-disk"></i> Save Settings
+            <i class="fa-solid fa-floppy-disk"></i> Save Token Settings
+          </button>
+        </div>
+
+        <!-- Mandatory Channels Manager -->
+        <div class="card settings-card" style="margin-bottom: 1.5rem;">
+          <h3 style="color:#fff; font-size:1.1rem; margin-bottom:1rem;"><i class="fa-solid fa-bullhorn" style="color:#38bdf8;"></i> Mandatory Force Subscription Channels</h3>
+          <p style="color:#94a3b8; font-size:0.88rem; margin-bottom:1rem;">Add channels users MUST join before accessing bot books and files:</p>
+          
+          <div style="display:flex; gap:10px; margin-bottom:1rem;">
+            <input type="text" id="newChannelUsername" placeholder="@Finance_Ahmadillo" style="flex:1;">
+            <input type="text" id="newChannelTitle" placeholder="Channel Name (e.g. Finance Ahmadillo)" style="flex:1;">
+            <button class="btn btn-success" onclick="addMandatoryChannel()"><i class="fa-solid fa-plus"></i> Add Channel</button>
+          </div>
+
+          <div id="channelsListContainer"></div>
+        </div>
+
+        <!-- Donation & Support Card Manager -->
+        <div class="card settings-card">
+          <h3 style="color:#fff; font-size:1.1rem; margin-bottom:1rem;"><i class="fa-solid fa-credit-card" style="color:#34d399;"></i> Donation Card & Support Settings</h3>
+          <p style="color:#94a3b8; font-size:0.88rem; margin-bottom:1rem;">Configure your card details shown in Telegram bot when users tap /donate or Donation button:</p>
+
+          <div class="form-group">
+            <label for="donCardNumber">Card Number (1-tap copyable):</label>
+            <input type="text" id="donCardNumber" placeholder="8600 0000 0000 0000">
+          </div>
+          <div class="form-group">
+            <label for="donCardHolder">Card Holder Name:</label>
+            <input type="text" id="donCardHolder" placeholder="Ahmadillo Ibrohimov">
+          </div>
+          <div class="form-group">
+            <label for="donBankName">Bank / Payment Network:</label>
+            <input type="text" id="donBankName" placeholder="Uzcard / Humo">
+          </div>
+          <div class="form-group">
+            <label for="donNote">Thank You Note / Description:</label>
+            <textarea id="donNote" rows="2" placeholder="Loyiha va bot rivojiga hissa qo'shganingiz uchun rahmat!"></textarea>
+          </div>
+          <button class="btn btn-success" onclick="saveDonationSettings()">
+            <i class="fa-solid fa-floppy-disk"></i> Save Donation Settings
           </button>
         </div>
       </section>

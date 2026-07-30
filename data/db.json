@@ -160,7 +160,15 @@
           "type": "file_id",
           "value": "BQACAgIAAxkBAAIDE2pq85L0mh3xYKon7zskHwEGZC6_AAJClwACnBxIS9a-GhlMdMpjPQQ",
           "description": "Uploaded via Telegram Admin Direct Upload"
-        },
+        }
+      ]
+    },
+    {
+      "id": "cat_f1_videos",
+      "title": "🎥 Video Lessons for F1",
+      "parentId": "cat_f1",
+      "order": 3,
+      "resources": [
         {
           "id": "res_1785394442219og47",
           "title": "Corporate governance and ethical considerations - ACCA Accountant in Business (AB)",
@@ -351,13 +359,6 @@
           "description": "Uploaded via Telegram Admin Direct Upload"
         }
       ]
-    },
-    {
-      "id": "cat_f1_videos",
-      "title": "🎥 Video Lessons for F1",
-      "parentId": "cat_f1",
-      "order": 3,
-      "resources": []
     },
     {
       "id": "cat_f1_youtube",

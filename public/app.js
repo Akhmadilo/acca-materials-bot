@@ -65,6 +65,119 @@ function updateSettingsForm() {
   if (tokenInput && dbData.settings) {
     tokenInput.value = dbData.settings.bot_token || "";
   }
+
+  // Update Donation fields
+  const don = dbData.settings?.donation || {};
+  if (document.getElementById('donCardNumber')) document.getElementById('donCardNumber').value = don.card_number || '';
+  if (document.getElementById('donCardHolder')) document.getElementById('donCardHolder').value = don.card_holder || '';
+  if (document.getElementById('donBankName')) document.getElementById('donBankName').value = don.bank_name || '';
+  if (document.getElementById('donNote')) document.getElementById('donNote').value = don.note || '';
+
+  renderMandatoryChannels();
+}
+
+function renderMandatoryChannels() {
+  const container = document.getElementById('channelsListContainer');
+  if (!container) return;
+  container.innerHTML = '';
+
+  const channels = dbData.settings?.required_channels || [];
+
+  if (channels.length === 0) {
+    container.innerHTML = `<p style="color:#94a3b8; font-size:0.9rem;">No mandatory channels added yet.</p>`;
+    return;
+  }
+
+  channels.forEach((ch, index) => {
+    const item = document.createElement('div');
+    item.style.cssText = 'display:flex; justify-content:space-between; align-items:center; background:rgba(0,0,0,0.3); padding:10px 14px; border-radius:8px; margin-bottom:8px; border:1px solid var(--panel-border);';
+    item.innerHTML = `
+      <div>
+        <strong style="color:#fff;"><i class="fa-solid fa-bullhorn" style="color:#38bdf8;"></i> ${ch.title || ch.username}</strong>
+        <span style="color:#60a5fa; font-size:0.85rem; margin-left:10px;">(${ch.username})</span>
+      </div>
+      <button class="btn btn-danger btn-sm" onclick="deleteMandatoryChannel(${index})"><i class="fa-solid fa-trash"></i></button>
+    `;
+    container.appendChild(item);
+  });
+}
+
+async function addMandatoryChannel() {
+  const usernameInput = document.getElementById('newChannelUsername');
+  const titleInput = document.getElementById('newChannelTitle');
+
+  const username = usernameInput.value.trim();
+  const title = titleInput.value.trim() || username;
+
+  if (!username) {
+    alert("Please enter channel username (e.g. @Finance_Ahmadillo)!");
+    return;
+  }
+
+  const cleanUsername = username.startsWith('@') ? username : '@' + username;
+  const link = `https://t.me/${cleanUsername.replace('@', '')}`;
+
+  const currentChannels = dbData.settings?.required_channels || [];
+  currentChannels.push({ username: cleanUsername, title, link });
+
+  try {
+    const res = await fetch('/api/settings', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ required_channels: currentChannels })
+    });
+    if (res.ok) {
+      alert("✅ Mandatory channel added successfully!");
+      usernameInput.value = '';
+      titleInput.value = '';
+      loadData();
+    }
+  } catch (err) {
+    alert("Error adding channel!");
+  }
+}
+
+async function deleteMandatoryChannel(index) {
+  if (!confirm("Are you sure you want to remove this mandatory channel?")) return;
+
+  const currentChannels = dbData.settings?.required_channels || [];
+  currentChannels.splice(index, 1);
+
+  try {
+    const res = await fetch('/api/settings', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ required_channels: currentChannels })
+    });
+    if (res.ok) {
+      loadData();
+    }
+  } catch (err) {
+    alert("Error removing channel!");
+  }
+}
+
+async function saveDonationSettings() {
+  const card_number = document.getElementById('donCardNumber').value.trim();
+  const card_holder = document.getElementById('donCardHolder').value.trim();
+  const bank_name = document.getElementById('donBankName').value.trim();
+  const note = document.getElementById('donNote').value.trim();
+
+  const donation = { card_number, card_holder, bank_name, note };
+
+  try {
+    const res = await fetch('/api/settings', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ donation })
+    });
+    if (res.ok) {
+      alert("✅ Donation settings saved successfully!");
+      loadData();
+    }
+  } catch (err) {
+    alert("Error saving donation settings!");
+  }
 }
 
 function populateBatchSelect() {
