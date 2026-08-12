@@ -715,6 +715,9 @@ function toggleResValuePlaceholder() {
     if (type === 'link') {
       label.textContent = "Resource Link (URL / Telegram / YouTube):";
       input.placeholder = "https://t.me/acca_materials_official/123";
+    } else if (type === 'bundle') {
+      label.textContent = "Multi-File Bundle Pack Items (Format: Title | Link or File ID - 1 per line):";
+      input.placeholder = "Kaplan F1 Study Text 2026 | https://t.me/kanalingiz/101\nBPP F1 Revision Kit | BQACAgIAAxkBAA...\nF1 Summary Notes | https://t.me/kanalingiz/103";
     } else if (type === 'file_id') {
       label.textContent = "Telegram File ID:";
       input.placeholder = "BQACAgQAAxkBAAE...";
@@ -808,8 +811,30 @@ async function saveResource() {
   let value = document.getElementById('resValueInput').value.trim();
   const description = document.getElementById('resDescInput').value.trim();
   let type = selectType;
+  let items = [];
 
-  if (selectType === 'file_upload') {
+  if (selectType === 'bundle') {
+    type = 'bundle';
+    const lines = value.split('\n');
+    lines.forEach(line => {
+      const trimmed = line.trim();
+      if (trimmed) {
+        const parts = trimmed.split('|');
+        const itemTitle = parts[0].trim();
+        const itemVal = parts[1] ? parts[1].trim() : itemTitle;
+        let itemType = 'link';
+        if (itemVal.startsWith('http://') || itemVal.startsWith('https://') || itemVal.startsWith('t.me/')) {
+          itemType = 'link';
+        } else if (itemVal.startsWith('BQAC') || itemVal.startsWith('BAAC') || itemVal.startsWith('BAAD') || itemVal.startsWith('AgAC')) {
+          itemType = 'file_id';
+        } else if (itemVal.startsWith('/uploads/')) {
+          itemType = 'file';
+        }
+        items.push({ title: itemTitle, type: itemType, value: itemVal });
+      }
+    });
+    value = `Multi-Pack Bundle (${items.length} items)`;
+  } else if (selectType === 'file_upload') {
     if (!uploadedFileUrl && !editingResId) {
       alert('Please select or drop a file first!');
       return;
@@ -822,8 +847,8 @@ async function saveResource() {
     type = 'link';
   }
 
-  if (!title || !value) {
-    alert('Please enter resource title and link/file!');
+  if (!title || (!value && items.length === 0)) {
+    alert('Please enter resource title and link/file/bundle items!');
     return;
   }
 
@@ -834,7 +859,7 @@ async function saveResource() {
     const res = await fetch(url, {
       method: method,
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ title, type, value, description })
+      body: JSON.stringify({ title, type, value, description, items })
     });
 
     if (res.ok) {
