@@ -30,7 +30,7 @@ function generateFullMasterDb() {
     { id: "cat_analytics", title: "📈 Data Analytics & BI", parentId: null, order: 3, resources: [] },
     { id: "cat_national_1c", title: "🇺🇿 Milliy Buxgalteriya va 1C", parentId: null, order: 4, resources: [] },
     { id: "cat_fin_modeling", title: "💼 Financial Modeling & Corporate Finance", parentId: null, order: 5, resources: [] },
-    { id: "cat_feedback", title: "💬 Feedback & Support", parentId: null, order: 6, resources: [], isFeedback: true }
+    { id: "cat_feedback", title: "💬 Feedback", parentId: null, order: 6, resources: [], isFeedback: true }
   ];
 
   const mainLevels = [
@@ -304,14 +304,20 @@ function setupBotHandlers() {
   if (!bot) return;
 
   function isUserAdmin(msg) {
+    if (!msg) return false;
     const db = getDb();
-    const chatId = msg.chat ? msg.chat.id : (msg.from ? msg.from.id : null);
-    const username = msg.from ? (msg.from.username || '') : '';
+    const chatId = msg.chat ? msg.chat.id : (msg.from ? msg.from.id : (typeof msg === 'number' ? msg : null));
+    const username = msg.from ? (msg.from.username || '') : (typeof msg === 'string' ? msg : '');
+    const cleanUsername = username.replace('@', '').toLowerCase();
 
-    if (chatId === 557976703 || username.toLowerCase() === 'ibrohimov_ahmadillo') return true;
+    if (chatId === 557976703 || cleanUsername === 'ibrohimov_ahmadillo') return true;
 
     const adminIds = db.settings.admin_ids || [557976703, "Ibrohimov_Ahmadillo"];
-    return adminIds.includes(chatId) || adminIds.includes(username);
+    return adminIds.some(admin => {
+      if (typeof admin === 'number' && admin === chatId) return true;
+      if (typeof admin === 'string' && admin.toString().replace('@', '').toLowerCase() === cleanUsername) return true;
+      return false;
+    });
   }
 
   async function getUnsubscribedChannels(userId) {
@@ -383,17 +389,25 @@ function setupBotHandlers() {
       });
 
     const keyboard = [];
+    const normalCats = categories.filter(c => !c.isFeedback);
 
-    categories.forEach(cat => {
-      if (!cat.isFeedback) {
-        keyboard.push([{ text: cat.title }]);
+    // SIDE-BY-SIDE GRID LAYOUT (2 buttons per row)
+    for (let i = 0; i < normalCats.length; i += 2) {
+      const row = [{ text: normalCats[i].title }];
+      if (normalCats[i + 1]) {
+        row.push({ text: normalCats[i + 1].title });
       }
-    });
+      keyboard.push(row);
+    }
 
     if (parentId === null) {
-      keyboard.push([{ text: '💳 Donation & Support' }]);
+      const extraRow = [{ text: '💳 Donation & Support' }];
       if (msg && isUserAdmin(msg)) {
-        keyboard.push([{ text: '⚡ Admin Batch Mode' }]);
+        extraRow.push({ text: '⚡ Admin Batch Mode' });
+      }
+      keyboard.push(extraRow);
+
+      if (msg && isUserAdmin(msg)) {
         keyboard.push([{ text: '📤 Direct Upload' }]);
       }
 

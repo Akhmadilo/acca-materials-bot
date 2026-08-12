@@ -201,6 +201,19 @@
           </button>
         </div>
 
+        <!-- Admin Access Control Manager -->
+        <div class="card settings-card" style="margin-bottom: 1.5rem;">
+          <h3 style="color:#fff; font-size:1.1rem; margin-bottom:1rem;"><i class="fa-solid fa-user-shield" style="color:#a855f7;"></i> Telegram Administrators & Access Control</h3>
+          <p style="color:#94a3b8; font-size:0.88rem; margin-bottom:1rem;">Add Telegram Usernames or Chat IDs who can publish books, drop batch files, and see admin buttons:</p>
+          
+          <div style="display:flex; gap:10px; margin-bottom:1rem;">
+            <input type="text" id="newAdminInput" placeholder="@username or Chat ID (e.g. @Ibrohimov_Ahmadillo)" style="flex:1;">
+            <button class="btn btn-primary" onclick="addTelegramAdmin()"><i class="fa-solid fa-user-plus"></i> Add Admin</button>
+          </div>
+
+          <div id="adminsListContainer"></div>
+        </div>
+
         <!-- Mandatory Channels Manager -->
         <div class="card settings-card" style="margin-bottom: 1.5rem;">
           <h3 style="color:#fff; font-size:1.1rem; margin-bottom:1rem;"><i class="fa-solid fa-bullhorn" style="color:#38bdf8;"></i> Mandatory Force Subscription Channels</h3>

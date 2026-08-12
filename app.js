@@ -80,6 +80,88 @@ function updateSettingsForm() {
   if (document.getElementById('donNote')) document.getElementById('donNote').value = don.note || '';
 
   renderMandatoryChannels();
+  renderTelegramAdmins();
+}
+
+function renderTelegramAdmins() {
+  const container = document.getElementById('adminsListContainer');
+  if (!container) return;
+  container.innerHTML = '';
+
+  const adminIds = dbData.settings?.admin_ids || [557976703, "Ibrohimov_Ahmadillo"];
+
+  if (adminIds.length === 0) {
+    container.innerHTML = `<p style="color:#94a3b8; font-size:0.9rem;">No extra admins configured.</p>`;
+    return;
+  }
+
+  adminIds.forEach((adminItem, index) => {
+    const item = document.createElement('div');
+    item.style.cssText = 'display:flex; justify-content:space-between; align-items:center; background:rgba(0,0,0,0.3); padding:10px 14px; border-radius:8px; margin-bottom:8px; border:1px solid var(--panel-border);';
+    item.innerHTML = `
+      <div>
+        <strong style="color:#fff;"><i class="fa-solid fa-user-shield" style="color:#a855f7;"></i> ${adminItem}</strong>
+        <span style="color:#a855f7; font-size:0.85rem; margin-left:10px;">(Full System Administrator)</span>
+      </div>
+      <button class="btn btn-danger btn-sm" onclick="deleteTelegramAdmin(${index})"><i class="fa-solid fa-trash"></i></button>
+    `;
+    container.appendChild(item);
+  });
+}
+
+async function addTelegramAdmin() {
+  const input = document.getElementById('newAdminInput');
+  const val = input.value.trim();
+
+  if (!val) {
+    alert("Please enter Telegram username or Chat ID!");
+    return;
+  }
+
+  const cleanVal = isNaN(val) ? (val.startsWith('@') ? val.replace('@', '') : val) : parseInt(val);
+
+  const currentAdmins = dbData.settings?.admin_ids || [557976703, "Ibrohimov_Ahmadillo"];
+  if (currentAdmins.includes(cleanVal) || currentAdmins.includes(val)) {
+    alert("This admin is already added!");
+    return;
+  }
+
+  currentAdmins.push(cleanVal);
+
+  try {
+    const res = await fetch('/api/settings', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ admin_ids: currentAdmins })
+    });
+    if (res.ok) {
+      alert("✅ Administrator added successfully!");
+      input.value = '';
+      loadData();
+    }
+  } catch (err) {
+    alert("Error adding administrator!");
+  }
+}
+
+async function deleteTelegramAdmin(index) {
+  if (!confirm("Are you sure you want to remove this administrator?")) return;
+
+  const currentAdmins = dbData.settings?.admin_ids || [557976703, "Ibrohimov_Ahmadillo"];
+  currentAdmins.splice(index, 1);
+
+  try {
+    const res = await fetch('/api/settings', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ admin_ids: currentAdmins })
+    });
+    if (res.ok) {
+      loadData();
+    }
+  } catch (err) {
+    alert("Error removing administrator!");
+  }
 }
 
 function renderMandatoryChannels() {
