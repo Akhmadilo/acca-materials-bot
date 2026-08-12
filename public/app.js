@@ -347,7 +347,11 @@ function renderFileManager() {
 
   const subFolders = dbData.categories
     .filter(c => (currentFolderId === null ? !c.parentId : c.parentId === currentFolderId))
-    .sort((a, b) => (a.order || 0) - (b.order || 0));
+    .sort((a, b) => {
+      if (a.isFeedback || a.id === 'cat_feedback') return 1;
+      if (b.isFeedback || b.id === 'cat_feedback') return -1;
+      return (a.order || 0) - (b.order || 0);
+    });
 
   const currentCategory = currentFolderId ? dbData.categories.find(c => c.id === currentFolderId) : null;
   const currentFiles = currentCategory ? (currentCategory.resources || []) : [];

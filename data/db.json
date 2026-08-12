@@ -63,9 +63,9 @@
     },
     {
       "id": "cat_feedback",
-      "title": "💬 Feedback & Support",
+      "title": "💬 Feedback",
       "parentId": null,
-      "order": 3,
+      "order": 99,
       "resources": [],
       "isFeedback": true
     },
