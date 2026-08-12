@@ -286,6 +286,7 @@ function initBot() {
         { command: 'start', description: '🏠 Main Menu & Start Portal' },
         { command: 'search', description: '🔍 Search Textbooks & Materials' },
         { command: 'donate', description: '💳 Support & Donation Card' },
+        { command: 'pack', description: '📦 Create Multi-Book Pack (10 books in 1 button)' },
         { command: 'batch', description: '⚡ Admin Batch Upload Mode' }
       ]);
     } catch (err) {
@@ -596,6 +597,26 @@ function setupBotHandlers() {
     }
   });
 
+  // --- /pack Command (Create Multi-Book Bundle Pack in Telegram) ---
+  bot.onText(/\/pack|📦 Create Multi-Book Pack/, (msg) => {
+    const chatId = msg.chat.id;
+    if (!userStates[chatId]) userStates[chatId] = {};
+    const state = userStates[chatId];
+
+    if (!isUserAdmin(msg) && !state.isAdmin) {
+      bot.sendMessage(chatId, `🔐 Administrator access required.`);
+      return;
+    }
+
+    state.packStep = 'await_title';
+    state.packItems = [];
+    state.packTitle = null;
+    state.packFolderId = null;
+
+    bot.sendMessage(chatId, `📦 <b>TELEGRAM MULTI-BOOK PACK CREATOR</b>\n\n` +
+                            `1️⃣ Please send the <b>title/name</b> for this Pack in chat (e.g. <i>"Kaplan F1 Complete Pack 2026"</i>):`, { parse_mode: 'HTML' });
+  });
+
   // --- /batch Command ---
   bot.onText(/\/batch|⚡ Admin Batch Mode/, (msg) => {
     const chatId = msg.chat.id;
@@ -632,11 +653,44 @@ function setupBotHandlers() {
   bot.onText(/\/done/, (msg) => {
     const chatId = msg.chat.id;
     if (!userStates[chatId]) userStates[chatId] = {};
-    const count = userStates[chatId].batchSavedCount || 0;
-    userStates[chatId].batchTargetFolderId = null;
-    userStates[chatId].batchSavedCount = 0;
+    const state = userStates[chatId];
 
-    bot.sendMessage(chatId, `🎉 <b>Batch Upload Completed!</b>\n\nTotal <b>${count} items</b> successfully published to the database!`, { parse_mode: 'HTML' });
+    if (state.packStep === 'collecting_items' && state.packItems && state.packItems.length > 0) {
+      const db = getDb();
+      const cat = db.categories.find(c => c.id === state.packFolderId);
+
+      if (cat) {
+        if (!cat.resources) cat.resources = [];
+        const newRes = {
+          id: 'res_' + Date.now() + Math.random().toString(36).substr(2, 4),
+          title: state.packTitle || 'Multi-Book Pack',
+          type: 'bundle',
+          value: `Multi-Pack Bundle (${state.packItems.length} items)`,
+          description: `Combined Multi-Book Pack (${state.packItems.length} items)`,
+          items: state.packItems
+        };
+        cat.resources.push(newRes);
+        saveDb(db);
+
+        bot.sendMessage(chatId, `🎉 <b>MULTI-BOOK BUNDLE PACK CREATED!</b> 📦\n\n` +
+                               `📦 <b>Title:</b> ${newRes.title}\n` +
+                               `📚 <b>Total Books:</b> ${state.packItems.length} items\n` +
+                               `📁 <b>Folder:</b> ${cat.title}\n\n` +
+                               `✨ Tapping this 1 button in Telegram will now send all ${state.packItems.length} books in 1 click!`, { parse_mode: 'HTML' });
+      }
+
+      state.packStep = null;
+      state.packItems = [];
+      state.packTitle = null;
+      state.packFolderId = null;
+      return;
+    }
+
+    const count = state.batchSavedCount || 0;
+    state.batchTargetFolderId = null;
+    state.batchSavedCount = 0;
+
+    bot.sendMessage(chatId, `🎉 <b>Upload Completed!</b>\n\nTotal <b>${count} items</b> published!`, { parse_mode: 'HTML' });
   });
 
   // --- Direct File / Document Upload Handler inside Telegram ---
@@ -678,6 +732,19 @@ function setupBotHandlers() {
     }
 
     const title = msg.caption || defaultTitle;
+
+    if (state.packStep === 'collecting_items' && state.packFolderId) {
+      if (!state.packItems) state.packItems = [];
+      state.packItems.push({
+        title: title,
+        type: type,
+        value: value,
+        description: "Part of " + (state.packTitle || "Bundle Pack")
+      });
+
+      bot.sendMessage(chatId, `✅ <b>[Item ${state.packItems.length}] "${title}"</b> added to <b>"${state.packTitle}"</b> pack!\n\nSend next file or type /done when finished.`, { parse_mode: 'HTML' });
+      return;
+    }
 
     if (state.batchTargetFolderId) {
       const cat = db.categories.find(c => c.id === state.batchTargetFolderId);
@@ -748,6 +815,38 @@ function setupBotHandlers() {
         bot.answerCallbackQuery(query.id, { text: "⚠️ Please join required channel(s) first!", show_alert: true });
         return;
       }
+    }
+
+    if (data.startsWith('pack_select_paper_')) {
+      const paperId = data.replace('pack_select_paper_', '');
+      const subFolders = db.categories.filter(c => c.parentId === paperId);
+
+      const inlineKeyboard = subFolders.map(sf => [{ text: sf.title, callback_data: `set_pack_target_${sf.id}` }]);
+
+      bot.editMessageText(`📦 <b>Select subfolder for "${state.packTitle || 'Pack'}":</b>`, {
+        chat_id: chatId,
+        message_id: query.message.message_id,
+        parse_mode: 'HTML',
+        reply_markup: { inline_keyboard: inlineKeyboard }
+      });
+      bot.answerCallbackQuery(query.id);
+    } else if (data.startsWith('set_pack_target_')) {
+      const folderId = data.replace('set_pack_target_', '');
+      const cat = db.categories.find(c => c.id === folderId);
+      state.packFolderId = folderId;
+      state.packItems = [];
+      state.packStep = 'collecting_items';
+
+      bot.editMessageText(`📦 <b>BUNDLE PACK CREATOR ACTIVE!</b>\n\n` +
+                         `📦 <b>Pack Title:</b> ${state.packTitle}\n` +
+                         `📁 <b>Target Folder:</b> ${cat ? cat.title : folderId}\n\n` +
+                         `📥 Drop all 5, 10, or 20 PDF books/files into Telegram now! Each item will be added to this pack.\n\n` +
+                         `🔴 Type <b>/done</b> when finished to publish the entire Pack into 1 single button!`, {
+        chat_id: chatId,
+        message_id: query.message.message_id,
+        parse_mode: 'HTML'
+      });
+      bot.answerCallbackQuery(query.id);
     }
 
     if (data.startsWith('batch_select_paper_')) {
@@ -861,6 +960,28 @@ function setupBotHandlers() {
         sendForceSubMessage(chatId, msg.from.id);
         return;
       }
+    }
+
+    if (state.packStep === 'await_title') {
+      state.packTitle = text;
+      state.packStep = 'await_folder';
+
+      const paperCats = db.categories.filter(c => c.parentId && (c.parentId.includes('applied') || c.parentId.includes('strategic') || c.parentId === 'cat_cfa' || c.parentId.includes('analytics') || c.parentId.includes('national')));
+      const inlineKeyboard = [];
+
+      for (let i = 0; i < paperCats.length; i += 2) {
+        const row = [{ text: paperCats[i].title, callback_data: `pack_select_paper_${paperCats[i].id}` }];
+        if (paperCats[i + 1]) {
+          row.push({ text: paperCats[i + 1].title, callback_data: `pack_select_paper_${paperCats[i + 1].id}` });
+        }
+        inlineKeyboard.push(row);
+      }
+
+      bot.sendMessage(chatId, `📦 <b>Pack Title Saved:</b> "${text}"\n\n2️⃣ <b>Select target folder below:</b>`, {
+        parse_mode: 'HTML',
+        reply_markup: { inline_keyboard: inlineKeyboard }
+      });
+      return;
     }
 
     // --- Instant URL / Link Interceptor for Admin ---
