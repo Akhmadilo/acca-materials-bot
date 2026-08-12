@@ -287,7 +287,8 @@ function initBot() {
         { command: 'search', description: '🔍 Search Textbooks & Materials' },
         { command: 'donate', description: '💳 Support & Donation Card' },
         { command: 'pack', description: '📦 Create Multi-Book Pack (10 books in 1 button)' },
-        { command: 'batch', description: '⚡ Admin Batch Upload Mode' }
+        { command: 'batch', description: '⚡ Admin Batch Upload Mode' },
+        { command: 'delete', description: '🗑️ Delete & Manage Resources in Telegram' }
       ]);
     } catch (err) {
       console.log('setMyCommands error:', err.message);
@@ -409,7 +410,7 @@ function setupBotHandlers() {
       keyboard.push(extraRow);
 
       if (msg && isUserAdmin(msg)) {
-        keyboard.push([{ text: '📤 Direct Upload' }]);
+        keyboard.push([{ text: '📦 Create Multi-Book Pack' }, { text: '🗑️ Delete Resources' }]);
       }
 
       const feedbackCat = categories.find(c => c.isFeedback);
@@ -617,6 +618,36 @@ function setupBotHandlers() {
                             `1️⃣ Please send the <b>title/name</b> for this Pack in chat (e.g. <i>"Kaplan F1 Complete Pack 2026"</i>):`, { parse_mode: 'HTML' });
   });
 
+  // --- /delete Command (Delete / Manage Resources in Telegram) ---
+  bot.onText(/\/delete|🗑️ Delete Resources/, (msg) => {
+    const chatId = msg.chat.id;
+    const db = getDb();
+    if (!userStates[chatId]) userStates[chatId] = {};
+    const state = userStates[chatId];
+
+    if (!isUserAdmin(msg) && !state.isAdmin) {
+      bot.sendMessage(chatId, `🔐 Administrator access required.`);
+      return;
+    }
+
+    const paperCats = db.categories.filter(c => c.parentId && (c.parentId.includes('applied') || c.parentId.includes('strategic') || c.parentId === 'cat_cfa' || c.parentId.includes('analytics') || c.parentId.includes('national')));
+    const inlineKeyboard = [];
+
+    for (let i = 0; i < paperCats.length; i += 2) {
+      const row = [{ text: paperCats[i].title, callback_data: `del_paper_${paperCats[i].id}` }];
+      if (paperCats[i + 1]) {
+        row.push({ text: paperCats[i + 1].title, callback_data: `del_paper_${paperCats[i + 1].id}` });
+      }
+      inlineKeyboard.push(row);
+    }
+
+    bot.sendMessage(chatId, `🗑️ <b>TELEGRAM RESOURCE DELETION PORTAL</b>\n\n` +
+                            `1️⃣ Choose folder / paper below to view & delete resources:`, {
+      parse_mode: 'HTML',
+      reply_markup: { inline_keyboard: inlineKeyboard }
+    });
+  });
+
   // --- /batch Command ---
   bot.onText(/\/batch|⚡ Admin Batch Mode/, (msg) => {
     const chatId = msg.chat.id;
@@ -817,7 +848,83 @@ function setupBotHandlers() {
       }
     }
 
-    if (data.startsWith('pack_select_paper_')) {
+    if (data.startsWith('del_paper_')) {
+      const paperId = data.replace('del_paper_', '');
+      const subFolders = db.categories.filter(c => c.parentId === paperId);
+      const inlineKeyboard = subFolders.map(sf => [{ text: sf.title, callback_data: `del_folder_${sf.id}` }]);
+
+      bot.editMessageText(`🗑️ <b>Select subfolder to manage/delete:</b>`, {
+        chat_id: chatId,
+        message_id: query.message.message_id,
+        parse_mode: 'HTML',
+        reply_markup: { inline_keyboard: inlineKeyboard }
+      });
+      bot.answerCallbackQuery(query.id);
+    } else if (data.startsWith('del_folder_')) {
+      const folderId = data.replace('del_folder_', '');
+      const cat = db.categories.find(c => c.id === folderId);
+      if (!cat) return;
+
+      const resources = cat.resources || [];
+      if (resources.length === 0) {
+        bot.editMessageText(`ℹ️ No study materials to delete inside <b>${cat.title}</b>.`, {
+          chat_id: chatId,
+          message_id: query.message.message_id,
+          parse_mode: 'HTML'
+        });
+        bot.answerCallbackQuery(query.id);
+        return;
+      }
+
+      const inlineKeyboard = resources.map(r => [{ text: `🗑️ Delete "${r.title.substr(0, 30)}"`, callback_data: `delete_item_${r.id}` }]);
+
+      bot.editMessageText(`🗑️ <b>Resources inside ${cat.title}:</b>\n\nTap any resource below to delete it instantly:`, {
+        chat_id: chatId,
+        message_id: query.message.message_id,
+        parse_mode: 'HTML',
+        reply_markup: { inline_keyboard: inlineKeyboard }
+      });
+      bot.answerCallbackQuery(query.id);
+    } else if (data.startsWith('delete_item_')) {
+      const resId = data.replace('delete_item_', '');
+      let deletedTitle = '';
+      let targetCat = null;
+
+      db.categories.forEach(cat => {
+        if (cat.resources) {
+          const index = cat.resources.findIndex(r => r.id === resId);
+          if (index !== -1) {
+            deletedTitle = cat.resources[index].title;
+            targetCat = cat;
+            cat.resources.splice(index, 1);
+          }
+        }
+      });
+
+      if (deletedTitle) {
+        saveDb(db);
+        bot.answerCallbackQuery(query.id, { text: `✅ "${deletedTitle}" deleted successfully!`, show_alert: true });
+
+        const remaining = targetCat ? (targetCat.resources || []) : [];
+        if (remaining.length === 0) {
+          bot.editMessageText(`🎉 All resources deleted from <b>${targetCat ? targetCat.title : 'folder'}</b>!`, {
+            chat_id: chatId,
+            message_id: query.message.message_id,
+            parse_mode: 'HTML'
+          });
+        } else {
+          const inlineKeyboard = remaining.map(r => [{ text: `🗑️ Delete "${r.title.substr(0, 30)}"`, callback_data: `delete_item_${r.id}` }]);
+          bot.editMessageText(`🗑️ <b>Resources inside ${targetCat.title}:</b>\n\n✅ <i>"${deletedTitle}" was deleted!</i>\n\nTap another item below to delete:`, {
+            chat_id: chatId,
+            message_id: query.message.message_id,
+            parse_mode: 'HTML',
+            reply_markup: { inline_keyboard: inlineKeyboard }
+          });
+        }
+      } else {
+        bot.answerCallbackQuery(query.id, { text: "Resource not found or already deleted.", show_alert: true });
+      }
+    } else if (data.startsWith('pack_select_paper_')) {
       const paperId = data.replace('pack_select_paper_', '');
       const subFolders = db.categories.filter(c => c.parentId === paperId);
 
