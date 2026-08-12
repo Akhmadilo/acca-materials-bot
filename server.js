@@ -376,13 +376,18 @@ function setupBotHandlers() {
     const db = getDb();
     const categories = db.categories
       .filter(c => (parentId === null ? !c.parentId : c.parentId === parentId))
-      .sort((a, b) => (a.order || 0) - (b.order || 0));
+      .sort((a, b) => {
+        if (a.isFeedback) return 1;
+        if (b.isFeedback) return -1;
+        return (a.order || 0) - (b.order || 0);
+      });
 
     const keyboard = [];
 
-    // VERTICAL LAYOUT (1 button per row top to bottom)
     categories.forEach(cat => {
-      keyboard.push([{ text: cat.title }]);
+      if (!cat.isFeedback) {
+        keyboard.push([{ text: cat.title }]);
+      }
     });
 
     if (parentId === null) {
@@ -390,6 +395,11 @@ function setupBotHandlers() {
       if (msg && isUserAdmin(msg)) {
         keyboard.push([{ text: '⚡ Admin Batch Mode' }]);
         keyboard.push([{ text: '📤 Direct Upload' }]);
+      }
+
+      const feedbackCat = categories.find(c => c.isFeedback);
+      if (feedbackCat) {
+        keyboard.push([{ text: feedbackCat.title }]);
       }
     } else {
       keyboard.push([{ text: '🏠 Main Menu' }, { text: '🔙 Go Back' }]);

@@ -1526,6 +1526,104 @@
           "description": "CFA Level 3 recommended YouTube tutorial channels"
         }
       ]
+    },
+    {
+      "id": "cat_analytics",
+      "title": "📈 Data Analytics & BI",
+      "parentId": null,
+      "order": 3,
+      "resources": []
+    },
+    {
+      "id": "cat_national_1c",
+      "title": "🇺🇿 Milliy Buxgalteriya va 1C",
+      "parentId": null,
+      "order": 4,
+      "resources": []
+    },
+    {
+      "id": "cat_fin_modeling",
+      "title": "💼 Financial Modeling & Corporate Finance",
+      "parentId": null,
+      "order": 5,
+      "resources": []
+    },
+    {
+      "id": "cat_analytics_excel",
+      "title": "📊 Advanced Financial Excel & Dashboards",
+      "parentId": "cat_analytics",
+      "order": 1,
+      "resources": []
+    },
+    {
+      "id": "cat_analytics_powerbi",
+      "title": "📈 Power BI & Tableau for Finance",
+      "parentId": "cat_analytics",
+      "order": 2,
+      "resources": []
+    },
+    {
+      "id": "cat_analytics_python",
+      "title": "🐍 Python for Finance & Data Analysis",
+      "parentId": "cat_analytics",
+      "order": 3,
+      "resources": []
+    },
+    {
+      "id": "cat_analytics_sql",
+      "title": "🗄️ SQL & Financial Databases",
+      "parentId": "cat_analytics",
+      "order": 4,
+      "resources": []
+    },
+    {
+      "id": "cat_1c_enterprise",
+      "title": "💻 1C: Buxgalteriya & 1C Enterprise 8.3",
+      "parentId": "cat_national_1c",
+      "order": 1,
+      "resources": []
+    },
+    {
+      "id": "cat_bhms_standards",
+      "title": "📜 BHMS (Buxgalteriya Hisobining Milliy Standartlari)",
+      "parentId": "cat_national_1c",
+      "order": 2,
+      "resources": []
+    },
+    {
+      "id": "cat_tax_reporting",
+      "title": "🏛️ Soliqlar va Hisobotlar (Tax Code & Declarations)",
+      "parentId": "cat_national_1c",
+      "order": 3,
+      "resources": []
+    },
+    {
+      "id": "cat_ifrs_national",
+      "title": "📑 MHXS / IFRS Milliy Amaliyotda",
+      "parentId": "cat_national_1c",
+      "order": 4,
+      "resources": []
+    },
+    {
+      "id": "cat_fm_excel",
+      "title": "📊 Excel Financial Modeling (DCF, LBO, Budgeting)",
+      "parentId": "cat_fin_modeling",
+      "order": 1,
+      "resources": []
+    },
+    {
+      "id": "cat_fm_valuation",
+      "title": "💎 Business Valuation & Corporate Finance",
+      "parentId": "cat_fin_modeling",
+      "order": 2,
+      "resources": []
+    },
+    {
+      "id": "cat_fm_banking",
+      "title": "🏢 Banking, Credit Analysis & Risk",
+      "parentId": "cat_fin_modeling",
+      "order": 3,
+      "resources": []
     }
   ],
   "feedback_messages": []
