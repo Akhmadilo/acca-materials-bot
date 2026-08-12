@@ -22,18 +22,39 @@ if (!fs.existsSync(UPLOADS_DIR)) {
   fs.mkdirSync(UPLOADS_DIR, { recursive: true });
 }
 
-// --- Full Master Database Generator (100% English) ---
+// --- Full Master Database Generator (ACCA, CFA, Analytics, 1C, Financial Modeling) ---
 function generateFullMasterDb() {
   const rootCategories = [
     { id: "cat_acca", title: "🔴 ACCA 🔴", parentId: null, order: 1, resources: [] },
     { id: "cat_cfa", title: "📊 CFA Exam", parentId: null, order: 2, resources: [] },
-    { id: "cat_feedback", title: "💬 Feedback & Support", parentId: null, order: 3, resources: [], isFeedback: true }
+    { id: "cat_analytics", title: "📈 Data Analytics & BI", parentId: null, order: 3, resources: [] },
+    { id: "cat_national_1c", title: "🇺🇿 Milliy Buxgalteriya va 1C", parentId: null, order: 4, resources: [] },
+    { id: "cat_fin_modeling", title: "💼 Financial Modeling & Corporate Finance", parentId: null, order: 5, resources: [] },
+    { id: "cat_feedback", title: "💬 Feedback & Support", parentId: null, order: 6, resources: [], isFeedback: true }
   ];
 
   const mainLevels = [
+    // ACCA
     { id: "cat_applied_knowledge", title: "📘 Applied Knowledge", parentId: "cat_acca", order: 1, resources: [] },
     { id: "cat_applied_skills", title: "📊 Applied Skills", parentId: "cat_acca", order: 2, resources: [] },
-    { id: "cat_strategic_professional", title: "🏆 Strategic Professional", parentId: "cat_acca", order: 3, resources: [] }
+    { id: "cat_strategic_professional", title: "🏆 Strategic Professional", parentId: "cat_acca", order: 3, resources: [] },
+
+    // Data Analytics
+    { id: "cat_analytics_excel", title: "📊 Advanced Financial Excel & Dashboards", parentId: "cat_analytics", order: 1, resources: [] },
+    { id: "cat_analytics_powerbi", title: "📈 Power BI & Tableau for Finance", parentId: "cat_analytics", order: 2, resources: [] },
+    { id: "cat_analytics_python", title: "🐍 Python for Finance & Data Analysis", parentId: "cat_analytics", order: 3, resources: [] },
+    { id: "cat_analytics_sql", title: "🗄️ SQL & Financial Databases", parentId: "cat_analytics", order: 4, resources: [] },
+
+    // Milliy Buxgalteriya va 1C
+    { id: "cat_1c_enterprise", title: "💻 1C: Buxgalteriya & 1C Enterprise 8.3", parentId: "cat_national_1c", order: 1, resources: [] },
+    { id: "cat_bhms_standards", title: "📜 BHMS (Buxgalteriya Hisobining Milliy Standartlari)", parentId: "cat_national_1c", order: 2, resources: [] },
+    { id: "cat_tax_reporting", title: "🏛️ Soliqlar va Hisobotlar (Tax Code & Declarations)", parentId: "cat_national_1c", order: 3, resources: [] },
+    { id: "cat_ifrs_national", title: "📑 MHXS / IFRS Milliy Amaliyotda", parentId: "cat_national_1c", order: 4, resources: [] },
+
+    // Financial Modeling & Corporate Finance
+    { id: "cat_fm_excel", title: "📊 Excel Financial Modeling (DCF, LBO, Budgeting)", parentId: "cat_fin_modeling", order: 1, resources: [] },
+    { id: "cat_fm_valuation", title: "💎 Business Valuation & Corporate Finance", parentId: "cat_fin_modeling", order: 2, resources: [] },
+    { id: "cat_fm_banking", title: "🏢 Banking, Credit Analysis & Risk", parentId: "cat_fin_modeling", order: 3, resources: [] }
   ];
 
   const papers = [
@@ -182,29 +203,32 @@ function getDb() {
     }
     const data = fs.readFileSync(DB_PATH, 'utf8');
     const parsed = JSON.parse(data);
-    if (!parsed.categories || parsed.categories.length < 90) {
-      const fullDb = generateFullMasterDb();
-      if (parsed.settings && parsed.settings.bot_token) {
-        fullDb.settings.bot_token = parsed.settings.bot_token;
+    
+    // Ensure new root categories exist without wiping existing user resources!
+    const fullMaster = generateFullMasterDb();
+    let updated = false;
+
+    fullMaster.categories.forEach(masterCat => {
+      const exists = parsed.categories.find(c => c.id === masterCat.id);
+      if (!exists) {
+        parsed.categories.push(masterCat);
+        updated = true;
       }
-      fs.writeFileSync(DB_PATH, JSON.stringify(fullDb, null, 2));
-      return fullDb;
-    }
+    });
+
     if (!parsed.settings.donation) {
-      parsed.settings.donation = {
-        card_number: "8600 0000 0000 0000",
-        card_holder: "Ahmadillo Ibrohimov",
-        bank_name: "Uzcard / Humo",
-        note: "Thank you for supporting the development of this learning portal!"
-      };
-      fs.writeFileSync(DB_PATH, JSON.stringify(parsed, null, 2));
+      parsed.settings.donation = fullMaster.settings.donation;
+      updated = true;
     }
     if (!parsed.settings.required_channels) {
-      parsed.settings.required_channels = [
-        { username: "@Finance_Ahmadillo", title: "Finance Ahmadillo Channel", link: "https://t.me/Finance_Ahmadillo" }
-      ];
+      parsed.settings.required_channels = fullMaster.settings.required_channels;
+      updated = true;
+    }
+
+    if (updated) {
       fs.writeFileSync(DB_PATH, JSON.stringify(parsed, null, 2));
     }
+
     return parsed;
   } catch (err) {
     console.error('Error reading DB:', err);
@@ -379,6 +403,41 @@ function setupBotHandlers() {
     };
   }
 
+  async function sendSingleResource(chatId, res) {
+    if (res.type === 'bundle' || (Array.isArray(res.items) && res.items.length > 0)) {
+      bot.sendMessage(chatId, `📦 <b>Sending Resource Pack: "${res.title}" (${res.items.length} items)...</b>`, { parse_mode: 'HTML' });
+      for (const subItem of res.items) {
+        await sendSingleResource(chatId, subItem);
+        await new Promise(r => setTimeout(r, 400));
+      }
+      return;
+    }
+
+    if (res.type === 'file_path' || res.type === 'file') {
+      const localPath = path.join(__dirname, 'public', res.value);
+      if (fs.existsSync(localPath)) {
+        bot.sendMessage(chatId, `📄 Sending <b>${res.title}</b>...`, { parse_mode: 'HTML' });
+        await bot.sendDocument(chatId, localPath, { caption: res.description || res.title }).catch(err => {
+          bot.sendMessage(chatId, `📖 <b>${res.title}</b>\n\n${res.description || ''}\n🔗 ${res.value}`);
+        });
+      } else {
+        bot.sendMessage(chatId, `📖 <b>${res.title}</b>\n\n${res.description || ''}\n🔗 ${res.value}`);
+      }
+    } else if (res.type === 'link') {
+      const content = `<b>${res.title}</b>\n\n` +
+                      `${res.description ? res.description + '\n\n' : ''}` +
+                      `🔗 <b>Link:</b> ${res.value}`;
+      bot.sendMessage(chatId, content, { parse_mode: 'HTML' });
+    } else if (res.type === 'file_id') {
+      bot.sendMessage(chatId, `📄 Sending <b>${res.title}</b>...`, { parse_mode: 'HTML' });
+      await bot.sendDocument(chatId, res.value, { caption: res.description || res.title }).catch(err => {
+        bot.sendMessage(chatId, `❌ Error sending file: ${res.value}`);
+      });
+    } else {
+      bot.sendMessage(chatId, `📖 <b>${res.title}</b>\n\n${res.value}`, { parse_mode: 'HTML' });
+    }
+  }
+
   // --- /start Command ---
   bot.onText(/\/start/, async (msg) => {
     const chatId = msg.chat.id;
@@ -401,9 +460,9 @@ function setupBotHandlers() {
     }
 
     const welcomeText = `✨ Hello, <b>${msg.from.first_name || 'Member'}</b>!\n\n` +
-                        `🎓 Welcome to the <b>ACCA & CFA Professional Resource Portal</b>.\n` +
+                        `🎓 Welcome to the <b>ACCA, CFA, Analytics & 1C Professional Resource Portal</b>.\n` +
                         `${isAdmin ? `\n👑 <b>System Administrator Mode Active!</b>\nSend any PDF textbook, video, link, or drop 10-50 files at once!\n` : ''}\n` +
-                        `🔍 <i>Tip: Type any paper code (e.g. F1, F5, CFA) or textbook name anytime to search instantly!</i>\n\n` +
+                        `🔍 <i>Tip: Type any subject code (e.g. F1, F5, CFA, 1C, Python, Excel) anytime to search instantly!</i>\n\n` +
                         `👇 Select a category below:`;
 
     bot.sendMessage(chatId, welcomeText, {
@@ -443,7 +502,7 @@ function setupBotHandlers() {
 
     const query = match[1] ? match[1].trim().toLowerCase() : "";
     if (!query) {
-      bot.sendMessage(chatId, "🔍 Please enter search query. Example: <code>/search F1</code> or <code>/search Kaplan</code>", { parse_mode: 'HTML' });
+      bot.sendMessage(chatId, "🔍 Please enter search query. Example: <code>/search F1</code> or <code>/search 1C</code>", { parse_mode: 'HTML' });
       return;
     }
     performSearch(chatId, query, msg);
@@ -525,7 +584,7 @@ function setupBotHandlers() {
       return;
     }
 
-    const paperCats = db.categories.filter(c => c.parentId && (c.parentId.includes('applied') || c.parentId.includes('strategic') || c.parentId === 'cat_cfa'));
+    const paperCats = db.categories.filter(c => c.parentId && (c.parentId.includes('applied') || c.parentId.includes('strategic') || c.parentId === 'cat_cfa' || c.parentId.includes('analytics') || c.parentId.includes('national')));
     const inlineKeyboard = [];
 
     for (let i = 0; i < paperCats.length; i += 2) {
@@ -537,7 +596,7 @@ function setupBotHandlers() {
     }
 
     bot.sendMessage(chatId, `⚡ <b>TELEGRAM BATCH UPLOAD MODE</b>\n\n` +
-                            `1️⃣ Choose target subject paper below (e.g. 📘 F1, F5, CFA L1):\n` +
+                            `1️⃣ Choose target subject paper below (e.g. 📘 F1, 1C, CFA L1, Python):\n` +
                             `2️⃣ Next, select 10-50 files/textbooks at once in Telegram and send them all together!\n` +
                             `All files will be saved automatically without extra prompts!`, {
       parse_mode: 'HTML',
@@ -619,7 +678,7 @@ function setupBotHandlers() {
     state.pendingUpload = { type, value, title };
 
     const inlineKeyboard = [];
-    const paperCats = db.categories.filter(c => c.parentId && (c.parentId.includes('applied') || c.parentId.includes('strategic') || c.parentId === 'cat_cfa'));
+    const paperCats = db.categories.filter(c => c.parentId && (c.parentId.includes('applied') || c.parentId.includes('strategic') || c.parentId === 'cat_cfa' || c.parentId.includes('analytics') || c.parentId.includes('national')));
 
     for (let i = 0; i < paperCats.length; i += 2) {
       const row = [{ text: paperCats[i].title, callback_data: `select_paper_${paperCats[i].id}` }];
@@ -646,7 +705,7 @@ function setupBotHandlers() {
     if (data === 'check_sub_status') {
       const unSubbed = await getUnsubscribedChannels(chatId);
       if (unSubbed.length === 0) {
-        bot.editMessageText(`🎉 <b>Thank you! Subscription Verified / Access Granted!</b>\n\nWelcome to the ACCA & CFA Resource Portal. Type /start to explore study materials!`, {
+        bot.editMessageText(`🎉 <b>Thank you! Subscription Verified / Access Granted!</b>\n\nWelcome to the Resource Portal. Type /start to explore study materials!`, {
           chat_id: chatId,
           message_id: query.message.message_id,
           parse_mode: 'HTML'
@@ -869,33 +928,11 @@ function setupBotHandlers() {
       }
     }
 
-    // Direct Resource Item Click
+    // Direct Resource Item Click (Support Single & Bundle Packs!)
     for (const cat of db.categories) {
       const res = (cat.resources || []).find(r => r.title.trim().toLowerCase() === text.toLowerCase());
       if (res) {
-        if (res.type === 'file_path' || res.type === 'file') {
-          const localPath = path.join(__dirname, 'public', res.value);
-          if (fs.existsSync(localPath)) {
-            bot.sendMessage(chatId, `📄 Sending <b>${res.title}</b>...`, { parse_mode: 'HTML' });
-            bot.sendDocument(chatId, localPath, { caption: res.description || res.title }).catch(err => {
-              bot.sendMessage(chatId, `📖 <b>${res.title}</b>\n\n${res.description || ''}\n🔗 ${res.value}`);
-            });
-          } else {
-            bot.sendMessage(chatId, `📖 <b>${res.title}</b>\n\n${res.description || ''}\n🔗 ${res.value}`);
-          }
-        } else if (res.type === 'link') {
-          const content = `<b>${res.title}</b>\n\n` +
-                          `${res.description ? res.description + '\n\n' : ''}` +
-                          `🔗 <b>Link:</b> ${res.value}`;
-          bot.sendMessage(chatId, content, { parse_mode: 'HTML' });
-        } else if (res.type === 'file_id') {
-          bot.sendMessage(chatId, `📄 Sending <b>${res.title}</b>...`, { parse_mode: 'HTML' });
-          bot.sendDocument(chatId, res.value, { caption: res.description || res.title }).catch(err => {
-            bot.sendMessage(chatId, `❌ Error sending file: ${res.value}`);
-          });
-        } else {
-          bot.sendMessage(chatId, `📖 <b>${res.title}</b>\n\n${res.value}`, { parse_mode: 'HTML' });
-        }
+        await sendSingleResource(chatId, res);
         return;
       }
     }
@@ -940,7 +977,7 @@ app.post('/api/admin/restore-full-db', (req, res) => {
   }
   saveDb(fullDb);
   initBot();
-  res.json({ success: true, message: "Database restored with all 96 master categories!", categoriesCount: fullDb.categories.length });
+  res.json({ success: true, message: "Database restored with all master categories!", categoriesCount: fullDb.categories.length });
 });
 
 app.get('/api/admin/export-db', (req, res) => {
@@ -998,7 +1035,7 @@ app.delete('/api/categories/:id', (req, res) => {
 
 app.post('/api/categories/:catId/resources', (req, res) => {
   const { catId } = req.params;
-  const { title, type, value, description } = req.body;
+  const { title, type, value, description, items } = req.body;
   const db = getDb();
 
   const cat = db.categories.find(c => c.id === catId);
@@ -1010,8 +1047,9 @@ app.post('/api/categories/:catId/resources', (req, res) => {
     id: 'res_' + Date.now() + Math.random().toString(36).substr(2, 4),
     title,
     type: type || 'link',
-    value,
-    description: description || ''
+    value: value || '',
+    description: description || '',
+    items: Array.isArray(items) ? items : []
   };
 
   cat.resources.push(newRes);
@@ -1021,7 +1059,7 @@ app.post('/api/categories/:catId/resources', (req, res) => {
 
 app.put('/api/categories/:catId/resources/:resId', (req, res) => {
   const { catId, resId } = req.params;
-  const { title, type, value, description } = req.body;
+  const { title, type, value, description, items } = req.body;
   const db = getDb();
 
   const cat = db.categories.find(c => c.id === catId);
@@ -1034,6 +1072,7 @@ app.put('/api/categories/:catId/resources/:resId', (req, res) => {
   if (type !== undefined) resItem.type = type;
   if (value !== undefined) resItem.value = value;
   if (description !== undefined) resItem.description = description;
+  if (items !== undefined) resItem.items = items;
 
   saveDb(db);
   res.json({ success: true, resource: resItem });
