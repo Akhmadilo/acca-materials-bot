@@ -1428,15 +1428,7 @@ app.post('/api/exams', (req, res) => {
   res.json({ success: true, exam: newExam });
 });
 
-app.delete('/api/exams/:id', (req, res) => {
-  const { id } = req.params;
-  const db = getDb();
-  if (!db.exams) db.exams = [];
-  db.exams = db.exams.filter(e => e.id !== id);
-  saveDb(db);
-  res.json({ success: true });
-});
-
+// NOTE: /api/exams/update MUST come before /api/exams/:id to avoid Express routing conflict
 app.post('/api/exams/update', (req, res) => {
   const { examId, questions } = req.body;
   const db = getDb();
@@ -1448,8 +1440,17 @@ app.post('/api/exams/update', (req, res) => {
     saveDb(db);
     res.json({ success: true, exam });
   } else {
-    res.status(404).json({ error: "Exam not found" });
+    res.status(404).json({ error: 'Exam not found: ' + examId });
   }
+});
+
+app.delete('/api/exams/:id', (req, res) => {
+  const { id } = req.params;
+  const db = getDb();
+  if (!db.exams) db.exams = [];
+  db.exams = db.exams.filter(e => e.id !== id);
+  saveDb(db);
+  res.json({ success: true });
 });
 
 app.post('/api/admin/restore-full-db', (req, res) => {

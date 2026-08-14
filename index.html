@@ -414,11 +414,11 @@
         <h3 id="examQuestionsModalTitle"><i class="fa-solid fa-list-check"></i> Manage Exam Questions</h3>
         <button class="close-btn" onclick="closeModal('examQuestionsModal')">&times;</button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body" style="max-height: 70vh; overflow-y: auto; padding-right: 4px;">
         <input type="hidden" id="currentExamId">
         
-        <div class="card" style="margin-bottom: 2rem; background: var(--bg-color);">
-          <h4 style="color:var(--text-color); margin-bottom:1rem;"><i class="fa-solid fa-plus"></i> Add New Question</h4>
+        <div class="card" style="margin-bottom: 2rem; background: var(--file-bg); border:1px solid var(--panel-border);">
+          <h4 style="color:var(--text-main); margin-bottom:1rem;"><i class="fa-solid fa-plus"></i> Add New Question</h4>
           
           <div class="form-group">
             <label>Question Type:</label>
