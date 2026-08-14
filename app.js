@@ -1263,7 +1263,7 @@ function renderExamQuestionsList(exam) {
       </div>
       <p style="margin:0 0 8px; font-size:0.95rem;">${q.text}</p>
       ${q.type === 'mcq' ? `<p style="margin:0; font-size:0.85rem; color:var(--text-muted);">A) ${q.options[0]} | B) ${q.options[1]} | C) ${q.options[2]} | D) ${q.options[3]}</p>` : ''}
-      ${q.type !== 'written' ? `<p style="margin:4px 0 0; color:var(--success); font-size:0.85rem;"><strong>Correct:</strong> ${q.correctAnswer}</p>` : `<p style="margin:4px 0 0; color:var(--warning); font-size:0.85rem;">Requires manual grading by Admin</p>`}
+      ${q.correctAnswer ? `<p style="margin:4px 0 0; color:var(--success); font-size:0.85rem;"><strong>Correct / Model Answer:</strong> ${q.correctAnswer}</p>` : `<p style="margin:4px 0 0; color:var(--warning); font-size:0.85rem;">Requires manual grading by Admin</p>`}
       ${q.imageUrl ? `<div style="margin-top:8px;"><img src="${q.imageUrl}" style="max-width:200px; max-height:150px; border-radius:8px; border:1px solid var(--panel-border);" onerror="this.style.display='none'"></div>` : ''}
     `;
     list.appendChild(div);
@@ -1274,6 +1274,41 @@ function toggleQuestionTypeFields() {
   const type = document.getElementById('qTypeSelect').value;
   document.getElementById('mcqOptionsContainer').style.display = type === 'mcq' ? 'block' : 'none';
   document.getElementById('tfOptionsContainer').style.display = type === 'tf' ? 'block' : 'none';
+  const writtenContainer = document.getElementById('writtenOptionsContainer');
+  if (writtenContainer) writtenContainer.style.display = type === 'written' ? 'block' : 'none';
+}
+
+async function uploadQuestionImage(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  
+  const reader = new FileReader();
+  reader.onload = async function(e) {
+    const fileData = e.target.result;
+    try {
+      const res = await fetch('/api/upload', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ fileName: file.name, fileData })
+      });
+      const data = await res.json();
+      if (res.ok && data.fileUrl) {
+        document.getElementById('qImageUrl').value = data.fileUrl;
+        const previewBox = document.getElementById('qImagePreviewBox');
+        const previewImg = document.getElementById('qImagePreview');
+        if (previewBox && previewImg) {
+          previewImg.src = data.fileUrl;
+          previewBox.style.display = 'block';
+        }
+        alert("📷 Question image uploaded successfully!");
+      } else {
+        alert("Image upload failed!");
+      }
+    } catch (err) {
+      alert("Upload error: " + err.message);
+    }
+  };
+  reader.readAsDataURL(file);
 }
 
 async function addQuestionToExam() {
@@ -1299,6 +1334,11 @@ async function addQuestionToExam() {
     } else if (type === 'tf') {
       question.options = ['True', 'False'];
       question.correctAnswer = document.getElementById('qCorrectTf').value;
+    } else if (type === 'written') {
+      const modelAns = document.getElementById('qCorrectWritten');
+      if (modelAns && modelAns.value.trim()) {
+        question.correctAnswer = modelAns.value.trim();
+      }
     }
     
     const exam = dbData.exams.find(e => e.id === examId);
@@ -1315,6 +1355,11 @@ async function addQuestionToExam() {
 
     document.getElementById('qTextInput').value = '';
     document.getElementById('qImageUrl').value = '';
+    const previewBox = document.getElementById('qImagePreviewBox');
+    if (previewBox) previewBox.style.display = 'none';
+    const modelAns = document.getElementById('qCorrectWritten');
+    if (modelAns) modelAns.value = '';
+
     await loadData();
     openExamQuestions(examId);
     alert("✅ Savol muvaffaqiyatli qo'shildi!");

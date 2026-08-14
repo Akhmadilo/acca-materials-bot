@@ -435,8 +435,17 @@
           </div>
 
           <div class="form-group">
-            <label>📷 Question Image (optional - paste image URL or Telegram file link):</label>
-            <input type="text" id="qImageUrl" placeholder="https://example.com/image.jpg or leave empty">
+            <label>📷 Question Image (optional - upload file or paste URL):</label>
+            <div style="display:flex; gap:10px; align-items:center;">
+              <input type="text" id="qImageUrl" placeholder="Image URL or uploaded file path" style="flex:1;">
+              <label class="btn btn-secondary btn-sm" style="margin:0; cursor:pointer;">
+                <i class="fa-solid fa-upload"></i> Upload File
+                <input type="file" id="qImageFile" accept="image/*" style="display:none;" onchange="uploadQuestionImage(event)">
+              </label>
+            </div>
+            <div id="qImagePreviewBox" style="margin-top:8px; display:none;">
+              <img id="qImagePreview" style="max-width:150px; max-height:100px; border-radius:8px; border:1px solid var(--panel-border);">
+            </div>
           </div>
 
           <div id="mcqOptionsContainer">
@@ -474,6 +483,13 @@
                 <option value="True">True</option>
                 <option value="False">False</option>
               </select>
+            </div>
+          </div>
+
+          <div id="writtenOptionsContainer" style="display: none;">
+            <div class="form-group">
+              <label>💡 Model Answer / Key Criteria (Shown to user for self-check):</label>
+              <textarea id="qCorrectWritten" rows="3" placeholder="Enter expected sample answer or keywords..."></textarea>
             </div>
           </div>
 
