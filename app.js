@@ -1271,41 +1271,48 @@ function toggleQuestionTypeFields() {
 }
 
 async function addQuestionToExam() {
-  const examId = document.getElementById('currentExamId').value;
-  const type = document.getElementById('qTypeSelect').value;
-  const text = document.getElementById('qTextInput').value.trim();
-  
-  if (!text) return alert("Enter question text!");
-  
-  const question = { id: 'q_' + Date.now(), type, text };
-  
-  if (type === 'mcq') {
-    question.options = [
-      document.getElementById('qOptA').value || 'A',
-      document.getElementById('qOptB').value || 'B',
-      document.getElementById('qOptC').value || 'C',
-      document.getElementById('qOptD').value || 'D'
-    ];
-    question.correctAnswer = document.getElementById('qCorrectMcq').value;
-  } else if (type === 'tf') {
-    question.options = ['True', 'False'];
-    question.correctAnswer = document.getElementById('qCorrectTf').value;
+  try {
+    const examId = document.getElementById('currentExamId').value;
+    const type = document.getElementById('qTypeSelect').value;
+    const text = document.getElementById('qTextInput').value.trim();
+    
+    if (!text) return alert("Enter question text!");
+    
+    const question = { id: 'q_' + Date.now(), type, text };
+    
+    if (type === 'mcq') {
+      question.options = [
+        document.getElementById('qOptA').value || 'A',
+        document.getElementById('qOptB').value || 'B',
+        document.getElementById('qOptC').value || 'C',
+        document.getElementById('qOptD').value || 'D'
+      ];
+      question.correctAnswer = document.getElementById('qCorrectMcq').value;
+    } else if (type === 'tf') {
+      question.options = ['True', 'False'];
+      question.correctAnswer = document.getElementById('qCorrectTf').value;
+    }
+    
+    const exam = dbData.exams.find(e => e.id === examId);
+    if (!exam.questions) exam.questions = [];
+    exam.questions.push(question);
+    
+    const res = await fetch('/api/exams/update', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ examId: exam.id, questions: exam.questions })
+    });
+    
+    if (!res.ok) throw new Error("Server xatolik berdi");
+
+    document.getElementById('qTextInput').value = '';
+    await loadData();
+    openExamQuestions(examId);
+    alert("Savol muvaffaqiyatli qo'shildi! ?");
+  } catch (err) {
+    console.error(err);
+    alert("Xatolik yuz berdi: " + err.message);
   }
-  
-  // Post directly to API or save whole DB
-  const exam = dbData.exams.find(e => e.id === examId);
-  if (!exam.questions) exam.questions = [];
-  exam.questions.push(question);
-  
-  await fetch('/api/exams/update', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ examId: exam.id, questions: exam.questions })
-  });
-  
-  document.getElementById('qTextInput').value = '';
-  await loadData();
-  openExamQuestions(examId);
 }
 
 async function deleteQuestion(examId, qId) {
