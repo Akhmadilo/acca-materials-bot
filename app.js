@@ -1021,6 +1021,11 @@ function closeModal(id) {
   document.getElementById(id).classList.remove('active');
 }
 
+function openModal(id) {
+  const el = document.getElementById(id);
+  if (el) el.classList.add('active');
+}
+
 // --- BULK SELECTION & RESOURCE MOVE ENGINE ---
 let selectedResourceIds = [];
 
@@ -1308,7 +1313,7 @@ async function addQuestionToExam() {
     document.getElementById('qTextInput').value = '';
     await loadData();
     openExamQuestions(examId);
-    alert("Savol muvaffaqiyatli qo'shildi! ?");
+    alert("✅ Savol muvaffaqiyatli qo'shildi!");
   } catch (err) {
     console.error(err);
     alert("Xatolik yuz berdi: " + err.message);

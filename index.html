@@ -110,7 +110,7 @@
         <div id="bulkActionBar" style="display:none; background: linear-gradient(135deg, rgba(59,130,246,0.2) 0%, rgba(37,99,235,0.3) 100%); border: 1px solid rgba(59,130,246,0.4); border-radius: 12px; padding: 12px 20px; margin-bottom: 1rem; align-items: center; justify-content: space-between;">
           <div style="display:flex; align-items:center; gap: 10px;">
             <i class="fa-solid fa-check-double" style="color:#60a5fa; font-size:1.3rem;"></i>
-            <span id="selectedCountText" style="font-weight:700; color:#fff;">0 items selected</span>
+            <span id="selectedCountText" style="font-weight:700; color:var(--text-main);">0 items selected</span>
           </div>
           <div style="display:flex; gap:10px;">
             <button class="btn btn-primary btn-sm" onclick="openBulkMoveModal()">
@@ -190,7 +190,7 @@
         </div>
         
         <div class="card" style="margin-bottom: 2rem;">
-          <h3 style="color:#fff; font-size:1.1rem; margin-bottom:1rem;"><i class="fa-solid fa-plus-circle"></i> Create New Exam</h3>
+          <h3 style="color:var(--text-main); font-size:1.1rem; margin-bottom:1rem;"><i class="fa-solid fa-plus-circle"></i> Create New Exam</h3>
           <div class="form-group">
             <label>Exam Title (e.g. ACCA F1 Mock Exam 1):</label>
             <input type="text" id="newExamTitle" placeholder="Enter exam title...">
@@ -217,7 +217,7 @@
         </div>
 
         <div class="card settings-card" style="margin-bottom: 1.5rem;">
-          <h3 style="color:#fff; font-size:1.1rem; margin-bottom:1rem;"><i class="fa-solid fa-key"></i> Bot Token Settings</h3>
+          <h3 style="color:var(--text-main); font-size:1.1rem; margin-bottom:1rem;"><i class="fa-solid fa-key"></i> Bot Token Settings</h3>
           <div class="form-group">
             <label for="botTokenInput">Telegram Bot API Token:</label>
             <input type="text" id="botTokenInput" placeholder="8723520559:AAFM108x6EzYIMg_bsHtLShCEwCZKj3gb50">
@@ -229,7 +229,7 @@
 
         <!-- Admin Access Control Manager -->
         <div class="card settings-card" style="margin-bottom: 1.5rem;">
-          <h3 style="color:#fff; font-size:1.1rem; margin-bottom:1rem;"><i class="fa-solid fa-user-shield" style="color:#a855f7;"></i> Telegram Administrators & Access Control</h3>
+          <h3 style="color:var(--text-main); font-size:1.1rem; margin-bottom:1rem;"><i class="fa-solid fa-user-shield" style="color:#a855f7;"></i> Telegram Administrators & Access Control</h3>
           <p style="color:#94a3b8; font-size:0.88rem; margin-bottom:1rem;">Add Telegram Usernames or Chat IDs who can publish books, drop batch files, and see admin buttons:</p>
           
           <div style="display:flex; gap:10px; margin-bottom:1rem;">
@@ -242,7 +242,7 @@
 
         <!-- Mandatory Channels Manager -->
         <div class="card settings-card" style="margin-bottom: 1.5rem;">
-          <h3 style="color:#fff; font-size:1.1rem; margin-bottom:1rem;"><i class="fa-solid fa-bullhorn" style="color:#38bdf8;"></i> Mandatory Force Subscription Channels</h3>
+          <h3 style="color:var(--text-main); font-size:1.1rem; margin-bottom:1rem;"><i class="fa-solid fa-bullhorn" style="color:#38bdf8;"></i> Mandatory Force Subscription Channels</h3>
           <p style="color:#94a3b8; font-size:0.88rem; margin-bottom:1rem;">Add channels users MUST join before accessing bot books and files:</p>
           
           <div style="display:flex; gap:10px; margin-bottom:1rem;">
@@ -256,7 +256,7 @@
 
         <!-- Donation & Support Card Manager -->
         <div class="card settings-card">
-          <h3 style="color:#fff; font-size:1.1rem; margin-bottom:1rem;"><i class="fa-solid fa-credit-card" style="color:#34d399;"></i> Donation Card & Support Settings</h3>
+          <h3 style="color:var(--text-main); font-size:1.1rem; margin-bottom:1rem;"><i class="fa-solid fa-credit-card" style="color:#34d399;"></i> Donation Card & Support Settings</h3>
           <p style="color:#94a3b8; font-size:0.88rem; margin-bottom:1rem;">Configure your card details shown in Telegram bot when users tap /donate or Donation button:</p>
 
           <div class="form-group">
@@ -315,7 +315,7 @@
           <label>Select or Drag & Drop File from Computer (PDF / Doc / Video):</label>
           <div id="dropZone" style="border: 2px dashed #3b82f6; border-radius: 12px; padding: 1.5rem; text-align: center; background: rgba(59,130,246,0.05); cursor: pointer;" onclick="document.getElementById('resFileInput').click()">
             <i class="fa-solid fa-cloud-arrow-up" style="font-size: 2.5rem; color: #60a5fa; margin-bottom: 8px;"></i>
-            <p style="color: #fff; font-weight: 500;">Click to browse or Drag & Drop files here</p>
+            <p style="color: var(--text-main); font-weight: 500;">Click to browse or Drag & Drop files here</p>
             <small style="color: #94a3b8; font-size: 0.8rem;">Supports PDF, DOCX, MP4, ZIP (Up to 500 MB)</small>
             <input type="file" id="resFileInput" style="display:none;" onchange="handleFileUpload(event)">
           </div>
@@ -402,7 +402,7 @@
       </div>
       <div class="modal-footer">
         <button class="btn btn-secondary" onclick="closeModal('moveModal')">Cancel</button>
-        <button class="btn btn-primary" onclick="confirmMove()">Move Here <i class="fa-solid fa-arrow-right-to-bracket"></i></button>
+        <button class="btn btn-primary" onclick="confirmMoveResources()">Move Here <i class="fa-solid fa-arrow-right-to-bracket"></i></button>
       </div>
     </div>
   </div>

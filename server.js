@@ -671,7 +671,13 @@ function setupBotHandlers() {
       return;
     }
 
-    const inlineKeyboard = db.exams.map(e => [{ text: `📝 ${e.title} (${e.duration} mins)`, callback_data: `start_exam_${e.id}` }]);
+    const validExams = db.exams.filter(e => e.questions && e.questions.length > 0);
+    if (validExams.length === 0) {
+      bot.sendMessage(chatId, `ℹ️ No Mock Exams are currently available. Check back later!`);
+      return;
+    }
+
+    const inlineKeyboard = validExams.map(e => [{ text: `📝 ${e.title} (${e.duration} mins)`, callback_data: `start_exam_${e.id}` }]);
 
     bot.sendMessage(chatId, `📝 <b>AVAILABLE MOCK EXAMS</b>\n\nChoose an exam below to begin:`, {
       parse_mode: 'HTML',
@@ -890,7 +896,7 @@ function setupBotHandlers() {
       state.examAnswers = [];
 
       bot.answerCallbackQuery(query.id);
-      bot.sendMessage(chatId, `🚀 <b>Exam Started: ${exam.title}</b>\n⏱️ <b>Duration:</b> ${exam.duration} mins\n📝 <b>Questions:</b> ${exam.questions.length}\n\nGood luck!`, { parse_mode: 'HTML' }).then(() => {
+      bot.sendMessage(chatId, `🚀 <b>Exam Started: ${exam.title}</b>\n⏱️ <b>Duration:</b> ${exam.duration} mins\n📝 <b>Questions:</b> ${(exam.questions || []).length}\n\nGood luck!`, { parse_mode: 'HTML' }).then(() => {
         sendNextQuestion(chatId);
       });
       return;
@@ -1459,6 +1465,8 @@ app.post('/api/admin/restore-full-db', (req, res) => {
   if (currentDb.settings && currentDb.settings.bot_token) {
     fullDb.settings.bot_token = currentDb.settings.bot_token;
   }
+  fullDb.exams = currentDb.exams || [];
+  fullDb.exam_submissions = currentDb.exam_submissions || [];
   saveDb(fullDb);
   initBot();
   res.json({ success: true, message: "Database restored with all master categories!", categoriesCount: fullDb.categories.length });
