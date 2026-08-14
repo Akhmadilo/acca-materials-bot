@@ -189,7 +189,11 @@ function generateFullMasterDb() {
   };
 }
 
+let dbCache = null;
+
 function getDb() {
+  if (dbCache) return dbCache; // In-Memory Cache (Instant response for thousands of users)
+
   try {
     const dataDir = path.join(__dirname, 'data');
     if (!fs.existsSync(dataDir)) {
@@ -199,7 +203,8 @@ function getDb() {
     if (!fs.existsSync(DB_PATH)) {
       const initialDb = generateFullMasterDb();
       fs.writeFileSync(DB_PATH, JSON.stringify(initialDb, null, 2));
-      return initialDb;
+      dbCache = initialDb;
+      return dbCache;
     }
     const data = fs.readFileSync(DB_PATH, 'utf8');
     const parsed = JSON.parse(data);
@@ -229,22 +234,28 @@ function getDb() {
       fs.writeFileSync(DB_PATH, JSON.stringify(parsed, null, 2));
     }
 
-    return parsed;
+    dbCache = parsed;
+    return dbCache;
   } catch (err) {
     console.error('Error reading DB:', err);
-    return generateFullMasterDb();
+    dbCache = generateFullMasterDb();
+    return dbCache;
   }
 }
 
 function saveDb(db) {
   try {
+    dbCache = db; // Update cache instantly for blazing fast reads
     const dataDir = path.join(__dirname, 'data');
     if (!fs.existsSync(dataDir)) {
       fs.mkdirSync(dataDir, { recursive: true });
     }
-    fs.writeFileSync(DB_PATH, JSON.stringify(db, null, 2));
+    // Async write to disk so we don't block the Node event loop (24/7 high concurrency safe)
+    fs.promises.writeFile(DB_PATH, JSON.stringify(db, null, 2)).catch(err => {
+      console.error('Async write error:', err);
+    });
   } catch (err) {
-    console.error('Error writing DB:', err);
+    console.error('Error saving DB:', err);
   }
 }
 
@@ -284,6 +295,7 @@ function initBot() {
     try {
       bot.setMyCommands([
         { command: 'start', description: '🏠 Main Menu & Start Portal' },
+        { command: 'exams', description: '📝 Take Mock Exams & Tests' },
         { command: 'search', description: '🔍 Search Textbooks & Materials' },
         { command: 'donate', description: '💳 Support & Donation Card' },
         { command: 'pack', description: '📦 Create Multi-Book Pack (10 books in 1 button)' },
@@ -408,6 +420,7 @@ function setupBotHandlers() {
         extraRow.push({ text: '⚡ Admin Batch Mode' });
       }
       keyboard.push(extraRow);
+      keyboard.push([{ text: '📝 Mock Exams' }]);
 
       if (msg && isUserAdmin(msg)) {
         keyboard.push([{ text: '📦 Create Multi-Book Pack' }, { text: '🗑️ Delete Resources' }]);
@@ -648,6 +661,24 @@ function setupBotHandlers() {
     });
   });
 
+  // --- /exams Command (Mock Exams) ---
+  bot.onText(/\/exams|📝 Mock Exams/, (msg) => {
+    const chatId = msg.chat.id;
+    const db = getDb();
+    
+    if (!db.exams || db.exams.length === 0) {
+      bot.sendMessage(chatId, `ℹ️ No Mock Exams are currently available. Check back later!`);
+      return;
+    }
+
+    const inlineKeyboard = db.exams.map(e => [{ text: `📝 ${e.title} (${e.duration} mins)`, callback_data: `start_exam_${e.id}` }]);
+
+    bot.sendMessage(chatId, `📝 <b>AVAILABLE MOCK EXAMS</b>\n\nChoose an exam below to begin:`, {
+      parse_mode: 'HTML',
+      reply_markup: { inline_keyboard: inlineKeyboard }
+    });
+  });
+
   // --- /batch Command ---
   bot.onText(/\/batch|⚡ Admin Batch Mode/, (msg) => {
     const chatId = msg.chat.id;
@@ -848,6 +879,47 @@ function setupBotHandlers() {
       }
     }
 
+    if (data.startsWith('start_exam_')) {
+      const examId = data.replace('start_exam_', '');
+      const exam = db.exams.find(e => e.id === examId);
+      if (!exam) return bot.answerCallbackQuery(query.id, { text: "Exam not found!", show_alert: true });
+
+      state.examMode = true;
+      state.examId = examId;
+      state.currentQuestionIndex = 0;
+      state.examAnswers = [];
+
+      bot.answerCallbackQuery(query.id);
+      bot.sendMessage(chatId, `🚀 <b>Exam Started: ${exam.title}</b>\n⏱️ <b>Duration:</b> ${exam.duration} mins\n📝 <b>Questions:</b> ${exam.questions.length}\n\nGood luck!`, { parse_mode: 'HTML' }).then(() => {
+        sendNextQuestion(chatId);
+      });
+      return;
+    } else if (data.startsWith('ans_exam_')) {
+      const ansData = data.replace('ans_exam_', ''); // format: "qIndex_answer"
+      const [qIndexStr, answer] = ansData.split('_');
+      const qIndex = parseInt(qIndexStr, 10);
+
+      if (!state.examMode || state.currentQuestionIndex !== qIndex) {
+        return bot.answerCallbackQuery(query.id, { text: "Invalid or expired question.", show_alert: true });
+      }
+
+      const exam = db.exams.find(e => e.id === state.examId);
+      const question = exam.questions[qIndex];
+      const isCorrect = (question.correctAnswer === answer);
+
+      state.examAnswers.push({
+        questionId: question.id,
+        type: question.type,
+        userAnswer: answer,
+        isCorrect: isCorrect
+      });
+
+      state.currentQuestionIndex++;
+      bot.answerCallbackQuery(query.id, { text: "Answer saved!" });
+      sendNextQuestion(chatId, query.message.message_id);
+      return;
+    }
+    
     if (data.startsWith('del_paper_')) {
       const paperId = data.replace('del_paper_', '');
       const subFolders = db.categories.filter(c => c.parentId === paperId);
@@ -1106,6 +1178,39 @@ function setupBotHandlers() {
       return;
     }
 
+    if (text === '📝 Mock Exams') {
+      const inlineKeyboard = db.exams ? db.exams.map(e => [{ text: `📝 ${e.title} (${e.duration} mins)`, callback_data: `start_exam_${e.id}` }]) : [];
+      bot.sendMessage(chatId, `📝 <b>AVAILABLE MOCK EXAMS</b>\n\nChoose an exam below to begin:`, {
+        parse_mode: 'HTML',
+        reply_markup: { inline_keyboard: inlineKeyboard }
+      });
+      return;
+    }
+
+    if (state.examMode) {
+      if (text.startsWith('/')) return; // Ignore commands like /start or /exams inside exam
+      
+      const exam = db.exams.find(e => e.id === state.examId);
+      if (!exam) return;
+      
+      const qIndex = state.currentQuestionIndex;
+      const question = exam.questions[qIndex];
+      
+      if (question.type === 'written') {
+        state.examAnswers.push({
+          questionId: question.id,
+          type: question.type,
+          userAnswer: text,
+          isCorrect: null // Needs manual grading
+        });
+        
+        state.currentQuestionIndex++;
+        bot.sendMessage(chatId, "✅ Written answer saved!");
+        sendNextQuestion(chatId);
+        return;
+      }
+    }
+
     if (state.feedbackMode) {
       db.feedback_messages.push({
         id: Date.now().toString(),
@@ -1192,6 +1297,86 @@ function setupBotHandlers() {
     // Fallback: Perform instant query search across entire database!
     performSearch(chatId, text.toLowerCase(), msg);
   });
+
+  function sendNextQuestion(chatId, replaceMessageId = null) {
+    const state = userStates[chatId];
+    const db = getDb();
+    const exam = db.exams.find(e => e.id === state.examId);
+    
+    if (!exam) return;
+
+    if (state.currentQuestionIndex >= exam.questions.length) {
+      let score = 0;
+      let mcqCount = 0;
+      state.examAnswers.forEach(ans => {
+        if (ans.type === 'mcq' || ans.type === 'tf') {
+          mcqCount++;
+          if (ans.isCorrect) score++;
+        }
+      });
+      
+      db.exam_submissions.push({
+        id: 'sub_' + Date.now(),
+        userId: chatId,
+        examId: exam.id,
+        examTitle: exam.title,
+        answers: state.examAnswers,
+        score: score,
+        mcqCount: mcqCount,
+        date: new Date().toISOString()
+      });
+      saveDb(db);
+      
+      const msgText = `🎉 <b>EXAM COMPLETED!</b>\n\n📝 <b>${exam.title}</b>\n✅ <b>OT Score:</b> ${score} / ${mcqCount}\n\n<i>Any Written (CR) answers have been saved and sent to the instructor for manual grading.</i>`;
+      
+      state.examMode = false;
+      state.examId = null;
+      state.currentQuestionIndex = 0;
+      state.examAnswers = [];
+      
+      if (replaceMessageId) {
+        bot.editMessageText(msgText, { chat_id: chatId, message_id: replaceMessageId, parse_mode: 'HTML' });
+      } else {
+        bot.sendMessage(chatId, msgText, { parse_mode: 'HTML' });
+      }
+      return;
+    }
+
+    const qIndex = state.currentQuestionIndex;
+    const q = exam.questions[qIndex];
+    let text = `<b>Question ${qIndex + 1} of ${exam.questions.length}</b>\n\n${q.text}`;
+    
+    if (q.type === 'mcq' || q.type === 'tf') {
+      const inlineKeyboard = [];
+      if (q.type === 'mcq') {
+        text += `\n\nA) ${q.options[0]}\nB) ${q.options[1]}\nC) ${q.options[2]}\nD) ${q.options[3]}`;
+        inlineKeyboard.push([
+          { text: 'A', callback_data: `ans_exam_${qIndex}_A` },
+          { text: 'B', callback_data: `ans_exam_${qIndex}_B` },
+          { text: 'C', callback_data: `ans_exam_${qIndex}_C` },
+          { text: 'D', callback_data: `ans_exam_${qIndex}_D` }
+        ]);
+      } else if (q.type === 'tf') {
+        inlineKeyboard.push([
+          { text: 'True', callback_data: `ans_exam_${qIndex}_True` },
+          { text: 'False', callback_data: `ans_exam_${qIndex}_False` }
+        ]);
+      }
+      
+      if (replaceMessageId) {
+        bot.editMessageText(text, { chat_id: chatId, message_id: replaceMessageId, parse_mode: 'HTML', reply_markup: { inline_keyboard: inlineKeyboard } });
+      } else {
+        bot.sendMessage(chatId, text, { parse_mode: 'HTML', reply_markup: { inline_keyboard: inlineKeyboard } });
+      }
+    } else if (q.type === 'written') {
+      text += `\n\n<i>✍️ Please type your answer directly in the chat below and send it.</i>`;
+      if (replaceMessageId) {
+        bot.editMessageText(text, { chat_id: chatId, message_id: replaceMessageId, parse_mode: 'HTML' });
+      } else {
+        bot.sendMessage(chatId, text, { parse_mode: 'HTML' });
+      }
+    }
+  }
 }
 
 // --- Direct File Upload API ---
@@ -1219,6 +1404,47 @@ app.post('/api/upload', (req, res) => {
 // --- API Endpoints ---
 app.get('/api/data', (req, res) => {
   res.json(getDb());
+});
+
+app.post('/api/exams', (req, res) => {
+  const { title, duration, questions } = req.body;
+  const db = getDb();
+  if (!db.exams) db.exams = [];
+  
+  const newExam = {
+    id: 'exam_' + Date.now(),
+    title: title || 'Mock Exam',
+    duration: duration || 60,
+    questions: questions || []
+  };
+
+  db.exams.push(newExam);
+  saveDb(db);
+  res.json({ success: true, exam: newExam });
+});
+
+app.delete('/api/exams/:id', (req, res) => {
+  const { id } = req.params;
+  const db = getDb();
+  if (!db.exams) db.exams = [];
+  db.exams = db.exams.filter(e => e.id !== id);
+  saveDb(db);
+  res.json({ success: true });
+});
+
+app.post('/api/exams/update', (req, res) => {
+  const { examId, questions } = req.body;
+  const db = getDb();
+  if (!db.exams) db.exams = [];
+  
+  const exam = db.exams.find(e => e.id === examId);
+  if (exam) {
+    exam.questions = questions;
+    saveDb(db);
+    res.json({ success: true, exam });
+  } else {
+    res.status(404).json({ error: "Exam not found" });
+  }
 });
 
 app.post('/api/admin/restore-full-db', (req, res) => {
@@ -1455,6 +1681,20 @@ app.get('/', (req, res) => {
 app.get('/ping', (req, res) => {
   res.send('PONG - 24/7 Alive');
 });
+
+// --- 24/7 Keep-Alive Mechanism ---
+setInterval(() => {
+  const url = process.env.RENDER_EXTERNAL_URL || `http://localhost:${PORT}`;
+  const client = url.startsWith('https') ? require('https') : require('http');
+  
+  client.get(`${url}/ping`, (res) => {
+    if (res.statusCode === 200) {
+      console.log('✅ Keep-Alive Ping successful: ' + url);
+    }
+  }).on('error', (err) => {
+    console.log('Keep-Alive Ping failed:', err.message);
+  });
+}, 14 * 60 * 1000); // Har 14 daqiqada o'ziga-o'zi so'rov yuboradi (Render uxlab qolmasligi uchun)
 
 app.listen(PORT, () => {
   console.log(`🌐 Web Admin Panel server running: http://localhost:${PORT}`);

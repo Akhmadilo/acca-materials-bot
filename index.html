@@ -57,6 +57,10 @@
           <i class="fa-solid fa-comments"></i>
           <span>User Feedback</span>
         </button>
+        <button class="nav-item" data-tab="tab-exams">
+          <i class="fa-solid fa-file-signature"></i>
+          <span>Mock Exams</span>
+        </button>
         <button class="nav-item" data-tab="tab-settings">
           <i class="fa-solid fa-gear"></i>
           <span>Bot Settings</span>
@@ -179,7 +183,34 @@
         <div class="feedback-grid" id="feedbackContainer"></div>
       </section>
 
-      <!-- TAB 5: Settings -->
+      <!-- TAB 5: Exams -->
+      <section id="tab-exams" class="tab-pane">
+        <div class="section-header">
+          <h2><i class="fa-solid fa-file-signature"></i> Mock Exams & Testing System</h2>
+        </div>
+        
+        <div class="card" style="margin-bottom: 2rem;">
+          <h3 style="color:#fff; font-size:1.1rem; margin-bottom:1rem;"><i class="fa-solid fa-plus-circle"></i> Create New Exam</h3>
+          <div class="form-group">
+            <label>Exam Title (e.g. ACCA F1 Mock Exam 1):</label>
+            <input type="text" id="newExamTitle" placeholder="Enter exam title...">
+          </div>
+          <div class="form-group">
+            <label>Duration (Minutes):</label>
+            <input type="number" id="newExamDuration" value="60">
+          </div>
+          <button class="btn btn-primary" onclick="createExam()">
+            <i class="fa-solid fa-save"></i> Create Exam
+          </button>
+        </div>
+
+        <div class="section-header">
+          <h2><i class="fa-solid fa-list-ol"></i> Available Exams</h2>
+        </div>
+        <div id="examsListContainer"></div>
+      </section>
+
+      <!-- TAB 6: Settings -->
       <section id="tab-settings" class="tab-pane">
         <div class="section-header">
           <h2><i class="fa-solid fa-sliders"></i> Bot Settings, Channels & Donation Portal</h2>
@@ -371,13 +402,93 @@
       </div>
       <div class="modal-footer">
         <button class="btn btn-secondary" onclick="closeModal('moveModal')">Cancel</button>
-        <button class="btn btn-primary" onclick="confirmMoveResources()">
-          <i class="fa-solid fa-arrow-right-to-bracket"></i> Move Resources Now
-        </button>
+        <button class="btn btn-primary" onclick="confirmMove()">Move Here <i class="fa-solid fa-arrow-right-to-bracket"></i></button>
       </div>
     </div>
   </div>
 
-  <script src="app.js?v=5.0"></script>
+  <!-- Modal 5: Manage Exam Questions Modal -->
+  <div class="modal-overlay" id="examQuestionsModal">
+    <div class="modal-card modal-lg">
+      <div class="modal-header">
+        <h3 id="examQuestionsModalTitle"><i class="fa-solid fa-list-check"></i> Manage Exam Questions</h3>
+        <button class="close-btn" onclick="closeModal('examQuestionsModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="currentExamId">
+        
+        <div class="card" style="margin-bottom: 2rem; background: var(--bg-color);">
+          <h4 style="color:var(--text-color); margin-bottom:1rem;"><i class="fa-solid fa-plus"></i> Add New Question</h4>
+          
+          <div class="form-group">
+            <label>Question Type:</label>
+            <select id="qTypeSelect" onchange="toggleQuestionTypeFields()">
+              <option value="mcq">Multiple Choice (A, B, C, D)</option>
+              <option value="tf">True / False</option>
+              <option value="written">Written / CR (Telegram Text Input)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Question Text / Scenario:</label>
+            <textarea id="qTextInput" rows="4" placeholder="Enter the question text or scenario here..."></textarea>
+          </div>
+
+          <div id="mcqOptionsContainer">
+            <div class="form-group">
+              <label>Option A:</label>
+              <input type="text" id="qOptA" placeholder="Option A text">
+            </div>
+            <div class="form-group">
+              <label>Option B:</label>
+              <input type="text" id="qOptB" placeholder="Option B text">
+            </div>
+            <div class="form-group">
+              <label>Option C:</label>
+              <input type="text" id="qOptC" placeholder="Option C text">
+            </div>
+            <div class="form-group">
+              <label>Option D:</label>
+              <input type="text" id="qOptD" placeholder="Option D text">
+            </div>
+            <div class="form-group">
+              <label>Correct Answer:</label>
+              <select id="qCorrectMcq">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="tfOptionsContainer" style="display: none;">
+            <div class="form-group">
+              <label>Correct Answer:</label>
+              <select id="qCorrectTf">
+                <option value="True">True</option>
+                <option value="False">False</option>
+              </select>
+            </div>
+          </div>
+
+          <button class="btn btn-success" onclick="addQuestionToExam()">
+            <i class="fa-solid fa-check"></i> Add Question
+          </button>
+        </div>
+
+        <div class="section-header">
+          <h4>Current Questions</h4>
+        </div>
+        <div id="examQuestionsList"></div>
+
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="closeModal('examQuestionsModal')">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
 </body>
 </html>

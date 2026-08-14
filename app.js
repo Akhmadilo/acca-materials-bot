@@ -1161,3 +1161,163 @@ async function bulkDeleteSelected() {
   updateBulkActionBar();
   loadData();
 }
+
+// ==========================================
+// MOCK EXAM SYSTEM JAVASCRIPT
+// ==========================================
+
+function renderExams() {
+  const container = document.getElementById('examsListContainer');
+  if (!container) return;
+  container.innerHTML = '';
+  
+  if (!dbData.exams || dbData.exams.length === 0) {
+    container.innerHTML = `<p style="color:var(--text-muted);">No exams available.</p>`;
+    return;
+  }
+
+  dbData.exams.forEach(exam => {
+    const div = document.createElement('div');
+    div.className = 'card';
+    div.style.cssText = 'margin-bottom:1rem; display:flex; justify-content:space-between; align-items:center;';
+    
+    div.innerHTML = `
+      <div>
+        <h4 style="margin:0; font-size:1.1rem;">${exam.title}</h4>
+        <p style="margin:4px 0 0; font-size:0.85rem; color:var(--text-muted);">
+          ⏱️ ${exam.duration} mins | 📝 ${exam.questions ? exam.questions.length : 0} Questions
+        </p>
+      </div>
+      <div>
+        <button class="btn btn-primary" onclick="openExamQuestions('${exam.id}')"><i class="fa-solid fa-list-check"></i> Manage Questions</button>
+        <button class="btn btn-danger" onclick="deleteExam('${exam.id}')"><i class="fa-solid fa-trash"></i> Delete</button>
+      </div>
+    `;
+    container.appendChild(div);
+  });
+}
+
+async function createExam() {
+  const title = document.getElementById('newExamTitle').value.trim();
+  const duration = document.getElementById('newExamDuration').value;
+  
+  if (!title) return alert('Enter exam title!');
+  
+  await fetch('/api/exams', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ title, duration })
+  });
+  
+  document.getElementById('newExamTitle').value = '';
+  loadData();
+}
+
+async function deleteExam(id) {
+  if (!confirm('Delete this exam completely?')) return;
+  await fetch('/api/exams/' + id, { method: 'DELETE' });
+  loadData();
+}
+
+function openExamQuestions(examId) {
+  const exam = dbData.exams.find(e => e.id === examId);
+  if (!exam) return;
+  
+  document.getElementById('currentExamId').value = examId;
+  document.getElementById('examQuestionsModalTitle').innerHTML = `<i class="fa-solid fa-list-check"></i> Manage Questions: ${exam.title}`;
+  
+  renderExamQuestionsList(exam);
+  openModal('examQuestionsModal');
+}
+
+function renderExamQuestionsList(exam) {
+  const list = document.getElementById('examQuestionsList');
+  list.innerHTML = '';
+  
+  if (!exam.questions || exam.questions.length === 0) {
+    list.innerHTML = `<p style="color:var(--text-muted);">No questions added yet.</p>`;
+    return;
+  }
+  
+  exam.questions.forEach((q, index) => {
+    const div = document.createElement('div');
+    div.style.cssText = 'background:var(--bg-color); padding:1rem; border-radius:8px; margin-bottom:1rem; border:1px solid var(--panel-border);';
+    
+    let typeBadge = '';
+    if (q.type === 'mcq') typeBadge = '<span style="background:#3b82f6; color:#fff; padding:2px 6px; border-radius:4px; font-size:0.75rem;">MCQ</span>';
+    else if (q.type === 'tf') typeBadge = '<span style="background:#f59e0b; color:#fff; padding:2px 6px; border-radius:4px; font-size:0.75rem;">True/False</span>';
+    else if (q.type === 'written') typeBadge = '<span style="background:#10b981; color:#fff; padding:2px 6px; border-radius:4px; font-size:0.75rem;">Written (CR)</span>';
+    
+    div.innerHTML = `
+      <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+        <strong>Q${index + 1}. ${typeBadge}</strong>
+        <button class="btn btn-danger" style="padding:4px 8px; font-size:0.8rem;" onclick="deleteQuestion('${exam.id}', '${q.id}')">
+          <i class="fa-solid fa-trash"></i>
+        </button>
+      </div>
+      <p style="margin:0 0 8px; font-size:0.95rem;">${q.text}</p>
+      ${q.type === 'mcq' ? `<p style="margin:0; font-size:0.85rem; color:var(--text-muted);">A) ${q.options[0]} | B) ${q.options[1]} | C) ${q.options[2]} | D) ${q.options[3]}</p>` : ''}
+      ${q.type !== 'written' ? `<p style="margin:4px 0 0; color:var(--success); font-size:0.85rem;"><strong>Correct:</strong> ${q.correctAnswer}</p>` : `<p style="margin:4px 0 0; color:var(--warning); font-size:0.85rem;">Requires manual grading by Admin</p>`}
+    `;
+    list.appendChild(div);
+  });
+}
+
+function toggleQuestionTypeFields() {
+  const type = document.getElementById('qTypeSelect').value;
+  document.getElementById('mcqOptionsContainer').style.display = type === 'mcq' ? 'block' : 'none';
+  document.getElementById('tfOptionsContainer').style.display = type === 'tf' ? 'block' : 'none';
+}
+
+async function addQuestionToExam() {
+  const examId = document.getElementById('currentExamId').value;
+  const type = document.getElementById('qTypeSelect').value;
+  const text = document.getElementById('qTextInput').value.trim();
+  
+  if (!text) return alert("Enter question text!");
+  
+  const question = { id: 'q_' + Date.now(), type, text };
+  
+  if (type === 'mcq') {
+    question.options = [
+      document.getElementById('qOptA').value || 'A',
+      document.getElementById('qOptB').value || 'B',
+      document.getElementById('qOptC').value || 'C',
+      document.getElementById('qOptD').value || 'D'
+    ];
+    question.correctAnswer = document.getElementById('qCorrectMcq').value;
+  } else if (type === 'tf') {
+    question.options = ['True', 'False'];
+    question.correctAnswer = document.getElementById('qCorrectTf').value;
+  }
+  
+  // Post directly to API or save whole DB
+  const exam = dbData.exams.find(e => e.id === examId);
+  if (!exam.questions) exam.questions = [];
+  exam.questions.push(question);
+  
+  await fetch('/api/exams/update', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ examId: exam.id, questions: exam.questions })
+  });
+  
+  document.getElementById('qTextInput').value = '';
+  loadData();
+  setTimeout(() => openExamQuestions(examId), 300); // refresh modal
+}
+
+async function deleteQuestion(examId, qId) {
+  if (!confirm('Delete this question?')) return;
+  const exam = dbData.exams.find(e => e.id === examId);
+  exam.questions = exam.questions.filter(q => q.id !== qId);
+  
+  await fetch('/api/exams/update', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ examId: exam.id, questions: exam.questions })
+  });
+  
+  loadData();
+  setTimeout(() => openExamQuestions(examId), 300);
+}
