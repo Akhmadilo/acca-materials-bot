@@ -1406,6 +1406,11 @@ app.get('/api/data', (req, res) => {
   res.json(getDb());
 });
 
+app.get('/api/exams', (req, res) => {
+  const db = getDb();
+  res.json(db.exams || []);
+});
+
 app.post('/api/exams', (req, res) => {
   const { title, duration, questions } = req.body;
   const db = getDb();

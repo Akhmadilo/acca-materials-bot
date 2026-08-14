@@ -42,6 +42,7 @@ async function loadData() {
     updateBotBadge();
     updateTotalResourcesCounter();
     populateBatchSelect();
+    if (typeof renderExams === 'function') renderExams();
   } catch (error) {
     console.error('Error loading data:', error);
   }
