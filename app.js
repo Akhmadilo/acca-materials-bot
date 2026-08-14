@@ -1264,6 +1264,7 @@ function renderExamQuestionsList(exam) {
       <p style="margin:0 0 8px; font-size:0.95rem;">${q.text}</p>
       ${q.type === 'mcq' ? `<p style="margin:0; font-size:0.85rem; color:var(--text-muted);">A) ${q.options[0]} | B) ${q.options[1]} | C) ${q.options[2]} | D) ${q.options[3]}</p>` : ''}
       ${q.type !== 'written' ? `<p style="margin:4px 0 0; color:var(--success); font-size:0.85rem;"><strong>Correct:</strong> ${q.correctAnswer}</p>` : `<p style="margin:4px 0 0; color:var(--warning); font-size:0.85rem;">Requires manual grading by Admin</p>`}
+      ${q.imageUrl ? `<div style="margin-top:8px;"><img src="${q.imageUrl}" style="max-width:200px; max-height:150px; border-radius:8px; border:1px solid var(--panel-border);" onerror="this.style.display='none'"></div>` : ''}
     `;
     list.appendChild(div);
   });
@@ -1284,6 +1285,8 @@ async function addQuestionToExam() {
     if (!text) return alert("Enter question text!");
     
     const question = { id: 'q_' + Date.now(), type, text };
+    const imageUrl = document.getElementById('qImageUrl').value.trim();
+    if (imageUrl) question.imageUrl = imageUrl;
     
     if (type === 'mcq') {
       question.options = [
@@ -1311,6 +1314,7 @@ async function addQuestionToExam() {
     if (!res.ok) throw new Error("Server xatolik berdi");
 
     document.getElementById('qTextInput').value = '';
+    document.getElementById('qImageUrl').value = '';
     await loadData();
     openExamQuestions(examId);
     alert("✅ Savol muvaffaqiyatli qo'shildi!");

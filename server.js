@@ -30,7 +30,8 @@ function generateFullMasterDb() {
     { id: "cat_analytics", title: "📈 Data Analytics & BI", parentId: null, order: 3, resources: [] },
     { id: "cat_national_1c", title: "🇺🇿 Milliy Buxgalteriya va 1C", parentId: null, order: 4, resources: [] },
     { id: "cat_fin_modeling", title: "💼 Financial Modeling & Corporate Finance", parentId: null, order: 5, resources: [] },
-    { id: "cat_feedback", title: "💬 Feedback", parentId: null, order: 6, resources: [], isFeedback: true }
+    { id: "cat_economics", title: "📚 Economics", parentId: null, order: 6, resources: [] },
+    { id: "cat_feedback", title: "💬 Feedback", parentId: null, order: 7, resources: [], isFeedback: true }
   ];
 
   const mainLevels = [
@@ -54,7 +55,17 @@ function generateFullMasterDb() {
     // Financial Modeling & Corporate Finance
     { id: "cat_fm_excel", title: "📊 Excel Financial Modeling (DCF, LBO, Budgeting)", parentId: "cat_fin_modeling", order: 1, resources: [] },
     { id: "cat_fm_valuation", title: "💎 Business Valuation & Corporate Finance", parentId: "cat_fin_modeling", order: 2, resources: [] },
-    { id: "cat_fm_banking", title: "🏢 Banking, Credit Analysis & Risk", parentId: "cat_fin_modeling", order: 3, resources: [] }
+    { id: "cat_fm_banking", title: "🏢 Banking, Credit Analysis & Risk", parentId: "cat_fin_modeling", order: 3, resources: [] },
+
+    // Economics
+    { id: "cat_econ_micro", title: "📊 Microeconomics", parentId: "cat_economics", order: 1, resources: [] },
+    { id: "cat_econ_macro", title: "🌍 Macroeconomics", parentId: "cat_economics", order: 2, resources: [] },
+    { id: "cat_econ_international", title: "🌐 International Economics & Trade", parentId: "cat_economics", order: 3, resources: [] },
+    { id: "cat_econ_development", title: "📈 Development Economics", parentId: "cat_economics", order: 4, resources: [] },
+    { id: "cat_econ_econometrics", title: "📉 Econometrics & Statistics", parentId: "cat_economics", order: 5, resources: [] },
+    { id: "cat_econ_monetary", title: "🏦 Monetary & Financial Economics", parentId: "cat_economics", order: 6, resources: [] },
+    { id: "cat_econ_public", title: "🏛️ Public Economics & Fiscal Policy", parentId: "cat_economics", order: 7, resources: [] },
+    { id: "cat_econ_behavioral", title: "🧠 Behavioral Economics", parentId: "cat_economics", order: 8, resources: [] }
   ];
 
   const papers = [
@@ -1352,36 +1363,57 @@ function setupBotHandlers() {
     const q = exam.questions[qIndex];
     let text = `<b>Question ${qIndex + 1} of ${exam.questions.length}</b>\n\n${q.text}`;
     
-    if (q.type === 'mcq' || q.type === 'tf') {
-      const inlineKeyboard = [];
-      if (q.type === 'mcq') {
-        text += `\n\nA) ${q.options[0]}\nB) ${q.options[1]}\nC) ${q.options[2]}\nD) ${q.options[3]}`;
-        inlineKeyboard.push([
-          { text: 'A', callback_data: `ans_exam_${qIndex}_A` },
-          { text: 'B', callback_data: `ans_exam_${qIndex}_B` },
-          { text: 'C', callback_data: `ans_exam_${qIndex}_C` },
-          { text: 'D', callback_data: `ans_exam_${qIndex}_D` }
-        ]);
-      } else if (q.type === 'tf') {
-        inlineKeyboard.push([
-          { text: 'True', callback_data: `ans_exam_${qIndex}_True` },
-          { text: 'False', callback_data: `ans_exam_${qIndex}_False` }
-        ]);
+    const sendQuestionContent = async () => {
+      if (q.imageUrl) {
+        try {
+          await bot.sendPhoto(chatId, q.imageUrl, {
+            caption: text,
+            parse_mode: 'HTML'
+          });
+        } catch (err) {
+          await bot.sendMessage(chatId, text + '\n\n⚠️ (Image could not load)', { parse_mode: 'HTML' });
+        }
       }
-      
-      if (replaceMessageId) {
-        bot.editMessageText(text, { chat_id: chatId, message_id: replaceMessageId, parse_mode: 'HTML', reply_markup: { inline_keyboard: inlineKeyboard } });
-      } else {
-        bot.sendMessage(chatId, text, { parse_mode: 'HTML', reply_markup: { inline_keyboard: inlineKeyboard } });
+
+      if (q.type === 'mcq' || q.type === 'tf') {
+        const inlineKeyboard = [];
+        let buttonText = '';
+        if (q.type === 'mcq') {
+          buttonText = `A) ${q.options[0]}\nB) ${q.options[1]}\nC) ${q.options[2]}\nD) ${q.options[3]}`;
+          inlineKeyboard.push([
+            { text: 'A', callback_data: `ans_exam_${qIndex}_A` },
+            { text: 'B', callback_data: `ans_exam_${qIndex}_B` },
+            { text: 'C', callback_data: `ans_exam_${qIndex}_C` },
+            { text: 'D', callback_data: `ans_exam_${qIndex}_D` }
+          ]);
+        } else if (q.type === 'tf') {
+          inlineKeyboard.push([
+            { text: '✅ True', callback_data: `ans_exam_${qIndex}_True` },
+            { text: '❌ False', callback_data: `ans_exam_${qIndex}_False` }
+          ]);
+        }
+        
+        if (q.imageUrl) {
+          await bot.sendMessage(chatId, buttonText || 'Select your answer:', { parse_mode: 'HTML', reply_markup: { inline_keyboard: inlineKeyboard } });
+        } else {
+          const fullText = text + (buttonText ? '\n\n' + buttonText : '');
+          if (replaceMessageId) {
+            bot.editMessageText(fullText, { chat_id: chatId, message_id: replaceMessageId, parse_mode: 'HTML', reply_markup: { inline_keyboard: inlineKeyboard } });
+          } else {
+            await bot.sendMessage(chatId, fullText, { parse_mode: 'HTML', reply_markup: { inline_keyboard: inlineKeyboard } });
+          }
+        }
+      } else if (q.type === 'written') {
+        const writtenText = (q.imageUrl ? '' : text + '\n\n') + '<i>✍️ Please type your answer directly in the chat below and send it.</i>';
+        if (!q.imageUrl && replaceMessageId) {
+          bot.editMessageText(text + '\n\n<i>✍️ Please type your answer directly in the chat below and send it.</i>', { chat_id: chatId, message_id: replaceMessageId, parse_mode: 'HTML' });
+        } else {
+          await bot.sendMessage(chatId, writtenText, { parse_mode: 'HTML' });
+        }
       }
-    } else if (q.type === 'written') {
-      text += `\n\n<i>✍️ Please type your answer directly in the chat below and send it.</i>`;
-      if (replaceMessageId) {
-        bot.editMessageText(text, { chat_id: chatId, message_id: replaceMessageId, parse_mode: 'HTML' });
-      } else {
-        bot.sendMessage(chatId, text, { parse_mode: 'HTML' });
-      }
-    }
+    };
+    
+    sendQuestionContent();
   }
 }
 
