@@ -1304,8 +1304,8 @@ async function addQuestionToExam() {
   });
   
   document.getElementById('qTextInput').value = '';
-  loadData();
-  setTimeout(() => openExamQuestions(examId), 300); // refresh modal
+  await loadData();
+  openExamQuestions(examId);
 }
 
 async function deleteQuestion(examId, qId) {
@@ -1319,6 +1319,6 @@ async function deleteQuestion(examId, qId) {
     body: JSON.stringify({ examId: exam.id, questions: exam.questions })
   });
   
-  loadData();
-  setTimeout(() => openExamQuestions(examId), 300);
+  await loadData();
+  openExamQuestions(examId);
 }
