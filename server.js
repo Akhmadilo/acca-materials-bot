@@ -153,20 +153,45 @@ function generateFullMasterDb() {
       ]
     });
 
+    // Real ACCA English YouTubers per paper
+    const youtubeLinks = {
+      'F1': [
+        { title: '🎓 OpenTuition F1 Free Lectures', url: 'https://www.youtube.com/playlist?list=PLAz8MpXr4MInXlF0A-e8Srf_YZYxd5lM9', desc: 'OpenTuition complete F1 BT lecture series (FREE)' },
+        { title: '📚 aCOWtancy F1 Tutorials', url: 'https://www.youtube.com/@aclowtancy', desc: 'aCOWtancy bite-size F1 Business & Technology videos' },
+        { title: '🌍 ACCA Global Official', url: 'https://www.youtube.com/@ACCAOfficial', desc: 'Official ACCA YouTube channel with exam tips' }
+      ],
+      'F2': [
+        { title: '🎓 OpenTuition F2 Free Lectures', url: 'https://www.youtube.com/playlist?list=PLAz8MpXr4MImjjWa_pxHH7xm-kj9Cvq9p', desc: 'OpenTuition complete F2 MA lecture series (FREE)' },
+        { title: '📚 aCOWtancy F2 Tutorials', url: 'https://www.youtube.com/@aclowtancy', desc: 'aCOWtancy bite-size F2 Management Accounting' },
+        { title: '📊 Accounting Stuff', url: 'https://www.youtube.com/@AccountingStuff', desc: 'Clear accounting explanations for beginners' }
+      ],
+      'F3': [
+        { title: '🎓 OpenTuition F3 Free Lectures', url: 'https://www.youtube.com/playlist?list=PLAz8MpXr4MImvRNF-_7lYJTzlXZelVWyS', desc: 'OpenTuition complete F3 FA lecture series (FREE)' },
+        { title: '📚 aCOWtancy F3 Tutorials', url: 'https://www.youtube.com/@aclowtancy', desc: 'aCOWtancy bite-size F3 Financial Accounting' },
+        { title: '📊 The Finance Storyteller', url: 'https://www.youtube.com/@TheFinanceStoryteller', desc: 'Finance concepts explained through stories' }
+      ],
+      'default': [
+        { title: '🎓 OpenTuition ACCA Lectures', url: 'https://www.youtube.com/@OpenTuition', desc: 'OpenTuition FREE ACCA lecture series for all papers' },
+        { title: '📚 aCOWtancy ACCA', url: 'https://www.youtube.com/@aclowtancy', desc: 'aCOWtancy bite-size ACCA tutorial videos' },
+        { title: '🌍 ACCA Global Official', url: 'https://www.youtube.com/@ACCAOfficial', desc: 'Official ACCA YouTube channel' },
+        { title: '📊 Accounting Stuff', url: 'https://www.youtube.com/@AccountingStuff', desc: 'Clear accounting explanations' }
+      ]
+    };
+
+    const ytLinks = youtubeLinks[code] || youtubeLinks['default'];
+    
     categories.push({
       id: `${paper.id}_youtube`,
       title: `🔍 YouTube Channels : ${code}`,
       parentId: paper.id,
       order: 4,
-      resources: [
-        {
-          id: `res_${paper.id}_yt1`,
-          title: `🔍 ${code} YouTube Channel`,
-          type: "link",
-          value: "https://youtube.com",
-          description: `${code} recommended YouTube tutorial channels`
-        }
-      ]
+      resources: ytLinks.map((yt, idx) => ({
+        id: `res_${paper.id}_yt${idx + 1}`,
+        title: yt.title,
+        type: "link",
+        value: yt.url,
+        description: yt.desc
+      }))
     });
   });
 
@@ -673,7 +698,7 @@ function setupBotHandlers() {
   });
 
   // --- /exams Command (Mock Exams) ---
-  bot.onText(/\/exams|📝 Mock Exams/, (msg) => {
+  bot.onText(/\/exams/, (msg) => {
     const chatId = msg.chat.id;
     const db = getDb();
     
@@ -1196,7 +1221,12 @@ function setupBotHandlers() {
     }
 
     if (text === '📝 Mock Exams') {
-      const inlineKeyboard = db.exams ? db.exams.map(e => [{ text: `📝 ${e.title} (${e.duration} mins)`, callback_data: `start_exam_${e.id}` }]) : [];
+      const validExams = (db.exams || []).filter(e => e.questions && e.questions.length > 0);
+      if (validExams.length === 0) {
+        bot.sendMessage(chatId, `ℹ️ No Mock Exams are currently available. Check back later!`);
+        return;
+      }
+      const inlineKeyboard = validExams.map(e => [{ text: `📝 ${e.title} (${e.duration} mins)`, callback_data: `start_exam_${e.id}` }]);
       bot.sendMessage(chatId, `📝 <b>AVAILABLE MOCK EXAMS</b>\n\nChoose an exam below to begin:`, {
         parse_mode: 'HTML',
         reply_markup: { inline_keyboard: inlineKeyboard }
@@ -1348,17 +1378,26 @@ function setupBotHandlers() {
       });
       saveDb(db);
       
-      const msgText = `🎉 <b>EXAM COMPLETED!</b>\n\n📝 <b>${exam.title}</b>\n✅ <b>OT Score:</b> ${score} / ${mcqCount}\n\n<i>Any Written (CR) answers have been saved and sent to the instructor for manual grading.</i>`;
+      let msgText = `🎉 <b>EXAM COMPLETED!</b>\n\n📝 <b>${exam.title}</b>\n✅ <b>OT Score:</b> ${score} / ${mcqCount}\n\n<i>Any Written (CR) answers have been saved and sent to the instructor for manual grading.</i>`;
       
       state.examMode = false;
       state.examId = null;
       state.currentQuestionIndex = 0;
       state.examAnswers = [];
       
-      if (replaceMessageId) {
-        bot.editMessageText(msgText, { chat_id: chatId, message_id: replaceMessageId, parse_mode: 'HTML' });
-      } else {
-        bot.sendMessage(chatId, msgText, { parse_mode: 'HTML' });
+      // Send completion message
+      bot.sendMessage(chatId, msgText, { parse_mode: 'HTML' });
+      
+      // If exam has answer video, send it as a separate clickable button
+      if (exam.videoUrl) {
+        bot.sendMessage(chatId, `🎬 <b>Answer Explanation Video:</b>`, {
+          parse_mode: 'HTML',
+          reply_markup: {
+            inline_keyboard: [[
+              { text: '🎬 Watch Answer Video', url: exam.videoUrl }
+            ]]
+          }
+        });
       }
       return;
     }
@@ -1454,7 +1493,7 @@ app.get('/api/exams', (req, res) => {
 });
 
 app.post('/api/exams', (req, res) => {
-  const { title, duration, questions } = req.body;
+  const { title, duration, questions, videoUrl } = req.body;
   const db = getDb();
   if (!db.exams) db.exams = [];
   
@@ -1464,6 +1503,7 @@ app.post('/api/exams', (req, res) => {
     duration: duration || 60,
     questions: questions || []
   };
+  if (videoUrl) newExam.videoUrl = videoUrl;
 
   db.exams.push(newExam);
   saveDb(db);

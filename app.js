@@ -1185,16 +1185,17 @@ function renderExams() {
   dbData.exams.forEach(exam => {
     const div = document.createElement('div');
     div.className = 'card';
-    div.style.cssText = 'margin-bottom:1rem; display:flex; justify-content:space-between; align-items:center;';
+    div.style.cssText = 'margin-bottom:1rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;';
     
     div.innerHTML = `
-      <div>
+      <div style="flex:1; min-width:200px;">
         <h4 style="margin:0; font-size:1.1rem;">${exam.title}</h4>
         <p style="margin:4px 0 0; font-size:0.85rem; color:var(--text-muted);">
           ⏱️ ${exam.duration} mins | 📝 ${exam.questions ? exam.questions.length : 0} Questions
         </p>
+        ${exam.videoUrl ? `<p style="margin:4px 0 0; font-size:0.85rem; color:var(--primary);"><i class="fa-solid fa-video"></i> <a href="${exam.videoUrl}" target="_blank" style="color:var(--primary);">🎬 Answer Video</a></p>` : ''}
       </div>
-      <div>
+      <div style="display:flex; gap:8px; flex-wrap:wrap;">
         <button class="btn btn-primary" onclick="openExamQuestions('${exam.id}')"><i class="fa-solid fa-list-check"></i> Manage Questions</button>
         <button class="btn btn-danger" onclick="deleteExam('${exam.id}')"><i class="fa-solid fa-trash"></i> Delete</button>
       </div>
@@ -1206,16 +1207,22 @@ function renderExams() {
 async function createExam() {
   const title = document.getElementById('newExamTitle').value.trim();
   const duration = document.getElementById('newExamDuration').value;
+  const videoUrlEl = document.getElementById('newExamVideoUrl');
+  const videoUrl = videoUrlEl ? videoUrlEl.value.trim() : '';
   
   if (!title) return alert('Enter exam title!');
+  
+  const body = { title, duration };
+  if (videoUrl) body.videoUrl = videoUrl;
   
   await fetch('/api/exams', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ title, duration })
+    body: JSON.stringify(body)
   });
   
   document.getElementById('newExamTitle').value = '';
+  if (videoUrlEl) videoUrlEl.value = '';
   loadData();
 }
 
