@@ -42,6 +42,7 @@ async function loadData() {
     updateBotBadge();
     updateTotalResourcesCounter();
     populateBatchSelect();
+    if (typeof renderExams === 'function') renderExams();
   } catch (error) {
     console.error('Error loading data:', error);
   }
@@ -1020,6 +1021,11 @@ function closeModal(id) {
   document.getElementById(id).classList.remove('active');
 }
 
+function openModal(id) {
+  const el = document.getElementById(id);
+  if (el) el.classList.add('active');
+}
+
 // --- BULK SELECTION & RESOURCE MOVE ENGINE ---
 let selectedResourceIds = [];
 
@@ -1179,16 +1185,17 @@ function renderExams() {
   dbData.exams.forEach(exam => {
     const div = document.createElement('div');
     div.className = 'card';
-    div.style.cssText = 'margin-bottom:1rem; display:flex; justify-content:space-between; align-items:center;';
+    div.style.cssText = 'margin-bottom:1rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;';
     
     div.innerHTML = `
-      <div>
+      <div style="flex:1; min-width:200px;">
         <h4 style="margin:0; font-size:1.1rem;">${exam.title}</h4>
         <p style="margin:4px 0 0; font-size:0.85rem; color:var(--text-muted);">
           ⏱️ ${exam.duration} mins | 📝 ${exam.questions ? exam.questions.length : 0} Questions
         </p>
+        ${exam.videoUrl ? `<p style="margin:4px 0 0; font-size:0.85rem; color:var(--primary);"><i class="fa-solid fa-video"></i> <a href="${exam.videoUrl}" target="_blank" style="color:var(--primary);">🎬 Answer Video</a></p>` : ''}
       </div>
-      <div>
+      <div style="display:flex; gap:8px; flex-wrap:wrap;">
         <button class="btn btn-primary" onclick="openExamQuestions('${exam.id}')"><i class="fa-solid fa-list-check"></i> Manage Questions</button>
         <button class="btn btn-danger" onclick="deleteExam('${exam.id}')"><i class="fa-solid fa-trash"></i> Delete</button>
       </div>
@@ -1200,16 +1207,22 @@ function renderExams() {
 async function createExam() {
   const title = document.getElementById('newExamTitle').value.trim();
   const duration = document.getElementById('newExamDuration').value;
+  const videoUrlEl = document.getElementById('newExamVideoUrl');
+  const videoUrl = videoUrlEl ? videoUrlEl.value.trim() : '';
   
   if (!title) return alert('Enter exam title!');
+  
+  const body = { title, duration };
+  if (videoUrl) body.videoUrl = videoUrl;
   
   await fetch('/api/exams', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ title, duration })
+    body: JSON.stringify(body)
   });
   
   document.getElementById('newExamTitle').value = '';
+  if (videoUrlEl) videoUrlEl.value = '';
   loadData();
 }
 
@@ -1257,7 +1270,8 @@ function renderExamQuestionsList(exam) {
       </div>
       <p style="margin:0 0 8px; font-size:0.95rem;">${q.text}</p>
       ${q.type === 'mcq' ? `<p style="margin:0; font-size:0.85rem; color:var(--text-muted);">A) ${q.options[0]} | B) ${q.options[1]} | C) ${q.options[2]} | D) ${q.options[3]}</p>` : ''}
-      ${q.type !== 'written' ? `<p style="margin:4px 0 0; color:var(--success); font-size:0.85rem;"><strong>Correct:</strong> ${q.correctAnswer}</p>` : `<p style="margin:4px 0 0; color:var(--warning); font-size:0.85rem;">Requires manual grading by Admin</p>`}
+      ${q.correctAnswer ? `<p style="margin:4px 0 0; color:var(--success); font-size:0.85rem;"><strong>Correct / Model Answer:</strong> ${q.correctAnswer}</p>` : `<p style="margin:4px 0 0; color:var(--warning); font-size:0.85rem;">Requires manual grading by Admin</p>`}
+      ${q.imageUrl ? `<div style="margin-top:8px;"><img src="${q.imageUrl}" style="max-width:200px; max-height:150px; border-radius:8px; border:1px solid var(--panel-border);" onerror="this.style.display='none'"></div>` : ''}
     `;
     list.appendChild(div);
   });
@@ -1267,44 +1281,99 @@ function toggleQuestionTypeFields() {
   const type = document.getElementById('qTypeSelect').value;
   document.getElementById('mcqOptionsContainer').style.display = type === 'mcq' ? 'block' : 'none';
   document.getElementById('tfOptionsContainer').style.display = type === 'tf' ? 'block' : 'none';
+  const writtenContainer = document.getElementById('writtenOptionsContainer');
+  if (writtenContainer) writtenContainer.style.display = type === 'written' ? 'block' : 'none';
+}
+
+async function uploadQuestionImage(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  
+  const reader = new FileReader();
+  reader.onload = async function(e) {
+    const fileData = e.target.result;
+    try {
+      const res = await fetch('/api/upload', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ fileName: file.name, fileData })
+      });
+      const data = await res.json();
+      if (res.ok && data.fileUrl) {
+        document.getElementById('qImageUrl').value = data.fileUrl;
+        const previewBox = document.getElementById('qImagePreviewBox');
+        const previewImg = document.getElementById('qImagePreview');
+        if (previewBox && previewImg) {
+          previewImg.src = data.fileUrl;
+          previewBox.style.display = 'block';
+        }
+        alert("📷 Question image uploaded successfully!");
+      } else {
+        alert("Image upload failed!");
+      }
+    } catch (err) {
+      alert("Upload error: " + err.message);
+    }
+  };
+  reader.readAsDataURL(file);
 }
 
 async function addQuestionToExam() {
-  const examId = document.getElementById('currentExamId').value;
-  const type = document.getElementById('qTypeSelect').value;
-  const text = document.getElementById('qTextInput').value.trim();
-  
-  if (!text) return alert("Enter question text!");
-  
-  const question = { id: 'q_' + Date.now(), type, text };
-  
-  if (type === 'mcq') {
-    question.options = [
-      document.getElementById('qOptA').value || 'A',
-      document.getElementById('qOptB').value || 'B',
-      document.getElementById('qOptC').value || 'C',
-      document.getElementById('qOptD').value || 'D'
-    ];
-    question.correctAnswer = document.getElementById('qCorrectMcq').value;
-  } else if (type === 'tf') {
-    question.options = ['True', 'False'];
-    question.correctAnswer = document.getElementById('qCorrectTf').value;
+  try {
+    const examId = document.getElementById('currentExamId').value;
+    const type = document.getElementById('qTypeSelect').value;
+    const text = document.getElementById('qTextInput').value.trim();
+    
+    if (!text) return alert("Enter question text!");
+    
+    const question = { id: 'q_' + Date.now(), type, text };
+    const imageUrl = document.getElementById('qImageUrl').value.trim();
+    if (imageUrl) question.imageUrl = imageUrl;
+    
+    if (type === 'mcq') {
+      question.options = [
+        document.getElementById('qOptA').value || 'A',
+        document.getElementById('qOptB').value || 'B',
+        document.getElementById('qOptC').value || 'C',
+        document.getElementById('qOptD').value || 'D'
+      ];
+      question.correctAnswer = document.getElementById('qCorrectMcq').value;
+    } else if (type === 'tf') {
+      question.options = ['True', 'False'];
+      question.correctAnswer = document.getElementById('qCorrectTf').value;
+    } else if (type === 'written') {
+      const modelAns = document.getElementById('qCorrectWritten');
+      if (modelAns && modelAns.value.trim()) {
+        question.correctAnswer = modelAns.value.trim();
+      }
+    }
+    
+    const exam = dbData.exams.find(e => e.id === examId);
+    if (!exam.questions) exam.questions = [];
+    exam.questions.push(question);
+    
+    const res = await fetch('/api/exams/update', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ examId: exam.id, questions: exam.questions })
+    });
+    
+    if (!res.ok) throw new Error("Server xatolik berdi");
+
+    document.getElementById('qTextInput').value = '';
+    document.getElementById('qImageUrl').value = '';
+    const previewBox = document.getElementById('qImagePreviewBox');
+    if (previewBox) previewBox.style.display = 'none';
+    const modelAns = document.getElementById('qCorrectWritten');
+    if (modelAns) modelAns.value = '';
+
+    await loadData();
+    openExamQuestions(examId);
+    alert("✅ Savol muvaffaqiyatli qo'shildi!");
+  } catch (err) {
+    console.error(err);
+    alert("Xatolik yuz berdi: " + err.message);
   }
-  
-  // Post directly to API or save whole DB
-  const exam = dbData.exams.find(e => e.id === examId);
-  if (!exam.questions) exam.questions = [];
-  exam.questions.push(question);
-  
-  await fetch('/api/exams/update', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ examId: exam.id, questions: exam.questions })
-  });
-  
-  document.getElementById('qTextInput').value = '';
-  loadData();
-  setTimeout(() => openExamQuestions(examId), 300); // refresh modal
 }
 
 async function deleteQuestion(examId, qId) {
@@ -1318,6 +1387,6 @@ async function deleteQuestion(examId, qId) {
     body: JSON.stringify({ examId: exam.id, questions: exam.questions })
   });
   
-  loadData();
-  setTimeout(() => openExamQuestions(examId), 300);
+  await loadData();
+  openExamQuestions(examId);
 }

@@ -130,7 +130,14 @@ function generateFullMasterDb() {
         {
           id: `res_${paper.id}_b1`,
           title: `📖 ${code} Kaplan Study Text & Revision Kit`,
-          type    // Real ACCA English YouTubers per paper - VERIFIED channel handles
+          type: "link",
+          value: "https://t.me/Finance_Ahmadillo",
+          description: `${code} Kaplan & BPP latest exam kits and textbooks`
+        }
+      ]
+    });
+
+    // Real ACCA English YouTubers per paper - VERIFIED channel handles
     const videoResources = {
       'F1': [
         { title: '🎓 F1 Business & Technology — By OpenTuition (FREE)', url: 'https://www.youtube.com/@OpenTuition', desc: 'OpenTuition complete F1 BT lecture series — 100% FREE' },
@@ -221,14 +228,18 @@ function generateFullMasterDb() {
       ]
     };
 
-    const vids = videoResources[code] || [
+    const vids = [
+      { title: `🎥 ${code} Complete Video Course`, url: 'https://youtube.com', desc: `${code} comprehensive lecture series` }
+    ];
+
+    const ytLinks = videoResources[code] || [
       { title: `🎓 ${code} Lectures — By OpenTuition (FREE)`, url: 'https://www.youtube.com/@OpenTuition', desc: `OpenTuition ${code} lecture series — 100% FREE` },
       { title: `📚 ${code} Tutorials — By aCOWtancy`, url: 'https://www.youtube.com/@aCOWtancyACCA', desc: `aCOWtancy short ${code} tutorials` }
     ];
 
     categories.push({
       id: `${paper.id}_videos`,
-      title: `🎥 Video Lectures: ${code}`,
+      title: `🎥 Video Lessons for ${code}`,
       parentId: paper.id,
       order: 3,
       resources: vids.map((v, idx) => ({
@@ -237,6 +248,20 @@ function generateFullMasterDb() {
         type: "link",
         value: v.url,
         description: v.desc
+      }))
+    });
+
+    categories.push({
+      id: `${paper.id}_youtube`,
+      title: `🔍 YouTube Channels : ${code}`,
+      parentId: paper.id,
+      order: 4,
+      resources: ytLinks.map((yt, idx) => ({
+        id: `res_${paper.id}_yt${idx + 1}`,
+        title: yt.title,
+        type: "link",
+        value: yt.url,
+        description: yt.desc
       }))
     });
   });
@@ -546,9 +571,13 @@ function setupBotHandlers() {
       }
     } else if (res.type === 'link') {
       const content = `<b>${res.title}</b>\n\n` +
-                      `${res.description ? res.description + '\n\n' : ''}` +
-                      `🔗 <b>Link:</b> ${res.value}`;
-      bot.sendMessage(chatId, content, { parse_mode: 'HTML' });
+                      `${res.description ? res.description : ''}`;
+      bot.sendMessage(chatId, content, {
+        parse_mode: 'HTML',
+        reply_markup: {
+          inline_keyboard: [[{ text: '🔗 Open Link', url: res.value }]]
+        }
+      });
     } else if (res.type === 'file_id') {
       bot.sendMessage(chatId, `📄 Sending <b>${res.title}</b>...`, { parse_mode: 'HTML' });
       await bot.sendDocument(chatId, res.value, { caption: res.description || res.title }).catch(err => {
@@ -1590,9 +1619,26 @@ app.post('/api/admin/restore-full-db', (req, res) => {
   }
   fullDb.exams = currentDb.exams || [];
   fullDb.exam_submissions = currentDb.exam_submissions || [];
+  
+  // PRESERVE CUSTOM UPLOADED RESOURCES
+  if (currentDb.categories) {
+    fullDb.categories.forEach(newCat => {
+      const oldCat = currentDb.categories.find(c => c.id === newCat.id);
+      if (oldCat && oldCat.resources) {
+        oldCat.resources.forEach(oldRes => {
+          // If it's a file_id, file, or a custom added link that isn't in the defaults
+          const exists = newCat.resources.some(r => r.id === oldRes.id || r.title === oldRes.title);
+          if (!exists) {
+            newCat.resources.push(oldRes);
+          }
+        });
+      }
+    });
+  }
+
   saveDb(fullDb);
   initBot();
-  res.json({ success: true, message: "Database restored with all master categories!", categoriesCount: fullDb.categories.length });
+  res.json({ success: true, message: "Database restored with all master categories, custom resources preserved!", categoriesCount: fullDb.categories.length });
 });
 
 app.get('/api/admin/export-db', (req, res) => {
