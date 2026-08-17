@@ -722,6 +722,36 @@ function setupBotHandlers() {
     }
   });
 
+  // --- /post Command (Admin Broadcast) ---
+  bot.onText(/\/post/, (msg) => {
+    const chatId = msg.chat.id;
+    if (!userStates[chatId]) userStates[chatId] = {};
+    const state = userStates[chatId];
+    if (!isUserAdmin(msg) && !state.isAdmin) return;
+
+    state.postMode = 'awaiting_content';
+    bot.sendMessage(chatId, "📢 Send me the content you want to broadcast. You can send: Text, Photo, Video, Document, or Text+Photo.");
+  });
+
+  // --- /attach Command (Admin Exam File Attachment) ---
+  bot.onText(/\/attach/, (msg) => {
+    const chatId = msg.chat.id;
+    if (!userStates[chatId]) userStates[chatId] = {};
+    const state = userStates[chatId];
+    if (!isUserAdmin(msg) && !state.isAdmin) return;
+
+    const db = getDb();
+    if (!db.exams || db.exams.length === 0) {
+      bot.sendMessage(chatId, "ℹ️ No exams available to attach files to.");
+      return;
+    }
+
+    const inlineKeyboard = db.exams.map(e => [{ text: `📝 ${e.title}`, callback_data: `attach_exam_${e.id}` }]);
+    bot.sendMessage(chatId, "📝 Select an exam to attach a file to:", {
+      reply_markup: { inline_keyboard: inlineKeyboard }
+    });
+  });
+
   // --- /pack Command (Create Multi-Book Bundle Pack in Telegram) ---
   bot.onText(/\/pack|📦 Create Multi-Book Pack/, (msg) => {
     const chatId = msg.chat.id;
@@ -903,6 +933,9 @@ function setupBotHandlers() {
     const db = getDb();
     if (!userStates[chatId]) userStates[chatId] = {};
     const state = userStates[chatId];
+    
+    if (state.postMode || state.attachMode) return;
+
     const isAdmin = isUserAdmin(msg) || state.isAdmin;
 
     if (!isAdmin) {
@@ -996,6 +1029,73 @@ function setupBotHandlers() {
       }
     }
 
+    if (data === 'post_confirm') {
+      bot.answerCallbackQuery(query.id);
+      if (!state.pendingPost) return;
+      const { type, text, photo_id, video_id, document_id, caption } = state.pendingPost;
+      let sentCount = 0;
+      let errorCount = 0;
+      bot.sendMessage(chatId, `⏳ Starting broadcast to ${db.subscribers.length} users...`);
+      const users = db.subscribers || [];
+      const BATCH_SIZE = 30;
+      const sendPost = async () => {
+        for (let i = 0; i < users.length; i++) {
+          const u = users[i];
+          try {
+            if (type === 'text') await bot.sendMessage(u.id, text);
+            else if (type === 'photo') await bot.sendPhoto(u.id, photo_id, { caption });
+            else if (type === 'video') await bot.sendVideo(u.id, video_id, { caption });
+            else if (type === 'document') await bot.sendDocument(u.id, document_id, { caption });
+            sentCount++;
+          } catch (e) {
+            errorCount++;
+          }
+          if (i > 0 && i % BATCH_SIZE === 0) await new Promise(r => setTimeout(r, 1000));
+        }
+        bot.sendMessage(chatId, `✅ Broadcast complete!\nSent to: ${sentCount}/${users.length}\nErrors (blocked/deleted): ${errorCount}`);
+      };
+      sendPost();
+      state.postMode = null;
+      state.pendingPost = null;
+      return;
+    } else if (data === 'post_cancel') {
+      bot.answerCallbackQuery(query.id);
+      state.postMode = null;
+      state.pendingPost = null;
+      bot.sendMessage(chatId, "Post cancelled.");
+      return;
+    } else if (data.startsWith('attach_exam_')) {
+      const examId = data.replace('attach_exam_', '');
+      const exam = db.exams.find(e => e.id === examId);
+      if (!exam) return bot.answerCallbackQuery(query.id, { text: "Exam not found!", show_alert: true });
+
+      bot.editMessageText(`📝 <b>${exam.title}</b>\nWhat would you like to attach?`, {
+        chat_id: chatId,
+        message_id: query.message.message_id,
+        parse_mode: 'HTML',
+        reply_markup: {
+          inline_keyboard: [
+            [{ text: "📄 Attach PDF Paper", callback_data: `attach_pdf_${examId}` }],
+            [{ text: "🎬 Attach Answer Video", callback_data: `attach_video_${examId}` }]
+          ]
+        }
+      });
+      bot.answerCallbackQuery(query.id);
+      return;
+    } else if (data.startsWith('attach_pdf_')) {
+      const examId = data.replace('attach_pdf_', '');
+      state.attachMode = { examId, type: 'pdf' };
+      bot.sendMessage(chatId, "Send me the PDF file to attach to this exam.");
+      bot.answerCallbackQuery(query.id);
+      return;
+    } else if (data.startsWith('attach_video_')) {
+      const examId = data.replace('attach_video_', '');
+      state.attachMode = { examId, type: 'video' };
+      bot.sendMessage(chatId, "Send me the video to attach to this exam.");
+      bot.answerCallbackQuery(query.id);
+      return;
+    }
+
     if (data.startsWith('start_exam_')) {
       const examId = data.replace('start_exam_', '');
       const exam = db.exams.find(e => e.id === examId);
@@ -1007,6 +1107,19 @@ function setupBotHandlers() {
       state.examAnswers = [];
 
       bot.answerCallbackQuery(query.id);
+      
+      // Send PDF file if available
+      if (exam.pdfFileId) {
+        bot.sendDocument(chatId, exam.pdfFileId, { caption: `📄 <b>Exam Paper (PDF):</b>`, parse_mode: 'HTML' });
+      } else if (exam.pdfUrl) {
+        bot.sendMessage(chatId, `📄 <b>Exam Paper (PDF):</b>`, {
+          parse_mode: 'HTML',
+          reply_markup: {
+            inline_keyboard: [[{ text: '📄 Download Exam Paper', url: exam.pdfUrl }]]
+          }
+        });
+      }
+      
       bot.sendMessage(chatId, `🚀 <b>Exam Started: ${exam.title}</b>\n⏱️ <b>Duration:</b> ${exam.duration} mins\n📝 <b>Questions:</b> ${(exam.questions || []).length}\n\nGood luck!`, { parse_mode: 'HTML' }).then(() => {
         sendNextQuestion(chatId);
       });
@@ -1236,9 +1349,71 @@ function setupBotHandlers() {
 
   // --- Main Message Listener ---
   bot.on('message', async (msg) => {
+    const chatId = msg.chat.id;
+    if (!userStates[chatId]) {
+      userStates[chatId] = { currentParentId: null, feedbackMode: false };
+    }
+    const state = userStates[chatId];
+    const db = getDb();
+
+    // Handle admin file attachments (PDF/Video for exams)
+    if (state.attachMode && isUserAdmin(msg)) {
+      if (msg.document && state.attachMode.type === 'pdf') {
+        const exam = db.exams.find(e => e.id === state.attachMode.examId);
+        if (exam) {
+          exam.pdfFileId = msg.document.file_id;
+          saveDb(db);
+          bot.sendMessage(chatId, "✅ File attached to exam!");
+        }
+        state.attachMode = null;
+        return;
+      } else if (msg.video && state.attachMode.type === 'video') {
+        const exam = db.exams.find(e => e.id === state.attachMode.examId);
+        if (exam) {
+          exam.videoFileId = msg.video.file_id;
+          saveDb(db);
+          bot.sendMessage(chatId, "✅ File attached to exam!");
+        }
+        state.attachMode = null;
+        return;
+      }
+    }
+
+    // Handle admin post content capture
+    if (state.postMode === 'awaiting_content' && isUserAdmin(msg)) {
+      if (!msg.text && !msg.photo && !msg.video && !msg.document) {
+        bot.sendMessage(chatId, "Unsupported message type. Please send Text, Photo, Video, or Document.");
+        return;
+      }
+      
+      let type, text, photo_id, video_id, document_id, caption;
+      if (msg.text) { type = 'text'; text = msg.text; }
+      else if (msg.photo) { type = 'photo'; photo_id = msg.photo[msg.photo.length - 1].file_id; caption = msg.caption; }
+      else if (msg.video) { type = 'video'; video_id = msg.video.file_id; caption = msg.caption; }
+      else if (msg.document) { type = 'document'; document_id = msg.document.file_id; caption = msg.caption; }
+      
+      state.pendingPost = { type, text, photo_id, video_id, document_id, caption };
+      
+      const opts = {
+        reply_markup: {
+          inline_keyboard: [
+            [{ text: `✅ Send to All (${db.subscribers.length} subscribers)`, callback_data: `post_confirm` }],
+            [{ text: `❌ Cancel`, callback_data: `post_cancel` }]
+          ]
+        }
+      };
+
+      if (type === 'text') bot.sendMessage(chatId, text, opts);
+      else if (type === 'photo') bot.sendPhoto(chatId, photo_id, { caption, ...opts });
+      else if (type === 'video') bot.sendVideo(chatId, video_id, { caption, ...opts });
+      else if (type === 'document') bot.sendDocument(chatId, document_id, { caption, ...opts });
+      
+      state.postMode = 'preview';
+      return;
+    }
+
     if (!msg.text || msg.text.startsWith('/')) return;
 
-    const chatId = msg.chat.id;
     const text = msg.text.trim();
     addSubscriber(msg);
 
@@ -1456,16 +1631,39 @@ function setupBotHandlers() {
       
       let msgText = `🎉 <b>EXAM COMPLETED!</b>\n\n📝 <b>${exam.title}</b>\n✅ <b>OT Score:</b> ${score} / ${mcqCount}\n\n<i>Any Written (CR) answers have been saved and sent to the instructor for manual grading.</i>`;
       
+      // Build full answer key
+      let answerKey = `\n\n📊 <b>ANSWER KEY:</b>\n`;
+      answerKey += `────────────────────\n`;
+      exam.questions.forEach((q, i) => {
+        const userAns = state.examAnswers[i];
+        if (q.type === 'mcq' || q.type === 'tf') {
+          const icon = userAns && userAns.isCorrect ? '✅' : '❌';
+          const userAnswer = userAns ? userAns.userAnswer : '-';
+          answerKey += `${icon} Q${i + 1}: Your answer: <b>${userAnswer}</b> | Correct: <b>${q.correctAnswer}</b>\n`;
+        } else if (q.type === 'written') {
+          answerKey += `✍️ Q${i + 1}: <i>Written answer submitted</i>\n`;
+          if (q.modelAnswer) {
+            answerKey += `   📝 Model: <i>${q.modelAnswer.substring(0, 100)}${q.modelAnswer.length > 100 ? '...' : ''}</i>\n`;
+          }
+        }
+      });
+      answerKey += `────────────────────`;
+      
       state.examMode = false;
       state.examId = null;
       state.currentQuestionIndex = 0;
       state.examAnswers = [];
       
-      // Send completion message
+      // Send completion message with score
       bot.sendMessage(chatId, msgText, { parse_mode: 'HTML' });
       
+      // Send answer key as separate message
+      bot.sendMessage(chatId, answerKey, { parse_mode: 'HTML' });
+      
       // If exam has answer video, send it as a separate clickable button
-      if (exam.videoUrl) {
+      if (exam.videoFileId) {
+        bot.sendVideo(chatId, exam.videoFileId, { caption: `🎬 <b>Answer Explanation Video:</b>`, parse_mode: 'HTML' });
+      } else if (exam.videoUrl) {
         bot.sendMessage(chatId, `🎬 <b>Answer Explanation Video:</b>`, {
           parse_mode: 'HTML',
           reply_markup: {
@@ -1569,7 +1767,7 @@ app.get('/api/exams', (req, res) => {
 });
 
 app.post('/api/exams', (req, res) => {
-  const { title, duration, questions, videoUrl } = req.body;
+  const { title, duration, questions, videoUrl, pdfUrl } = req.body;
   const db = getDb();
   if (!db.exams) db.exams = [];
   
@@ -1580,6 +1778,7 @@ app.post('/api/exams', (req, res) => {
     questions: questions || []
   };
   if (videoUrl) newExam.videoUrl = videoUrl;
+  if (pdfUrl) newExam.pdfUrl = pdfUrl;
 
   db.exams.push(newExam);
   saveDb(db);

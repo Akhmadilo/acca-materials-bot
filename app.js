@@ -1194,6 +1194,7 @@ function renderExams() {
           ⏱️ ${exam.duration} mins | 📝 ${exam.questions ? exam.questions.length : 0} Questions
         </p>
         ${exam.videoUrl ? `<p style="margin:4px 0 0; font-size:0.85rem; color:var(--primary);"><i class="fa-solid fa-video"></i> <a href="${exam.videoUrl}" target="_blank" style="color:var(--primary);">🎬 Answer Video</a></p>` : ''}
+        ${exam.pdfUrl ? `<p style="margin:4px 0 0; font-size:0.85rem; color:var(--accent);"><i class="fa-solid fa-file-pdf"></i> <a href="${exam.pdfUrl}" target="_blank" style="color:var(--accent);">📄 Exam PDF</a></p>` : ''}
       </div>
       <div style="display:flex; gap:8px; flex-wrap:wrap;">
         <button class="btn btn-primary" onclick="openExamQuestions('${exam.id}')"><i class="fa-solid fa-list-check"></i> Manage Questions</button>
@@ -1209,11 +1210,14 @@ async function createExam() {
   const duration = document.getElementById('newExamDuration').value;
   const videoUrlEl = document.getElementById('newExamVideoUrl');
   const videoUrl = videoUrlEl ? videoUrlEl.value.trim() : '';
+  const pdfUrlEl = document.getElementById('newExamPdfUrl');
+  const pdfUrl = pdfUrlEl ? pdfUrlEl.value.trim() : '';
   
   if (!title) return alert('Enter exam title!');
   
   const body = { title, duration };
   if (videoUrl) body.videoUrl = videoUrl;
+  if (pdfUrl) body.pdfUrl = pdfUrl;
   
   await fetch('/api/exams', {
     method: 'POST',
@@ -1223,6 +1227,7 @@ async function createExam() {
   
   document.getElementById('newExamTitle').value = '';
   if (videoUrlEl) videoUrlEl.value = '';
+  if (pdfUrlEl) pdfUrlEl.value = '';
   loadData();
 }
 
