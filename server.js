@@ -523,16 +523,17 @@ function setupBotHandlers() {
       keyboard.push(row);
     }
 
-    if (parentId === null) {
-      const extraRow = [{ text: '💳 Donation & Support' }];
-      if (msg && isUserAdmin(msg)) {
-        extraRow.push({ text: '⚡ Admin Batch Mode' });
-      }
-      keyboard.push(extraRow);
-      keyboard.push([{ text: '📝 Mock Exams' }]);
+    const isAdmin = (msg && isUserAdmin(msg)) || (msg && userStates[msg.chat ? msg.chat.id : msg] && userStates[msg.chat ? msg.chat.id : msg].isAdmin);
 
-      if (msg && isUserAdmin(msg)) {
-        keyboard.push([{ text: '📦 Create Multi-Book Pack' }, { text: '🗑️ Delete Resources' }]);
+    if (parentId === null) {
+      if (isAdmin) {
+        keyboard.push([{ text: '📢 Broadcast Post' }, { text: '📎 Attach to Exam' }]);
+        keyboard.push([{ text: '⚡ Admin Batch Mode' }, { text: '📦 Create Multi-Book Pack' }]);
+      }
+      keyboard.push([{ text: '📝 Mock Exams' }, { text: '💳 Donation & Support' }]);
+
+      if (isAdmin) {
+        keyboard.push([{ text: '🗑️ Delete Resources' }]);
       }
 
       const feedbackCat = categories.find(c => c.isFeedback);
@@ -540,6 +541,9 @@ function setupBotHandlers() {
         keyboard.push([{ text: feedbackCat.title }]);
       }
     } else {
+      if (isAdmin) {
+        keyboard.push([{ text: '➕ Upload File to This Folder' }]);
+      }
       keyboard.push([{ text: '🏠 Main Menu' }, { text: '🔙 Go Back' }]);
     }
 
@@ -964,6 +968,30 @@ function setupBotHandlers() {
 
       bot.sendMessage(chatId, `✅ <b>[Item ${state.packItems.length}] "${title}"</b> added to <b>"${state.packTitle}"</b> pack!\n\nSend next file or type /done when finished.`, { parse_mode: 'HTML' });
       return;
+    }
+
+    if (state.directUploadFolderId) {
+      const cat = db.categories.find(c => c.id === state.directUploadFolderId);
+      if (cat) {
+        if (!cat.resources) cat.resources = [];
+        const newRes = {
+          id: 'res_' + Date.now() + Math.random().toString(36).substr(2, 4),
+          title: title,
+          type: type,
+          value: value,
+          description: "Uploaded via Telegram Folder Direct Upload"
+        };
+        cat.resources.push(newRes);
+        saveDb(db);
+        const folderTitle = cat.title;
+        const targetId = cat.id;
+        state.directUploadFolderId = null;
+        bot.sendMessage(chatId, `✅ <b>"${title}"</b> muvaffaqiyatli <b>${folderTitle}</b> papkasiga joylandi!`, {
+          parse_mode: 'HTML',
+          ...getKeyboardForCategory(targetId, msg)
+        });
+        return;
+      }
     }
 
     if (state.batchTargetFolderId) {
@@ -1466,6 +1494,58 @@ function setupBotHandlers() {
     // --- Instant URL / Link Interceptor for Admin ---
     if (isUserAdmin(msg) && (text.startsWith('http://') || text.startsWith('https://') || text.startsWith('t.me/') || text.startsWith('www.') || text.startsWith('@'))) {
       handleIncomingMedia(msg, 'link', text, 'Study Link / Resource');
+      return;
+    }
+
+    if (text === '📢 Broadcast Post') {
+      if (!isUserAdmin(msg) && !state.isAdmin) return;
+      state.postMode = 'awaiting_content';
+      bot.sendMessage(chatId, "📢 <b>Post yuborish rejimi:</b>\n\nIltimos, barcha obunachilarga yubormoqchi bo'lgan <b>matn, rasm, video yoki faylingizni</b> yuboring. Sizga avval namunasi ko'rsatiladi!", { parse_mode: 'HTML' });
+      return;
+    }
+
+    if (text === '📎 Attach to Exam') {
+      if (!isUserAdmin(msg) && !state.isAdmin) return;
+      if (!db.exams || db.exams.length === 0) {
+        bot.sendMessage(chatId, "ℹ️ Hozircha biriktirish uchun testlar mavjud emas.");
+        return;
+      }
+      const inlineKeyboard = db.exams.map(e => [{ text: `📝 ${e.title}`, callback_data: `attach_exam_${e.id}` }]);
+      bot.sendMessage(chatId, "📝 <b>PDF yoki Video biriktirish uchun testni tanlang:</b>", {
+        parse_mode: 'HTML',
+        reply_markup: { inline_keyboard: inlineKeyboard }
+      });
+      return;
+    }
+
+    if (text === '➕ Upload File to This Folder') {
+      if (!isUserAdmin(msg) && !state.isAdmin) return;
+      const catId = state.currentParentId;
+      const cat = db.categories.find(c => c.id === catId);
+      if (!cat) {
+        bot.sendMessage(chatId, "⚠️ Iltimos, avval kerakli fanni yoki papkani oching!");
+        return;
+      }
+      state.directUploadFolderId = catId;
+      bot.sendMessage(chatId, `📥 <b>"${cat.title}" papkasiga yuklash:</b>\n\nIltimos, ushbu papkaga joylamoqchi bo'lgan <b>PDF kitob, havola (link), rasm yoki video faylingizni</b> to'g'ridan-to'g'ri yuboring!`, { parse_mode: 'HTML' });
+      return;
+    }
+
+    if (text === '🗑️ Delete Resources') {
+      if (!isUserAdmin(msg) && !state.isAdmin) return;
+      const paperCats = db.categories.filter(c => c.parentId && (c.parentId.includes('applied') || c.parentId.includes('strategic') || c.parentId === 'cat_cfa' || c.parentId.includes('analytics') || c.parentId.includes('national')));
+      const inlineKeyboard = [];
+      for (let i = 0; i < paperCats.length; i += 2) {
+        const row = [{ text: `🗑️ ${paperCats[i].title}`, callback_data: `del_paper_${paperCats[i].id}` }];
+        if (paperCats[i + 1]) {
+          row.push({ text: `🗑️ ${paperCats[i + 1].title}`, callback_data: `del_paper_${paperCats[i + 1].id}` });
+        }
+        inlineKeyboard.push(row);
+      }
+      bot.sendMessage(chatId, `🗑️ <b>O'chirish yoki tahrirlash uchun fanni tanlang:</b>`, {
+        parse_mode: 'HTML',
+        reply_markup: { inline_keyboard: inlineKeyboard }
+      });
       return;
     }
 
