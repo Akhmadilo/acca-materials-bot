@@ -145,12 +145,22 @@
         <div class="card broadcast-card">
           <div class="form-group">
             <label for="broadcastMessage">Announcement Message (HTML format supported):</label>
-            <textarea id="broadcastMessage" rows="6" placeholder="Hello everyone! New 2026 Kaplan & BPP study materials have been uploaded to ACCA F1-F9 and CFA Level 1-3 folders!"></textarea>
+            <textarea id="broadcastMessage" rows="6" oninput="updateBroadcastPreview()" placeholder="Hello everyone! New 2026 Kaplan & BPP study materials have been uploaded to ACCA F1-F9 and CFA Level 1-3 folders!"></textarea>
           </div>
-          <button class="btn btn-success btn-lg" onclick="sendBroadcast()">
-            <i class="fa-solid fa-paper-plane"></i> Send to All Subscribers
-          </button>
-          <div id="broadcastResult" class="result-box hidden"></div>
+
+          <div style="margin-bottom: 1.5rem; background: var(--bg-color); border: 1px dashed var(--panel-border); border-radius: 8px; padding: 1rem;">
+            <div style="font-size: 0.85rem; font-weight: 600; color: var(--text-muted); margin-bottom: 0.5rem;">
+              <i class="fa-solid fa-eye"></i> Post Preview (How it appears in Telegram):
+            </div>
+            <div id="broadcastPreviewBox" style="background: var(--panel-bg); padding: 0.75rem 1rem; border-radius: 8px; border-left: 3px solid var(--primary); min-height: 40px; color: var(--text-main); font-size: 0.95rem; white-space: pre-wrap;"><i>Type a message above to see preview...</i></div>
+          </div>
+
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <button class="btn btn-success btn-lg" onclick="sendBroadcast()">
+              <i class="fa-solid fa-paper-plane"></i> Send to All Subscribers
+            </button>
+          </div>
+          <div id="broadcastResult" class="result-box hidden" style="margin-top:1rem;"></div>
         </div>
       </section>
 

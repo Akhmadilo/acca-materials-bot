@@ -1172,6 +1172,17 @@ async function bulkDeleteSelected() {
 // MOCK EXAM SYSTEM JAVASCRIPT
 // ==========================================
 
+function updateBroadcastPreview() {
+  const text = document.getElementById('broadcastMessage').value;
+  const box = document.getElementById('broadcastPreviewBox');
+  if (!box) return;
+  if (!text.trim()) {
+    box.innerHTML = `<i>Type a message above to see preview...</i>`;
+  } else {
+    box.innerHTML = text.replace(/\n/g, '<br>');
+  }
+}
+
 function renderExams() {
   const container = document.getElementById('examsListContainer');
   if (!container) return;
@@ -1187,14 +1198,30 @@ function renderExams() {
     div.className = 'card';
     div.style.cssText = 'margin-bottom:1rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;';
     
+    let attachmentsHtml = '';
+    if (exam.pdfFileId) {
+      attachmentsHtml += `<p style="margin:4px 0 0; font-size:0.85rem; color:#10b981;"><i class="fa-solid fa-file-pdf"></i> <b>PDF Attached (via Telegram)</b> <span style="font-size:0.75rem; color:var(--text-muted);">[${exam.pdfFileId.substring(0, 15)}...]</span></p>`;
+    } else if (exam.pdfUrl) {
+      attachmentsHtml += `<p style="margin:4px 0 0; font-size:0.85rem; color:var(--accent);"><i class="fa-solid fa-file-pdf"></i> <a href="${exam.pdfUrl}" target="_blank" style="color:var(--accent);">📄 Exam PDF (Link)</a></p>`;
+    }
+
+    if (exam.videoFileId) {
+      attachmentsHtml += `<p style="margin:4px 0 0; font-size:0.85rem; color:#8b5cf6;"><i class="fa-solid fa-video"></i> <b>Answer Video Attached (via Telegram)</b> <span style="font-size:0.75rem; color:var(--text-muted);">[${exam.videoFileId.substring(0, 15)}...]</span></p>`;
+    } else if (exam.videoUrl) {
+      attachmentsHtml += `<p style="margin:4px 0 0; font-size:0.85rem; color:var(--primary);"><i class="fa-solid fa-video"></i> <a href="${exam.videoUrl}" target="_blank" style="color:var(--primary);">🎬 Answer Video (Link)</a></p>`;
+    }
+
+    if (!exam.pdfFileId && !exam.pdfUrl && !exam.videoFileId && !exam.videoUrl) {
+      attachmentsHtml += `<p style="margin:4px 0 0; font-size:0.8rem; color:var(--text-muted);">💡 <i>You can attach PDF / Video via Telegram bot: <code>/attach</code></i></p>`;
+    }
+
     div.innerHTML = `
       <div style="flex:1; min-width:200px;">
         <h4 style="margin:0; font-size:1.1rem;">${exam.title}</h4>
         <p style="margin:4px 0 0; font-size:0.85rem; color:var(--text-muted);">
           ⏱️ ${exam.duration} mins | 📝 ${exam.questions ? exam.questions.length : 0} Questions
         </p>
-        ${exam.videoUrl ? `<p style="margin:4px 0 0; font-size:0.85rem; color:var(--primary);"><i class="fa-solid fa-video"></i> <a href="${exam.videoUrl}" target="_blank" style="color:var(--primary);">🎬 Answer Video</a></p>` : ''}
-        ${exam.pdfUrl ? `<p style="margin:4px 0 0; font-size:0.85rem; color:var(--accent);"><i class="fa-solid fa-file-pdf"></i> <a href="${exam.pdfUrl}" target="_blank" style="color:var(--accent);">📄 Exam PDF</a></p>` : ''}
+        ${attachmentsHtml}
       </div>
       <div style="display:flex; gap:8px; flex-wrap:wrap;">
         <button class="btn btn-primary" onclick="openExamQuestions('${exam.id}')"><i class="fa-solid fa-list-check"></i> Manage Questions</button>
