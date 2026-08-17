@@ -1453,13 +1453,6 @@ function setupBotHandlers() {
     const text = msg.text.trim();
     addSubscriber(msg);
 
-    if (!userStates[chatId]) {
-      userStates[chatId] = { currentParentId: null, feedbackMode: false };
-    }
-
-    const state = userStates[chatId];
-    const db = getDb();
-
     // STRICT LOCKDOWN: Force Sub Check for Non-Admins
     if (!isUserAdmin(msg)) {
       const unSubbed = await getUnsubscribedChannels(msg.from.id);
