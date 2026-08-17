@@ -405,9 +405,11 @@ function initBot() {
         { command: 'exams', description: '📝 Take Mock Exams & Tests' },
         { command: 'search', description: '🔍 Search Textbooks & Materials' },
         { command: 'donate', description: '💳 Support & Donation Card' },
-        { command: 'pack', description: '📦 Create Multi-Book Pack (10 books in 1 button)' },
+        { command: 'post', description: '📢 Broadcast Post to All Users (Admin)' },
+        { command: 'attach', description: '📎 Attach PDF/Video to Exams (Admin)' },
+        { command: 'pack', description: '📦 Create Multi-Book Pack' },
         { command: 'batch', description: '⚡ Admin Batch Upload Mode' },
-        { command: 'delete', description: '🗑️ Delete & Manage Resources in Telegram' }
+        { command: 'delete', description: '🗑️ Delete & Manage Resources' }
       ]);
     } catch (err) {
       console.log('setMyCommands error:', err.message);
@@ -727,7 +729,10 @@ function setupBotHandlers() {
     const chatId = msg.chat.id;
     if (!userStates[chatId]) userStates[chatId] = {};
     const state = userStates[chatId];
-    if (!isUserAdmin(msg) && !state.isAdmin) return;
+    if (!isUserAdmin(msg) && !state.isAdmin) {
+      bot.sendMessage(chatId, `🔐 <b>Administrator access required.</b>\nUse <code>/admin admin</code> to log in.`, { parse_mode: 'HTML' });
+      return;
+    }
 
     state.postMode = 'awaiting_content';
     bot.sendMessage(chatId, "📢 Send me the content you want to broadcast. You can send: Text, Photo, Video, Document, or Text+Photo.");
@@ -738,7 +743,10 @@ function setupBotHandlers() {
     const chatId = msg.chat.id;
     if (!userStates[chatId]) userStates[chatId] = {};
     const state = userStates[chatId];
-    if (!isUserAdmin(msg) && !state.isAdmin) return;
+    if (!isUserAdmin(msg) && !state.isAdmin) {
+      bot.sendMessage(chatId, `🔐 <b>Administrator access required.</b>\nUse <code>/admin admin</code> to log in.`, { parse_mode: 'HTML' });
+      return;
+    }
 
     const db = getDb();
     if (!db.exams || db.exams.length === 0) {
