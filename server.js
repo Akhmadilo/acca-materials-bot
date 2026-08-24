@@ -94,6 +94,28 @@ function generateFullMasterDb() {
 
   const categories = [...rootCategories, ...mainLevels];
 
+  // TG Channel links per paper
+  const tgChannelLinks = {
+    'F1': 'https://t.me/business_technolog',
+    'F2': 'https://t.me/F2managmentaccounting',
+    'F3': 'https://t.me/f3Financialaccounting',
+    'F4': 'https://t.me/F4CorparateandBusinessLaw',
+    'F5': 'https://t.me/f5performancemanagament',
+    'F6': 'https://t.me/joinchat/kX738BzRRVw2MDZi',
+    'F7': 'https://t.me/f7financialreporting',
+    'F8': 'https://t.me/joinchat/o-wVAE6QNmg5ZTcy',
+    'F9': 'https://t.me/joinchat/aQ36wtXOS0MwZWYy',
+    'SBL': 'https://t.me/joinchat/QPCU28qkZCo4ZDQy',
+    'SBR': 'https://t.me/joinchat/2ikD9oyPG4ZkMThi',
+    'P4': 'https://t.me/joinchat/YfhZsKMP4jE0NTk6',
+    'P5': 'https://t.me/joinchat/4FZy8DIF_9AyM2My',
+    'P6': 'https://t.me/joinchat/ih0JW8efZ_szMjUy',
+    'P7': 'https://t.me/joinchat/Eh8MAp0edRs4OGMy',
+    'CFA Level 1': 'https://t.me/Finance_Ahmadillo',
+    'CFA Level 2': 'https://t.me/Finance_Ahmadillo',
+    'CFA Level 3': 'https://t.me/Finance_Ahmadillo'
+  };
+
   papers.forEach((paper) => {
     categories.push({
       id: paper.id,
@@ -104,10 +126,11 @@ function generateFullMasterDb() {
     });
 
     const code = paper.code;
+    const tgLink = tgChannelLinks[code] || 'https://t.me/Finance_Ahmadillo';
 
     categories.push({
       id: `${paper.id}_channels`,
-      title: `📊 Telegram Channels: ${code}`,
+      title: `📊 Telegram Channel: ${code}`,
       parentId: paper.id,
       order: 1,
       resources: [
@@ -115,8 +138,8 @@ function generateFullMasterDb() {
           id: `res_${paper.id}_ch1`,
           title: `📢 ${code} Telegram Channel`,
           type: "link",
-          value: "https://t.me/Finance_Ahmadillo",
-          description: `${code} official Telegram channels & discussion groups`
+          value: tgLink,
+          description: `${code} Telegram channel — study materials & discussion`
         }
       ]
     });
@@ -126,15 +149,7 @@ function generateFullMasterDb() {
       title: `📗 ${code} Study Books`,
       parentId: paper.id,
       order: 2,
-      resources: [
-        {
-          id: `res_${paper.id}_b1`,
-          title: `📖 ${code} Kaplan Study Text & Revision Kit`,
-          type: "link",
-          value: "https://t.me/Finance_Ahmadillo",
-          description: `${code} Kaplan & BPP latest exam kits and textbooks`
-        }
-      ]
+      resources: []
     });
 
     // Real ACCA English YouTubers per paper - VERIFIED channel handles
@@ -1146,13 +1161,10 @@ function setupBotHandlers() {
       
       // Send PDF file if available
       if (exam.pdfFileId) {
-        bot.sendDocument(chatId, exam.pdfFileId, { caption: `📄 <b>Exam Paper (PDF):</b>`, parse_mode: 'HTML' });
+        await bot.sendDocument(chatId, exam.pdfFileId, { caption: `📄 Exam Paper (PDF)`, parse_mode: 'HTML' });
       } else if (exam.pdfUrl) {
-        bot.sendMessage(chatId, `📄 <b>Exam Paper (PDF):</b>`, {
-          parse_mode: 'HTML',
-          reply_markup: {
-            inline_keyboard: [[{ text: '📄 Download Exam Paper', url: exam.pdfUrl }]]
-          }
+        await bot.sendDocument(chatId, exam.pdfUrl, { caption: `📄 Exam Paper (PDF)`, parse_mode: 'HTML' }).catch(err => {
+          bot.sendMessage(chatId, `📄 Exam Paper: ${exam.pdfUrl}`);
         });
       }
       
