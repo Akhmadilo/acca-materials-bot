@@ -759,50 +759,90 @@ function setupDropZone() {
   }, false);
 }
 
-function processSingleFile(file) {
+function handleFileUpload(event) {
+  const file = event.target.files[0];
   if (!file) return;
 
   const statusEl = document.getElementById('uploadStatusText');
-  statusEl.style.color = '#3b82f6';
+  statusEl.style.color = 'var(--text-main)';
   statusEl.textContent = `⏳ Uploading "${file.name}"...`;
 
   const reader = new FileReader();
-  reader.onload = async function(e) {
-    const base64Data = e.target.result;
-
+  reader.readAsDataURL(file);
+  reader.onload = async () => {
     try {
       const res = await fetch('/api/upload', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ fileName: file.name, fileData: base64Data })
+        body: JSON.stringify({
+          fileName: file.name,
+          fileData: reader.result
+        })
       });
       const data = await res.json();
-
       if (res.ok && data.success) {
         uploadedFileUrl = data.fileUrl;
-        statusEl.style.color = '#10b981';
+        statusEl.style.color = 'var(--success)';
         statusEl.textContent = `✅ "${file.name}" uploaded successfully!`;
-
-        if (!document.getElementById('resTitleInput').value) {
-          document.getElementById('resTitleInput').value = file.name;
+        if(document.getElementById('resTitleInput').value === '') {
+          document.getElementById('resTitleInput').value = file.name.replace(/\.[^/.]+$/, "");
         }
       } else {
-        statusEl.style.color = '#ef4444';
+        statusEl.style.color = 'var(--danger)';
         statusEl.textContent = `❌ Upload error: ${data.error}`;
       }
     } catch (err) {
-      statusEl.style.color = '#ef4444';
+      statusEl.style.color = 'var(--danger)';
       statusEl.textContent = `❌ File upload failed!`;
     }
   };
-
-  reader.readAsDataURL(file);
 }
 
-function handleFileUpload(event) {
-  const file = event.target.files[0];
-  processSingleFile(file);
+async function handleBatchFileUpload(event) {
+  const files = event.target.files;
+  if (!files || files.length === 0) return;
+  
+  const statusEl = document.getElementById('batchUploadStatusText');
+  statusEl.style.color = 'var(--text-main)';
+  let uploadedCount = 0;
+
+  for (let i = 0; i < files.length; i++) {
+    const file = files[i];
+    statusEl.textContent = `⏳ Uploading file ${i+1} of ${files.length}: "${file.name}"...`;
+    
+    try {
+      const base64 = await new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = error => reject(error);
+      });
+
+      const res = await fetch('/api/upload', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ fileName: file.name, fileData: base64 })
+      });
+      const data = await res.json();
+      
+      if (res.ok && data.success) {
+        const textarea = document.getElementById('batchTextInput');
+        const title = file.name.replace(/\.[^/.]+$/, "");
+        const newEntry = `${title} | ${data.fileUrl}`;
+        textarea.value = textarea.value ? textarea.value + '\n' + newEntry : newEntry;
+        uploadedCount++;
+      }
+    } catch(err) {
+      console.error("Batch upload failed for", file.name, err);
+    }
+  }
+  
+  statusEl.style.color = 'var(--success)';
+  statusEl.textContent = `✅ ${uploadedCount} ta fayl muvaffaqiyatli yuklandi! Tepada nomlarini o'zgartirib "Save Batch Items" tugmasini bosing.`;
+  event.target.value = ''; // reset file input
 }
+
+
 
 async function saveResource() {
   const catId = document.getElementById('modalResCatId').value;

@@ -986,27 +986,39 @@ function setupBotHandlers() {
     }
 
     if (state.directUploadFolderId) {
+      // Initialize batch queue if not exists
+      if (!state.uploadQueue) state.uploadQueue = [];
+      
+      state.uploadQueue.push({
+        id: 'res_' + Date.now() + Math.random().toString(36).substr(2, 4),
+        title: title,
+        type: type,
+        value: value,
+        description: "Uploaded via Telegram"
+      });
+
+      const count = state.uploadQueue.length;
       const cat = db.categories.find(c => c.id === state.directUploadFolderId);
-      if (cat) {
-        if (!cat.resources) cat.resources = [];
-        const newRes = {
-          id: 'res_' + Date.now() + Math.random().toString(36).substr(2, 4),
-          title: title,
-          type: type,
-          value: value,
-          description: "Uploaded via Telegram Folder Direct Upload"
-        };
-        cat.resources.push(newRes);
-        saveDb(db);
-        const folderTitle = cat.title;
-        const targetId = cat.id;
-        state.directUploadFolderId = null;
-        bot.sendMessage(chatId, `✅ <b>"${title}"</b> muvaffaqiyatli <b>${folderTitle}</b> papkasiga joylandi!`, {
-          parse_mode: 'HTML',
-          ...getKeyboardForCategory(targetId, msg)
-        });
-        return;
-      }
+      const folderName = cat ? cat.title : 'Folder';
+      
+      let fileList = state.uploadQueue.map((f, i) => `${i + 1}. 📄 ${f.title}`).join('\n');
+      
+      bot.sendMessage(chatId, 
+        `📥 <b>Fayl qabul qilindi!</b>\n\n` +
+        `📂 Papka: <b>${folderName}</b>\n` +
+        `📋 Kutilayotgan fayllar (${count} ta):\n${fileList}\n\n` +
+        `🔹 Yana fayl yuboring — navbatga qo'shiladi\n` +
+        `🔹 Bitta nomni o'zgartirish: <code>/rename 1 Yangi nom</code>\n` +
+        `🔹 Hammasini bir xil nomlash: <code>/nameall Umumiy nom</code>\n`, {
+        parse_mode: 'HTML',
+        reply_markup: {
+          inline_keyboard: [
+            [{ text: '✅ Barchasini Saqlash', callback_data: 'upload_save' }],
+            [{ text: '❌ Bekor qilish', callback_data: 'upload_cancel' }]
+          ]
+        }
+      });
+      return;
     }
 
     if (state.batchTargetFolderId) {
@@ -1459,6 +1471,64 @@ function setupBotHandlers() {
       state.postMode = 'preview';
       return;
     }
+    // Batch Queue Commands
+    if (msg.text) {
+      const text = msg.text.trim();
+      
+      if (text === '/cancelupload' && state.uploadQueue && state.uploadQueue.length > 0) {
+        state.uploadQueue = null;
+        state.directUploadFolderId = null;
+        bot.sendMessage(chatId, "❌ <b>Fayllarni yuklash bekor qilindi.</b>", { parse_mode: 'HTML' });
+        return;
+      }
+      
+      if (text === '/save' && state.uploadQueue && state.uploadQueue.length > 0) {
+        const cat = db.categories.find(c => c.id === state.directUploadFolderId);
+        if (cat) {
+          if (!cat.resources) cat.resources = [];
+          state.uploadQueue.forEach(item => cat.resources.push(item));
+          saveDb(db);
+          
+          bot.sendMessage(chatId, `✅ <b>Muvaffaqiyatli saqlandi!</b>\n📂 <b>${cat.title}</b> papkasiga ${state.uploadQueue.length} ta fayl joylandi.`, {
+            parse_mode: 'HTML',
+            ...getKeyboardForCategory(cat.id, msg)
+          });
+        }
+        state.uploadQueue = null;
+        state.directUploadFolderId = null;
+        return;
+      }
+      
+      if (text.startsWith('/rename ') && state.uploadQueue) {
+        const parts = text.split(' ');
+        if (parts.length >= 3) {
+          const index = parseInt(parts[1]) - 1;
+          if (index >= 0 && index < state.uploadQueue.length) {
+            const newName = parts.slice(2).join(' ');
+            state.uploadQueue[index].title = newName;
+            
+            let fileList = state.uploadQueue.map((f, i) => `${i + 1}. 📄 ${f.title}`).join('\n');
+            bot.sendMessage(chatId, `✅ <b>${index + 1}-fayl nomi o'zgartirildi!</b>\n\n📋 Hozirgi holat:\n${fileList}`, { parse_mode: 'HTML' });
+            return;
+          }
+        }
+        bot.sendMessage(chatId, "⚠️ Xato format! Masalan: <code>/rename 1 Yangi Kitob Nomi</code>", { parse_mode: 'HTML' });
+        return;
+      }
+      
+      if (text.startsWith('/nameall ') && state.uploadQueue) {
+        const newNameBase = text.replace('/nameall ', '').trim();
+        if (newNameBase) {
+          state.uploadQueue.forEach((item, index) => {
+            item.title = `${newNameBase} Part ${index + 1}`;
+          });
+          
+          let fileList = state.uploadQueue.map((f, i) => `${i + 1}. 📄 ${f.title}`).join('\n');
+          bot.sendMessage(chatId, `✅ <b>Barcha fayllar nomi o'zgartirildi!</b>\n\n📋 Hozirgi holat:\n${fileList}`, { parse_mode: 'HTML' });
+          return;
+        }
+      }
+    }
 
     if (!msg.text || msg.text.startsWith('/')) return;
 
@@ -1661,9 +1731,13 @@ function setupBotHandlers() {
       if (resources.length > 0) {
         state.currentParentId = matchedCategory.id;
         const resKeyboard = resources.map(r => [{ text: r.title }]);
+        const isAdmin = isUserAdmin(msg) || state.isAdmin;
+        if (isAdmin) {
+          resKeyboard.push([{ text: '➕ Upload File to This Folder' }]);
+        }
         resKeyboard.push([{ text: '🏠 Main Menu' }, { text: '🔙 Go Back' }]);
 
-        bot.sendMessage(chatId, `📚 <b>${matchedCategory.title}</b> available study materials:`, {
+        bot.sendMessage(chatId, `📚 <b>${matchedCategory.title}</b> — ${resources.length} ta material:`, {
           parse_mode: 'HTML',
           reply_markup: {
             keyboard: resKeyboard,
@@ -1672,10 +1746,22 @@ function setupBotHandlers() {
         });
         return;
       } else {
-        bot.sendMessage(chatId, `ℹ️ No study materials uploaded yet under <b>${matchedCategory.title}</b>. Uploads coming soon!`, {
-          parse_mode: 'HTML',
-          ...getKeyboardForCategory(state.currentParentId, msg)
-        });
+        const isAdmin = isUserAdmin(msg) || state.isAdmin;
+        if (isAdmin) {
+          const emptyKeyboard = [
+            [{ text: '➕ Upload File to This Folder' }],
+            [{ text: '🏠 Main Menu' }, { text: '🔙 Go Back' }]
+          ];
+          bot.sendMessage(chatId, `📂 <b>${matchedCategory.title}</b> — hozircha material yo'q.\n\n📥 Fayl yuklash uchun "➕ Upload File to This Folder" bosing!`, {
+            parse_mode: 'HTML',
+            reply_markup: { keyboard: emptyKeyboard, resize_keyboard: true }
+          });
+        } else {
+          bot.sendMessage(chatId, `ℹ️ <b>${matchedCategory.title}</b> — hozircha material yo'q. Tez orada qo'shiladi!`, {
+            parse_mode: 'HTML',
+            ...getKeyboardForCategory(state.currentParentId, msg)
+          });
+        }
         return;
       }
     }

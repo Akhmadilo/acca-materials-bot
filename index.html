@@ -375,6 +375,16 @@
           <textarea id="batchTextInput" rows="8" placeholder="Kaplan F1 Study Text 2026 | https://t.me/kanalingiz/101&#10;BPP F1 Exam Kit 2026 | https://t.me/kanalingiz/102&#10;F1 Lecture 1 | https://youtube.com/..."></textarea>
           <small style="color:var(--text-muted); display:block; margin-top:6px;">Put each textbook or link on a new line separated by | character.</small>
         </div>
+
+        <div class="form-group" style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(148, 163, 184, 0.2);">
+          <label>Or Upload Multiple Files Directly from Computer:</label>
+          <div id="batchDropZone" style="border: 2px dashed #3b82f6; border-radius: 12px; padding: 1.5rem; text-align: center; background: rgba(59,130,246,0.05); cursor: pointer;" onclick="document.getElementById('batchFileInput').click()">
+            <i class="fa-solid fa-file-arrow-up" style="font-size: 2.5rem; color: #60a5fa; margin-bottom: 8px;"></i>
+            <p style="color: var(--text-main); font-weight: 500;">Click to select multiple PDF/Video files</p>
+            <input type="file" id="batchFileInput" multiple style="display:none;" onchange="handleBatchFileUpload(event)">
+          </div>
+          <small id="batchUploadStatusText" style="color:var(--success); display:block; margin-top:8px; font-weight:600; font-size:0.9rem;"></small>
+        </div>
       </div>
       <div class="modal-footer">
         <button class="btn btn-secondary" onclick="closeModal('batchModal')">Cancel</button>
