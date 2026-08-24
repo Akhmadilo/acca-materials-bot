@@ -1092,6 +1092,42 @@ function setupBotHandlers() {
       }
     }
 
+    // Upload Queue Inline Button Handlers
+    if (data === 'upload_save') {
+      if (state.uploadQueue && state.uploadQueue.length > 0 && state.directUploadFolderId) {
+        const cat = db.categories.find(c => c.id === state.directUploadFolderId);
+        if (cat) {
+          if (!cat.resources) cat.resources = [];
+          state.uploadQueue.forEach(item => cat.resources.push(item));
+          saveDb(db);
+          
+          bot.editMessageText(`✅ <b>Muvaffaqiyatli saqlandi!</b>\n📂 <b>${cat.title}</b> papkasiga ${state.uploadQueue.length} ta fayl joylandi.`, {
+            chat_id: chatId,
+            message_id: query.message.message_id,
+            parse_mode: 'HTML'
+          });
+        }
+        state.uploadQueue = null;
+        state.directUploadFolderId = null;
+      } else {
+        bot.answerCallbackQuery(query.id, { text: "⚠️ Saqlash uchun fayl yo'q!", show_alert: true });
+      }
+      bot.answerCallbackQuery(query.id);
+      return;
+    }
+
+    if (data === 'upload_cancel') {
+      state.uploadQueue = null;
+      state.directUploadFolderId = null;
+      bot.editMessageText("❌ <b>Fayllarni yuklash bekor qilindi.</b>", {
+        chat_id: chatId,
+        message_id: query.message.message_id,
+        parse_mode: 'HTML'
+      });
+      bot.answerCallbackQuery(query.id);
+      return;
+    }
+
     if (data === 'post_confirm') {
       bot.answerCallbackQuery(query.id);
       if (!state.pendingPost) return;
