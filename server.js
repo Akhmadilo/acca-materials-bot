@@ -133,7 +133,7 @@ function generateFullMasterDb() {
       title: `📊 Telegram Channel: ${code}`,
       parentId: paper.id,
       order: 1,
-      resources: [
+      resources: code === 'F1' ? [
         {
           id: `res_${paper.id}_ch1`,
           title: `📢 ${code} Telegram Channel`,
@@ -141,7 +141,7 @@ function generateFullMasterDb() {
           value: tgLink,
           description: `${code} Telegram channel — study materials & discussion`
         }
-      ]
+      ] : []
     });
 
     categories.push({
@@ -158,99 +158,14 @@ function generateFullMasterDb() {
         { title: '🎓 F1 Business & Technology — By OpenTuition (FREE)', url: 'https://www.youtube.com/@OpenTuition', desc: 'OpenTuition complete F1 BT lecture series — 100% FREE' },
         { title: '📚 F1 BT Tutorials — By aCOWtancy', url: 'https://www.youtube.com/@aCOWtancyACCA', desc: 'aCOWtancy short F1 Business & Technology tutorials' },
         { title: '🌍 F1 Exam Tips — By ACCA Global', url: 'https://www.youtube.com/@ACCAOfficial', desc: 'Official ACCA exam tips for F1/BT paper' }
-      ],
-      'F2': [
-        { title: '🎓 F2 Management Accounting — By OpenTuition (FREE)', url: 'https://www.youtube.com/@OpenTuition', desc: 'OpenTuition complete F2 MA lecture series — 100% FREE' },
-        { title: '📚 F2 MA Tutorials — By aCOWtancy', url: 'https://www.youtube.com/@aCOWtancyACCA', desc: 'aCOWtancy short F2 Management Accounting tutorials' },
-        { title: '📊 Accounting Basics — By Accounting Stuff', url: 'https://www.youtube.com/@AccountingStuff', desc: 'Clear accounting explanations for beginners' }
-      ],
-      'F3': [
-        { title: '🎓 F3 Financial Accounting — By OpenTuition (FREE)', url: 'https://www.youtube.com/@OpenTuition', desc: 'OpenTuition complete F3 FA lecture series — 100% FREE' },
-        { title: '📚 F3 FA Tutorials — By aCOWtancy', url: 'https://www.youtube.com/@aCOWtancyACCA', desc: 'aCOWtancy short F3 Financial Accounting tutorials' },
-        { title: '📊 Finance Explained — By The Finance Storyteller', url: 'https://www.youtube.com/@TheFinanceStoryteller', desc: 'Finance concepts explained through stories' }
-      ],
-      'F4': [
-        { title: '🎓 F4 Corporate & Business Law — By OpenTuition (FREE)', url: 'https://www.youtube.com/@OpenTuition', desc: 'OpenTuition complete F4 LW lecture series — 100% FREE' },
-        { title: '📚 F4 LW Tutorials — By aCOWtancy', url: 'https://www.youtube.com/@aCOWtancyACCA', desc: 'aCOWtancy short F4 Corporate Law tutorials' },
-        { title: '🌍 F4 Exam Tips — By ACCA Global', url: 'https://www.youtube.com/@ACCAOfficial', desc: 'Official ACCA exam tips for F4/LW paper' }
-      ],
-      'F5': [
-        { title: '🎓 F5 Performance Management — By OpenTuition (FREE)', url: 'https://www.youtube.com/@OpenTuition', desc: 'OpenTuition complete F5 PM lecture series — 100% FREE' },
-        { title: '📚 F5 PM Tutorials — By aCOWtancy', url: 'https://www.youtube.com/@aCOWtancyACCA', desc: 'aCOWtancy short F5 Performance Management tutorials' },
-        { title: '🌍 F5 Exam Tips — By ACCA Global', url: 'https://www.youtube.com/@ACCAOfficial', desc: 'Official ACCA exam tips for F5/PM paper' }
-      ],
-      'F6': [
-        { title: '🎓 F6 Taxation — By OpenTuition (FREE)', url: 'https://www.youtube.com/@OpenTuition', desc: 'OpenTuition complete F6 TX lecture series — 100% FREE' },
-        { title: '📚 F6 TX Tutorials — By aCOWtancy', url: 'https://www.youtube.com/@aCOWtancyACCA', desc: 'aCOWtancy short F6 Taxation tutorials' },
-        { title: '🌍 F6 Exam Tips — By ACCA Global', url: 'https://www.youtube.com/@ACCAOfficial', desc: 'ACCA Taxation exam guidance and practice' }
-      ],
-      'F7': [
-        { title: '🎓 F7 Financial Reporting — By OpenTuition (FREE)', url: 'https://www.youtube.com/@OpenTuition', desc: 'OpenTuition complete F7 FR lecture series — 100% FREE' },
-        { title: '📚 F7 FR Tutorials — By aCOWtancy', url: 'https://www.youtube.com/@aCOWtancyACCA', desc: 'aCOWtancy short F7 Financial Reporting tutorials' },
-        { title: '📊 IFRS Explained — By Silvia of CPDbox', url: 'https://www.youtube.com/@CPDbox', desc: 'IFRS standards explained clearly for F7/SBR' }
-      ],
-      'F8': [
-        { title: '🎓 F8 Audit & Assurance — By OpenTuition (FREE)', url: 'https://www.youtube.com/@OpenTuition', desc: 'OpenTuition complete F8 AA lecture series — 100% FREE' },
-        { title: '📚 F8 AA Tutorials — By aCOWtancy', url: 'https://www.youtube.com/@aCOWtancyACCA', desc: 'aCOWtancy short F8 Audit & Assurance tutorials' },
-        { title: '🌍 F8 Exam Tips — By ACCA Global', url: 'https://www.youtube.com/@ACCAOfficial', desc: 'Official ACCA exam tips for F8/AA paper' }
-      ],
-      'F9': [
-        { title: '🎓 F9 Financial Management — By OpenTuition (FREE)', url: 'https://www.youtube.com/@OpenTuition', desc: 'OpenTuition complete F9 FM lecture series — 100% FREE' },
-        { title: '📚 F9 FM Tutorials — By aCOWtancy', url: 'https://www.youtube.com/@aCOWtancyACCA', desc: 'aCOWtancy short F9 Financial Management tutorials' },
-        { title: '📊 Finance Concepts — By The Finance Storyteller', url: 'https://www.youtube.com/@TheFinanceStoryteller', desc: 'NPV, IRR, WACC explained visually' }
-      ],
-      'SBL': [
-        { title: '🎓 SBL Strategic Business Leader — By OpenTuition (FREE)', url: 'https://www.youtube.com/@OpenTuition', desc: 'OpenTuition complete SBL lecture series — 100% FREE' },
-        { title: '📚 SBL Tutorials — By aCOWtancy', url: 'https://www.youtube.com/@aCOWtancyACCA', desc: 'aCOWtancy short SBL strategy tutorials' },
-        { title: '🌍 SBL Exam Tips — By ACCA Global', url: 'https://www.youtube.com/@ACCAOfficial', desc: 'Official ACCA SBL exam approach and tips' }
-      ],
-      'SBR': [
-        { title: '🎓 SBR Strategic Business Reporting — By OpenTuition (FREE)', url: 'https://www.youtube.com/@OpenTuition', desc: 'OpenTuition complete SBR lecture series — 100% FREE' },
-        { title: '📚 SBR Tutorials — By aCOWtancy', url: 'https://www.youtube.com/@aCOWtancyACCA', desc: 'aCOWtancy short SBR IFRS tutorials' },
-        { title: '📊 IFRS Deep Dives — By Silvia of CPDbox', url: 'https://www.youtube.com/@CPDbox', desc: 'Advanced IFRS standards for SBR exam' }
-      ],
-      'P4': [
-        { title: '🎓 P4 Advanced Financial Management — By OpenTuition (FREE)', url: 'https://www.youtube.com/@OpenTuition', desc: 'OpenTuition complete P4 AFM lecture series — 100% FREE' },
-        { title: '📚 P4 AFM Tutorials — By aCOWtancy', url: 'https://www.youtube.com/@aCOWtancyACCA', desc: 'aCOWtancy short P4 AFM tutorials' },
-        { title: '🌍 P4 Exam Tips — By ACCA Global', url: 'https://www.youtube.com/@ACCAOfficial', desc: 'Official ACCA P4 AFM exam guidance' }
-      ],
-      'P5': [
-        { title: '🎓 P5 Advanced Performance Mgmt — By OpenTuition (FREE)', url: 'https://www.youtube.com/@OpenTuition', desc: 'OpenTuition complete P5 APM lecture series — 100% FREE' },
-        { title: '📚 P5 APM Tutorials — By aCOWtancy', url: 'https://www.youtube.com/@aCOWtancyACCA', desc: 'aCOWtancy short P5 APM tutorials' },
-        { title: '🌍 P5 Exam Tips — By ACCA Global', url: 'https://www.youtube.com/@ACCAOfficial', desc: 'Official ACCA P5 APM exam guidance' }
-      ],
-      'P6': [
-        { title: '🎓 P6 Advanced Taxation — By OpenTuition (FREE)', url: 'https://www.youtube.com/@OpenTuition', desc: 'OpenTuition complete P6 ATX lecture series — 100% FREE' },
-        { title: '📚 P6 ATX Tutorials — By aCOWtancy', url: 'https://www.youtube.com/@aCOWtancyACCA', desc: 'aCOWtancy short P6 ATX tutorials' },
-        { title: '🌍 P6 Exam Tips — By ACCA Global', url: 'https://www.youtube.com/@ACCAOfficial', desc: 'Official ACCA P6 ATX exam guidance' }
-      ],
-      'P7': [
-        { title: '🎓 P7 Advanced Audit & Assurance — By OpenTuition (FREE)', url: 'https://www.youtube.com/@OpenTuition', desc: 'OpenTuition complete P7 AAA lecture series — 100% FREE' },
-        { title: '📚 P7 AAA Tutorials — By aCOWtancy', url: 'https://www.youtube.com/@aCOWtancyACCA', desc: 'aCOWtancy short P7 AAA tutorials' },
-        { title: '🌍 P7 Exam Tips — By ACCA Global', url: 'https://www.youtube.com/@ACCAOfficial', desc: 'Official ACCA P7 AAA exam guidance' }
-      ],
-      'CFA Level 1': [
-        { title: '🎓 CFA Level 1 — By IFT (FREE)', url: 'https://www.youtube.com/@IFT-CFA', desc: 'IFT complete CFA Level 1 lectures' },
-        { title: '📊 CFA Level 1 — By Mark Meldrum', url: 'https://www.youtube.com/@MarkMeldrum', desc: 'Mark Meldrum CFA Level 1 comprehensive videos' }
-      ],
-      'CFA Level 2': [
-        { title: '🎓 CFA Level 2 — By IFT (FREE)', url: 'https://www.youtube.com/@IFT-CFA', desc: 'IFT complete CFA Level 2 lectures' },
-        { title: '📊 CFA Level 2 — By Mark Meldrum', url: 'https://www.youtube.com/@MarkMeldrum', desc: 'Mark Meldrum CFA Level 2 comprehensive videos' }
-      ],
-      'CFA Level 3': [
-        { title: '🎓 CFA Level 3 — By IFT (FREE)', url: 'https://www.youtube.com/@IFT-CFA', desc: 'IFT complete CFA Level 3 lectures' },
-        { title: '📊 CFA Level 3 — By Mark Meldrum', url: 'https://www.youtube.com/@MarkMeldrum', desc: 'Mark Meldrum CFA Level 3 comprehensive videos' }
       ]
     };
 
-    const vids = [
+    const vids = code === 'F1' ? [
       { title: `🎥 ${code} Complete Video Course`, url: 'https://youtube.com', desc: `${code} comprehensive lecture series` }
-    ];
+    ] : [];
 
-    const ytLinks = videoResources[code] || [
-      { title: `🎓 ${code} Lectures — By OpenTuition (FREE)`, url: 'https://www.youtube.com/@OpenTuition', desc: `OpenTuition ${code} lecture series — 100% FREE` },
-      { title: `📚 ${code} Tutorials — By aCOWtancy`, url: 'https://www.youtube.com/@aCOWtancyACCA', desc: `aCOWtancy short ${code} tutorials` }
-    ];
+    const ytLinks = code === 'F1' ? (videoResources['F1'] || []) : [];
 
     categories.push({
       id: `${paper.id}_videos`,
