@@ -557,7 +557,7 @@ function setupBotHandlers() {
       }
     } else {
       if (isAdmin) {
-        keyboard.push([{ text: '➕ Upload File to This Folder' }]);
+        keyboard.push([{ text: '➕ Upload File / Link' }]);
       }
       keyboard.push([{ text: '🏠 Main Menu' }, { text: '🔙 Go Back' }]);
     }
@@ -1629,7 +1629,7 @@ function setupBotHandlers() {
       return;
     }
 
-    if (text === '➕ Upload File to This Folder') {
+    if (text === '➕ Upload File / Link') {
       if (!isUserAdmin(msg) && !state.isAdmin) return;
       const catId = state.currentParentId;
       const cat = db.categories.find(c => c.id === catId);
@@ -1638,7 +1638,15 @@ function setupBotHandlers() {
         return;
       }
       state.directUploadFolderId = catId;
-      bot.sendMessage(chatId, `📥 <b>"${cat.title}" papkasiga yuklash:</b>\n\nIltimos, ushbu papkaga joylamoqchi bo'lgan <b>PDF kitob, havola (link), rasm yoki video faylingizni</b> to'g'ridan-to'g'ri yuboring!`, { parse_mode: 'HTML' });
+      state.uploadQueue = null;
+      bot.sendMessage(chatId, 
+        `📥 <b>"${cat.title}" papkasiga yuklash:</b>\n\n` +
+        `Quyidagilarni yuboring:\n` +
+        `📄 PDF kitob yoki fayl\n` +
+        `🔗 Link (https://... yoki t.me/...)\n` +
+        `🎥 Video\n` +
+        `🖼 Rasm\n\n` +
+        `💡 Bir nechta fayl/link yuborsangiz, hammasi navbatga tushadi va keyin saqlaysiz!`, { parse_mode: 'HTML' });
       return;
     }
 
@@ -1769,7 +1777,7 @@ function setupBotHandlers() {
         const resKeyboard = resources.map(r => [{ text: r.title }]);
         const isAdmin = isUserAdmin(msg) || state.isAdmin;
         if (isAdmin) {
-          resKeyboard.push([{ text: '➕ Upload File to This Folder' }]);
+          resKeyboard.push([{ text: '➕ Upload File / Link' }]);
         }
         resKeyboard.push([{ text: '🏠 Main Menu' }, { text: '🔙 Go Back' }]);
 
@@ -1785,10 +1793,10 @@ function setupBotHandlers() {
         const isAdmin = isUserAdmin(msg) || state.isAdmin;
         if (isAdmin) {
           const emptyKeyboard = [
-            [{ text: '➕ Upload File to This Folder' }],
+            [{ text: '➕ Upload File / Link' }],
             [{ text: '🏠 Main Menu' }, { text: '🔙 Go Back' }]
           ];
-          bot.sendMessage(chatId, `📂 <b>${matchedCategory.title}</b> — hozircha material yo'q.\n\n📥 Fayl yuklash uchun "➕ Upload File to This Folder" bosing!`, {
+          bot.sendMessage(chatId, `📂 <b>${matchedCategory.title}</b> — hozircha material yo'q.\n\n📥 Fayl yuklash uchun "➕ Upload File / Link" bosing!`, {
             parse_mode: 'HTML',
             reply_markup: { keyboard: emptyKeyboard, resize_keyboard: true }
           });
