@@ -5,6 +5,14 @@ document.addEventListener('DOMContentLoaded', () => {
       window.Telegram.WebApp.expand();
     } catch (e) {}
   }
+  
+  const passInput = document.getElementById('loginPassword');
+  if (passInput) {
+    passInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') attemptLogin();
+    });
+  }
+  
   initTabs();
   loadData();
   setupDropZone();
@@ -13,6 +21,84 @@ document.addEventListener('DOMContentLoaded', () => {
 let dbData = { categories: [], subscribers: [], settings: {}, feedback_messages: [] };
 let currentFolderId = null;
 let uploadedFileUrl = "";
+
+// --- Auth Interceptor ---
+const originalFetch = window.fetch.bind(window);
+window.fetch = async function() {
+  let [resource, config] = arguments;
+  if (typeof resource === 'string' && resource.startsWith('/api') && resource !== '/api/login') {
+    if (!config) config = {};
+    
+    // Check if headers is a Headers object or a plain object
+    if (config.headers instanceof Headers) {
+      config.headers.set('x-admin-email', localStorage.getItem('adminEmail') || '');
+      config.headers.set('x-admin-password', localStorage.getItem('adminPass') || '');
+    } else {
+      config.headers = {
+        ...config.headers,
+        'x-admin-email': localStorage.getItem('adminEmail') || '',
+        'x-admin-password': localStorage.getItem('adminPass') || ''
+      };
+    }
+  }
+  
+  const response = await originalFetch(resource, config);
+  if (response.status === 401 && typeof resource === 'string' && resource.startsWith('/api') && resource !== '/api/login') {
+    const overlay = document.getElementById('loginOverlay');
+    if (overlay) overlay.style.display = 'flex';
+    const nav = document.getElementById('mainNavbar');
+    if (nav) nav.style.display = 'none';
+    const layout = document.getElementById('mainLayout');
+    if (layout) layout.style.display = 'none';
+  } else if (response.ok && typeof resource === 'string' && resource.startsWith('/api') && resource !== '/api/login') {
+    // If successfully authenticated, hide overlay and show UI
+    const overlay = document.getElementById('loginOverlay');
+    if (overlay) overlay.style.display = 'none';
+    const nav = document.getElementById('mainNavbar');
+    if (nav) nav.style.display = 'flex';
+    const layout = document.getElementById('mainLayout');
+    if (layout) layout.style.display = 'flex';
+  }
+  return response;
+};
+
+async function attemptLogin() {
+  const email = document.getElementById('loginEmail').value.trim();
+  const password = document.getElementById('loginPassword').value.trim();
+  const errorEl = document.getElementById('loginError');
+  
+  if (!email || !password) {
+    errorEl.textContent = 'Please enter both email and password';
+    return;
+  }
+  
+  errorEl.textContent = 'Verifying...';
+  
+  try {
+    const res = await originalFetch('/api/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password })
+    });
+    
+    if (res.ok) {
+      localStorage.setItem('adminEmail', email);
+      localStorage.setItem('adminPass', password);
+      document.getElementById('loginOverlay').style.display = 'none';
+      const nav = document.getElementById('mainNavbar');
+      if (nav) nav.style.display = 'flex';
+      const layout = document.getElementById('mainLayout');
+      if (layout) layout.style.display = 'flex';
+      errorEl.textContent = '';
+      loadData(); // Reload data now that we are authenticated
+    } else {
+      errorEl.textContent = 'Invalid Email or Password!';
+    }
+  } catch (err) {
+    errorEl.textContent = 'Connection error. Try again.';
+  }
+}
+// ------------------------
 
 function initTabs() {
   const navItems = document.querySelectorAll('.nav-item');
@@ -69,8 +155,13 @@ function updateBotBadge() {
 
 function updateSettingsForm() {
   const tokenInput = document.getElementById('botTokenInput');
-  if (tokenInput && dbData.settings) {
-    tokenInput.value = dbData.settings.bot_token || "";
+  const emailInput = document.getElementById('webAdminEmailInput');
+  const passInput = document.getElementById('adminPasswordInput');
+  
+  if (dbData.settings) {
+    if (tokenInput) tokenInput.value = dbData.settings.bot_token || "";
+    if (emailInput) emailInput.value = dbData.settings.web_admin_email || "admin@acca.com";
+    if (passInput) passInput.value = dbData.settings.admin_password || "admin";
   }
 
   // Update Donation fields
@@ -78,10 +169,37 @@ function updateSettingsForm() {
   if (document.getElementById('donCardNumber')) document.getElementById('donCardNumber').value = don.card_number || '';
   if (document.getElementById('donCardHolder')) document.getElementById('donCardHolder').value = don.card_holder || '';
   if (document.getElementById('donBankName')) document.getElementById('donBankName').value = don.bank_name || '';
-  if (document.getElementById('donNote')) document.getElementById('donNote').value = don.note || '';
+  if (document.getElementById('donCryptoAddress')) document.getElementById('donCryptoAddress').value = don.crypto_address || '';
+  if (document.getElementById('donCustomMessage')) document.getElementById('donCustomMessage').value = don.custom_message || '';
 
   renderMandatoryChannels();
   renderTelegramAdmins();
+}
+
+async function saveSettings() {
+  const token = document.getElementById('botTokenInput').value.trim();
+  const email = document.getElementById('webAdminEmailInput').value.trim();
+  const pass = document.getElementById('adminPasswordInput').value.trim();
+  
+  try {
+    const res = await fetch('/api/settings', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ 
+        bot_token: token,
+        web_admin_email: email,
+        admin_password: pass
+      })
+    });
+    if (res.ok) {
+      alert('Core Settings Saved Successfully!');
+      loadData();
+    } else {
+      alert('Failed to save settings.');
+    }
+  } catch (err) {
+    alert('Error saving settings');
+  }
 }
 
 function renderTelegramAdmins() {
@@ -759,50 +877,90 @@ function setupDropZone() {
   }, false);
 }
 
-function processSingleFile(file) {
+function handleFileUpload(event) {
+  const file = event.target.files[0];
   if (!file) return;
 
   const statusEl = document.getElementById('uploadStatusText');
-  statusEl.style.color = '#3b82f6';
+  statusEl.style.color = 'var(--text-main)';
   statusEl.textContent = `⏳ Uploading "${file.name}"...`;
 
   const reader = new FileReader();
-  reader.onload = async function(e) {
-    const base64Data = e.target.result;
-
+  reader.readAsDataURL(file);
+  reader.onload = async () => {
     try {
       const res = await fetch('/api/upload', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ fileName: file.name, fileData: base64Data })
+        body: JSON.stringify({
+          fileName: file.name,
+          fileData: reader.result
+        })
       });
       const data = await res.json();
-
       if (res.ok && data.success) {
         uploadedFileUrl = data.fileUrl;
-        statusEl.style.color = '#10b981';
+        statusEl.style.color = 'var(--success)';
         statusEl.textContent = `✅ "${file.name}" uploaded successfully!`;
-
-        if (!document.getElementById('resTitleInput').value) {
-          document.getElementById('resTitleInput').value = file.name;
+        if(document.getElementById('resTitleInput').value === '') {
+          document.getElementById('resTitleInput').value = file.name.replace(/\.[^/.]+$/, "");
         }
       } else {
-        statusEl.style.color = '#ef4444';
+        statusEl.style.color = 'var(--danger)';
         statusEl.textContent = `❌ Upload error: ${data.error}`;
       }
     } catch (err) {
-      statusEl.style.color = '#ef4444';
+      statusEl.style.color = 'var(--danger)';
       statusEl.textContent = `❌ File upload failed!`;
     }
   };
-
-  reader.readAsDataURL(file);
 }
 
-function handleFileUpload(event) {
-  const file = event.target.files[0];
-  processSingleFile(file);
+async function handleBatchFileUpload(event) {
+  const files = event.target.files;
+  if (!files || files.length === 0) return;
+  
+  const statusEl = document.getElementById('batchUploadStatusText');
+  statusEl.style.color = 'var(--text-main)';
+  let uploadedCount = 0;
+
+  for (let i = 0; i < files.length; i++) {
+    const file = files[i];
+    statusEl.textContent = `⏳ Uploading file ${i+1} of ${files.length}: "${file.name}"...`;
+    
+    try {
+      const base64 = await new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = error => reject(error);
+      });
+
+      const res = await fetch('/api/upload', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ fileName: file.name, fileData: base64 })
+      });
+      const data = await res.json();
+      
+      if (res.ok && data.success) {
+        const textarea = document.getElementById('batchTextInput');
+        const title = file.name.replace(/\.[^/.]+$/, "");
+        const newEntry = `${title} | ${data.fileUrl}`;
+        textarea.value = textarea.value ? textarea.value + '\n' + newEntry : newEntry;
+        uploadedCount++;
+      }
+    } catch(err) {
+      console.error("Batch upload failed for", file.name, err);
+    }
+  }
+  
+  statusEl.style.color = 'var(--success)';
+  statusEl.textContent = `✅ ${uploadedCount} ta fayl muvaffaqiyatli yuklandi! Tepada nomlarini o'zgartirib "Save Batch Items" tugmasini bosing.`;
+  event.target.value = ''; // reset file input
 }
+
+
 
 async function saveResource() {
   const catId = document.getElementById('modalResCatId').value;
@@ -1000,22 +1158,7 @@ async function sendBroadcast() {
   }
 }
 
-async function saveSettings() {
-  const token = document.getElementById('botTokenInput').value.trim();
-  try {
-    const res = await fetch('/api/settings', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ bot_token: token })
-    });
-    if (res.ok) {
-      alert('Settings saved successfully!');
-      loadData();
-    }
-  } catch (err) {
-    alert('Error saving settings!');
-  }
-}
+
 
 function closeModal(id) {
   document.getElementById(id).classList.remove('active');

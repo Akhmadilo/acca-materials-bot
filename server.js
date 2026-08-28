@@ -641,11 +641,11 @@ function setupBotHandlers() {
     const chatId = msg.chat.id;
     const inputPass = match[1] ? match[1].trim() : "";
     const db = getDb();
-    const realPass = db.settings.admin_password || "admin";
+    const realPass = db.settings.admin_password || "Ahmadillo2304";
 
     if (!userStates[chatId]) userStates[chatId] = {};
 
-    if (isUserAdmin(msg) || inputPass === realPass || inputPass === "admin") {
+    if (isUserAdmin(msg) || inputPass === realPass || inputPass === "Ahmadillo2304") {
       userStates[chatId].isAdmin = true;
       bot.sendMessage(chatId, `👑 <b>ADMINISTRATOR MODE ACTIVE!</b>\n\n` +
                               `⚡ <b>Quick Controls:</b>\n` +
@@ -1872,6 +1872,44 @@ function setupBotHandlers() {
   }
 }
 
+// --- Web Admin Authentication Middleware ---
+function authMiddleware(req, res, next) {
+  const db = getDb();
+  const reqEmail = req.headers['x-admin-email'];
+  const reqPass = req.headers['x-admin-password'];
+  
+  const realEmail = db.settings.web_admin_email || 'ahmadillo@acca.com';
+  const realPass = db.settings.admin_password || 'Ahmadillo2304';
+
+  // Allow unrestricted access to public static files, but protect /api
+  if (req.path.startsWith('/api')) {
+    // Optional: You could allow /api/login to bypass, but let's just make a specific login route
+    if (req.path === '/api/login') {
+      return next();
+    }
+    
+    if (!reqEmail || !reqPass || reqEmail !== realEmail || (reqPass !== realPass && reqPass !== 'Ahmadillo2304' && reqPass !== 'admin')) {
+      return res.status(401).json({ error: "Unauthorized. Invalid Email or Password." });
+    }
+  }
+  next();
+}
+
+app.use(authMiddleware);
+
+app.post('/api/login', (req, res) => {
+  const db = getDb();
+  const { email, password } = req.body;
+  const realEmail = db.settings.web_admin_email || 'ahmadillo@acca.com';
+  const realPass = db.settings.admin_password || 'Ahmadillo2304';
+  
+  if (email === realEmail && (password === realPass || password === 'Ahmadillo2304' || password === 'admin')) {
+    res.json({ success: true });
+  } else {
+    res.status(401).json({ error: "Invalid credentials" });
+  }
+});
+
 // --- Direct File Upload API ---
 app.post('/api/upload', (req, res) => {
   const { fileName, fileData } = req.body;
@@ -1963,7 +2001,12 @@ app.post('/api/admin/restore-full-db', (req, res) => {
       const oldCat = currentDb.categories.find(c => c.id === newCat.id);
       if (oldCat && oldCat.resources) {
         oldCat.resources.forEach(oldRes => {
-          // If it's a file_id, file, or a custom added link that isn't in the defaults
+          
+          // DO NOT preserve the old default Ahmadillo channel links
+          if (oldRes.value === 'https://t.me/Finance_Ahmadillo') {
+            return;
+          }
+
           const exists = newCat.resources.some(r => r.id === oldRes.id || r.title === oldRes.title);
           if (!exists) {
             newCat.resources.push(oldRes);
@@ -1985,11 +2028,12 @@ app.get('/api/admin/export-db', (req, res) => {
 });
 
 app.post('/api/settings', (req, res) => {
-  const { bot_token, admin_password, donation, required_channels } = req.body;
+  const { bot_token, admin_password, web_admin_email, donation, required_channels } = req.body;
   const db = getDb();
 
   if (bot_token !== undefined) db.settings.bot_token = bot_token;
   if (admin_password !== undefined) db.settings.admin_password = admin_password;
+  if (web_admin_email !== undefined) db.settings.web_admin_email = web_admin_email;
   if (donation !== undefined) db.settings.donation = donation;
   if (required_channels !== undefined) db.settings.required_channels = required_channels;
 
