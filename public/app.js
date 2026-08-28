@@ -38,6 +38,18 @@ window.fetch = async function() {
   if (response.status === 401 && typeof resource === 'string' && resource.startsWith('/api') && resource !== '/api/login') {
     const overlay = document.getElementById('loginOverlay');
     if (overlay) overlay.style.display = 'flex';
+    const nav = document.getElementById('mainNavbar');
+    if (nav) nav.style.display = 'none';
+    const layout = document.getElementById('mainLayout');
+    if (layout) layout.style.display = 'none';
+  } else if (response.ok && typeof resource === 'string' && resource.startsWith('/api') && resource !== '/api/login') {
+    // If successfully authenticated, hide overlay and show UI
+    const overlay = document.getElementById('loginOverlay');
+    if (overlay) overlay.style.display = 'none';
+    const nav = document.getElementById('mainNavbar');
+    if (nav) nav.style.display = 'flex';
+    const layout = document.getElementById('mainLayout');
+    if (layout) layout.style.display = 'flex';
   }
   return response;
 };
@@ -65,6 +77,10 @@ async function attemptLogin() {
       localStorage.setItem('adminEmail', email);
       localStorage.setItem('adminPass', password);
       document.getElementById('loginOverlay').style.display = 'none';
+      const nav = document.getElementById('mainNavbar');
+      if (nav) nav.style.display = 'flex';
+      const layout = document.getElementById('mainLayout');
+      if (layout) layout.style.display = 'flex';
       errorEl.textContent = '';
       loadData(); // Reload data now that we are authenticated
     } else {
