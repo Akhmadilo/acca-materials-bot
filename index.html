@@ -13,6 +13,28 @@
 </head>
 <body>
 
+  <!-- Full Screen Login Overlay -->
+  <div id="loginOverlay" style="position:fixed; top:0; left:0; width:100%; height:100%; background:var(--bg-main); z-index:9999; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+    <div class="card" style="width:100%; max-width:400px; padding:2rem; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.5);">
+      <div style="font-size:3rem; color:var(--primary); margin-bottom:1rem;"><i class="fa-solid fa-shield-halved"></i></div>
+      <h2 style="color:var(--text-main); margin-bottom:0.5rem;">Admin Access</h2>
+      <p style="color:var(--text-muted); margin-bottom:1.5rem;">Please sign in to manage the platform.</p>
+      
+      <div class="form-group" style="text-align:left;">
+        <label>Admin Email:</label>
+        <input type="email" id="loginEmail" placeholder="admin@acca.com" value="admin@acca.com">
+      </div>
+      <div class="form-group" style="text-align:left;">
+        <label>Password:</label>
+        <input type="password" id="loginPassword" placeholder="••••••••">
+      </div>
+      <button class="btn btn-primary" style="width:100%; padding:0.8rem; font-size:1.1rem; margin-top:1rem;" onclick="attemptLogin()">
+        <i class="fa-solid fa-right-to-bracket"></i> Login securely
+      </button>
+      <small id="loginError" style="color:var(--danger); display:block; margin-top:1rem; font-weight:600;"></small>
+    </div>
+  </div>
+
   <!-- Top Navbar -->
   <header class="navbar">
     <div class="brand">
@@ -235,13 +257,25 @@
         </div>
 
         <div class="card settings-card" style="margin-bottom: 1.5rem;">
-          <h3 style="color:var(--text-main); font-size:1.1rem; margin-bottom:1rem;"><i class="fa-solid fa-key"></i> Bot Token Settings</h3>
+          <h3 style="color:var(--text-main); font-size:1.1rem; margin-bottom:1rem;"><i class="fa-solid fa-key"></i> Bot Token & Admin Login Settings</h3>
           <div class="form-group">
             <label for="botTokenInput">Telegram Bot API Token:</label>
             <input type="text" id="botTokenInput" placeholder="8723520559:AAFM108x6EzYIMg_bsHtLShCEwCZKj3gb50">
           </div>
+          
+          <div style="display:flex; gap:10px; margin-bottom: 1rem;">
+            <div class="form-group" style="flex:1;">
+              <label for="webAdminEmailInput">Web Admin Email (Login ID):</label>
+              <input type="email" id="webAdminEmailInput" placeholder="admin@acca.com">
+            </div>
+            <div class="form-group" style="flex:1;">
+              <label for="adminPasswordInput">Admin Password (Web & Telegram):</label>
+              <input type="text" id="adminPasswordInput" placeholder="admin">
+            </div>
+          </div>
+          
           <button class="btn btn-primary" onclick="saveSettings()">
-            <i class="fa-solid fa-floppy-disk"></i> Save Token Settings
+            <i class="fa-solid fa-floppy-disk"></i> Save Core Settings
           </button>
         </div>
 

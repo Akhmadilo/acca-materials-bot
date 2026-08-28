@@ -14,6 +14,68 @@ let dbData = { categories: [], subscribers: [], settings: {}, feedback_messages:
 let currentFolderId = null;
 let uploadedFileUrl = "";
 
+// --- Auth Interceptor ---
+const originalFetch = window.fetch;
+window.fetch = async function() {
+  let [resource, config] = arguments;
+  if (typeof resource === 'string' && resource.startsWith('/api') && resource !== '/api/login') {
+    if (!config) config = {};
+    
+    // Check if headers is a Headers object or a plain object
+    if (config.headers instanceof Headers) {
+      config.headers.set('x-admin-email', localStorage.getItem('adminEmail') || '');
+      config.headers.set('x-admin-password', localStorage.getItem('adminPass') || '');
+    } else {
+      config.headers = {
+        ...config.headers,
+        'x-admin-email': localStorage.getItem('adminEmail') || '',
+        'x-admin-password': localStorage.getItem('adminPass') || ''
+      };
+    }
+  }
+  
+  const response = await originalFetch(resource, config);
+  if (response.status === 401 && typeof resource === 'string' && resource.startsWith('/api') && resource !== '/api/login') {
+    const overlay = document.getElementById('loginOverlay');
+    if (overlay) overlay.style.display = 'flex';
+  }
+  return response;
+};
+
+async function attemptLogin() {
+  const email = document.getElementById('loginEmail').value.trim();
+  const password = document.getElementById('loginPassword').value.trim();
+  const errorEl = document.getElementById('loginError');
+  
+  if (!email || !password) {
+    errorEl.textContent = 'Please enter both email and password';
+    return;
+  }
+  
+  errorEl.textContent = 'Verifying...';
+  
+  try {
+    const res = await originalFetch('/api/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password })
+    });
+    
+    if (res.ok) {
+      localStorage.setItem('adminEmail', email);
+      localStorage.setItem('adminPass', password);
+      document.getElementById('loginOverlay').style.display = 'none';
+      errorEl.textContent = '';
+      loadData(); // Reload data now that we are authenticated
+    } else {
+      errorEl.textContent = 'Invalid Email or Password!';
+    }
+  } catch (err) {
+    errorEl.textContent = 'Connection error. Try again.';
+  }
+}
+// ------------------------
+
 function initTabs() {
   const navItems = document.querySelectorAll('.nav-item');
   const tabPanes = document.querySelectorAll('.tab-pane');
@@ -69,8 +131,13 @@ function updateBotBadge() {
 
 function updateSettingsForm() {
   const tokenInput = document.getElementById('botTokenInput');
-  if (tokenInput && dbData.settings) {
-    tokenInput.value = dbData.settings.bot_token || "";
+  const emailInput = document.getElementById('webAdminEmailInput');
+  const passInput = document.getElementById('adminPasswordInput');
+  
+  if (dbData.settings) {
+    if (tokenInput) tokenInput.value = dbData.settings.bot_token || "";
+    if (emailInput) emailInput.value = dbData.settings.web_admin_email || "admin@acca.com";
+    if (passInput) passInput.value = dbData.settings.admin_password || "admin";
   }
 
   // Update Donation fields
@@ -78,10 +145,37 @@ function updateSettingsForm() {
   if (document.getElementById('donCardNumber')) document.getElementById('donCardNumber').value = don.card_number || '';
   if (document.getElementById('donCardHolder')) document.getElementById('donCardHolder').value = don.card_holder || '';
   if (document.getElementById('donBankName')) document.getElementById('donBankName').value = don.bank_name || '';
-  if (document.getElementById('donNote')) document.getElementById('donNote').value = don.note || '';
+  if (document.getElementById('donCryptoAddress')) document.getElementById('donCryptoAddress').value = don.crypto_address || '';
+  if (document.getElementById('donCustomMessage')) document.getElementById('donCustomMessage').value = don.custom_message || '';
 
   renderMandatoryChannels();
   renderTelegramAdmins();
+}
+
+async function saveSettings() {
+  const token = document.getElementById('botTokenInput').value.trim();
+  const email = document.getElementById('webAdminEmailInput').value.trim();
+  const pass = document.getElementById('adminPasswordInput').value.trim();
+  
+  try {
+    const res = await fetch('/api/settings', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ 
+        bot_token: token,
+        web_admin_email: email,
+        admin_password: pass
+      })
+    });
+    if (res.ok) {
+      alert('Core Settings Saved Successfully!');
+      loadData();
+    } else {
+      alert('Failed to save settings.');
+    }
+  } catch (err) {
+    alert('Error saving settings');
+  }
 }
 
 function renderTelegramAdmins() {
@@ -1040,22 +1134,7 @@ async function sendBroadcast() {
   }
 }
 
-async function saveSettings() {
-  const token = document.getElementById('botTokenInput').value.trim();
-  try {
-    const res = await fetch('/api/settings', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ bot_token: token })
-    });
-    if (res.ok) {
-      alert('Settings saved successfully!');
-      loadData();
-    }
-  } catch (err) {
-    alert('Error saving settings!');
-  }
-}
+
 
 function closeModal(id) {
   document.getElementById(id).classList.remove('active');
