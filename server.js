@@ -25,47 +25,58 @@ if (!fs.existsSync(UPLOADS_DIR)) {
 // --- Full Master Database Generator (ACCA, CFA, Analytics, 1C, Financial Modeling) ---
 function generateFullMasterDb() {
   const rootCategories = [
-    { id: "cat_acca", title: "🔴 ACCA 🔴", parentId: null, order: 1, resources: [] },
-    { id: "cat_cfa", title: "📊 CFA Exam", parentId: null, order: 2, resources: [] },
-    { id: "cat_analytics", title: "📈 Data Analytics & BI", parentId: null, order: 3, resources: [] },
-    { id: "cat_national_1c", title: "🇺🇿 Milliy Buxgalteriya va 1C", parentId: null, order: 4, resources: [] },
-    { id: "cat_fin_modeling", title: "💼 Financial Modeling & Corporate Finance", parentId: null, order: 5, resources: [] },
-    { id: "cat_economics", title: "📚 Economics", parentId: null, order: 6, resources: [] },
-    { id: "cat_feedback", title: "💬 Feedback", parentId: null, order: 7, resources: [], isFeedback: true }
+    { id: "cat_acca",            title: "🔴 ACCA",                                    parentId: null, order: 1, resources: [] },
+    { id: "cat_cfa",             title: "📊 CFA Exam",                                parentId: null, order: 2, resources: [] },
+    { id: "cat_analytics",       title: "📈 Data Analytics & BI",                     parentId: null, order: 3, resources: [] },
+    { id: "cat_national_1c",     title: "🇺🇿 Milliy Buxgalteriya va 1C",              parentId: null, order: 4, resources: [] },
+    { id: "cat_fin_modeling",    title: "💼 Financial Modeling & Corporate Finance",   parentId: null, order: 5, resources: [] },
+    { id: "cat_islamic_finance", title: "🌙 Islamic Finance",                          parentId: null, order: 6, resources: [] },
+    { id: "cat_economics",       title: "📚 Economics",                                parentId: null, order: 7, resources: [] },
+    { id: "cat_feedback",        title: "💬 Feedback",                                 parentId: null, order: 8, resources: [], isFeedback: true }
   ];
 
   const mainLevels = [
     // ACCA
-    { id: "cat_applied_knowledge", title: "📘 Applied Knowledge", parentId: "cat_acca", order: 1, resources: [] },
-    { id: "cat_applied_skills", title: "📊 Applied Skills", parentId: "cat_acca", order: 2, resources: [] },
+    { id: "cat_applied_knowledge",    title: "🎓 Applied Knowledge",      parentId: "cat_acca", order: 1, resources: [] },
+    { id: "cat_applied_skills",       title: "🛠️ Applied Skills",          parentId: "cat_acca", order: 2, resources: [] },
     { id: "cat_strategic_professional", title: "🏆 Strategic Professional", parentId: "cat_acca", order: 3, resources: [] },
 
-    // Data Analytics
-    { id: "cat_analytics_excel", title: "📊 Advanced Financial Excel & Dashboards", parentId: "cat_analytics", order: 1, resources: [] },
-    { id: "cat_analytics_powerbi", title: "📈 Power BI & Tableau for Finance", parentId: "cat_analytics", order: 2, resources: [] },
-    { id: "cat_analytics_python", title: "🐍 Python for Finance & Data Analysis", parentId: "cat_analytics", order: 3, resources: [] },
-    { id: "cat_analytics_sql", title: "🗄️ SQL & Financial Databases", parentId: "cat_analytics", order: 4, resources: [] },
+    // Data Analytics & BI
+    { id: "cat_analytics_excel",   title: "📊 Advanced Excel & Dashboards",        parentId: "cat_analytics", order: 1, resources: [] },
+    { id: "cat_analytics_powerbi", title: "📉 Power BI & Tableau for Finance",     parentId: "cat_analytics", order: 2, resources: [] },
+    { id: "cat_analytics_python",  title: "🐍 Python for Finance & Data Analysis", parentId: "cat_analytics", order: 3, resources: [] },
+    { id: "cat_analytics_sql",     title: "🗄️ SQL & Financial Databases",          parentId: "cat_analytics", order: 4, resources: [] },
 
     // Milliy Buxgalteriya va 1C
-    { id: "cat_1c_enterprise", title: "💻 1C: Buxgalteriya & 1C Enterprise 8.3", parentId: "cat_national_1c", order: 1, resources: [] },
-    { id: "cat_bhms_standards", title: "📜 BHMS (Buxgalteriya Hisobining Milliy Standartlari)", parentId: "cat_national_1c", order: 2, resources: [] },
-    { id: "cat_tax_reporting", title: "🏛️ Soliqlar va Hisobotlar (Tax Code & Declarations)", parentId: "cat_national_1c", order: 3, resources: [] },
-    { id: "cat_ifrs_national", title: "📑 MHXS / IFRS Milliy Amaliyotda", parentId: "cat_national_1c", order: 4, resources: [] },
+    { id: "cat_1c_enterprise",  title: "💻 1C: Buxgalteriya & 1C Enterprise 8.3",          parentId: "cat_national_1c", order: 1, resources: [] },
+    { id: "cat_bhms_standards", title: "📜 BHMS (Milliy Standartlar)",                      parentId: "cat_national_1c", order: 2, resources: [] },
+    { id: "cat_tax_reporting",  title: "🏛️ Soliqlar va Hisobotlar (Tax & Declarations)",    parentId: "cat_national_1c", order: 3, resources: [] },
+    { id: "cat_ifrs_national",  title: "📑 MHXS / IFRS Milliy Amaliyotda",                 parentId: "cat_national_1c", order: 4, resources: [] },
 
     // Financial Modeling & Corporate Finance
-    { id: "cat_fm_excel", title: "📊 Excel Financial Modeling (DCF, LBO, Budgeting)", parentId: "cat_fin_modeling", order: 1, resources: [] },
-    { id: "cat_fm_valuation", title: "💎 Business Valuation & Corporate Finance", parentId: "cat_fin_modeling", order: 2, resources: [] },
-    { id: "cat_fm_banking", title: "🏢 Banking, Credit Analysis & Risk", parentId: "cat_fin_modeling", order: 3, resources: [] },
+    { id: "cat_fm_excel",     title: "📋 Excel Financial Modeling (DCF, LBO, Budget)", parentId: "cat_fin_modeling", order: 1, resources: [] },
+    { id: "cat_fm_valuation", title: "💎 Business Valuation & Corporate Finance",       parentId: "cat_fin_modeling", order: 2, resources: [] },
+    { id: "cat_fm_banking",   title: "🏢 Banking, Credit Analysis & Risk",              parentId: "cat_fin_modeling", order: 3, resources: [] },
 
     // Economics
-    { id: "cat_econ_micro", title: "📊 Microeconomics", parentId: "cat_economics", order: 1, resources: [] },
-    { id: "cat_econ_macro", title: "🌍 Macroeconomics", parentId: "cat_economics", order: 2, resources: [] },
-    { id: "cat_econ_international", title: "🌐 International Economics & Trade", parentId: "cat_economics", order: 3, resources: [] },
-    { id: "cat_econ_development", title: "📈 Development Economics", parentId: "cat_economics", order: 4, resources: [] },
-    { id: "cat_econ_econometrics", title: "📉 Econometrics & Statistics", parentId: "cat_economics", order: 5, resources: [] },
-    { id: "cat_econ_monetary", title: "🏦 Monetary & Financial Economics", parentId: "cat_economics", order: 6, resources: [] },
-    { id: "cat_econ_public", title: "🏛️ Public Economics & Fiscal Policy", parentId: "cat_economics", order: 7, resources: [] },
-    { id: "cat_econ_behavioral", title: "🧠 Behavioral Economics", parentId: "cat_economics", order: 8, resources: [] }
+    { id: "cat_econ_micro",        title: "🔬 Microeconomics",                     parentId: "cat_economics", order: 1, resources: [] },
+    { id: "cat_econ_macro",        title: "🌍 Macroeconomics",                     parentId: "cat_economics", order: 2, resources: [] },
+    { id: "cat_econ_international",title: "✈️ International Economics & Trade",    parentId: "cat_economics", order: 3, resources: [] },
+    { id: "cat_econ_development",  title: "🌱 Development Economics",               parentId: "cat_economics", order: 4, resources: [] },
+    { id: "cat_econ_econometrics", title: "📉 Econometrics & Statistics",           parentId: "cat_economics", order: 5, resources: [] },
+    { id: "cat_econ_monetary",     title: "🏦 Monetary & Financial Economics",     parentId: "cat_economics", order: 6, resources: [] },
+    { id: "cat_econ_public",       title: "🏛️ Public Economics & Fiscal Policy",   parentId: "cat_economics", order: 7, resources: [] },
+    { id: "cat_econ_behavioral",   title: "🧠 Behavioral Economics",               parentId: "cat_economics", order: 8, resources: [] },
+
+    // Islamic Finance
+    { id: "cat_if_foundations", title: "☪️ Foundations of Islamic Finance", parentId: "cat_islamic_finance", order: 1, resources: [] },
+    { id: "cat_if_banking", title: "🏦 Islamic Banking & Products", parentId: "cat_islamic_finance", order: 2, resources: [] },
+    { id: "cat_if_capital_markets", title: "📊 Islamic Capital Markets & Sukuk", parentId: "cat_islamic_finance", order: 3, resources: [] },
+    { id: "cat_if_takaful", title: "🛡️ Takaful (Islamic Insurance)", parentId: "cat_islamic_finance", order: 4, resources: [] },
+    { id: "cat_if_accounting", title: "📒 Islamic Accounting & AAOIFI Standards", parentId: "cat_islamic_finance", order: 5, resources: [] },
+    { id: "cat_if_law", title: "⚖️ Shariah Law & Fiqh al-Muamalat", parentId: "cat_islamic_finance", order: 6, resources: [] },
+    { id: "cat_if_fintech", title: "💡 Islamic Fintech & Digital Finance", parentId: "cat_islamic_finance", order: 7, resources: [] },
+    { id: "cat_if_certifications", title: "🎓 CIFE / CIFP / CIPA Certifications", parentId: "cat_islamic_finance", order: 8, resources: [] }
   ];
 
   const papers = [
@@ -2110,7 +2121,7 @@ app.get('/api/admin/export-db', (req, res) => {
 });
 
 app.post('/api/settings', (req, res) => {
-  const { bot_token, admin_password, web_admin_email, donation, required_channels } = req.body;
+  const { bot_token, admin_password, web_admin_email, donation, required_channels, admin_ids } = req.body;
   const db = getDb();
 
   if (bot_token !== undefined) db.settings.bot_token = bot_token;
@@ -2118,6 +2129,7 @@ app.post('/api/settings', (req, res) => {
   if (web_admin_email !== undefined) db.settings.web_admin_email = web_admin_email;
   if (donation !== undefined) db.settings.donation = donation;
   if (required_channels !== undefined) db.settings.required_channels = required_channels;
+  if (admin_ids !== undefined) db.settings.admin_ids = admin_ids;
 
   saveDb(db);
   initBot();
