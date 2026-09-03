@@ -647,16 +647,83 @@ function setupBotHandlers() {
 
     if (isUserAdmin(msg) || inputPass === realPass || inputPass === "Ahmadillo2304") {
       userStates[chatId].isAdmin = true;
-      bot.sendMessage(chatId, `👑 <b>ADMINISTRATOR MODE ACTIVE!</b>\n\n` +
-                              `⚡ <b>Quick Controls:</b>\n` +
-                              `1️⃣ <b>Batch Upload (10-50 Files at Once):</b> Tap /batch\n` +
-                              `2️⃣ <b>Single File / Link Upload:</b> Send any link or PDF into chat!\n` +
-                              `3️⃣ <b>Web Admin Panel:</b> https://acca-materials-bot.onrender.com\n\n` +
-                              `📥 Drop your study materials anytime!`, { parse_mode: 'HTML', ...getKeyboardForCategory(null, msg) });
+      bot.sendMessage(chatId, 
+        `👑 <b>ADMINISTRATOR MODE ACTIVE!</b>\n\n` +
+        `⚡ <b>Quick Controls:</b>\n` +
+        `📥 <b>Upload file/link:</b> Navigate to a folder, tap "➕ Upload File / Link"\n` +
+        `📦 <b>Batch upload (10-50 files):</b> /batch\n` +
+        `📢 <b>Broadcast to all users:</b> /post\n` +
+        `👤 <b>Add new admin:</b> /addadmin @username\n` +
+        `🌐 <b>Web Admin Panel:</b> https://acca-materials-bot.onrender.com\n\n` +
+        `💡 Drop any PDF, video or link into chat to upload it!`,
+        { parse_mode: 'HTML', ...getKeyboardForCategory(null, msg) }
+      );
     } else {
-      bot.sendMessage(chatId, `🔐 Please enter the admin password:\n\nFormat: <code>/admin admin</code>`, { parse_mode: 'HTML' });
+      bot.sendMessage(chatId, `🔐 <b>Admin Password Required</b>\n\nFormat: <code>/admin YourPassword</code>`, { parse_mode: 'HTML' });
     }
   });
+
+  // --- /addadmin Command ---
+  bot.onText(/\/addadmin(.*)/, (msg, match) => {
+    const chatId = msg.chat.id;
+    if (!userStates[chatId]) userStates[chatId] = {};
+    const state = userStates[chatId];
+
+    if (!isUserAdmin(msg) && !state.isAdmin) {
+      bot.sendMessage(chatId, `🔐 <b>Administrator access required.</b>`, { parse_mode: 'HTML' });
+      return;
+    }
+
+    const input = match[1] ? match[1].trim() : '';
+    if (!input) {
+      bot.sendMessage(chatId, `👤 <b>Add Admin</b>\n\nFormat: <code>/addadmin @username</code> or <code>/addadmin 123456789</code>\n\nExample: <code>/addadmin @helper_name</code>`, { parse_mode: 'HTML' });
+      return;
+    }
+
+    const db = getDb();
+    if (!db.settings.admin_ids) db.settings.admin_ids = [];
+
+    const alreadyExists = db.settings.admin_ids.some(id => String(id).toLowerCase() === input.toLowerCase());
+    if (alreadyExists) {
+      bot.sendMessage(chatId, `⚠️ <b>${input}</b> is already an admin.`, { parse_mode: 'HTML' });
+      return;
+    }
+
+    db.settings.admin_ids.push(input);
+    saveDb(db);
+    bot.sendMessage(chatId, `✅ <b>${input}</b> has been added as admin!\n\nThey can now use <code>/admin</code> to access admin features.`, { parse_mode: 'HTML' });
+  });
+
+  // --- /removeadmin Command ---
+  bot.onText(/\/removeadmin(.*)/, (msg, match) => {
+    const chatId = msg.chat.id;
+    if (!userStates[chatId]) userStates[chatId] = {};
+    const state = userStates[chatId];
+
+    if (!isUserAdmin(msg) && !state.isAdmin) {
+      bot.sendMessage(chatId, `🔐 <b>Administrator access required.</b>`, { parse_mode: 'HTML' });
+      return;
+    }
+
+    const input = match[1] ? match[1].trim() : '';
+    if (!input) {
+      bot.sendMessage(chatId, `👤 <b>Remove Admin</b>\n\nFormat: <code>/removeadmin @username</code>`, { parse_mode: 'HTML' });
+      return;
+    }
+
+    const db = getDb();
+    const before = (db.settings.admin_ids || []).length;
+    db.settings.admin_ids = (db.settings.admin_ids || []).filter(id => String(id).toLowerCase() !== input.toLowerCase());
+    const after = db.settings.admin_ids.length;
+
+    if (before === after) {
+      bot.sendMessage(chatId, `⚠️ <b>${input}</b> was not found in the admin list.`, { parse_mode: 'HTML' });
+    } else {
+      saveDb(db);
+      bot.sendMessage(chatId, `✅ <b>${input}</b> has been removed from admins.`, { parse_mode: 'HTML' });
+    }
+  });
+
 
   // --- /post Command (Admin Broadcast) ---
   bot.onText(/\/post/, (msg) => {
@@ -919,17 +986,17 @@ function setupBotHandlers() {
       let fileList = state.uploadQueue.map((f, i) => `${i + 1}. 📄 ${f.title}`).join('\n');
       
       bot.sendMessage(chatId, 
-        `📥 <b>Fayl qabul qilindi!</b>\n\n` +
-        `📂 Papka: <b>${folderName}</b>\n` +
-        `📋 Kutilayotgan fayllar (${count} ta):\n${fileList}\n\n` +
-        `🔹 Yana fayl yuboring — navbatga qo'shiladi\n` +
-        `🔹 Bitta nomni o'zgartirish: <code>/rename 1 Yangi nom</code>\n` +
-        `🔹 Hammasini bir xil nomlash: <code>/nameall Umumiy nom</code>\n`, {
+        `📥 <b>File received!</b>\n\n` +
+        `📂 Folder: <b>${folderName}</b>\n` +
+        `📋 Queued files (${count}):\n${fileList}\n\n` +
+        `🔹 Send more files — they'll be added to the queue\n` +
+        `🔹 Rename one: <code>/rename 1 New Name</code>\n` +
+        `🔹 Rename all: <code>/nameall Common Name</code>\n`, {
         parse_mode: 'HTML',
         reply_markup: {
           inline_keyboard: [
-            [{ text: '✅ Barchasini Saqlash', callback_data: 'upload_save' }],
-            [{ text: '❌ Bekor qilish', callback_data: 'upload_cancel' }]
+            [{ text: '✅ Save All', callback_data: 'upload_save' }],
+            [{ text: '❌ Cancel', callback_data: 'upload_cancel' }]
           ]
         }
       });
@@ -1016,7 +1083,7 @@ function setupBotHandlers() {
           state.uploadQueue.forEach(item => cat.resources.push(item));
           saveDb(db);
           
-          bot.editMessageText(`✅ <b>Muvaffaqiyatli saqlandi!</b>\n📂 <b>${cat.title}</b> papkasiga ${state.uploadQueue.length} ta fayl joylandi.`, {
+          bot.editMessageText(`✅ <b>Saved successfully!</b>\n📂 <b>${cat.title}</b> — ${state.uploadQueue.length} files published.`, {
             chat_id: chatId,
             message_id: query.message.message_id,
             parse_mode: 'HTML'
@@ -1025,7 +1092,7 @@ function setupBotHandlers() {
         state.uploadQueue = null;
         state.directUploadFolderId = null;
       } else {
-        bot.answerCallbackQuery(query.id, { text: "⚠️ Saqlash uchun fayl yo'q!", show_alert: true });
+        bot.answerCallbackQuery(query.id, { text: "⚠️ No files in queue to save!", show_alert: true });
       }
       bot.answerCallbackQuery(query.id);
       return;
@@ -1034,7 +1101,7 @@ function setupBotHandlers() {
     if (data === 'upload_cancel') {
       state.uploadQueue = null;
       state.directUploadFolderId = null;
-      bot.editMessageText("❌ <b>Fayllarni yuklash bekor qilindi.</b>", {
+      bot.editMessageText("❌ <b>Upload cancelled.</b>", {
         chat_id: chatId,
         message_id: query.message.message_id,
         parse_mode: 'HTML'
@@ -1429,7 +1496,7 @@ function setupBotHandlers() {
       if (text === '/cancelupload' && state.uploadQueue && state.uploadQueue.length > 0) {
         state.uploadQueue = null;
         state.directUploadFolderId = null;
-        bot.sendMessage(chatId, "❌ <b>Fayllarni yuklash bekor qilindi.</b>", { parse_mode: 'HTML' });
+        bot.sendMessage(chatId, "❌ <b>Upload cancelled.</b>", { parse_mode: 'HTML' });
         return;
       }
       
@@ -1440,7 +1507,7 @@ function setupBotHandlers() {
           state.uploadQueue.forEach(item => cat.resources.push(item));
           saveDb(db);
           
-          bot.sendMessage(chatId, `✅ <b>Muvaffaqiyatli saqlandi!</b>\n📂 <b>${cat.title}</b> papkasiga ${state.uploadQueue.length} ta fayl joylandi.`, {
+          bot.sendMessage(chatId, `✅ <b>Saved successfully!</b>\n📂 <b>${cat.title}</b> — ${state.uploadQueue.length} files published.`, {
             parse_mode: 'HTML',
             ...getKeyboardForCategory(cat.id, msg)
           });
@@ -1459,11 +1526,11 @@ function setupBotHandlers() {
             state.uploadQueue[index].title = newName;
             
             let fileList = state.uploadQueue.map((f, i) => `${i + 1}. 📄 ${f.title}`).join('\n');
-            bot.sendMessage(chatId, `✅ <b>${index + 1}-fayl nomi o'zgartirildi!</b>\n\n📋 Hozirgi holat:\n${fileList}`, { parse_mode: 'HTML' });
+            bot.sendMessage(chatId, `✅ <b>File ${index + 1} renamed!</b>\n\n📋 Current queue:\n${fileList}`, { parse_mode: 'HTML' });
             return;
           }
         }
-        bot.sendMessage(chatId, "⚠️ Xato format! Masalan: <code>/rename 1 Yangi Kitob Nomi</code>", { parse_mode: 'HTML' });
+        bot.sendMessage(chatId, "⚠️ Wrong format! Example: <code>/rename 1 New Book Name</code>", { parse_mode: 'HTML' });
         return;
       }
       
@@ -1475,7 +1542,7 @@ function setupBotHandlers() {
           });
           
           let fileList = state.uploadQueue.map((f, i) => `${i + 1}. 📄 ${f.title}`).join('\n');
-          bot.sendMessage(chatId, `✅ <b>Barcha fayllar nomi o'zgartirildi!</b>\n\n📋 Hozirgi holat:\n${fileList}`, { parse_mode: 'HTML' });
+          bot.sendMessage(chatId, `✅ <b>All files renamed!</b>\n\n📋 Current queue:\n${fileList}`, { parse_mode: 'HTML' });
           return;
         }
       }
@@ -1526,18 +1593,18 @@ function setupBotHandlers() {
     if (text === '📢 Broadcast Post') {
       if (!isUserAdmin(msg) && !state.isAdmin) return;
       state.postMode = 'awaiting_content';
-      bot.sendMessage(chatId, "📢 <b>Post yuborish rejimi:</b>\n\nIltimos, barcha obunachilarga yubormoqchi bo'lgan <b>matn, rasm, video yoki faylingizni</b> yuboring. Sizga avval namunasi ko'rsatiladi!", { parse_mode: 'HTML' });
+      bot.sendMessage(chatId, "📢 <b>Broadcast Mode:</b>\n\nSend the <b>text, photo, video or file</b> you want to broadcast to all subscribers. You'll see a preview before it's sent!", { parse_mode: 'HTML' });
       return;
     }
 
     if (text === '📎 Attach to Exam') {
       if (!isUserAdmin(msg) && !state.isAdmin) return;
       if (!db.exams || db.exams.length === 0) {
-        bot.sendMessage(chatId, "ℹ️ Hozircha biriktirish uchun testlar mavjud emas.");
+        bot.sendMessage(chatId, "ℹ️ No exams available to attach to.");
         return;
       }
       const inlineKeyboard = db.exams.map(e => [{ text: `📝 ${e.title}`, callback_data: `attach_exam_${e.id}` }]);
-      bot.sendMessage(chatId, "📝 <b>PDF yoki Video biriktirish uchun testni tanlang:</b>", {
+      bot.sendMessage(chatId, "📝 <b>Select exam to attach PDF or Video:</b>", {
         parse_mode: 'HTML',
         reply_markup: { inline_keyboard: inlineKeyboard }
       });
@@ -1549,19 +1616,19 @@ function setupBotHandlers() {
       const catId = state.currentParentId;
       const cat = db.categories.find(c => c.id === catId);
       if (!cat) {
-        bot.sendMessage(chatId, "⚠️ Iltimos, avval kerakli fanni yoki papkani oching!");
+        bot.sendMessage(chatId, "⚠️ Please open the correct subject folder first!");
         return;
       }
       state.directUploadFolderId = catId;
       state.uploadQueue = null;
       bot.sendMessage(chatId, 
-        `📥 <b>"${cat.title}" papkasiga yuklash:</b>\n\n` +
-        `Quyidagilarni yuboring:\n` +
-        `📄 PDF kitob yoki fayl\n` +
-        `🔗 Link (https://... yoki t.me/...)\n` +
+        `📥 <b>Upload to "${cat.title}":</b>\n\n` +
+        `Send any of the following:\n` +
+        `📄 PDF book or file\n` +
+        `🔗 Link (https://... or t.me/...)\n` +
         `🎥 Video\n` +
-        `🖼 Rasm\n\n` +
-        `💡 Bir nechta fayl/link yuborsangiz, hammasi navbatga tushadi va keyin saqlaysiz!`, { parse_mode: 'HTML' });
+        `🖼 Image\n\n` +
+        `💡 Send multiple files/links — they'll be queued and saved together!`, { parse_mode: 'HTML' });
       return;
     }
 
@@ -1576,7 +1643,7 @@ function setupBotHandlers() {
         }
         inlineKeyboard.push(row);
       }
-      bot.sendMessage(chatId, `🗑️ <b>O'chirish yoki tahrirlash uchun fanni tanlang:</b>`, {
+      bot.sendMessage(chatId, `🗑️ <b>Select a subject to manage resources:</b>`, {
         parse_mode: 'HTML',
         reply_markup: { inline_keyboard: inlineKeyboard }
       });
@@ -1696,7 +1763,7 @@ function setupBotHandlers() {
         }
         resKeyboard.push([{ text: '🏠 Main Menu' }, { text: '🔙 Go Back' }]);
 
-        bot.sendMessage(chatId, `📚 <b>${matchedCategory.title}</b> — ${resources.length} ta material:`, {
+        bot.sendMessage(chatId, `📚 <b>${matchedCategory.title}</b> — ${resources.length} resources:`, {
           parse_mode: 'HTML',
           reply_markup: {
             keyboard: resKeyboard,
@@ -1711,12 +1778,12 @@ function setupBotHandlers() {
             [{ text: '➕ Upload File / Link' }],
             [{ text: '🏠 Main Menu' }, { text: '🔙 Go Back' }]
           ];
-          bot.sendMessage(chatId, `📂 <b>${matchedCategory.title}</b> — hozircha material yo'q.\n\n📥 Fayl yuklash uchun "➕ Upload File / Link" bosing!`, {
+          bot.sendMessage(chatId, `📂 <b>${matchedCategory.title}</b> — no materials yet.\n\n📥 Tap "➕ Upload File / Link" to add resources!`, {
             parse_mode: 'HTML',
             reply_markup: { keyboard: emptyKeyboard, resize_keyboard: true }
           });
         } else {
-          bot.sendMessage(chatId, `ℹ️ <b>${matchedCategory.title}</b> — hozircha material yo'q. Tez orada qo'shiladi!`, {
+          bot.sendMessage(chatId, `ℹ️ <b>${matchedCategory.title}</b> — no materials yet. Coming soon!`, {
             parse_mode: 'HTML',
             ...getKeyboardForCategory(state.currentParentId, msg)
           });
