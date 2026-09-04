@@ -858,21 +858,15 @@ function setupBotHandlers() {
       return;
     }
 
-    const paperCats = db.categories.filter(c => c.parentId && (c.parentId.includes('applied') || c.parentId.includes('strategic') || c.parentId === 'cat_cfa' || c.parentId.includes('analytics') || c.parentId.includes('national')));
-    const inlineKeyboard = [];
+    // Show all ROOT categories (no parent) except Feedback
+    const rootCats = db.categories.filter(c => c.parentId === null && !c.isFeedback);
+    const inlineKeyboard = rootCats.map(c => [{ text: c.title, callback_data: `batch_root_${c.id}` }]);
 
-    for (let i = 0; i < paperCats.length; i += 2) {
-      const row = [{ text: paperCats[i].title, callback_data: `batch_select_paper_${paperCats[i].id}` }];
-      if (paperCats[i + 1]) {
-        row.push({ text: paperCats[i + 1].title, callback_data: `batch_select_paper_${paperCats[i + 1].id}` });
-      }
-      inlineKeyboard.push(row);
-    }
-
-    bot.sendMessage(chatId, `⚡ <b>TELEGRAM BATCH UPLOAD MODE</b>\n\n` +
-                            `1️⃣ Choose target subject paper below (e.g. 📘 F1, 1C, CFA L1, Python):\n` +
-                            `2️⃣ Next, select 10-50 files/textbooks at once in Telegram and send them all together!\n` +
-                            `All files will be saved automatically without extra prompts!`, {
+    bot.sendMessage(chatId,
+      `⚡ <b>BATCH UPLOAD MODE</b>\n\n` +
+      `1️⃣ Select the main subject area below\n` +
+      `2️⃣ Navigate into the subfolder you want\n` +
+      `3️⃣ Then drop 10–50 files — all saved automatically!`, {
       parse_mode: 'HTML',
       reply_markup: { inline_keyboard: inlineKeyboard }
     });
@@ -987,7 +981,7 @@ function setupBotHandlers() {
         title: title,
         type: type,
         value: value,
-        description: "Uploaded via Telegram"
+        description: ""
       });
 
       const count = state.uploadQueue.length;
@@ -1023,7 +1017,7 @@ function setupBotHandlers() {
           title: title,
           type: type,
           value: value,
-          description: "Uploaded via Telegram Admin Direct Upload"
+          description: ""
         };
         cat.resources.push(newRes);
         saveDb(db);
@@ -1036,18 +1030,11 @@ function setupBotHandlers() {
 
     state.pendingUpload = { type, value, title };
 
-    const inlineKeyboard = [];
-    const paperCats = db.categories.filter(c => c.parentId && (c.parentId.includes('applied') || c.parentId.includes('strategic') || c.parentId === 'cat_cfa' || c.parentId.includes('analytics') || c.parentId.includes('national')));
+    // Show all root categories (no parent) except Feedback
+    const rootCats = db.categories.filter(c => c.parentId === null && !c.isFeedback);
+    const inlineKeyboard = rootCats.map(c => [{ text: c.title, callback_data: `select_root_${c.id}` }]);
 
-    for (let i = 0; i < paperCats.length; i += 2) {
-      const row = [{ text: paperCats[i].title, callback_data: `select_paper_${paperCats[i].id}` }];
-      if (paperCats[i + 1]) {
-        row.push({ text: paperCats[i + 1].title, callback_data: `select_paper_${paperCats[i + 1].id}` });
-      }
-      inlineKeyboard.push(row);
-    }
-
-    bot.sendMessage(chatId, `📥 <b>Resource Received:</b>\n"<i>${title}</i>"\n\n👇 <b>Select target subject paper:</b>`, {
+    bot.sendMessage(chatId, `📥 <b>Resource Received:</b>\n"<i>${title}</i>"\n\n👇 <b>Select target subject area:</b>`, {
       parse_mode: 'HTML',
       reply_markup: { inline_keyboard: inlineKeyboard }
     });
@@ -1347,50 +1334,138 @@ function setupBotHandlers() {
       bot.answerCallbackQuery(query.id);
     }
 
-    if (data.startsWith('batch_select_paper_')) {
-      const paperId = data.replace('batch_select_paper_', '');
-      const subFolders = db.categories.filter(c => c.parentId === paperId);
+    // BATCH: Step 1 — user picked a root category, show its children
+    if (data.startsWith('batch_root_')) {
+      const rootId = data.replace('batch_root_', '');
+      const rootCat = db.categories.find(c => c.id === rootId);
+      const children = db.categories.filter(c => c.parentId === rootId);
 
-      const inlineKeyboard = subFolders.map(sf => [{ text: sf.title, callback_data: `set_batch_target_${sf.id}` }]);
+      if (children.length === 0) {
+        // No sub-folders — use root directly as target
+        state.batchTargetFolderId = rootId;
+        state.batchSavedCount = 0;
+        bot.editMessageText(
+          `⚡ <b>BATCH MODE ACTIVE!</b>\n\n` +
+          `📁 <b>Target:</b> ${rootCat ? rootCat.title : rootId}\n\n` +
+          `📥 Drop your files now — all saved automatically!\n` +
+          `🔴 Type /done when finished.`, {
+          chat_id: chatId, message_id: query.message.message_id, parse_mode: 'HTML'
+        });
+      } else {
+        const inlineKeyboard = children.map(c => [{ text: c.title, callback_data: `batch_mid_${c.id}` }]);
+        inlineKeyboard.push([{ text: '🔙 Back', callback_data: 'batch_back_root' }]);
+        bot.editMessageText(`📂 <b>${rootCat ? rootCat.title : rootId}</b>\n\nSelect a subfolder:`, {
+          chat_id: chatId, message_id: query.message.message_id, parse_mode: 'HTML',
+          reply_markup: { inline_keyboard: inlineKeyboard }
+        });
+      }
+      bot.answerCallbackQuery(query.id);
+    }
 
-      bot.editMessageText(`⚡ <b>Select subfolder for batch upload:</b>`, {
-        chat_id: chatId,
-        message_id: query.message.message_id,
-        parse_mode: 'HTML',
+    // BATCH: Step 2 — user picked a mid-level folder, show its children or use it
+    else if (data.startsWith('batch_mid_')) {
+      const midId = data.replace('batch_mid_', '');
+      const midCat = db.categories.find(c => c.id === midId);
+      const children = db.categories.filter(c => c.parentId === midId);
+
+      if (children.length === 0) {
+        // No deeper folders — use this as the target
+        state.batchTargetFolderId = midId;
+        state.batchSavedCount = 0;
+        bot.editMessageText(
+          `⚡ <b>BATCH MODE ACTIVE!</b>\n\n` +
+          `📁 <b>Target:</b> ${midCat ? midCat.title : midId}\n\n` +
+          `📥 Drop your files now — all saved automatically!\n` +
+          `🔴 Type /done when finished.`, {
+          chat_id: chatId, message_id: query.message.message_id, parse_mode: 'HTML'
+        });
+      } else {
+        const inlineKeyboard = children.map(c => [{ text: c.title, callback_data: `set_batch_target_${c.id}` }]);
+        inlineKeyboard.push([{ text: '🔙 Back', callback_data: `batch_root_${midCat ? midCat.parentId : ''}` }]);
+        bot.editMessageText(`📂 <b>${midCat ? midCat.title : midId}</b>\n\nSelect a folder to upload into:`, {
+          chat_id: chatId, message_id: query.message.message_id, parse_mode: 'HTML',
+          reply_markup: { inline_keyboard: inlineKeyboard }
+        });
+      }
+      bot.answerCallbackQuery(query.id);
+    }
+
+    // BATCH: back to root list
+    else if (data === 'batch_back_root') {
+      const rootCats = db.categories.filter(c => c.parentId === null && !c.isFeedback);
+      const inlineKeyboard = rootCats.map(c => [{ text: c.title, callback_data: `batch_root_${c.id}` }]);
+      bot.editMessageText(`⚡ <b>BATCH UPLOAD MODE</b>\n\nSelect the main subject area:`, {
+        chat_id: chatId, message_id: query.message.message_id, parse_mode: 'HTML',
         reply_markup: { inline_keyboard: inlineKeyboard }
       });
       bot.answerCallbackQuery(query.id);
-    } else if (data.startsWith('set_batch_target_')) {
+    }
+
+    // BATCH: Step 3 (legacy / leaf) — set final target folder
+    else if (data.startsWith('set_batch_target_')) {
       const folderId = data.replace('set_batch_target_', '');
       const cat = db.categories.find(c => c.id === folderId);
       state.batchTargetFolderId = folderId;
       state.batchSavedCount = 0;
 
-      bot.editMessageText(`⚡ <b>BATCH MODE ACTIVE!</b>\n\n` +
-                         `📁 <b>Target Folder:</b> ${cat ? cat.title : folderId}\n\n` +
-                         `📥 Drop 10-50 files at once into Telegram now! All items will be saved directly into this folder.\n\n` +
-                         `🔴 Type /done when finished.`, {
-        chat_id: chatId,
-        message_id: query.message.message_id,
-        parse_mode: 'HTML'
+      bot.editMessageText(
+        `⚡ <b>BATCH MODE ACTIVE!</b>\n\n` +
+        `📁 <b>Target Folder:</b> ${cat ? cat.title : folderId}\n\n` +
+        `📥 Drop 10–50 files into chat — all saved automatically!\n` +
+        `🔴 Type /done when finished.`, {
+        chat_id: chatId, message_id: query.message.message_id, parse_mode: 'HTML'
       });
       bot.answerCallbackQuery(query.id);
-    } else if (data.startsWith('select_paper_')) {
-      const paperId = data.replace('select_paper_', '');
-      const subFolders = db.categories.filter(c => c.parentId === paperId);
+    // SINGLE UPLOAD: Step 1 — user picked a root category, show its children
+    else if (data.startsWith('select_root_')) {
+      const rootId = data.replace('select_root_', '');
+      const rootCat = db.categories.find(c => c.id === rootId);
+      const children = db.categories.filter(c => c.parentId === rootId);
 
-      if (subFolders.length === 0) {
-        saveResourceToDb(chatId, paperId);
+      if (children.length === 0) {
+        saveResourceToDb(chatId, rootId);
         bot.answerCallbackQuery(query.id);
         return;
       }
 
-      const inlineKeyboard = subFolders.map(sf => [{ text: sf.title, callback_data: `save_to_${sf.id}` }]);
+      const inlineKeyboard = children.map(c => [{ text: c.title, callback_data: `select_mid_${c.id}` }]);
+      inlineKeyboard.push([{ text: '🔙 Back', callback_data: 'select_back_root' }]);
 
-      bot.editMessageText(`📁 <b>Select exact subfolder:</b>`, {
-        chat_id: chatId,
-        message_id: query.message.message_id,
-        parse_mode: 'HTML',
+      bot.editMessageText(`📂 <b>${rootCat ? rootCat.title : rootId}</b>\n\nSelect a subfolder:`, {
+        chat_id: chatId, message_id: query.message.message_id, parse_mode: 'HTML',
+        reply_markup: { inline_keyboard: inlineKeyboard }
+      });
+      bot.answerCallbackQuery(query.id);
+    }
+
+    // SINGLE UPLOAD: Step 2 — user picked a mid-level folder, show its children or save
+    else if (data.startsWith('select_mid_')) {
+      const midId = data.replace('select_mid_', '');
+      const midCat = db.categories.find(c => c.id === midId);
+      const children = db.categories.filter(c => c.parentId === midId);
+
+      if (children.length === 0) {
+        saveResourceToDb(chatId, midId);
+        bot.answerCallbackQuery(query.id);
+        return;
+      }
+
+      const inlineKeyboard = children.map(c => [{ text: c.title, callback_data: `save_to_${c.id}` }]);
+      inlineKeyboard.push([{ text: '🔙 Back', callback_data: `select_root_${midCat ? midCat.parentId : ''}` }]);
+
+      bot.editMessageText(`📂 <b>${midCat ? midCat.title : midId}</b>\n\nSelect exact folder to save:`, {
+        chat_id: chatId, message_id: query.message.message_id, parse_mode: 'HTML',
+        reply_markup: { inline_keyboard: inlineKeyboard }
+      });
+      bot.answerCallbackQuery(query.id);
+    }
+
+    // SINGLE UPLOAD: Back to root
+    else if (data === 'select_back_root') {
+      const rootCats = db.categories.filter(c => c.parentId === null && !c.isFeedback);
+      const inlineKeyboard = rootCats.map(c => [{ text: c.title, callback_data: `select_root_${c.id}` }]);
+      bot.editMessageText(`👇 <b>Select target subject area:</b>`, {
+        chat_id: chatId, message_id: query.message.message_id, parse_mode: 'HTML',
         reply_markup: { inline_keyboard: inlineKeyboard }
       });
       bot.answerCallbackQuery(query.id);
@@ -1416,7 +1491,7 @@ function setupBotHandlers() {
       title: state.pendingUpload.title,
       type: state.pendingUpload.type,
       value: state.pendingUpload.value,
-      description: "Directly published via Telegram Admin Mode"
+      description: ""
     };
 
     cat.resources.push(newRes);
