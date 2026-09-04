@@ -683,8 +683,27 @@ function renderSearchResults(query) {
 }
 
 // RESTORE MASTER FULL DB
+async function downloadBackup() {
+  try {
+    const res = await fetch('/api/admin/export-db');
+    if (!res.ok) { alert('Failed to download backup!'); return; }
+    const blob = await res.blob();
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'db.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  } catch (err) {
+    alert('Error downloading backup: ' + err.message);
+  }
+}
+
 async function restoreFullMasterDb() {
   if (!confirm("Are you sure you want to restore and resync all 96 ACCA and CFA master category folders?")) return;
+
 
   try {
     const res = await fetch('/api/admin/restore-full-db', { method: 'POST' });

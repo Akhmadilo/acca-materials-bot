@@ -113,18 +113,16 @@
             <button class="btn btn-primary" onclick="openAddResourceCurrentFolder()">
               <i class="fa-solid fa-plus"></i> Add File / Resource
             </button>
-            <button class="btn btn-secondary" onclick="openBatchAddModal()">
-              <i class="fa-solid fa-bolt"></i> Batch Upload (50 Books)
-            </button>
+
             <button class="btn btn-secondary" onclick="openAddCategoryModalCurrent()">
               <i class="fa-solid fa-folder-plus"></i> New Folder
             </button>
             <button class="btn btn-success" onclick="restoreFullMasterDb()" title="Restore all 96 master categories">
               <i class="fa-solid fa-rotate"></i> Sync Full DB
             </button>
-            <a href="/api/admin/export-db" download="db.json" class="btn btn-secondary" title="Download latest database backup file to keep books permanent">
+            <button class="btn btn-secondary" onclick="downloadBackup()" title="Download latest database backup file to keep books permanent">
               <i class="fa-solid fa-download"></i> Save Backup (db.json)
-            </a>
+            </button>
           </div>
         </div>
 
