@@ -1631,6 +1631,132 @@
       "parentId": "cat_fin_modeling",
       "order": 3,
       "resources": []
+    },
+    {
+      "id": "cat_islamic_finance",
+      "title": "🌙 Islamic Finance",
+      "parentId": null,
+      "order": 6,
+      "resources": []
+    },
+    {
+      "id": "cat_economics",
+      "title": "📚 Economics",
+      "parentId": null,
+      "order": 7,
+      "resources": []
+    },
+    {
+      "id": "cat_econ_micro",
+      "title": "🔬 Microeconomics",
+      "parentId": "cat_economics",
+      "order": 1,
+      "resources": []
+    },
+    {
+      "id": "cat_econ_macro",
+      "title": "🌍 Macroeconomics",
+      "parentId": "cat_economics",
+      "order": 2,
+      "resources": []
+    },
+    {
+      "id": "cat_econ_international",
+      "title": "✈️ International Economics & Trade",
+      "parentId": "cat_economics",
+      "order": 3,
+      "resources": []
+    },
+    {
+      "id": "cat_econ_development",
+      "title": "🌱 Development Economics",
+      "parentId": "cat_economics",
+      "order": 4,
+      "resources": []
+    },
+    {
+      "id": "cat_econ_econometrics",
+      "title": "📉 Econometrics & Statistics",
+      "parentId": "cat_economics",
+      "order": 5,
+      "resources": []
+    },
+    {
+      "id": "cat_econ_monetary",
+      "title": "🏦 Monetary & Financial Economics",
+      "parentId": "cat_economics",
+      "order": 6,
+      "resources": []
+    },
+    {
+      "id": "cat_econ_public",
+      "title": "🏛️ Public Economics & Fiscal Policy",
+      "parentId": "cat_economics",
+      "order": 7,
+      "resources": []
+    },
+    {
+      "id": "cat_econ_behavioral",
+      "title": "🧠 Behavioral Economics",
+      "parentId": "cat_economics",
+      "order": 8,
+      "resources": []
+    },
+    {
+      "id": "cat_if_foundations",
+      "title": "☪️ Foundations of Islamic Finance",
+      "parentId": "cat_islamic_finance",
+      "order": 1,
+      "resources": []
+    },
+    {
+      "id": "cat_if_banking",
+      "title": "🏦 Islamic Banking & Products",
+      "parentId": "cat_islamic_finance",
+      "order": 2,
+      "resources": []
+    },
+    {
+      "id": "cat_if_capital_markets",
+      "title": "📊 Islamic Capital Markets & Sukuk",
+      "parentId": "cat_islamic_finance",
+      "order": 3,
+      "resources": []
+    },
+    {
+      "id": "cat_if_takaful",
+      "title": "🛡️ Takaful (Islamic Insurance)",
+      "parentId": "cat_islamic_finance",
+      "order": 4,
+      "resources": []
+    },
+    {
+      "id": "cat_if_accounting",
+      "title": "📒 Islamic Accounting & AAOIFI Standards",
+      "parentId": "cat_islamic_finance",
+      "order": 5,
+      "resources": []
+    },
+    {
+      "id": "cat_if_law",
+      "title": "⚖️ Shariah Law & Fiqh al-Muamalat",
+      "parentId": "cat_islamic_finance",
+      "order": 6,
+      "resources": []
+    },
+    {
+      "id": "cat_if_fintech",
+      "title": "💡 Islamic Fintech & Digital Finance",
+      "parentId": "cat_islamic_finance",
+      "order": 7,
+      "resources": []
+    },
+    {
+      "id": "cat_if_certifications",
+      "title": "🎓 CIFE / CIFP / CIPA Certifications",
+      "parentId": "cat_islamic_finance",
+      "order": 8,
+      "resources": []
     }
   ],
   "feedback_messages": [
