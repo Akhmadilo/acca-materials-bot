@@ -15,13 +15,7 @@
       "bank_name": "Uzcard / Humo",
       "note": "Loyiha va bot rivojiga hissa qo'shganingiz uchun rahmat!"
     },
-    "required_channels": [
-      {
-        "username": "@Finance_Ahmadillo",
-        "title": "Finance Ahmadillo Channel",
-        "link": "https://t.me/Finance_Ahmadillo"
-      }
-    ]
+    "required_channels": []
   },
   "subscribers": [
     {
@@ -44,6 +38,20 @@
       "last_name": "",
       "username": "ahmadillo_o2",
       "joined_at": "2026-08-12T11:26:13.275Z"
+    },
+    {
+      "id": 6835598330,
+      "first_name": "Xolmirzayeva M",
+      "last_name": "",
+      "username": "Xolmirzayeva_MM",
+      "joined_at": "2026-09-04T16:21:08.769Z"
+    },
+    {
+      "id": 8802518062,
+      "first_name": "Akhmadillo",
+      "last_name": "",
+      "username": "a23262002",
+      "joined_at": "2026-09-04T17:45:08.483Z"
     }
   ],
   "categories": [
@@ -282,101 +290,115 @@
         },
         {
           "id": "res_1785394442332gizb",
-          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 1 Introduction to F1, types of organisation\n\n✅",
+          "title": "ACCA F1 - 1 Introduction to F1, types of organisation✅",
           "type": "file_id",
           "value": "BAACAgIAAxkBAAIDaWpq9Ql4Kd5hWc0lp-RyL74BTNaOAAIkBAACTmLZSPuxZ0TRC5EKPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "description": "Uploaded via Telegram Admin Direct Upload",
+          "items": []
         },
         {
           "id": "res_1785394442334mvc6",
-          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 2 Planning, marketing, organisation structure\n\n✅",
+          "title": "ACCA F1 - 2 Planning, marketing, organisation structure✅",
           "type": "file_id",
           "value": "BAACAgIAAxkBAAIDampq9QmBqLReOELGVE-mLkQrvfMOAAJ-BQACax7QSNwzCTPonOI_PQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "description": "Uploaded via Telegram Admin Direct Upload",
+          "items": []
         },
         {
           "id": "res_1785394442336gt09",
-          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 3 Span of control, scalar chain, (de) centralisation\n\n✅",
+          "title": "ACCA F1 - 3 Span of control, scalar chain, (de) centralisation✅",
           "type": "file_id",
           "value": "BAACAgIAAxkBAAIDa2pq9QlzFD-rkc3ZYNi93dEj3lF2AAJfBAAC_0LYSA3QoKnguHwyPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "description": "Uploaded via Telegram Admin Direct Upload",
+          "items": []
         },
         {
           "id": "res_1785394442337i2fb",
-          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 4 Culture\n\n✅",
+          "title": "ACCA F1 - 4 Culture✅",
           "type": "file_id",
           "value": "BAACAgIAAxkBAAIDbGpq9QkhRr4TLyPfVP-GwWW9hMNHAAI4BAACTmLZSECVY_sSV5sEPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "description": "Uploaded via Telegram Admin Direct Upload",
+          "items": []
         },
         {
           "id": "res_1785394442339463c",
-          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 5 Stakeholders\n\n✅",
+          "title": "ACCA F1 - 5 Stakeholders✅",
           "type": "file_id",
           "value": "BAACAgIAAxkBAAIDbWpq9QnkxOL3cF-n9aUrTXL1qyszAAI5BAACTmLZSEwH2iFmAAE-1j0E",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "description": "Uploaded via Telegram Admin Direct Upload",
+          "items": []
         },
         {
           "id": "res_1785394442341v7i1",
-          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 6 Committees\n\n✅",
+          "title": "ACCA F1 - 6 Committees✅",
           "type": "file_id",
           "value": "BAACAgIAAxkBAAIDbmpq9QmRy95UxqDZVs7jRlHLWCwqAAJ-BAACax7YSNEvjLVj3B-bPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "description": "Uploaded via Telegram Admin Direct Upload",
+          "items": []
         },
         {
           "id": "res_17853944423436782",
-          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 7 Information systems\n\n✅",
+          "title": "ACCA F1 - 7 Information systems✅",
           "type": "file_id",
           "value": "BAACAgIAAxkBAAIDb2pq9QmCqDU3SYjilTQDUCMh6J5UAAJ_BAACax7YSCxcbNqSjYbtPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "description": "Uploaded via Telegram Admin Direct Upload",
+          "items": []
         },
         {
           "id": "res_1785394442344fcnn",
-          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 8 Ethics and corporate governance\n\n✅",
+          "title": "ACCA F1 - 8 Ethics and corporate governance✅",
           "type": "file_id",
           "value": "BAACAgIAAxkBAAIDcGpq9QkyYDYXud6qnrprLjwS3WIDAAJ2BAACTmLZSJtRkf582t1uPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "description": "Uploaded via Telegram Admin Direct Upload",
+          "items": []
         },
         {
           "id": "res_1785394442432gyt5",
-          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 9 Environmental influences\n\n✅",
+          "title": "ACCA F1 - 9 Environmental influences✅",
           "type": "file_id",
           "value": "BAACAgIAAxkBAAIDcWpq9QkCxaMJFNNG5E1PQAkUjnfoAAJ3BAACTmLZSKz1uM46l7woPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "description": "Uploaded via Telegram Admin Direct Upload",
+          "items": []
         },
         {
           "id": "res_1785394442434xxmu",
-          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 10 Role of accounting in business\n\n✅",
+          "title": "ACCA F1 - 10 Role of accounting in business✅",
           "type": "file_id",
           "value": "BAACAgIAAxkBAAIDcmpq9Ql60dY2Doy-JlHjkoQOxBZRAAKGBAAC_0LYSPAfV91qLDyhPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "description": "Uploaded via Telegram Admin Direct Upload",
+          "items": []
         },
         {
           "id": "res_1785394442436pabe",
-          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 11 Functions of accounting and internal control\n\n✅",
+          "title": "ACCA F1 - 11 Functions of accounting and internal control✅",
           "type": "file_id",
           "value": "BAACAgIAAxkBAAIDc2pq9Qkt433ACf71uYXFiyhePDOKAAJ4BAACTmLZSGmFi-8RsRjXPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "description": "Uploaded via Telegram Admin Direct Upload",
+          "items": []
         },
         {
           "id": "res_1785394442438zmdc",
-          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 12 Leadership, management and teams\n\n✅",
+          "title": "ACCA F1 - 12 Leadership, management and teams✅",
           "type": "file_id",
           "value": "BAACAgIAAxkBAAIDdGpq9Qn6unWxutVMAAEekzbdPx-UtgACeQQAAk5i2UgWN5boj0WPPT0E",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "description": "Uploaded via Telegram Admin Direct Upload",
+          "items": []
         },
         {
           "id": "res_17853944424395bu8",
-          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 13 Motivating individuals and groups\n\n✅",
+          "title": "ACCA F1 - 13 Motivating individuals and groups✅",
           "type": "file_id",
           "value": "BAACAgIAAxkBAAIDdWpq9QlC4psctYcBkekxWCTQP88QAAJ6BAACTmLZSAdLl2_pI-IbPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "description": "Uploaded via Telegram Admin Direct Upload",
+          "items": []
         },
         {
           "id": "res_1785394442441s9gh",
-          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 14 Recruitment and development\n\n✅",
+          "title": "ACCA F1 - 14 Recruitment and development✅",
           "type": "file_id",
           "value": "BAACAgIAAxkBAAIDdmpq9QnP1PEYrk8LKg6q7P91e5L9AAKIBAAC_0LYSL8NGJ7HHHrqPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "description": "Uploaded via Telegram Admin Direct Upload",
+          "items": []
         }
       ]
     },
@@ -410,10 +432,11 @@
       "resources": [
         {
           "id": "res_cat_f2_ch1",
-          "title": "📢 F2 Telegram Channel",
+          "title": "F2 Management Accounting",
           "type": "link",
-          "value": "https://t.me/Finance_Ahmadillo",
-          "description": "F2 official Telegram channels & discussion groups"
+          "value": "https://t.me/F2managmentaccounting",
+          "description": "F2 official Telegram channels & discussion groups",
+          "items": []
         }
       ]
     },
@@ -424,11 +447,81 @@
       "order": 2,
       "resources": [
         {
-          "id": "res_cat_f2_b1",
-          "title": "📖 F2 Kaplan Study Text & Revision Kit",
-          "type": "link",
-          "value": "https://t.me/Finance_Ahmadillo",
-          "description": "F2 Kaplan & BPP latest exam kits and textbooks"
+          "id": "res_17885236006227pz1",
+          "title": "F2 Bpp kit 2024.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIJvWqatB3_qvFQGPfvLqz_6TCw0WHUAAJdqgACfb9gSexY6YaZpDifPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1788523600623oi07",
+          "title": "F2 Kaplan Kit 2025.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIJvmqatB31Gw5o9RFvHGrfz2jaawYbAAJeqgACfb9gSZYoIf5owoshPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1788523600624xia2",
+          "title": "MA KAPLAN  POCKET NOTES.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIJv2qatB2cSLggdn0EOf9m9qYQNzPFAAJfqgACfb9gSWSP5nFpwUatPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1788523600625ln94",
+          "title": "ACCA F2 marathon notes.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIJwGqatB3PV0sXIJK792TJ0L6nGavoAALWpgACuLa4SdBJp7xy7NdRPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_178852360062523vv",
+          "title": "FMA Practice Theoretical MCQs with answer key updated.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIJwWqatB2RdhHFlJJr6zaF3WW6a4JeAAJnnwACF2Y5So-7VLDjfv3NPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1788523600627vfoq",
+          "title": "MA formula sheet and table wef S19.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIJwmqatB18gHPLxNgCvQ7USJjqIAtLAAJpnwACF2Y5SqBxefIYVRJePQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1788523600628vphu",
+          "title": "MA KAPLAN  POCKET NOTES.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIJw2qatB0kl-idsw0en8HojHOnuebiAAJqnwACF2Y5SqeYAAGnlw46Dz0E",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1788523600628n4ph",
+          "title": "MA EXAM KIT-KAPLAN (24-25) ISDC.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIJxGqatB10RXrMGBXQPgbJe5ggtcRwAAJrnwACF2Y5SjrcUEvVUFXVPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1788523600629udnt",
+          "title": "MAFMA_ESSENTIALS_2024.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIJxWqatB2nHJzNHvqMsH4sTBpit48aAAKelgACRYXQSgcIDiSs9b7xPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1788523600630o5r8",
+          "title": "F2 Marathon Revision Notes(StudyBuddies).pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIJxmqatB1E2OmbUaz40Y_bUepqozc3AAK7ngACwZjpSsL-j5NakAboPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1788523600631m7lo",
+          "title": "F2 Kaplan Kit.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIJx2qatB36P7oCa459-eaEiNuf7k7bAAIqrgACB7PBSLi2e7eAk4yNPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
         }
       ]
     },
@@ -439,11 +532,176 @@
       "order": 3,
       "resources": [
         {
-          "id": "res_cat_f2_v1",
-          "title": "🎥 F2 Complete Video Course",
+          "id": "res_1788523684230ag30",
+          "title": "Session 1.1 - Introduction to Management Accounting",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAIJ_WqatKPSquevmzCI82e2k0OCiYFYAALpJAAC2yrwS4v7cOnrb8QTPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_178852368423124fr",
+          "title": "Session 1.2 - Cost Classification And Cost Behaviour",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAIJ_mqatKPVxizf_H4sUwS852WB8PU7AALqJAAC2yrwS3kQODhWTsh-PQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1788523684232m3i6",
+          "title": "Session 2.2 - Labour Costs - Part 1",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAIJ_2qatKPYTSouIUtegVLhaznliSBIAAK3JAAC2yrwSzzMdL5rQGdAPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1788523684232x7u0",
+          "title": "Session 2.3 - Labour Costs - Part 2.flv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIKAAFqmrSjqCnDs-j3fIiu_-BWvhJ-5wACwiQAAtsq8EsD2PUZp1Cj3j0E",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_178852368423366l9",
+          "title": "Session 3.1 - Overheads and Absorption Costing - Part 1 .flv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIKAWqatKOoFNkjQhoIDyNaB-_kM-ByAALTJAAC2yrwSz2ZogAB6VIujj0E",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_178852368423462of",
+          "title": "Session 3.2 - Overheads and Absorption Costing - Part 2.flv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIKAmqatKNGZonxx2FPH-qCTJxgUsqmAALXJAAC2yrwS9IgPnM_lJIOPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_17885236842340qzp",
+          "title": "Session 4.1 - Marginal Costing.flv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIKA2qatKOZZLMJaewsyo1RR-qvMUsTAALaJAAC2yrwS9xcWnuoUN7-PQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1788523684235gx72",
+          "title": "Session 4.2 - Decision Making - CVP (Breakeven analysis).flv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIKBGqatKPmUaNKwaii53emKJIYyBpmAALcJAAC2yrwS6mq6GwU2DNSPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1788523684236p0t4",
+          "title": "Session 5.1 - Business Math - part 1.flv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIKBWqatKNxmcrRAbsAAXr4TT21gJCU3AAC4CQAAtsq8EvUaadWYigbuj0E",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1788523684236rwww",
+          "title": "Session 5.2 - Business Math - part 2.flv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIKBmqatKMazig6MUMkfKf_G5-DzDDJAALiJAAC2yrwS2-JdF6Qm87jPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1788523684237oqy1",
+          "title": "Session 6.1 - Bookkeeping.flv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIKB2qatKOX0TwUTuQ7g3r7y0Fej9mQAALuJAAC2yrwSzk1mZcB-8-KPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1788523684238mcxc",
+          "title": "Session 6.2 - Process Costing - Costing Methods.flv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIKCGqatKO7C5Qk8XJ3uwf_rScmU97rAALyJAAC2yrwS9ID20nk8ehlPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1788523684238bhh8",
+          "title": "Session 7.1 - Process Costing - Work In Process.flv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIKCWqatKPUaoCcCrNSiyYq9d1Mn1U0AAL0JAAC2yrwS8TSbgUok6v9PQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1788523684239nebs",
+          "title": "Session_7_2_Process_Costing_Joint_Product,_By_product,_Service_costing.flv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIKCmqatKObuaWfLJXHiiSnlK6RybNXAAL3JAAC2yrwS0E4FiqwNXkHPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1788523684240hitg",
+          "title": "Session 8.1 - Budgeting 1 - Intro, and functional budget.flv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIKC2qatKMs5pQXPCwe2YJuYQ9sdIUiAAL_JAAC2yrwS3ncZHgMTjDtPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1788523684240dgsi",
+          "title": "Session 8.2 - Budgeting 2 - Flexible budget.flv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIKDGqatKNF_5qrzhkMIjRzrXh4CujeAAMlAALbKvBL30vpIn1SUeI9BA",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1788523684241636d",
+          "title": "Session_9_1_Decision_Making_Limiting_factor_and_liner_programming.flv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIKDWqatKOnjdcUs2jPMhB17rHjPvDaAAIBJQAC2yrwS05-DsGZRmA9PQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1788523684241887j",
+          "title": "Session_9_2_Decision_Making_Further_processing_decision_And_Relevant.flv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIKDmqatKPCHf0HiLkHWNE1BAFSw6SbAAICJQAC2yrwS1ZaO9XTddF2PQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_178852368424283pp",
+          "title": "Session 10.1 - Variance 1.flv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIKD2qatKPt5oqKki7Oop1I0mZBwh8KAAIDJQAC2yrwS0od4P3Z4XMzPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_17885236842438ejy",
+          "title": "Session 10.2 - Variance 2.flv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIKEGqatKPO1KUDUnFqfjQfLqGqac_7AAIEJQAC2yrwS-2bhQLOfAG6PQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1788526495330l8wq",
+          "title": "ACCA Management Accountancy (MA/F2)",
           "type": "link",
-          "value": "https://youtube.com",
-          "description": "F2 comprehensive lecture series"
+          "value": "https://youtube.com/playlist?list=PLWoTw-Fm_fzukPGSq_kU2R9_WOTuOq2Q0&si=jjy5xHOgQmSTEFmL",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_17885265270110f2z",
+          "title": "ACCA MA (F2)",
+          "type": "link",
+          "value": "https://youtube.com/playlist?list=PLnVJHvKQ_i501ueG73_08MmIwNM1EwFV7&si=T6tFjMFdc1KFk9_7",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1788526545372wp5f",
+          "title": "ACCA Management Accounting MA FMA",
+          "type": "link",
+          "value": "https://youtube.com/playlist?list=PLETfu1oU9uLyyg_h1solInawqb_7UMl6V&si=c_IhdtztBQkOrTPv",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1788526570958jvt4",
+          "title": "Tony Bell's Free Managerial Accounting Playlist",
+          "type": "link",
+          "value": "https://youtube.com/playlist?list=PLSlzC-HFo7w7TwAnmyThgdTDL_M0xG1P6&si=DCXc0ntYyFOWJOYP",
+          "description": "",
+          "items": []
         }
       ]
     },
@@ -454,11 +712,12 @@
       "order": 4,
       "resources": [
         {
-          "id": "res_cat_f2_yt1",
-          "title": "🔍 F2 YouTube Channel",
+          "id": "res_1788526641304arqh",
+          "title": "Tony Bell",
           "type": "link",
-          "value": "https://youtube.com",
-          "description": "F2 recommended YouTube tutorial channels"
+          "value": "http://www.youtube.com/@Tony-Bell",
+          "description": "",
+          "items": []
         }
       ]
     },
@@ -479,8 +738,17 @@
           "id": "res_cat_f3_ch1",
           "title": "📢 F3 Telegram Channel",
           "type": "link",
-          "value": "https://t.me/Finance_Ahmadillo",
-          "description": "F3 official Telegram channels & discussion groups"
+          "value": "https://t.me/ACCA_F3_FA",
+          "description": "F3 official Telegram channels & discussion groups",
+          "items": []
+        },
+        {
+          "id": "res_1788526912931sjsy",
+          "title": "F3 Financial Accounting",
+          "type": "link",
+          "value": "https://t.me/f3financialaccounting",
+          "description": "",
+          "items": []
         }
       ]
     },
@@ -491,11 +759,95 @@
       "order": 2,
       "resources": [
         {
-          "id": "res_cat_f3_b1",
-          "title": "📖 F3 Kaplan Study Text & Revision Kit",
-          "type": "link",
-          "value": "https://t.me/Finance_Ahmadillo",
-          "description": "F3 Kaplan & BPP latest exam kits and textbooks"
+          "id": "res_17885270503408t79",
+          "title": "FA1 Kaplan kit.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIKb2qawcqGVlVSjCXs2v_420z0ypA2AAK3dAACZPHAS4_1jKaINBDiPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1788527050341u9u8",
+          "title": "FA1 Kaplan Book (1).pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIKcGqawcpP0tMKDHv7gNT-zHItUSABAAK4dAACZPHAS5-vujac88yuPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1788527050342wtvg",
+          "title": "FA1 Kaplan kit.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIKcWqawcrHDA05fvIKgEaR06yriNKcAAIVgQACmuKBSIhw8ebGUgHjPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1788527050343hje7",
+          "title": "FA1_Summary_Notes NEW.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIKcmqawcowzXf4_EscEnyTxTWHxm9QAAIjgQACmuKBSBh30Ny4T7ItPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_17885270503430uw3",
+          "title": "FA2-BPP-KIT-pdf.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIKc2qawcqNS9m4pjnrWWxila8iGhNhAAJLgQACmuKBSPmflDZNM-xlPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_17885270503446lnw",
+          "title": "FA2-2023-2024-EK.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIKdGqawcrNXC6VEFAtngRnWGHKu4FLAAJMgQACmuKBSAmDl8E08vqjPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1788527050345jwnn",
+          "title": "FA1; Bpp Kit.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIKdWqawcoYSF_tvC9fKWefQCbvjzHnAAKifAAC2YdhSXUkcFY4ea0FPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1788527050345ihxm",
+          "title": "3 FA1-Kaplan EXAM kit 2025.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIKdmqawcrYw2esXx_pAQttocO8LstlAAJPjwACjwhZSUHAty4HTAqzPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1788527050346gqg2",
+          "title": "FA1;EXAM KIT;KAPLAN PUBLISHING.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIKd2qawcof2uac37OBLHZYWTkxIe8IAAKtfAAC2YdhSZt4ogil61h-PQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1788527050347gsxv",
+          "title": "FA_FFA(kit)​  2025-26.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIKeGqawco0FGUVDHyAymnI3y52bnloAALwmwAC0_VYSfnASgxNZ0y1PQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1788527050347wotr",
+          "title": "FA1 (kit).pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIKeWqawcprD2_W_koee9k8DM6MFKdnAALxmwAC0_VYSfl5jlvHWHrJPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_178852705034818xr",
+          "title": "AA_Exam_Kit_2025-26_ISDC (1).pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIKemqawcq9-7gKVf7x3fG9N1Z1-J6-AALymwAC0_VYSfn35aSYOcf8PQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1788527050349oenh",
+          "title": "Basics Accounting .pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIKe2qawcpXCgsekG_wTxH6PZN4atDWAAJwGQAClepgVQomrjZwkCuVPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
         }
       ]
     },
@@ -507,10 +859,27 @@
       "resources": [
         {
           "id": "res_cat_f3_v1",
-          "title": "🎥 F3 Complete Video Course",
+          "title": "ACCA FA (F3) - Financial Accounting Course",
           "type": "link",
-          "value": "https://youtube.com",
-          "description": "F3 comprehensive lecture series"
+          "value": "https://youtube.com/playlist?list=PLnVJHvKQ_i51h7fFOkLghFbPgFt99eS6l&si=JZivuE69TouO5s52",
+          "description": "F3 comprehensive lecture series",
+          "items": []
+        },
+        {
+          "id": "res_1788587233047u2lq",
+          "title": "Complete Financial Accounting Course - 11-Hour Full Tutorial for Beginners",
+          "type": "link",
+          "value": "https://youtu.be/eyXKvOrDoqw?si=LNYsNVhqw3ReYVrC",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_178858726232151pg",
+          "title": "Intermediate Financial Accounting 1 - Full 12-Hour Course",
+          "type": "link",
+          "value": "https://youtu.be/fmC56MY1F4s?si=JV02Mbmw6MmbComQ",
+          "description": "",
+          "items": []
         }
       ]
     },
@@ -522,10 +891,19 @@
       "resources": [
         {
           "id": "res_cat_f3_yt1",
-          "title": "🔍 F3 YouTube Channel",
+          "title": "🔍Got it Pass",
           "type": "link",
-          "value": "https://youtube.com",
-          "description": "F3 recommended YouTube tutorial channels"
+          "value": "http://www.youtube.com/@GotitPass",
+          "description": "F3 recommended YouTube tutorial channels",
+          "items": []
+        },
+        {
+          "id": "res_178858731098379gl",
+          "title": "Tony Bell",
+          "type": "link",
+          "value": "http://www.youtube.com/@Tony-Bell",
+          "description": "",
+          "items": []
         }
       ]
     },
@@ -544,10 +922,11 @@
       "resources": [
         {
           "id": "res_cat_f4_ch1",
-          "title": "📢 F4 Telegram Channel",
+          "title": "F4 Corparate and Business Law",
           "type": "link",
-          "value": "https://t.me/Finance_Ahmadillo",
-          "description": "F4 official Telegram channels & discussion groups"
+          "value": "https://t.me/F4CorparateandBusinessLaw",
+          "description": "F4 official Telegram channels & discussion groups",
+          "items": []
         }
       ]
     },
@@ -563,6 +942,98 @@
           "type": "link",
           "value": "https://t.me/Finance_Ahmadillo",
           "description": "F4 Kaplan & BPP latest exam kits and textbooks"
+        },
+        {
+          "id": "res_1788587465775qigp",
+          "title": "LW ST - Eng Kaplan.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAILLmqbrclbVYBEGG25IodPFvfplA7pAAJsogACIx_5SkUXEPPlKz-APQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1788587465776y53r",
+          "title": "LW-ENG Kaplan Kit 2026",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAILL2qbrcmS4uoYDN7TxlJe9kDEiGNpAAJvogACIx_5Sjtfhg2IPIH_PQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload",
+          "items": []
+        },
+        {
+          "id": "res_17885874657772rns",
+          "title": "LW-ENG Kaplan Kit 2026.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAILMGqbrcnVFNa4bQg_WOC1voWvb0HFAAJQoQACZKNpSz2BDFWngBspPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1788587465778su8g",
+          "title": "ACCA F4 ENG Course Notes-1.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAILMWqbrck5-Sp5yWDQIix3W7lPo8KLAALopQACQyPoS5R5eERQegcIPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_178858746577920jp",
+          "title": "F4 ENG POCKET NOTES.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAILMmqbrclPo3i7g62-bxR0wEBa32kZAALqpQACQyPoSzYvXWyvV8zHPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1788587465780q9ps",
+          "title": "F4 ACCA study hub notes-1.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAILM2qbrcl3lIXe411AniEM_dBTrOMBAALrpQACQyPoSx4QggIjxzTSPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_17885874657811v9d",
+          "title": "LW_GLO_Study_Text_2025-26_ISDC.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAILNGqbrcli4R-YVyHJmUjF0wnTbGxPAALQngAC_EP4S5LI-hqMYVl4PQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1788587465783kc67",
+          "title": "LW_GLO_Exam_Kit_2025-26_ISDC.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAILNWqbrcnASkc26k_m4uOlKAGx6HTGAALRngAC_EP4S6i_8tKDk9OOPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_17885874657844l1p",
+          "title": "ACCA F4 ENG Course Notes-1.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAILNmqbrckXu5469rHbXLoVYnuVmWQQAAJOoAACDSxwSFzDbw0l1fVhPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1788587465785wpse",
+          "title": "F4 ACCA study hub notes.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAILN2qbrcnCRQwUYSVD23P-LoLvz-SHAAJPoAACDSxwSC-6_mCDiBtjPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1788587465786nzza",
+          "title": "LW ST - Eng Kaplan.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAILOGqbrck1PuHn_HALJZFb0QekoYacAAJ7qgACs3J4SLESocg4YHCdPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1788587465787bx55",
+          "title": "LW-ENG Kaplan Text 2026_260824_110950.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAILOWqbrckPUnMS34QiXSinGTfqNbjBAAJXqQACi9OQSIgthd4pe1ftPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
+        },
+        {
+          "id": "res_1788587465788l9zd",
+          "title": "F4_LW_Notes_Complete.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAILOmqbrcnFRiEPGpihF7dWk21dKyXDAAKulwACPDrASMU0Xu1FoF-yPQQ",
+          "description": "Uploaded via Telegram Admin Direct Upload"
         }
       ]
     },
@@ -574,10 +1045,27 @@
       "resources": [
         {
           "id": "res_cat_f4_v1",
-          "title": "🎥 F4 Complete Video Course",
+          "title": "🎥ACCA Corporate and Business Law (LW) Global Variant",
           "type": "link",
-          "value": "https://youtube.com",
-          "description": "F4 comprehensive lecture series"
+          "value": "https://youtube.com/playlist?list=PLETfu1oU9uLwzNvGjrwc6O_4bw8ha1-eE&si=uhGg3-wF2m4SIyMZ",
+          "description": "F4 comprehensive lecture series",
+          "items": []
+        },
+        {
+          "id": "res_1788587685677v8m5",
+          "title": "Corporate and Business Law (LW)",
+          "type": "link",
+          "value": "https://youtube.com/playlist?list=PLRYOefFr48S0XkD5gEismg4cd3F0Mvbcb&si=04fj5DyULZ_5Gss1",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1788587710183w7t2",
+          "title": "ACCA Corporate and Business Law (LW) (ENG)",
+          "type": "link",
+          "value": "https://youtube.com/playlist?list=PLETfu1oU9uLx9JnBwcA45nd5dZCqNUM09&si=Z-pvCFySKoSO4fHw",
+          "description": "",
+          "items": []
         }
       ]
     },
@@ -588,11 +1076,12 @@
       "order": 4,
       "resources": [
         {
-          "id": "res_cat_f4_yt1",
-          "title": "🔍 F4 YouTube Channel",
+          "id": "res_1788587737846mhwy",
+          "title": "ACCA Corporate and Business Law (LW/F4)",
           "type": "link",
-          "value": "https://youtube.com",
-          "description": "F4 recommended YouTube tutorial channels"
+          "value": "https://youtube.com/playlist?list=PLWoTw-Fm_fzsQ4p1CDrzNtNN4LsIpC8GD&si=nPo21chObg7Mif5P",
+          "description": "",
+          "items": []
         }
       ]
     },
@@ -1616,21 +2105,344 @@
       "title": "📊 Excel Financial Modeling (DCF, LBO, Budgeting)",
       "parentId": "cat_fin_modeling",
       "order": 1,
-      "resources": []
+      "resources": [
+        {
+          "id": "res_1788536240386wi9s",
+          "title": "Build a Discounted Cash Flow (DCF) Model in Excel | Step-by-Step Valuation Guide",
+          "type": "link",
+          "value": "https://youtu.be/CfkFFk-r9aA?si=BINdrt5grYo8DPQl",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1788536510008fp0k",
+          "title": "Financial Modeling Tutorial | Build a Three-Statement Model in 30 Minutes with CFI CEO Tim Vipond",
+          "type": "link",
+          "value": "https://youtu.be/UMYDxmiVin4?si=yJFYncgyaXtWTncG",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1788536569754v5w8",
+          "title": "How to Build a Leveraged Buyout (LBO) Model in 5 Steps! (FREE Excel Included)",
+          "type": "link",
+          "value": "https://youtu.be/zeCfu5g0Uis?si=7ItmyoDTc0CMrOWX",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1788536620140cd6m",
+          "title": "Build a Monthly Budgeting & Forecasting Model in Excel",
+          "type": "link",
+          "value": "https://youtu.be/GjxhDo9luh8?si=3LAk_qei9FTsCN9S",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1788536653154pyde",
+          "title": "How To Build Monthly Budgeting & Forecasting Model",
+          "type": "link",
+          "value": "https://youtu.be/Awm_LxHbHHE?si=e4MX2TKXABH9O3qg",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1788536763270yxy6",
+          "title": "Leveraged Buyout (LBO) Model Tutorial",
+          "type": "link",
+          "value": "https://youtu.be/F7F6V4W4Gac?si=hU92WWDB-Fn5RiFc",
+          "description": "",
+          "items": []
+        }
+      ]
     },
     {
       "id": "cat_fm_valuation",
       "title": "💎 Business Valuation & Corporate Finance",
       "parentId": "cat_fin_modeling",
       "order": 2,
-      "resources": []
+      "resources": [
+        {
+          "id": "res_1788537032258xhno",
+          "title": "Corporate Finance Fundamentals: Learn Business Finance with CFI Part 1 | CFI Course",
+          "type": "link",
+          "value": "https://youtu.be/lm2ym3J4FMw?si=in36O8vyqUU8aWNO",
+          "description": "Corporate Finance Institute",
+          "items": []
+        },
+        {
+          "id": "res_1788537066245rkco",
+          "title": "Corporate Finance Fundamentals: Learn Business Finance with CFI Part 2 | CFI Course",
+          "type": "link",
+          "value": "https://youtu.be/Sy38dL2Tzvs?si=Ii2PR0QRp0PW8N_K",
+          "description": "Corporate Finance Institute",
+          "items": []
+        },
+        {
+          "id": "res_1788537099186sxxr",
+          "title": "Corporate Finance Fundamentals: Learn Business Finance with CFI Part 3 | CFI Course",
+          "type": "link",
+          "value": "https://youtu.be/S73dFt4_jHY?si=oWNuepTWh-ABIFYR",
+          "description": "Corporate Finance Institute",
+          "items": []
+        },
+        {
+          "id": "res_1788537141802wi52",
+          "title": "Corporate Finance Fundamentals: Learn Business Finance with CFI Part 4 | CFI Course",
+          "type": "link",
+          "value": "https://youtu.be/agxDE4SFopM?si=3qXsw6-sV391THaX",
+          "description": "Corporate Finance Institute",
+          "items": []
+        },
+        {
+          "id": "res_17885371767808ub4",
+          "title": "Corporate Finance Fundamentals: Learn Business Finance with CFI Part 5 | CFI Course",
+          "type": "link",
+          "value": "https://youtu.be/QIfkgi4-k_E?si=HQ15z0x2pGIB1RAv",
+          "description": "Corporate Finance Institute",
+          "items": []
+        },
+        {
+          "id": "res_17885373022352tuq",
+          "title": "Corporate Finance Fundamentals: Learn Business Finance with CFI Part 6 | CFI Course",
+          "type": "link",
+          "value": "https://youtu.be/2JKCMjQKScw?si=_WU8xnigpVVPQSLD",
+          "description": "Corporate Finance Institute",
+          "items": []
+        },
+        {
+          "id": "res_1788537342167m0ev",
+          "title": "Corporate Finance Fundamentals: Learn Business Finance with CFI Part 7 | CFI Course",
+          "type": "link",
+          "value": "https://youtu.be/94cTiZYeSfo?si=u2YKGXuzfJhSMjbW",
+          "description": "Corporate Finance Institute",
+          "items": []
+        },
+        {
+          "id": "res_1788537394594y0qz",
+          "title": "Introduction to Business Valuation | Course Module",
+          "type": "link",
+          "value": "https://youtu.be/GJ2-MUzCAgA?si=Ca4Hm8K9Mck3PmiM",
+          "description": "Corporate Finance Institute",
+          "items": []
+        },
+        {
+          "id": "res_17885374843518gps",
+          "title": "Business Valuations - How To Value a Company",
+          "type": "link",
+          "value": "https://youtu.be/dIlWJxo1pLA?si=Qvx_WwtWnqaUWlG4",
+          "description": "Kaplan UK",
+          "items": []
+        },
+        {
+          "id": "res_1788538100637w0dz",
+          "title": "Ses 1: Introduction and Course Overview (Corporate Finance)",
+          "type": "link",
+          "value": "https://youtu.be/HdHlfiOAJyE?si=t-bvaG2UnFVho-05",
+          "description": "MIT OpenCourseWare",
+          "items": []
+        },
+        {
+          "id": "res_17885381558662d8i",
+          "title": "Ses 2: Present Value Relations I (Corporate Finance",
+          "type": "link",
+          "value": "https://youtu.be/U03Md5enU-0?si=uhDfhtGQKGNOs4RQ",
+          "description": "MIT OpenCourseWare",
+          "items": []
+        },
+        {
+          "id": "res_17885381871587vy1",
+          "title": "Ses 3: Present Value Relations II",
+          "type": "link",
+          "value": "https://youtu.be/4F1J5Q3DiaI?si=7G3FYTvqKNMAlMLG",
+          "description": "MIT OpenCourseWare",
+          "items": []
+        },
+        {
+          "id": "res_1788538222998czvt",
+          "title": "Ses 4: Present Value Relations III & Fixed-Income Securities I",
+          "type": "link",
+          "value": "https://youtu.be/hyc8h5T76BE?si=5zObpVrYTr1RVWxe",
+          "description": "MIT OpenCourseWare",
+          "items": []
+        },
+        {
+          "id": "res_1788538255105u9u6",
+          "title": "Ses 5: Fixed-Income Securities II",
+          "type": "link",
+          "value": "https://youtu.be/yrmqYNvvIzs?si=P-mXu_cYeJGxxx9I",
+          "description": "MIT OpenCourseWare",
+          "items": []
+        },
+        {
+          "id": "res_17885382907528o2a",
+          "title": "Ses 6: Fixed-Income Securities III",
+          "type": "link",
+          "value": "https://youtu.be/AtT59jxU9es?si=ht62tS4HRDDw_5kC",
+          "description": "MIT OpenCourseWare",
+          "items": []
+        },
+        {
+          "id": "res_1788538319597g926",
+          "title": "Ses 7: Fixed-Income Securities IV",
+          "type": "link",
+          "value": "https://youtu.be/ZWKnK9LIETA?si=1nW2NM_0UBMOxgzb",
+          "description": "MIT OpenCourseWare",
+          "items": []
+        },
+        {
+          "id": "res_17885383496404l6q",
+          "title": "Ses 8: Equities",
+          "type": "link",
+          "value": "https://youtu.be/cny-1yDbQno?si=a19HWbJ0yOZQStDm",
+          "description": "MIT OpenCourseWare",
+          "items": []
+        },
+        {
+          "id": "res_1788538386038pxbw",
+          "title": "Ses 9: Forward and Futures Contracts I",
+          "type": "link",
+          "value": "https://youtu.be/i_pLF9J3QPE?si=chG0xXnusidKu2i-",
+          "description": "MIT OpenCourseWare",
+          "items": []
+        },
+        {
+          "id": "res_1788538413518d2v8",
+          "title": "Ses 10: Forward and Futures Contracts II & Options I",
+          "type": "link",
+          "value": "https://youtu.be/IwA7nVEwqto?si=luprTO-81UYgIYxu",
+          "description": "MIT OpenCourseWare",
+          "items": []
+        },
+        {
+          "id": "res_178853844683447cw",
+          "title": "Ses 11: Options II",
+          "type": "link",
+          "value": "https://youtu.be/rMsu4v-UlkA?si=55JBDeGGGMuiD7z2",
+          "description": "MIT OpenCourseWare",
+          "items": []
+        },
+        {
+          "id": "res_1788538477892gc45",
+          "title": "Ses 12: Options III & Risk and Return I",
+          "type": "link",
+          "value": "https://youtu.be/Q2qjnLO3I_M?si=a_Z-rKpXyOj5RDQ2",
+          "description": "MIT OpenCourseWare",
+          "items": []
+        },
+        {
+          "id": "res_1788538521348h7g5",
+          "title": "Ses 13: Risk and Return II & Portfolio Theory I",
+          "type": "link",
+          "value": "https://youtu.be/tL7Lcl90Sc0?si=UntEBJ_3JGZrP9ke",
+          "description": "MIT OpenCourseWare",
+          "items": []
+        },
+        {
+          "id": "res_178853859563575xb",
+          "title": "Ses 14: Portfolio Theory II",
+          "type": "link",
+          "value": "https://youtu.be/J7d3vcaS9-o?si=j6RUtofCci01EK2W",
+          "description": "MIT OpenCourseWare",
+          "items": []
+        },
+        {
+          "id": "res_1788538625454z11l",
+          "title": "Ses 15: Portfolio Theory III & The CAPM and APT I",
+          "type": "link",
+          "value": "https://youtu.be/z2oQe6B1Qa4?si=IN5IoSbKftPHM5-q",
+          "description": "MIT OpenCourseWare",
+          "items": []
+        },
+        {
+          "id": "res_1788538659665557l",
+          "title": "Ses 16: The CAPM and APT II",
+          "type": "link",
+          "value": "https://youtu.be/N8gtnbJuMoo?si=v1tHXxRsluWA04Ij",
+          "description": "MIT OpenCourseWare",
+          "items": []
+        },
+        {
+          "id": "res_1788538690287e079",
+          "title": "Ses 17: The CAPM and APT III & Capital Budgeting I",
+          "type": "link",
+          "value": "https://youtu.be/JE80wLNIhjE?si=JYfU8wkkG5IViwUj",
+          "description": "MIT OpenCourseWare",
+          "items": []
+        },
+        {
+          "id": "res_1788538726542ys0l",
+          "title": "Ses 18: Capital Budgeting II & Efficient Markets I",
+          "type": "link",
+          "value": "https://youtu.be/sMKQywwkIjQ?si=cVnR49EPRVh7zwkX",
+          "description": "MIT OpenCourseWare",
+          "items": []
+        },
+        {
+          "id": "res_17885387625028sbu",
+          "title": "Ses 19: Efficient Markets II",
+          "type": "link",
+          "value": "https://youtu.be/a5PF2PcElV0?si=aR-S1AcmxIKdyV-o",
+          "description": "MIT OpenCourseWare",
+          "items": []
+        },
+        {
+          "id": "res_1788538814025mdif",
+          "title": "Ses 20: Efficient Markets III & Course Summary",
+          "type": "link",
+          "value": "https://youtu.be/P03PfYgNjmw?si=gWtYiNPNAGPFacfy",
+          "description": "MIT OpenCourseWare",
+          "items": []
+        }
+      ]
     },
     {
       "id": "cat_fm_banking",
       "title": "🏢 Banking, Credit Analysis & Risk",
       "parentId": "cat_fin_modeling",
       "order": 3,
-      "resources": []
+      "resources": [
+        {
+          "id": "res_1788545438770q0zv",
+          "title": "Credit Analysis Fundamentals: How Banks & Lenders Assess Creditworthiness Part 1 | CFI Course",
+          "type": "link",
+          "value": "https://youtu.be/MoZkeN_eQYo?si=Ka6KuaeTbzjxCu1T",
+          "description": "Corporate Finance Institute",
+          "items": []
+        },
+        {
+          "id": "res_1788545544022ndet",
+          "title": "Credit Analysis Fundamentals: How Banks & Lenders Assess Creditworthiness Part 2 | CFI Course",
+          "type": "link",
+          "value": "https://youtu.be/7dY0f-aqf9g?si=NKp35KrFx0ISYkwu",
+          "description": "Corporate Finance Institute",
+          "items": []
+        },
+        {
+          "id": "res_17885455754429r11",
+          "title": "Credit Analysis Fundamentals: How Banks & Lenders Assess Creditworthiness Part 3 | CFI Course",
+          "type": "link",
+          "value": "https://youtu.be/p7uOYm-g_sc?si=1yjfWvLlAjPFhtf2",
+          "description": "Corporate Finance Institute",
+          "items": []
+        },
+        {
+          "id": "res_1788545611112y5gt",
+          "title": "Credit Analysis Fundamentals: How Banks & Lenders Assess Creditworthiness Part 4 | CFI Course",
+          "type": "link",
+          "value": "https://youtu.be/1YQjlaHon7M?si=RDr8FaeeGvpXEe8k",
+          "description": "Corporate Finance Institute",
+          "items": []
+        },
+        {
+          "id": "res_1788545648083kojv",
+          "title": "Credit Analysis Fundamentals: How Banks & Lenders Assess Creditworthiness Part 5 | CFI Course",
+          "type": "link",
+          "value": "https://youtu.be/7Iv5WeTwMc4?si=Zi_PKbl19_f6cS5B",
+          "description": "Corporate Finance Institute",
+          "items": []
+        }
+      ]
     },
     {
       "id": "cat_islamic_finance",
