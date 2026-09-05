@@ -1416,6 +1416,8 @@ function setupBotHandlers() {
         chat_id: chatId, message_id: query.message.message_id, parse_mode: 'HTML'
       });
       bot.answerCallbackQuery(query.id);
+    }
+
     // SINGLE UPLOAD: Step 1 — user picked a root category, show its children
     else if (data.startsWith('select_root_')) {
       const rootId = data.replace('select_root_', '');

@@ -1104,10 +1104,15 @@ function renderSubscribers() {
   tbody.innerHTML = '';
   const subs = dbData.subscribers || [];
 
+  // Update badge count
+  const badge = document.getElementById('subscriberCountBadge');
+  if (badge) badge.textContent = subs.length.toLocaleString();
+
   if (subs.length === 0) {
     tbody.innerHTML = `<tr><td colspan="4" style="text-align:center; color:#94a3b8;">No registered subscribers yet</td></tr>`;
     return;
   }
+
 
   subs.forEach(sub => {
     const tr = document.createElement('tr');
