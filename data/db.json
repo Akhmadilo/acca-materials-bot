@@ -4,7 +4,9 @@
     "admin_password": "admin",
     "admin_ids": [
       557976703,
-      "Ibrohimov_Ahmadillo"
+      "Ibrohimov_Ahmadillo",
+      "Xolmirzayeva_MM",
+      "Xudoyberdiyevh"
     ],
     "required_channel": "@Finance_Ahmadillo",
     "required_channel_link": "https://t.me/Finance_Ahmadillo",
@@ -2153,6 +2155,14 @@
           "value": "https://youtu.be/F7F6V4W4Gac?si=hU92WWDB-Fn5RiFc",
           "description": "",
           "items": []
+        },
+        {
+          "id": "res_1788632406058lzts",
+          "title": "The Dividend Discount Model (DDM): The Black Sheep of Valuation?",
+          "type": "link",
+          "value": "https://youtu.be/2MqVe2Gj3qU?si=G4tOV6gysYNUy_MA",
+          "description": "Mergers & Inquisitions / Breaking Into Wall Street",
+          "items": []
         }
       ]
     },
@@ -2393,6 +2403,30 @@
           "value": "https://youtu.be/P03PfYgNjmw?si=gWtYiNPNAGPFacfy",
           "description": "MIT OpenCourseWare",
           "items": []
+        },
+        {
+          "id": "res_1788632012120vpb7",
+          "title": "How To Calculate Intrinsic Value (Full Example)",
+          "type": "link",
+          "value": "https://youtu.be/d0EBO-vs0GM?si=r5iCIlWKKr_Z3GD9",
+          "description": "Cooper Academy",
+          "items": []
+        },
+        {
+          "id": "res_1788632208679kq66",
+          "title": "Market-Based Valuation",
+          "type": "link",
+          "value": "https://youtu.be/nP_wZXwacN8?si=cGLtyp3WNjpsu7us",
+          "description": "Charles Schell",
+          "items": []
+        },
+        {
+          "id": "res_17886325736961bqn",
+          "title": "CFA® Level II Equity Valuation - Residual Income Model",
+          "type": "link",
+          "value": "https://youtu.be/JMKC0sP4CtE?si=3KtLFGRsjn5ll-_U",
+          "description": "PrepNuggets",
+          "items": []
         }
       ]
     },
@@ -2401,48 +2435,7 @@
       "title": "🏢 Banking, Credit Analysis & Risk",
       "parentId": "cat_fin_modeling",
       "order": 3,
-      "resources": [
-        {
-          "id": "res_1788545438770q0zv",
-          "title": "Credit Analysis Fundamentals: How Banks & Lenders Assess Creditworthiness Part 1 | CFI Course",
-          "type": "link",
-          "value": "https://youtu.be/MoZkeN_eQYo?si=Ka6KuaeTbzjxCu1T",
-          "description": "Corporate Finance Institute",
-          "items": []
-        },
-        {
-          "id": "res_1788545544022ndet",
-          "title": "Credit Analysis Fundamentals: How Banks & Lenders Assess Creditworthiness Part 2 | CFI Course",
-          "type": "link",
-          "value": "https://youtu.be/7dY0f-aqf9g?si=NKp35KrFx0ISYkwu",
-          "description": "Corporate Finance Institute",
-          "items": []
-        },
-        {
-          "id": "res_17885455754429r11",
-          "title": "Credit Analysis Fundamentals: How Banks & Lenders Assess Creditworthiness Part 3 | CFI Course",
-          "type": "link",
-          "value": "https://youtu.be/p7uOYm-g_sc?si=1yjfWvLlAjPFhtf2",
-          "description": "Corporate Finance Institute",
-          "items": []
-        },
-        {
-          "id": "res_1788545611112y5gt",
-          "title": "Credit Analysis Fundamentals: How Banks & Lenders Assess Creditworthiness Part 4 | CFI Course",
-          "type": "link",
-          "value": "https://youtu.be/1YQjlaHon7M?si=RDr8FaeeGvpXEe8k",
-          "description": "Corporate Finance Institute",
-          "items": []
-        },
-        {
-          "id": "res_1788545648083kojv",
-          "title": "Credit Analysis Fundamentals: How Banks & Lenders Assess Creditworthiness Part 5 | CFI Course",
-          "type": "link",
-          "value": "https://youtu.be/7Iv5WeTwMc4?si=Zi_PKbl19_f6cS5B",
-          "description": "Corporate Finance Institute",
-          "items": []
-        }
-      ]
+      "resources": []
     },
     {
       "id": "cat_islamic_finance",
@@ -2569,6 +2562,197 @@
       "parentId": "cat_islamic_finance",
       "order": 8,
       "resources": []
+    },
+    {
+      "id": "cat_1788676293489",
+      "title": "Books for FRM",
+      "parentId": "cat_fm_banking",
+      "order": 129,
+      "resources": [
+        {
+          "id": "res_17886209328838757",
+          "title": "FRM2023-Study-Guide.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAILhmqcMIQkVPbv0NQVYyIQLaLd9SPtAAILBwACLh2YVGy70_3-rb1pPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1788620932884wys2",
+          "title": "FRM2023-Learning-Objectives.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAILh2qcMIR9YROK9v-GOe4HadzB9qY8AAIMBwACLh2YVMZtuyZr0NpUPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17886209328844301",
+          "title": "FRM 2023 Level 1 - Book 1.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAILiGqcMISdtqE0K-aR0LK_Z7pEvx8-AAJMBgACu9ioVl4EFpobfT03PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_178862093288419e1",
+          "title": "FRM 2023 Level 1  - Book 2.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAILiWqcMIQAAZ-1jx5yuQvXse71nlFNqQACTQYAArvYqFY5U_BMdXuIOT0E",
+          "description": ""
+        },
+        {
+          "id": "res_1788620932884otfe",
+          "title": "FRM 2023 Level 1 - Book 3.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAILimqcMIQtsiaEUb9zFbXZOHxqju6QAAJOBgACu9ioViwf8XvOMDEqPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1788620932884ojcg",
+          "title": "FRM 2023 Level 1 - Book 4.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAILi2qcMIR1INy-XhVsQzL-OtlxaUD9AAJPBgACu9ioVkMVY6eI3y5XPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1788620932884wehq",
+          "title": "GARP 2023 FRM PART I-Book 3 - Financial Markets and Products.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAILjGqcMIT92Mbz8NmuTKQFspRm0N40AALOBwACPuwpVQNdFFej3yDbPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1788620932885fjbi",
+          "title": "GARP 2023 FRM PART I-Book 4 - Valuation and Risk Models.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAILjWqcMITqxPSbHQOHH9CymgcJ8hm1AALPBwACPuwpVQHfdL3Nz3nnPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1788620932885aex4",
+          "title": "GARP 2023 FRM PART I-Book 1 - Foundations of Risk Management.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAILjmqcMIQ2uJF8O8IvUwhS-Cz9sOMoAAK2CQACyneYVXJzINb6jj5VPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1788620932885p5o7",
+          "title": "GARP 2023 FRM PART I-Book 2 - Quantitative Analysis.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAILj2qcMISpA2oFAR2yUt2LKUYHzOxtAAK3CQACyneYVS3VUPJiUTgWPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1788620932886w150",
+          "title": "2025_FRM_Exam_Part_II_4_Liquidity_and_Treasury_Risk_Measurement.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAILkGqcMIQeoX8-BGyraapK19eLSEqbAAIeFAACUoAAAVRVSjXjAAEOEws9BA",
+          "description": ""
+        },
+        {
+          "id": "res_1788620932886hz2p",
+          "title": "2025_FRM_Exam_Part_II_5_Risk_Management_and_Investment_Management.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAILkWqcMIQGUsvy_mG9HbWXlNXygc89AAIhFAACUoAAAVRvfE68KX9G7j0E",
+          "description": ""
+        },
+        {
+          "id": "res_17886209328866wkg",
+          "title": "2025 FRM Exam Part II - 3. Operational Risk and Resilience.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAILkmqcMIRoDFqagi4VZkMmgRfZz12XAAIlFAACUoAAAVTFzu_ILe47Ij0E",
+          "description": ""
+        },
+        {
+          "id": "res_1788620932886u7cc",
+          "title": "2025_FRM_Exam_Part_II_1_Market_Risk_Measurement_and_Management_1.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAILk2qcMIR1NdyYI-LSLU5grPfEO6ODAAItFAACUoAAAVRvyflfLO2jaT0E",
+          "description": ""
+        },
+        {
+          "id": "res_1788620932887ksb4",
+          "title": "2025_FRM_Exam_Part_II_2_Credit_Risk_Measurement_and_Management_1.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAILlGqcMIRg_Pk73rjpXmJD1gQ4_V0mAAIuFAACUoAAAVTqhozq7Nhobz0E",
+          "description": ""
+        },
+        {
+          "id": "res_17886209328879i6f",
+          "title": "2025 FRM Part 1 Book 2 - Quantitative Analysis (Kevin Sheppard, Chris Brooks etc.) (Z-Library).pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAILlWqcMISTjMXk3x9TkxFM2YKjBi1zAAISFQACN-XAVK7zfSctUn7vPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1788620932887iv5o",
+          "title": "2025 FRM Part 1 Book 1 - Foundations of Risk Management (Frank J. Fabozzi, Michel Crouhy, Robert Mark etc.) (Z-Library).pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAILlmqcMISOTR88NYyuMCzNBRYUMbGVAAKREwACN-XIVMoGll4RgmcjPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17886209328889zeq",
+          "title": "2025 FRM Part 1 Book 4 - Valuation and Risk Models (John C. Hull) (Z-Library).pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAILl2qcMIQ-yJoFl8rukIOaKIF_zsfAAAIGFgACyU_IVKcswk8t9JB0PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17886209328880g03",
+          "title": "2025 FRM Part 1 Book 3 - Financial Markets and Products (John C. Hull etc.) (Z-Library).pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAILmGqcMIRdLZQhhk7oOsgGZ1qsRr09AAIHFgACyU_IVJ2kx8JEcfhUPQQ",
+          "description": ""
+        }
+      ],
+      "isFeedback": false
+    },
+    {
+      "id": "cat_1788676419960",
+      "title": "Credit Analysis Fundamentals",
+      "parentId": "cat_fm_banking",
+      "order": 130,
+      "resources": [
+        {
+          "id": "res_1788545438770q0zv",
+          "title": "Credit Analysis Fundamentals: How Banks & Lenders Assess Creditworthiness Part 1 | CFI Course",
+          "type": "link",
+          "value": "https://youtu.be/MoZkeN_eQYo?si=Ka6KuaeTbzjxCu1T",
+          "description": "Corporate Finance Institute",
+          "items": []
+        },
+        {
+          "id": "res_1788545544022ndet",
+          "title": "Credit Analysis Fundamentals: How Banks & Lenders Assess Creditworthiness Part 2 | CFI Course",
+          "type": "link",
+          "value": "https://youtu.be/7dY0f-aqf9g?si=NKp35KrFx0ISYkwu",
+          "description": "Corporate Finance Institute",
+          "items": []
+        },
+        {
+          "id": "res_17885455754429r11",
+          "title": "Credit Analysis Fundamentals: How Banks & Lenders Assess Creditworthiness Part 3 | CFI Course",
+          "type": "link",
+          "value": "https://youtu.be/p7uOYm-g_sc?si=1yjfWvLlAjPFhtf2",
+          "description": "Corporate Finance Institute",
+          "items": []
+        },
+        {
+          "id": "res_1788545611112y5gt",
+          "title": "Credit Analysis Fundamentals: How Banks & Lenders Assess Creditworthiness Part 4 | CFI Course",
+          "type": "link",
+          "value": "https://youtu.be/1YQjlaHon7M?si=RDr8FaeeGvpXEe8k",
+          "description": "Corporate Finance Institute",
+          "items": []
+        },
+        {
+          "id": "res_1788545648083kojv",
+          "title": "Credit Analysis Fundamentals: How Banks & Lenders Assess Creditworthiness Part 5 | CFI Course",
+          "type": "link",
+          "value": "https://youtu.be/7Iv5WeTwMc4?si=Zi_PKbl19_f6cS5B",
+          "description": "Corporate Finance Institute",
+          "items": []
+        }
+      ],
+      "isFeedback": false
     }
   ],
   "feedback_messages": [
