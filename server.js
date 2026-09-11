@@ -1401,20 +1401,31 @@ function setupBotHandlers() {
       bot.answerCallbackQuery(query.id);
     }
 
-    // BATCH: Step 3 (legacy / leaf) — set final target folder
+    // BATCH: Recursive — drill deeper or activate batch mode at leaf
     else if (data.startsWith('set_batch_target_')) {
       const folderId = data.replace('set_batch_target_', '');
       const cat = db.categories.find(c => c.id === folderId);
-      state.batchTargetFolderId = folderId;
-      state.batchSavedCount = 0;
+      const children = db.categories.filter(c => c.parentId === folderId);
 
-      bot.editMessageText(
-        `⚡ <b>BATCH MODE ACTIVE!</b>\n\n` +
-        `📁 <b>Target Folder:</b> ${cat ? cat.title : folderId}\n\n` +
-        `📥 Drop 10–50 files into chat — all saved automatically!\n` +
-        `🔴 Type /done when finished.`, {
-        chat_id: chatId, message_id: query.message.message_id, parse_mode: 'HTML'
-      });
+      if (children.length > 0) {
+        const inlineKeyboard = children.map(c => [{ text: c.title, callback_data: `set_batch_target_${c.id}` }]);
+        const backCallback = (cat && cat.parentId) ? `set_batch_target_${cat.parentId}` : 'batch_back_root';
+        inlineKeyboard.push([{ text: '🔙 Back', callback_data: backCallback }]);
+        bot.editMessageText(`📂 <b>${cat ? cat.title : folderId}</b>\n\nSelect subfolder:`, {
+          chat_id: chatId, message_id: query.message.message_id, parse_mode: 'HTML',
+          reply_markup: { inline_keyboard: inlineKeyboard }
+        });
+      } else {
+        state.batchTargetFolderId = folderId;
+        state.batchSavedCount = 0;
+        bot.editMessageText(
+          `⚡ <b>BATCH MODE ACTIVE!</b>\n\n` +
+          `📁 <b>Target:</b> ${cat ? cat.title : folderId}\n\n` +
+          `📥 Drop files — all saved automatically!\n` +
+          `🔴 Type /done when finished.`, {
+          chat_id: chatId, message_id: query.message.message_id, parse_mode: 'HTML'
+        });
+      }
       bot.answerCallbackQuery(query.id);
     }
 
@@ -1473,7 +1484,22 @@ function setupBotHandlers() {
       bot.answerCallbackQuery(query.id);
     } else if (data.startsWith('save_to_')) {
       const folderId = data.replace('save_to_', '');
-      saveResourceToDb(chatId, folderId, query.message.message_id);
+      const cat = db.categories.find(c => c.id === folderId);
+      const children = db.categories.filter(c => c.parentId === folderId);
+
+      if (children.length > 0) {
+        // Has sub-folders — keep drilling
+        const inlineKeyboard = children.map(c => [{ text: c.title, callback_data: `save_to_${c.id}` }]);
+        const backCallback = (cat && cat.parentId) ? `save_to_${cat.parentId}` : 'select_back_root';
+        inlineKeyboard.push([{ text: '🔙 Back', callback_data: backCallback }]);
+        bot.editMessageText(`📂 <b>${cat ? cat.title : folderId}</b>\n\nSelect subfolder:`, {
+          chat_id: chatId, message_id: query.message.message_id, parse_mode: 'HTML',
+          reply_markup: { inline_keyboard: inlineKeyboard }
+        });
+      } else {
+        // Leaf — save here
+        saveResourceToDb(chatId, folderId, query.message.message_id);
+      }
       bot.answerCallbackQuery(query.id);
     }
   });
