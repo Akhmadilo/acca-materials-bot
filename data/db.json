@@ -1104,8 +1104,9 @@
           "id": "res_cat_f5_ch1",
           "title": "📢 F5 Telegram Channel",
           "type": "link",
-          "value": "https://t.me/Finance_Ahmadillo",
-          "description": "F5 official Telegram channels & discussion groups"
+          "value": "https://t.me/f5performancemanagament",
+          "description": "F5 official Telegram channels & discussion groups",
+          "items": []
         }
       ]
     },
@@ -1115,13 +1116,6 @@
       "parentId": "cat_f5",
       "order": 2,
       "resources": [
-        {
-          "id": "res_cat_f5_b1",
-          "title": "📖 F5 Kaplan Study Text & Revision Kit",
-          "type": "link",
-          "value": "https://t.me/Finance_Ahmadillo",
-          "description": "F5 Kaplan & BPP latest exam kits and textbooks"
-        },
         {
           "id": "res_1789062044433x342",
           "title": "ACCA_F5_All_Formulas_Summary.pdf",
