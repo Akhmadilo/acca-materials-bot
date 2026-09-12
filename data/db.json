@@ -54,6 +54,13 @@
       "last_name": "",
       "username": "a23262002",
       "joined_at": "2026-09-04T17:45:08.483Z"
+    },
+    {
+      "id": 1189749124,
+      "first_name": "Алиева Перизат",
+      "last_name": "",
+      "username": "",
+      "joined_at": "2026-09-11T17:55:07.882Z"
     }
   ],
   "categories": [
@@ -1238,10 +1245,27 @@
       "resources": [
         {
           "id": "res_cat_f5_v1",
-          "title": "🎥 F5 Complete Video Course",
+          "title": "🎥 Performance Management (PM)",
           "type": "link",
-          "value": "https://youtube.com",
-          "description": "F5 comprehensive lecture series"
+          "value": "https://youtube.com/playlist?list=PLRYOefFr48S2gLfuZD554hZm_5A-0bVR-&si=-iX_hqNgzLIpd3S9",
+          "description": "F5 comprehensive lecture series",
+          "items": []
+        },
+        {
+          "id": "res_1789203165902sscu",
+          "title": "ACCA Performance Management (PM) Open Tuition",
+          "type": "link",
+          "value": "https://www.youtube.com/playlist?list=PLETfu1oU9uLxCk7sSj0tAXvt47PWXDmf_",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789203259584smvy",
+          "title": "ACCA_F5 | PM - Performance Management Full Course 2023 - 2024",
+          "type": "link",
+          "value": "https://youtu.be/0A6JuTGzGTM?si=vadIwFgOd88yZTBz",
+          "description": "",
+          "items": []
         }
       ]
     },
@@ -1252,11 +1276,28 @@
       "order": 4,
       "resources": [
         {
-          "id": "res_cat_f5_yt1",
-          "title": "🔍 F5 YouTube Channel",
+          "id": "res_1789203302984nofo",
+          "title": "FinanceSkul",
           "type": "link",
-          "value": "https://youtube.com",
-          "description": "F5 recommended YouTube tutorial channels"
+          "value": "http://www.youtube.com/@financeskul",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789203319104pxlf",
+          "title": "James Wright ACCA",
+          "type": "link",
+          "value": "http://www.youtube.com/@JamesWrightACCA",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789203334461lsyk",
+          "title": "Market Knowledge Point",
+          "type": "link",
+          "value": "http://www.youtube.com/@MarketKnowledgePoint",
+          "description": "",
+          "items": []
         }
       ]
     },
@@ -1277,8 +1318,9 @@
           "id": "res_cat_f6_ch1",
           "title": "📢 F6 Telegram Channel",
           "type": "link",
-          "value": "https://t.me/Finance_Ahmadillo",
-          "description": "F6 official Telegram channels & discussion groups"
+          "value": "https://t.me/f6taxationglobal",
+          "description": "F6 official Telegram channels & discussion groups",
+          "items": []
         }
       ]
     },
@@ -1294,6 +1336,153 @@
           "type": "link",
           "value": "https://t.me/Finance_Ahmadillo",
           "description": "F6 Kaplan & BPP latest exam kits and textbooks"
+        },
+        {
+          "id": "res_1789203443695h2fs",
+          "title": "TX_Study_Text_FA25_260314_144248 (1).pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAINOGqlE_MpcP8GAhbpEjCu_7gmLc1ZAAIGoAACrT44Sh22Z0AfO3XXPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17892034436973jvs",
+          "title": "TX_Exam_Kit_FA25 (1).pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAINOWqlE_Mwtq6e-fyB7wiSqP_-2nwWAAIHoAACrT44Surmp4XWQ6wLPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789203443699jigb",
+          "title": "TX_Exam_Kit_FA25.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAINOmqlE_OIdy8iV7xZBvVfFebX_agMAAI2nAACrT5ASrThYuvLkus3PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789203443700w2ob",
+          "title": "TX_Study_Text_FA25.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAINO2qlE_MUvPYHHhsItOFVttUcwp8-AAKomwACQ2uoSjEQFst2scUWPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789203443701v2kr",
+          "title": "TX-UK Exam Kit-1.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAINPGqlE_OnKGuUiM2fn6UOSDa1pMDiAALrqAACRTzoSmT6ecnzpjoiPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789203443702am6b",
+          "title": "FA 25 TX Notes.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAINPWqlE_M_9ey6GY0Y7i9c8g46L5rSAAJBpQACHbtRS-hlYUZ4oEUePQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789203443704670a",
+          "title": "TX-FA2025-Dates-Penalties-Card.docx",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAINPmqlE_Pih0hUckAiS72KQDZeKk6OAAJCpQACHbtRS2xCLRL6Pg4uPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789203443705jwwq",
+          "title": "TX_Exam_Kit_FA25.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAINP2qlE_PeKuv2HZkCkCq-AAG_4P6x0wACXaUAAh27UUtqnXTwWsi_fz0E",
+          "description": ""
+        },
+        {
+          "id": "res_1789203443707chbj",
+          "title": "TX_Exam_Kit_FA25.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAINQGqlE_OXUVLmbXwEjOby0ZgkR7DSAAJwsAACHbtZS9rKjPwu36chPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789203443708c3tv",
+          "title": "TX Exam Kit FA25 BPP.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAINQWqlE_PPgfakpG6P4hRW6KOoSHRuAAJ1sAACHbtZS0su9LEyXjkYPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789203443709qzfd",
+          "title": "TX Exam Kit FA25 BPP.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAINQmqlE_O2zXYG7-jroi8IfxT6rPHtAALxpAACX7doS6HwuK8PtXQTPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789203443711cfc2",
+          "title": "TX Kaplan Kit FA25 June 2027.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAINQ2qlE_Mjr2G6SGZoM_brC3RwlmGqAAKppQACX7doS2oUlRm1noHRPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789203443712gogt",
+          "title": "TAX bpp kit 2425.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAINRGqlE_NrBOHRWR_gNFFUNJgO1l-gAAIqpQAC5-XwS1zAFk1Jt_KLPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789203443714dkyu",
+          "title": "TX_Exam_Kit_FA25.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAINRWqlE_PmtPc7gpi8TFsuQKY6l9zdAAIvpQAC5-XwS2pogU9ZAjJ6PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_178920344371534qc",
+          "title": "TX_Exam_Kit_FA25.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAINRmqlE_NRuAFkDs9W1tQoOQm8TX6yAAKDqAACeux5SPQfU4U9ZJBGPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789203443717xvax",
+          "title": "TX Exam Kit FA25 BPP.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAINR2qlE_NfbNhMOwiCIlm0trD4Ja-1AAKFqAACeux5SHkL6VQrHGgjPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789203443719ruiy",
+          "title": "Corporation_Tax_Summary_Notes.docx",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAINSGqlE_PEOU4gYzdQ9hRAhykPni_6AAKQrwACAh3ASGJkBSTs-OhkPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789203443720x7vo",
+          "title": "TX Exam Kit FA25 BPP.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAINSWqlE_OfvUuvgBEaJyqTs9xbhDAiAAJgrgAC3OMBSbB517UYY6MDPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789203443722resf",
+          "title": "TX Revision Shortnotes.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAINSmqlE_MqBthYEZLAiKQK0iy_dsG9AAJJoQACjwQZSdVxf7alR8oAAT0E",
+          "description": ""
+        },
+        {
+          "id": "res_1789203443723o5ad",
+          "title": "ACCA_TX_Last_Minute_Revision_Notes.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAINS2qlE_PdZNZhT8EdJO2yH91EXKD4AAK6pQACjwQZSUxQ5O7S9Wt7PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17892034438059ha9",
+          "title": "TX Kaplan Text FA25 June 2027",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAINTGqlE_PO1EAeQ2PAewa6HbZIc6FsAALCpQACjwQZSdWwv1VvHaPiPQQ",
+          "description": ""
         }
       ]
     },
@@ -1305,10 +1494,27 @@
       "resources": [
         {
           "id": "res_cat_f6_v1",
-          "title": "🎥 F6 Complete Video Course",
+          "title": "TX-UK Lectures June 2025 - March 2026",
           "type": "link",
-          "value": "https://youtube.com",
-          "description": "F6 comprehensive lecture series"
+          "value": "https://youtube.com/playlist?list=PLjGtRqtr3WLjxDVq_v443m-A9Y7dxNWB3&si=68Vk48jHk67rsoaH",
+          "description": "F6 comprehensive lecture series",
+          "items": []
+        },
+        {
+          "id": "res_1789203503934f2bn",
+          "title": "ACCA TX-UK (F6) - Taxation Course",
+          "type": "link",
+          "value": "https://youtube.com/playlist?list=PLnVJHvKQ_i5125u9KnlcSsRXoEeuAbcZ5&si=xiVsGuhlHySNsqP4",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789203522345xwkr",
+          "title": "ACCA Taxation TX-UK",
+          "type": "link",
+          "value": "https://youtube.com/playlist?list=PLETfu1oU9uLydyIUPsZTCQI_RpasOWO3M&si=tHhRurwfmoKHJ087",
+          "description": "",
+          "items": []
         }
       ]
     },
@@ -1344,8 +1550,9 @@
           "id": "res_cat_f7_ch1",
           "title": "📢 F7 Telegram Channel",
           "type": "link",
-          "value": "https://t.me/Finance_Ahmadillo",
-          "description": "F7 official Telegram channels & discussion groups"
+          "value": "https://t.me/f7financialreporting",
+          "description": "F7 official Telegram channels & discussion groups",
+          "items": []
         }
       ]
     },
@@ -1361,6 +1568,97 @@
           "type": "link",
           "value": "https://t.me/Finance_Ahmadillo",
           "description": "F7 Kaplan & BPP latest exam kits and textbooks"
+        },
+        {
+          "id": "res_1789203730243y1m9",
+          "title": "FR BPPCourseBook 24-25.pdf",
+          "type": "file_id",
+          "value": "BQACAgQAAxkBAAINZWqlFRIn4azfFjsrDMdbPATSp_5jAAJvFAACXpOgUjL-zw_1f7eQPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789203730245b8nz",
+          "title": "Financial Ratio best material.pdf",
+          "type": "file_id",
+          "value": "BQACAgQAAxkBAAINZmqlFRKWSYZf58DoVGlrSxgH23lVAAL8EgAClIzRUJhJiTA69HxxPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17892037302462iri",
+          "title": "list of standards.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAINZ2qlFRK-nPutFBZRtiFH7yV1aDvnAAIxdQAC9paASZ6cU-11fAyQPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789203730247eouf",
+          "title": "ACCA FR Capsule by CA Vishal Jain-1.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAINaGqlFRJky1aAsBe4BWZyLK5Z4GnHAAJFdQAC9paASRJ8hhGhATaNPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789203730249s5w2",
+          "title": "FR Bpp kit 2026 .pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAINaWqlFRJRLa_ruKLRA77Xnm5WjeyaAAJhGwACjDrhV5cU2EEzufVgPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789203730250xyjx",
+          "title": "ACCA_FR_Super_Detailed_Revision_Notes.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAINamqlFRIuGhurlgQOq01sx-Rc4S44AAIUjQAC-FUJSQ5LTVKrpVkNPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789203730252tv6r",
+          "title": "FR (kit)​ 2025-2026.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAINa2qlFRKQVcFdqOIQeAsjhBXJCTvZAAK5kwAC-FUJSeAUhlOFaAEZPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17892037302534h0m",
+          "title": "F7 Study hub text.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAINbGqlFRJNqUAEBoepaRVyAQuGHCqSAAJPjgACYaogSYao6MYymN9RPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17892037302541mxs",
+          "title": "FR Study Text September 2025 - Aug 2026.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAINbWqlFRIcW7IEjivWCIBnGMr9469xAAI4jAACpmRQSZD3Qc0QPo4kPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17892037756454k4b",
+          "title": "ACCA FR (F7) Course Notes.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAINd2qlFT8u7Bb1idVVPThv6ZgdMTBhAAIYpQACDrqISJWhaFLegtEGPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789203775646kfde",
+          "title": "F7 Kaplan Kit old edition.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAINeGqlFT-7LXwUEzYr3KDexlF_P1RVAAJHpQACDrqISCZzmFCN2yNBPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789203775648r1zl",
+          "title": "FR Kaplan Text 2026.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAINeWqlFT9FI5kS-ZzbhzrPCVRs3UvOAAKppgACrhDISKwkfPP08QgPPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17892037756494iln",
+          "title": "FR (kit)_ 2025-2026 (2).pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAINemqlFT_2RLFl2WcduWDLQqbIIPAFAAKspgACrhDISCh0wRJgpprcPQQ",
+          "description": ""
         }
       ]
     },
@@ -1372,10 +1670,35 @@
       "resources": [
         {
           "id": "res_cat_f7_v1",
-          "title": "🎥 F7 Complete Video Course",
+          "title": "ACCA Financial Reporting (FR)",
           "type": "link",
-          "value": "https://youtube.com",
-          "description": "F7 comprehensive lecture series"
+          "value": "https://youtube.com/playlist?list=PLETfu1oU9uLx_K-b1ydAEXimj70-HSQZr&si=7fuBnDbYRVdwGU--",
+          "description": "F7 comprehensive lecture series",
+          "items": []
+        },
+        {
+          "id": "res_1789203896955fg4j",
+          "title": "ACCA Financial reporting insights",
+          "type": "link",
+          "value": "https://youtube.com/playlist?list=PLhCTkN6YWdPkswSr65twhaFthegaq22LG&si=SNqcNauSutMjpL7a",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789203910891okji",
+          "title": "F7 Financial Reporting ACCA",
+          "type": "link",
+          "value": "https://youtube.com/playlist?list=PLx5QPLqBufeiLzxXQ-JkURmPU1yKzjvh6&si=T09TYCdTGe-_thN7",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789203930696ui41",
+          "title": "ACCA lecture",
+          "type": "link",
+          "value": "https://youtu.be/k3gxu79EoGM?si=T5vY0a-Q56abDKO6",
+          "description": "",
+          "items": []
         }
       ]
     },
@@ -1387,10 +1710,11 @@
       "resources": [
         {
           "id": "res_cat_f7_yt1",
-          "title": "🔍 F7 YouTube Channel",
+          "title": "🔍ACCA study",
           "type": "link",
-          "value": "https://youtube.com",
-          "description": "F7 recommended YouTube tutorial channels"
+          "value": "http://www.youtube.com/@ACCAStudyResources",
+          "description": "F7 recommended YouTube tutorial channels",
+          "items": []
         }
       ]
     },
@@ -1411,8 +1735,9 @@
           "id": "res_cat_f8_ch1",
           "title": "📢 F8 Telegram Channel",
           "type": "link",
-          "value": "https://t.me/Finance_Ahmadillo",
-          "description": "F8 official Telegram channels & discussion groups"
+          "value": "https://t.me/f8auditandassurance",
+          "description": "F8 official Telegram channels & discussion groups",
+          "items": []
         }
       ]
     },
@@ -1428,6 +1753,48 @@
           "type": "link",
           "value": "https://t.me/Finance_Ahmadillo",
           "description": "F8 Kaplan & BPP latest exam kits and textbooks"
+        },
+        {
+          "id": "res_1789204073264waem",
+          "title": "AA_Study_Text_2025-26_ISDC.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAINjGqlFmn6TncC6k_t-XtXx0Z-ch0TAAJNewACZRKASIe_PM6dnI0cPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17892040732662phv",
+          "title": "AA_Exam_Kit_2025-26_ISDC.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAINjWqlFmkrYslUcSxfhGtDbmwQE2pIAAJOewACZRKASN5ej9rp3yqfPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789204073267zpwg",
+          "title": "AA_Notes_25-26 (1).pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAINjmqlFmmdRQABQwsMCRObWfobVRyH-QAC6IkAArrnAUiM6h5I8ZqdVD0E",
+          "description": ""
+        },
+        {
+          "id": "res_1789204073268q19v",
+          "title": "AA Full Syllabus Notes.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAINj2qlFmmdj8VdFiQBYWrdm_Yu0DLQAALpiQACuucBSJD-yr0kwGbiPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17892040732699cy0",
+          "title": "AA NOTES.docx",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAINkGqlFmmPecAbPCPUAuBJDEhT_1u1AALqiQACuucBSHLf1MuRYc5FPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789204073270qemn",
+          "title": "AA_Pocket_Notes_2025-26 (1).pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAINkWqlFmnZVuakYtSNTkSjuBXgjuyGAALriQACuucBSEyHf1KfzYRQPQQ",
+          "description": ""
         }
       ]
     },
@@ -1439,10 +1806,27 @@
       "resources": [
         {
           "id": "res_cat_f8_v1",
-          "title": "🎥 F8 Complete Video Course",
+          "title": "FinanceSkul",
           "type": "link",
-          "value": "https://youtube.com",
-          "description": "F8 comprehensive lecture series"
+          "value": "https://www.youtube.com/@financeskul/playlists",
+          "description": "F8 comprehensive lecture series",
+          "items": []
+        },
+        {
+          "id": "res_1789204217927wuv1",
+          "title": "Audit & Assurance (AA) F8 ACCA",
+          "type": "link",
+          "value": "https://www.youtube.com/playlist?list=PLW356ZXpiv9mgQgIeHqlSW1dl8nNmWT3t",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789204243691htxp",
+          "title": "Got it Pass",
+          "type": "link",
+          "value": "https://www.youtube.com/@GotitPass",
+          "description": "",
+          "items": []
         }
       ]
     },
@@ -1454,10 +1838,19 @@
       "resources": [
         {
           "id": "res_cat_f8_yt1",
-          "title": "🔍 F8 YouTube Channel",
+          "title": "AA",
           "type": "link",
-          "value": "https://youtube.com",
-          "description": "F8 recommended YouTube tutorial channels"
+          "value": "https://youtu.be/EUhveR3ByLY?si=7In7eqvg1sWzRRlR",
+          "description": "F8 recommended YouTube tutorial channels",
+          "items": []
+        },
+        {
+          "id": "res_1789204146755kgg2",
+          "title": "ACCA Audit and Assurance (AA/F8)",
+          "type": "link",
+          "value": "https://youtube.com/playlist?list=PLWoTw-Fm_fzs2WG1WlXZXlfDpTvfp9kqZ&si=sDbUxomwewTSMuI4",
+          "description": "",
+          "items": []
         }
       ]
     },
@@ -2855,6 +3248,175 @@
           "type": "link",
           "value": "https://youtu.be/7Iv5WeTwMc4?si=Zi_PKbl19_f6cS5B",
           "description": "Corporate Finance Institute",
+          "items": []
+        }
+      ],
+      "isFeedback": false
+    },
+    {
+      "id": "cat_1789204456181",
+      "title": "Buxgalteriya oson tilda",
+      "parentId": "cat_national_1c",
+      "order": 131,
+      "resources": [
+        {
+          "id": "res_1789204691438mbry",
+          "title": "1-Dars. Aktiv va Passiv.",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAINm2qlGNIn13ZazdKfiUloRV9g82VJAAIoCAACp04QSXK4XkVTy2v0PQQ",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_17892046914404951",
+          "title": "1-bo'lim. 2-dars. Aktiv=Passiv, Debitorlik & Kreditorlik qarzlari.",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAINnGqlGNKSTPSeFtip3bzszoWbgbJ2AAJxCAACpwUwSR2bgOrKliznPQQ",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789204691441gcfi",
+          "title": "1-bo'lim. 3-dars. Daromad va Xarajat.",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAINnWqlGNKny2rvpwsqkbXpv-yCJrw1AAJ8BwAC0G45SS1RmsiUeefAPQQ",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789204691442bxow",
+          "title": "2-bo'lim. 1-dars. Ikkiyoqlama yozuv.",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAINnmqlGNLBZ0mBQ7NSZbmpe8ksTFlMAALmBgAC96NZSfvDtBwFv8khPQQ",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789204691444eset",
+          "title": "2-bo'lim. 2-dars. Ikkiyoqlama yozuv 2. Debet va Kredit.",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAINn2qlGNJzYqK1dlsfoX3bYFCEAAFmogACSAcAAvejWUns8xVluLhihj0E",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_17892046914462och",
+          "title": "2-bo'lim. 3-dars. Debit&Kredit vazifa.",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAINoGqlGNJGvQ80N2Id4w98W5GkDM6aAAIaBQAC81hwSU7hPjih16wPPQQ",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789204691447p7gv",
+          "title": "2-bo'lim. 4-dars. Schetlar rejasi.",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAINoWqlGNKMu6dhhGm1UV_gbjDicqnPAAIbBQAC81hwSZNUQJaZWKKfPQQ",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789204691449rizn",
+          "title": "2-bo'lim. 7-dars. Balansdan balansgacha 2. Shaxmatka",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAINomqlGNLUS8vwpIKCN9sTwmO5bhdlAAIYBwACw5LBSRp0K1uWFLN5PQQ",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789204691450587k",
+          "title": "2-bo'lim. 8-dars. Aylanma Saldo Vedmost. Oborot",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAINo2qlGNKKFPE98G-ZQEO5czTC1M8VAAKLBQACDjVxS1jlIM5UAW5GPQQ",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789204691453gqgl",
+          "title": "2-bo'lim. 9-dars. Buxgalteriya balansi.",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAINpGqlGNIFOGyK_D3Q0cRijdZPz9e0AAIGCAACMpGAS9KKzgABoEMuMT0E",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789204691505kg4g",
+          "title": "3-bo'lim. 1-dars. Buxgalteriya balansi. Forma 1.",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAINpWqlGNI-h9RAdO7Ny__iZwlg2VyAAAJbQQACWjfBS8m2TBuJ9-SvPQQ",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789204691506eb8v",
+          "title": "3-bo'lim. 2-dars. Forma 1 davomi.4-bo'lim. 1-dars. Pul mablag'lari hisobi. Kassa",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAINpmqlGNLlFaYbBkZOmg6GwMr6f3glAAJ_BgACKQzpSyHYrm4u1T62PQQ",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_17892046915070ch6",
+          "title": "4-bo'lim. 2-dars. Kassa operatsiyalari. Provodkalar",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAINp2qlGNLRoYkb416hcn6hs6ZPCAABXQACVwcAApCUAUhqaYwGynSQNT0E",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789204691508pr8n",
+          "title": "4-bo'lim. 3-dars. Asosiy h/r. Bank operatsiyalari. Provodkalar",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAINqGqlGNKewkkIwDwXmRf8Tm9xK2GLAAKcBwACzQABUUiR0mqFdEZtSz0E",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789204691509ub54",
+          "title": "4-bo'lim. 4-dars. Valyuta operatsiyalari.",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAINqWqlGNKUuc4EuKmDKlED_WXxVKnqAALWBgACLHRZSEv-20WDEHu6PQQ",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_178920469151000m1",
+          "title": "4-bo'lim. 5-dars. Valyutada xarid qilish & sotish.",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAINqmqlGNK_m_qTjCthTb0f4IqU0kQ9AAKlBwACDn1wSCCKzsVFwG-_PQQ",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789204691511g1nt",
+          "title": "4-bo'lim. 6-dars. Bankdagi boshqa schetlar.",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAINq2qlGNKqHj7aAAGAwDUSYEv3gKnsLwAC_wYAAh0OeUjRm2br7_zRRD0E",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789204691512xpnm",
+          "title": "5-bo'lim. 1-dars. Mehnat haqi hisobi. Mehnatga haq to'lash shakllari",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAINrGqlGNIxqGacm-eP9T1GcGM8oT2FAALABgACq3-ISDXlE_XHMEqlPQQ",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789204691513y4f4",
+          "title": "5-bo'lim. 2-dars. Mehnat haqi hisobi. Ish haqi provodkalar va ushlanmalar",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAINrWqlGNJRXAp0PRkby7OGweoPB8bMAAKeCAACX6OQSFk3rRwmjZ4SPQQ",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789204691514vffg",
+          "title": "5-bo'lim. 3-dars. Mehnat haqi hisobi. Mehnatga layoqatsizlik hisobi (Bolnichniy)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAINrmqlGNKp8vYxOkEatpXIZo9q338JAAI0CAACX6OgSAOGrg-_32E5PQQ",
+          "description": "",
           "items": []
         }
       ],
