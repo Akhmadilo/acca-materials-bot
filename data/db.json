@@ -1871,8 +1871,9 @@
           "id": "res_cat_f9_ch1",
           "title": "📢 F9 Telegram Channel",
           "type": "link",
-          "value": "https://t.me/Finance_Ahmadillo",
-          "description": "F9 official Telegram channels & discussion groups"
+          "value": "https://t.me/F9FinancialManagment",
+          "description": "F9 official Telegram channels & discussion groups",
+          "items": []
         }
       ]
     },
@@ -1883,11 +1884,67 @@
       "order": 2,
       "resources": [
         {
-          "id": "res_cat_f9_b1",
-          "title": "📖 F9 Kaplan Study Text & Revision Kit",
-          "type": "link",
-          "value": "https://t.me/Finance_Ahmadillo",
-          "description": "F9 Kaplan & BPP latest exam kits and textbooks"
+          "id": "res_1789378461163ji2s",
+          "title": "FM kaplan Study Text 25-26.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOP2qnv5zQAAFa3C8r24Hf3_4z9nl4ZAAC6p8AApikIUnVC9E-BeNgPD0E",
+          "description": ""
+        },
+        {
+          "id": "res_1789378461164yrkl",
+          "title": "FM Kaplan Text 2026.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOQGqnv5wjAAFiWFERuXLgD5qh615yXwACAqAAApikIUlHvi7wVHziiT0E",
+          "description": ""
+        },
+        {
+          "id": "res_1789378461165ar3k",
+          "title": "FM Kaplan Text 2026.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOQWqnv5w_twM7VfKxxI8ymMCWGF2PAALGrQACzHA4SVHGICSZK4n4PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17893784611674kxr",
+          "title": "FM kaplan Study Text 25-26.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOQmqnv5wiUu4uG4HZhZQ1S0PoIRSAAALHrQACzHA4Sd7MvZ47S36oPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789378461168b3ab",
+          "title": "THEORY FM ACCA (1).pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOQ2qnv5xBA73noH40fhrPdy-W-ledAALIrQACzHA4SQAB4nDpJT82Bz0E",
+          "description": ""
+        },
+        {
+          "id": "res_1789378461170dqze",
+          "title": "FM kaplan Study Text 25-26 (1).pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIORGqnv5y2VjFe79EX5zmmukfrnDa2AALNrQACzHA4Sar2e1e5EgKYPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789378461171wf6q",
+          "title": "FM Kaplan Kit 2026.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIORWqnv5z3e-qfp8AVduWxlNuOfD4zAAIXrgACzHA4SWGLhEPBIzsRPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789378461172rmrc",
+          "title": "FM Kaplan Text 2026.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIORmqnv5wqpxNxCFF1QebTDyT08J3aAAIYrgACzHA4SQJvI3OWxDEYPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17893784611739wii",
+          "title": "NOTES OF FM BY SKANS.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOR2qnv5yLVhNaEgQ6UvBCRpR9cDyQAAIbrgACzHA4SX9xzQdmoa0gPQQ",
+          "description": ""
         }
       ]
     },
@@ -1899,10 +1956,35 @@
       "resources": [
         {
           "id": "res_cat_f9_v1",
-          "title": "🎥 F9 Complete Video Course",
+          "title": "Introduction to Financial Management【Dr. Deric】",
           "type": "link",
-          "value": "https://youtube.com",
-          "description": "F9 comprehensive lecture series"
+          "value": "https://youtu.be/MKLd1iw1lFw?si=gQl8v6UmUVF9kzha",
+          "description": "F9 comprehensive lecture series",
+          "items": []
+        },
+        {
+          "id": "res_178937853117931r2",
+          "title": "Financial Management (FM)",
+          "type": "link",
+          "value": "https://youtu.be/cnjzaH2pHbc?si=pKuHypoBCY3jlpmr",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789378546039juqz",
+          "title": "ACCA F9 - Financial Management Full course",
+          "type": "link",
+          "value": "https://youtu.be/pamytSfNlE0?si=EQnNJP8wkB16vOAT",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789378562881wzfd",
+          "title": "ACCA Financial Management (FM)",
+          "type": "link",
+          "value": "https://youtube.com/playlist?list=PLETfu1oU9uLwZj6luPBKbcf8dr9_hHQ81&si=04v3yLJ8_pezHOml",
+          "description": "",
+          "items": []
         }
       ]
     },
@@ -1914,10 +1996,19 @@
       "resources": [
         {
           "id": "res_cat_f9_yt1",
-          "title": "🔍 F9 YouTube Channel",
+          "title": "Analyst Prep",
           "type": "link",
-          "value": "https://youtube.com",
-          "description": "F9 recommended YouTube tutorial channels"
+          "value": "http://www.youtube.com/@analystprep",
+          "description": "F9 recommended YouTube tutorial channels",
+          "items": []
+        },
+        {
+          "id": "res_1789378712541w3f0",
+          "title": "Steve Willis",
+          "type": "link",
+          "value": "http://www.youtube.com/@SteveWillisACCA",
+          "description": "",
+          "items": []
         }
       ]
     },
@@ -1938,8 +2029,9 @@
           "id": "res_cat_sbl_ch1",
           "title": "📢 SBL Telegram Channel",
           "type": "link",
-          "value": "https://t.me/Finance_Ahmadillo",
-          "description": "SBL official Telegram channels & discussion groups"
+          "value": "https://t.me/p1stratagicbussineslider",
+          "description": "",
+          "items": []
         }
       ]
     },
@@ -1955,6 +2047,69 @@
           "type": "link",
           "value": "https://t.me/Finance_Ahmadillo",
           "description": "SBL Kaplan & BPP latest exam kits and textbooks"
+        },
+        {
+          "id": "res_1789471885804mbsm",
+          "title": "SBL kaplan Exam Kit 25-26.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIObWqpLI3XdSlldqnsz4h_CQHGtPJ3AAJyogACUZXRSGHHLpYmWgtnPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789471885806ruvt",
+          "title": "SBR Exam Kit 2026-27 ISDC.pdf",
+          "type": "file_id",
+          "value": "BQACAgQAAxkBAAIObmqpLI1Fm2aAkkHlUJyVAAFsbpqUDAACFx4AAtMfOVGwbEJ-3JUppj0E",
+          "description": ""
+        },
+        {
+          "id": "res_1789471885806eeox",
+          "title": "SBR Study Text 2026-27 ISDC.pdf",
+          "type": "file_id",
+          "value": "BQACAgQAAxkBAAIOb2qpLI0hdUELmdJdGrFW7v1IUKx9AAIZHgAC0x85UaY8aA-TDux-PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789471885807w2xp",
+          "title": "SBL Exam Kit 2026-27 ISDC.pdf",
+          "type": "file_id",
+          "value": "BQACAgQAAxkBAAIOcGqpLI3I_3awv5C0TD0Wh1z-MdZzAAIbHgAC0x85Ubm3b87y2TxLPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789471885808seil",
+          "title": "SBL Study Text 2026-27 ISDC.pdf",
+          "type": "file_id",
+          "value": "BQACAgQAAxkBAAIOcWqpLI0nPCinuMXdQ6nQhf06PSWZAAIeHgAC0x85UYMksoS-40HQPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789471885810r2n6",
+          "title": "SBL Hassan dosani.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOcmqpLI2sg60Brz5qn-nMR9Y8C7_TAAKuoAACVZk5SXG1qgcH_cvGPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789471885811ahym",
+          "title": "SBL Kaplan Exam Kit 2025-26.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOc2qpLI0kF3GOuvzmVo8_vyqxTXCqAAKvoAACVZk5SXS4WWfvLmgzPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789471885812dy4l",
+          "title": "ACCA SBL FORMATS-1.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOdGqpLI1zrHsPLQM5_uJrf6_A8xsaAAJurAACAzhBSUh1RljHUYhSPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789471885814x0co",
+          "title": "ACCA-SBL-S25-Notes 25-26.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOdWqpLI26Jrrf7iMJnAxdUFi9leGzAAKQpwACAzhJSVUv1eMtvxrZPQQ",
+          "description": ""
         }
       ]
     },
@@ -2022,6 +2177,34 @@
           "type": "link",
           "value": "https://t.me/Finance_Ahmadillo",
           "description": "SBR Kaplan & BPP latest exam kits and textbooks"
+        },
+        {
+          "id": "res_1789379035909d8dk",
+          "title": "SBR Exam Kit 2026-27 ISDC.pdf",
+          "type": "file_id",
+          "value": "BQACAgQAAxkBAAIOVWqnwdtX3x4AAYqRz9-p4oYzTypyTAACFx4AAtMfOVGwbEJ-3JUppj0E",
+          "description": ""
+        },
+        {
+          "id": "res_1789379035911s5tj",
+          "title": "SBR Study Text 2026-27 ISDC.pdf",
+          "type": "file_id",
+          "value": "BQACAgQAAxkBAAIOVmqnwdtl9yJazP1aZyYJS2ohZwUwAAIZHgAC0x85UaY8aA-TDux-PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789379035912x1x3",
+          "title": "SBL Exam Kit 2026-27 ISDC.pdf",
+          "type": "file_id",
+          "value": "BQACAgQAAxkBAAIOV2qnwdtSj5iTExRiZYuV06JBphVdAAIbHgAC0x85Ubm3b87y2TxLPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789379035913cy3k",
+          "title": "SBL Study Text 2026-27 ISDC.pdf",
+          "type": "file_id",
+          "value": "BQACAgQAAxkBAAIOWGqnwdtpfDwQKXFYECq29HWlEdkGAAIeHgAC0x85UYMksoS-40HQPQQ",
+          "description": ""
         }
       ]
     },
@@ -2585,7 +2768,220 @@
       "title": "📜 BHMS (Buxgalteriya Hisobining Milliy Standartlari)",
       "parentId": "cat_national_1c",
       "order": 2,
-      "resources": []
+      "resources": [
+        {
+          "id": "res_17894733100954xl8",
+          "title": "YaTT faoliyat turlari pdf.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOgWqpMh2mziBas26sH1uLjDpF803eAAIqpwAC7FBJSSiCuCA3b1JKPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789473310688kzks",
+          "title": "Xususiy korxona to‘g‘risida pdf.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOg2qpMh4lgToqY2xzWnvNeGi_7rDaAAIrpwAC7FBJSV_IASHQEDzRPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17894733144744zac",
+          "title": "Mas’uliyati_cheklangan_hamda_qo‘shimcha_mas’uliyatli_jamiyatlar.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOhWqpMiIQxnHtmHz0_cghaRTT-ljxAAIspwAC7FBJSZ2gnZkiQ_iKPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789473314868nx20",
+          "title": "Oilaviy korxona.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOhmqpMiJZTLTwT-kC1GZHwJfqjt_WAAItpwAC7FBJSYCSeKT0Gmt7PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789473444826uzmd",
+          "title": "1-son BHMS",
+          "type": "link",
+          "value": "https://lex.uz/acts/828581",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_17894734657194oy5",
+          "title": "2-son BHMS",
+          "type": "link",
+          "value": "https://lex.uz/Pages/GetAct.aspx?lact_id=829551",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_178947351561767n2",
+          "title": "3-son BHMS",
+          "type": "link",
+          "value": "https://lex.uz/Pages/GetAct.aspx?lact_id=829520",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789473527454doqb",
+          "title": "4-son BHMS",
+          "type": "link",
+          "value": "https://lex.uz/docs/4890446",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789473543990ccay",
+          "title": "5-son BHMS",
+          "type": "link",
+          "value": "https://lex.uz/Pages/GetAct.aspx?lact_id=821041",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789473562937o8qa",
+          "title": "6-son BHMS",
+          "type": "link",
+          "value": "https://lex.uz/Pages/GetAct.aspx?lact_id=1473352",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789473577046b2oj",
+          "title": "7-son BHMS",
+          "type": "link",
+          "value": "https://lex.uz/Pages/GetAct.aspx?lact_id=627308",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789473734044i3se",
+          "title": "8-son BHMS",
+          "type": "link",
+          "value": "https://lex.uz/Pages/GetAct.aspx?lact_id=822699",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_17894737516793y03",
+          "title": "9-son BHMS",
+          "type": "link",
+          "value": "https://lex.uz/Pages/GetAct.aspx?lact_id=818994",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_17894737694217kow",
+          "title": "10-son BHMS",
+          "type": "link",
+          "value": "https://lex.uz/Pages/GetAct.aspx?lact_id=821447",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789473784864za9q",
+          "title": "11-son BHMS",
+          "type": "link",
+          "value": "https://lex.uz/Pages/GetAct.aspx?lact_id=822787",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789473795730x7w6",
+          "title": "12-son BHMS",
+          "type": "link",
+          "value": "https://lex.uz/Pages/GetAct.aspx?lact_id=823344",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789474285851irrj",
+          "title": "14-son BHMS",
+          "type": "link",
+          "value": "https://lex.uz/Pages/GetAct.aspx?lact_id=834244",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789474304393pnpw",
+          "title": "15-son BHMS",
+          "type": "link",
+          "value": "https://lex.uz/Pages/GetAct.aspx?lact_id=839065",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789474319363ntgh",
+          "title": "16-son BHMS",
+          "type": "link",
+          "value": "https://lex.uz/Pages/GetAct.aspx?lact_id=822638",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789474333541zg9p",
+          "title": "17-son BHMS",
+          "type": "link",
+          "value": "https://lex.uz/Pages/GetAct.aspx?lact_id=822679",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789474349505niqi",
+          "title": "19-son BHMS",
+          "type": "link",
+          "value": "https://lex.uz/Pages/GetAct.aspx?lact_id=812952",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789474362713vlxr",
+          "title": "20-son BHMS",
+          "type": "link",
+          "value": "https://lex.uz/Pages/GetAct.aspx?lact_id=2222824",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789474364309mo1g",
+          "title": "20-son BHMS",
+          "type": "link",
+          "value": "https://lex.uz/Pages/GetAct.aspx?lact_id=2222824",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789474373879gcg2",
+          "title": "21-son BHMS",
+          "type": "link",
+          "value": "https://lex.uz/Pages/GetAct.aspx?lact_id=809350",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789474385069q5de",
+          "title": "22-son BHMS",
+          "type": "link",
+          "value": "https://lex.uz/Pages/GetAct.aspx?lact_id=842094",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_17894743994492ent",
+          "title": "23-son BHMS",
+          "type": "link",
+          "value": "https://lex.uz/Pages/GetAct.aspx?lact_id=627304",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1789474411791uhnj",
+          "title": "24-son BHMS",
+          "type": "link",
+          "value": "https://lex.uz/Pages/GetAct.aspx?lact_id=1512384",
+          "description": "",
+          "items": []
+        }
+      ]
     },
     {
       "id": "cat_tax_reporting",
@@ -3255,7 +3651,7 @@
     },
     {
       "id": "cat_1789204456181",
-      "title": "Buxgalteriya oson tilda",
+      "title": "🎬 Buxgalteriya — Oson Tilda!",
       "parentId": "cat_national_1c",
       "order": 131,
       "resources": [
@@ -3418,6 +3814,632 @@
           "value": "BAACAgIAAxkBAAINrmqlGNKp8vYxOkEatpXIZo9q338JAAI0CAACX6OgSAOGrg-_32E5PQQ",
           "description": "",
           "items": []
+        }
+      ],
+      "isFeedback": false
+    },
+    {
+      "id": "cat_1789380096759",
+      "title": "Agricultural Economics",
+      "parentId": "cat_economics",
+      "order": 132,
+      "resources": [],
+      "isFeedback": false
+    },
+    {
+      "id": "cat_1789473156552",
+      "title": "🖥 1C 8.2: Amaliy buxgalteriya darslari",
+      "parentId": "cat_national_1c",
+      "order": 133,
+      "resources": [
+        {
+          "id": "res_17894744925270ryz",
+          "title": "1. Устав фондини шакиллантириш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOmWqpNrucwUp1PuZYxT69rV-KhP6_AAI0qQAC7_RJSTKtp54yUZOQPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474492528fezo",
+          "title": "1_Бошлангич_маълумотларни_киритиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOmmqpNruy5UZTv1R2fyT0XZvpxSFHAAI5qQAC7_RJSeu4VkdTlvquPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474492529hly4",
+          "title": "2. Материаллар номини киритиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOm2qpNrs7RMUswF2NvEtL7aLjWXcEAAI6qQAC7_RJSbp8AAHD9T2u9z0E",
+          "description": ""
+        },
+        {
+          "id": "res_1789474492531e171",
+          "title": "3. Kонтрагентлар киритиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOnGqpNru6_wpLz_3EzifmLPZVB_CNAAI7qQAC7_RJSZcR8X0L-5YfPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17894744925339res",
+          "title": "4. Банкдан соликка пул чикариш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOnWqpNru4k5aLxxNGX21GvSqiSMtHAAI8qQAC7_RJSViifTQ1WytbPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17894744925340kar",
+          "title": "5. Банкдан хом ашёга пул чикариш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOnmqpNrsv2nHxzMhK0Z05WmR5ltRZAAI9qQAC7_RJSVj25PPMlIRGPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474492535657c",
+          "title": "6_Банкдан_банк_хизмати_учун_пул_чикариш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOn2qpNrubfG0GN6PIIHLOBG-9_VjCAAI-qQAC7_RJScr0zYIjuIxSPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17894744925367w2q",
+          "title": "7. Банкдан кредит олиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOoGqpNrsDlYPsV-5W-DBxZyvAE_s9AAI_qQAC7_RJSQwzhjuKhsHkPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474492537xj65",
+          "title": "8_Хужжатдан_нусха_олиб_ишни_давом_эттириш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOoWqpNrsHQlxh_aEUuzmkzRRB08FyAAJAqQAC7_RJSXPmQZsi4_OePQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474492538ncqr",
+          "title": "9.Жисмоний шахс киритиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOomqpNrsT5Sx3yucJOWUYlFNWtkncAAJBqQAC7_RJSfGjzFuo2i1fPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474492539rvvi",
+          "title": "10. Сотрудникга олиб утиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOo2qpNrs8SV4KQ7Ki597P1S-yC9KAAAJCqQAC7_RJSZmtKVdKNnR3PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474492540esnq",
+          "title": "11. Должности киритиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOpGqpNruYM2CmpsBNqkuHPCmN30imAAJFqQAC7_RJSaiKuOAxv8WfPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17894744925412gir",
+          "title": "12. Булимлар очиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOpWqpNrs4h_rfrDr0SDevnoag5yaeAAJGqQAC7_RJSXa6xZ6lWiubPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474492580yjw2",
+          "title": "13. Ишга кабул килиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOpmqpNruA6gvDy-4U0lIgCXHryn7nAAJHqQAC7_RJSf961T-315iBPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_178947449258179km",
+          "title": "14_Ишга_кабул_килиш_ойлик_белгилаш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOp2qpNru-QYVZn5Qwxc8srFWQyFkRAAJOqQAC7_RJSY8g4VfcazvkPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474492582etm0",
+          "title": "15. Табель тузиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOqGqpNrvrrxFnjWg3fHAppu_Bz6LqAAJPqQAC7_RJSR4bj0RZKEe8PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474492583ekcy",
+          "title": "16_Иш_хаки_хисоблаш_ва_ведемость_тузиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOqWqpNrvSH-RSspKcNftAOTUBTuRYAAJQqQAC7_RJSbpFS5sVcqKIPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474492584ym6a",
+          "title": "17_Кассага_пул_кирим_килиш_ва_иш_хакига_тулаш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOqmqpNruqrXdGxBoyps7xB3M90zUwAAJRqQAC7_RJSZX6tatBN3w5PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474492586c245",
+          "title": "18. Хом ашёлар кирим килиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOq2qpNrv0SNYoyghdOrtHzrw-LokaAAJSqQAC7_RJSZsQvDewjmUQPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474492587d298",
+          "title": "19.Сувни приход килиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOrGqpNrsjxQ8AAeE_IKv68Pa9CZtMmwACU6kAAu_0SUnFrcMblPsRdD0E",
+          "description": ""
+        },
+        {
+          "id": "res_17894744925881yon",
+          "title": "20. Электр энергия киритиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOrWqpNrst55m-TBKjNesewplSp9TaAAJYqQAC7_RJScKiChTmdfPSPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474492589i0w7",
+          "title": "21. Спецификация киритиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOrmqpNrumdO1Ka_zt6syhgaLA1o4qAAJZqQAC7_RJScG0-ghhRHuvPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474492591hqew",
+          "title": "22. Ишлаб чикаришни ташкил этиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOr2qpNrsdjhYEj8oSNouA2DjftNkiAAJbqQAC7_RJSef8LaEeLguHPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474492681dky1",
+          "title": "23. Уйга вазифа Махсулотни сотиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOsGqpNrumeU2j5BQ-_8iBBYDL4Y0TAALmoQACr6pJSaqXMSTgsN9lPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17894744927797pai",
+          "title": "24_Асосий_воситани_номини_киритиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOsWqpNrtxQ4-d8HS9oXChKnArdL0FAALnoQACr6pJSRM_ZUgKe7n3PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474492879rg9d",
+          "title": "25. Бинони кирим килиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOsmqpNrsQHzh_ihEf8HTLcH7yCYS4AALooQACr6pJScAq6suuoqvUPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17894744928817h8a",
+          "title": "26. Асосий воситани учётга олиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOs2qpNrtVQGQMCG_Aco6JqGvsCl8oAALpoQACr6pJSWxvzJEJhMA_PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17894744928842i1i",
+          "title": "27_Номоддий_активни_сотиб_олиш_ва_учетга_олиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOtGqpNrusJoM2i2tmybgVIie5YxVgAALqoQACr6pJSZovMq25PGq8PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474492885u4lt",
+          "title": "28. Ускуналарни сотиб олиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOtWqpNrvbSWx9WT75oCkDDATxlOCyAALroQACr6pJSZmVCf1Bi2pyPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474492979c00o",
+          "title": "29. Ускунани учётга олиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOtmqpNrs5BdwX8nlEiHmIXh2clHDSAALtoQACr6pJSUsOV9lg1KxkPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474492981vgn3",
+          "title": "30_Автомашина_сотиб_олиш_ва_учётга_олиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOt2qpNrsLnO88UjvbBpwsMvSXIgs3AALuoQACr6pJSQH90tF1cXafPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17894744929827p2z",
+          "title": "31. Февраль ойига табель тузиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOuGqpNrtPh9sbW3IIuMG7Dt5gcopTAALvoQACr6pJSSxn8VHpwl47PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474492983ukg5",
+          "title": "32. Кушимча иш хаки киритиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOuWqpNrvSePkut4tSdQId2N-rWJ-sAALwoQACr6pJSVSVbGKFPebWPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474492984mou8",
+          "title": "33. Иш хакига ушланма куйиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOumqpNruOAvHLlmpAaloBwAMySIvsAALxoQACr6pJSSL9Jem_AubxPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474492985pjm1",
+          "title": "34. Февраль ойи иш хаки хисоблаш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOu2qpNruvR3VksLN79Py2gmHH6MKOAALzoQACr6pJSciiNHN8IW7xPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474492986px61",
+          "title": "35. Иш хаки китобини текшириш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOvGqpNrsKuHuZsTl1NkplnGQpTHQwAAL1oQACr6pJSfEklmSLb8WEPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474492987h410",
+          "title": "36. Иш хаки пластик карта очиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOvWqpNrv0zdcjc70MRRHPwNau9sttAAL2oQACr6pJSepkgHELyWklPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474492988cnih",
+          "title": "37_Иш_хакини_пластик_картага_тушириш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOvmqpNrtIWpFGjfS9qV-Jzn63sQrJAAL3oQACr6pJSSCHwHooG0SBPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474492989ng6a",
+          "title": "38. Разряд буйича ишга кабул килиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOv2qpNrt2RQi-KfSbW6U8wOzcHUweAAL6oQACr6pJSax8z30Cj0j8PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_178947449299045s5",
+          "title": "39_Иш_хакини_ойма_ой_ёпиш_проводкалари.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOwGqpNruFehrPZwFOrnyNvlDScV-oAAL7oQACr6pJSYSfwHZhsKc9PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474492992i4pt",
+          "title": "40_Соликка_даромад_солии_ва_ЯИТ_хисоботини_тайёрлаш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOwWqpNrs4VujEjl6nObqhFr1A0eDAAAL9oQACr6pJSVwbt1xn0s7YPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474492993t21y",
+          "title": "41. Хисоботларни текшириш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOwmqpNrtyPrzsH1oj7UOKEjq1PIVZAAL-oQACr6pJSY7X3dOl6562PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474492994viyh",
+          "title": "42_Молиёвий_ёрдам_тани_ва_фоизини_кайтариш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOw2qpNrtwmpJoXT5mYi_CqLyZJqivAAL_oQACr6pJSbKsZmwXYYv2PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474493080pemd",
+          "title": "43. Соликка пул утказиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOxGqpNrtFI8-O7tAVJOI3Yqz2I0azAAOiAAKvqklJvbk6eV3kqbs9BA",
+          "description": ""
+        },
+        {
+          "id": "res_17894744930815edj",
+          "title": "44. Март ойи иш хакини хисоблаш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOxWqpNrvUzQJ0ihqd_40WEN6gxyivAAIBogACr6pJSaUXON3Q23YzPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474493083h3o1",
+          "title": "45. Ер мулк ва сув солиги.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOxmqpNru1vGiJO5h61ZGmqUGkURmtAAICogACr6pJSUVUiyBEzMLLPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474493084b4eh",
+          "title": "46. Проведение бериш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOx2qpNrtAb3nDVyhmE3K38nF2n1QPAAIDogACr6pJSdBIWGP9m2QaPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474493085u4di",
+          "title": "47. Ойни ёпиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOyGqpNrsCBLHxnC5t8B0nYnI4cPAfAAIEogACr6pJScN0Wh4R2ci2PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17894744930868v22",
+          "title": "48_Ягона_солик_хисоблаш_ва_отчёт_тайёрлаш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOyWqpNruc6saP-rgmJ-POm1cyxm1vAAIFogACr6pJSbsGXF87DY0-PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474493087c17w",
+          "title": "49.  Ягона Соликка пул утказиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOymqpNrtuXtoZN5K1hxC7U3T0VnDAAAIGogACr6pJScDNHzzekTDOPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474493088zmh4",
+          "title": "50_Ойни_ёпилиши_ва_счётларни_текшириш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOy2qpNrvLF0PFKgdjEE4DhDkCqqhlAAIHogACr6pJSfCDu5wAATBJqT0E",
+          "description": ""
+        },
+        {
+          "id": "res_1789474493089ph7z",
+          "title": "51. Асосий воситани эскириши.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOzGqpNrubpAK3db-AxvoOmvbIeW7NAAIIogACr6pJSUOyBFdkrLlTPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474493090xasx",
+          "title": "52. Таннарх.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOzWqpNruxJOjDgJPG1Off2cNgYAeAAAIJogACr6pJSXyddpeMmhIOPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474493092xb37",
+          "title": "53. Калькуляция.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOzmqpNrsaMB4CI0Uprok_1EwmigxkAAIKogACr6pJSd3866g9C5a8PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474493093jr4g",
+          "title": "54. Проводкаларни текшириш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIOz2qpNrtCDEGX-flqsdevHpychXcRAAILogACr6pJScRKV_9hNQP3PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17894744931808tms",
+          "title": "55_Инвентар_жихозларни_кирим_килиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIO0GqpNrtrin10a4Z5nAWE6qn2_3wfAAIMogACr6pJST2C2HvQOD2oPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474493181sf2g",
+          "title": "56. Инвентарларни списать килиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIO0WqpNrvsAAFpLH8tyUcpqZN4QUdbmwACDqIAAq-qSUkF9-4SjpNItj0E",
+          "description": ""
+        },
+        {
+          "id": "res_1789474493182ohif",
+          "title": "57_Инвентарларни_балансдан_ташкари_014_счётга_олиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIO0mqpNruyev84xZmpljxUH5jAS-LaAAIPogACr6pJSZVTrf6Zoz85PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474493183nlxt",
+          "title": "58. Долларга станок кирим килиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIO02qpNrtLNQ-a5t2bxyc6qufLPdV7AAIQogACr6pJSUDnigiScNOJPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474493184f3dl",
+          "title": "59. Долларда пул чикариш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIO1GqpNruxgDI7PmZz8_IvmKTUHmTOAAIRogACr6pJSflTpbLm2BrHPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474493185rx8w",
+          "title": "60_Спаркга_газ_балон_урнатиш_модернизация_килиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIO1WqpNrvycaNlXlpivu_HQdGfV0SdAAISogACr6pJSQPMy87w2wHMPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_178947449318701e9",
+          "title": "61. Инвентаризация килиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIO1mqpNrsy7OSRV21qnuAUX8LCXPKwAAITogACr6pJSaaGBdyrpuFLPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474493188xxk8",
+          "title": "62_Корпоратив_картага_пул_чикариш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIO12qpNrtDVqGAMk9VAlGTB3abzVnfAAIUogACr6pJSeNopl6rhTbzPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474493189eiq6",
+          "title": "63. Авансовый отчёт тайёрлаш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIO2GqpNrv89V3Ty9RMbxuvZkMZnlJRAAIVogACr6pJSZxeZWd94vZfPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474493190hc9e",
+          "title": "64. Командировкага пул чикариш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIO2WqpNrvwEkOweaa58NZkIuA4xBB4AAIWogACr6pJSWtP6pzc2NeDPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474493191yq55",
+          "title": "65_Камомад_аникланди_ва_иш_хакига_жарима_куйилди.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIO2mqpNrurzHcE56xrNffe01OlOVTIAAIXogACr6pJSaWobiHZ26tiPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474493192ofxi",
+          "title": "66. Асосий воситани сотилиши.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIO22qpNruq7mWYzYsismm7Ibjq1zvMAAIYogACr6pJSUZxa6vLDZucPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474493194490a",
+          "title": "67_Даромад_солигидан_имтиёз_куйиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIO3GqpNruI4f559l4EKVabOpeCzgkhAAIZogACr6pJSZ6TYAVJz7IiPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474493280lp5k",
+          "title": "68_Асосий_воситаларни_кайта_бахолаш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIO3WqpNrsE06RePQABun27PV4Y2dnBFAACGqIAAq-qSUn2LMaY6jhRiT0E",
+          "description": ""
+        },
+        {
+          "id": "res_1789474493281d116",
+          "title": "69. Иш хаки справка чикариш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIO3mqpNruAx78KLBSJPL6HWhoSiZ9kAAIbogACr6pJSWkPOEI6gSZvPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17894744932839vl9",
+          "title": "70. Пулни кайтиб келиши.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIO32qpNruP9eWYKzdZtsNUBb7ojI6UAAIcogACr6pJSQWUiJo327dpPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474493284zra9",
+          "title": "71. Ишдан бушатиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIO4GqpNrvjKmj9CeQwEoj8z9yKVb9qAAIdogACr6pJSdT0-nSc-buePQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474493285nbb3",
+          "title": "72. Иш хакини ошириш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIO4WqpNrszyMHcqpEqLLtPaMmCOZsQAAIeogACr6pJSYU74aVVl96GPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17894744932868wpo",
+          "title": "73. Командировкага чикариш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIO4mqpNrubQoK_NbOKKh9HtQO54pgkAAIfogACr6pJSQABzcj3kxw_wz0E",
+          "description": ""
+        },
+        {
+          "id": "res_1789474493287ec27",
+          "title": "74. Отпускага чикариш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIO42qpNrs4F6O_1kvseYwEn1lxQZx6AAIgogACr6pJSRlbtCW4MOChPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474493288t4xj",
+          "title": "75. Табельга больничный чикариш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIO5GqpNrsTERV2ggLNDbSJyVI1WupNAAIhogACr6pJSeKpA5W03YvfPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474493289g0p9",
+          "title": "76. Табельни текшириш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIO5WqpNruF2KJpD6AfAAEsu1sRdtxpWQACIqIAAq-qSUnoGdW5h75HXz0E",
+          "description": ""
+        },
+        {
+          "id": "res_1789474493290al13",
+          "title": "77. Контракт (укиш) киритиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIO5mqpNrvxAAFHPmGpPwtgrIxYi2r_YwACI6IAAq-qSUm_lFG0S7I1Ej0E",
+          "description": ""
+        },
+        {
+          "id": "res_1789474493381czki",
+          "title": "78. Уй-жой учун ушланма киритиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIO52qpNrvsrv4qDw2sDmxSOwPNNU5JAAIkogACr6pJSZyel4Lh2wEfPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474493382tr2v",
+          "title": "79. Иш хаки имтиёзини текшириш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIO6GqpNrsP14x-H_aLyhPLQpvilHqhAAIlogACr6pJSW6wyR9WKMwFPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474493384wm2z",
+          "title": "80_Тунги_навбатчилик_учун_кушимча_иш_хаки_киритиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIO6WqpNrs5uws6j-yEHgL0XEpPNkiaAAImogACr6pJSRq4Ag9rLv2bPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474493385fwwh",
+          "title": "81. Выслуга лет киритиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIO6mqpNrsc9qIfywyBEwhyqR7cBvvvAAInogACr6pJSWiXR92pKUubPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474493387v281",
+          "title": "82_Жисмоний_шахс_билан_мехнат_шартномаси_тузиш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIO62qpNruBmImeBSzeISsffqJLWWHvAAIoogACr6pJSXpbWAW4X6dfPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474493388wx94",
+          "title": "83. Авансовый отчёт тайёрлаш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIO7GqpNruMFgSn89SrcGNznta_-eeAAAIpogACr6pJSV4sb0xBa9qLPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17894744933903qlt",
+          "title": "84. Иш хакини текшириш.wmv",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIO7WqpNrt05MgzzcwZ3Mfjqv1CR8xkAAIrogACr6pJSYTow1E8SU2pPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789474624448c4xj",
+          "title": "1C buhgalteriya 8 qollanma.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIPK2qpN0DqKyfIYkxkYVqNuZ2uz5OAAALfAwACkERZSxwHWv0KcMJiPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_178947470459187fh",
+          "title": "Barcha videolar.zip",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIPLWqpN5Dax1RfEEf9JFIHeB3su_hbAAI4ogACr6pJSSzUmvc5mztiPQQ",
+          "description": ""
         }
       ],
       "isFeedback": false
