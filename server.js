@@ -1607,7 +1607,10 @@ function setupBotHandlers() {
     // Batch Queue Commands
     if (msg.text) {
       const text = msg.text.trim();
-      
+
+      // Skip admin keyboard button texts — let bot.onText handlers process them
+      const adminButtons = ['⚡ Admin Batch Mode', '📣 Broadcast Post', '📎 Attach to Exam', '📦 Create Multi-Book Pack'];
+      if (adminButtons.includes(text)) return;      
       if (text === '/cancelupload' && state.uploadQueue && state.uploadQueue.length > 0) {
         state.uploadQueue = null;
         state.directUploadFolderId = null;
