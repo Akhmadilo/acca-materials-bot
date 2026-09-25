@@ -1336,7 +1336,7 @@ function setupBotHandlers() {
     }
 
     // BATCH: Step 1 — user picked a root category, show its children
-    if (data.startsWith('batch_root_')) {
+    else if (data.startsWith('batch_root_')) {
       const rootId = data.replace('batch_root_', '');
       const rootCat = db.categories.find(c => c.id === rootId);
       const children = db.categories.filter(c => c.parentId === rootId);
@@ -1351,14 +1351,14 @@ function setupBotHandlers() {
           `📥 Drop your files now — all saved automatically!\n` +
           `🔴 Type /done when finished.`, {
           chat_id: chatId, message_id: query.message.message_id, parse_mode: 'HTML'
-        });
+        }).catch(err => bot.sendMessage(chatId, `Error in editMessage: ${err.message}`));
       } else {
         const inlineKeyboard = children.map(c => [{ text: c.title, callback_data: `batch_mid_${c.id}` }]);
         inlineKeyboard.push([{ text: '🔙 Back', callback_data: 'batch_back_root' }]);
         bot.editMessageText(`📂 <b>${rootCat ? rootCat.title : rootId}</b>\n\nSelect a subfolder:`, {
           chat_id: chatId, message_id: query.message.message_id, parse_mode: 'HTML',
           reply_markup: { inline_keyboard: inlineKeyboard }
-        });
+        }).catch(err => bot.sendMessage(chatId, `Error in editMessage: ${err.message}`));
       }
       bot.answerCallbackQuery(query.id);
     }
@@ -1379,14 +1379,14 @@ function setupBotHandlers() {
           `📥 Drop your files now — all saved automatically!\n` +
           `🔴 Type /done when finished.`, {
           chat_id: chatId, message_id: query.message.message_id, parse_mode: 'HTML'
-        });
+        }).catch(err => bot.sendMessage(chatId, `Error in editMessage (mid): ${err.message}`));
       } else {
         const inlineKeyboard = children.map(c => [{ text: c.title, callback_data: `set_batch_target_${c.id}` }]);
         inlineKeyboard.push([{ text: '🔙 Back', callback_data: `batch_root_${midCat ? midCat.parentId : ''}` }]);
         bot.editMessageText(`📂 <b>${midCat ? midCat.title : midId}</b>\n\nSelect a folder to upload into:`, {
           chat_id: chatId, message_id: query.message.message_id, parse_mode: 'HTML',
           reply_markup: { inline_keyboard: inlineKeyboard }
-        });
+        }).catch(err => bot.sendMessage(chatId, `Error in editMessage (mid): ${err.message}`));
       }
       bot.answerCallbackQuery(query.id);
     }
@@ -2034,13 +2034,13 @@ function setupBotHandlers() {
         }
         
         if (q.imageUrl) {
-          await bot.sendMessage(chatId, buttonText || 'Select your answer:', { parse_mode: 'HTML', reply_markup: { inline_keyboard: inlineKeyboard } });
+          await bot.sendMessage(chatId, buttonText || 'Select your answer:', { parse_mode: 'HTML', reply_markup: { inline_keyboard: inlineKeyboard } }).catch(err => bot.sendMessage(chatId, `Error in editMessage: ${err.message}`));
         } else {
           const fullText = text + (buttonText ? '\n\n' + buttonText : '');
           if (replaceMessageId) {
-            bot.editMessageText(fullText, { chat_id: chatId, message_id: replaceMessageId, parse_mode: 'HTML', reply_markup: { inline_keyboard: inlineKeyboard } });
+            bot.editMessageText(fullText, { chat_id: chatId, message_id: replaceMessageId, parse_mode: 'HTML', reply_markup: { inline_keyboard: inlineKeyboard } }).catch(err => bot.sendMessage(chatId, `Error in editMessage: ${err.message}`));
           } else {
-            await bot.sendMessage(chatId, fullText, { parse_mode: 'HTML', reply_markup: { inline_keyboard: inlineKeyboard } });
+            await bot.sendMessage(chatId, fullText, { parse_mode: 'HTML', reply_markup: { inline_keyboard: inlineKeyboard } }).catch(err => bot.sendMessage(chatId, `Error in editMessage: ${err.message}`));
           }
         }
       } else if (q.type === 'written') {
