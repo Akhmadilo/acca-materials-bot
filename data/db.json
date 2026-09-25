@@ -61,6 +61,13 @@
       "last_name": "",
       "username": "",
       "joined_at": "2026-09-11T17:55:07.882Z"
+    },
+    {
+      "id": 1449925696,
+      "first_name": "Dilafro'z Mamajonova",
+      "last_name": "",
+      "username": "Dilafroz_Mamajonova",
+      "joined_at": "2026-09-24T13:26:58.539Z"
     }
   ],
   "categories": [
@@ -2121,10 +2128,19 @@
       "resources": [
         {
           "id": "res_cat_sbl_v1",
-          "title": "🎥 SBL Complete Video Course",
+          "title": "🎥 Strategic Business Leader (SBL)",
           "type": "link",
-          "value": "https://youtube.com",
-          "description": "SBL comprehensive lecture series"
+          "value": "https://youtube.com/playlist?list=PLRYOefFr48S3qNnqyt7HvqWTI_xjpRtpX&si=OLmOiz8biM39JEFg",
+          "description": "SBL comprehensive lecture series",
+          "items": []
+        },
+        {
+          "id": "res_17903214125933o9k",
+          "title": "ACCA Strategic Business Leader (SBL)",
+          "type": "link",
+          "value": "https://youtube.com/playlist?list=PLETfu1oU9uLxePvbqfLoEb5BVocSADw6z&si=TfpprKa6w1lQJAb8",
+          "description": "",
+          "items": []
         }
       ]
     },
@@ -2136,10 +2152,35 @@
       "resources": [
         {
           "id": "res_cat_sbl_yt1",
-          "title": "🔍 SBL YouTube Channel",
+          "title": "Examiner report",
           "type": "link",
-          "value": "https://youtube.com",
-          "description": "SBL recommended YouTube tutorial channels"
+          "value": "https://youtu.be/0GpPjeur4GM?si=r0x2gadlB-aR16Ow",
+          "description": "SBL recommended YouTube tutorial channels",
+          "items": []
+        },
+        {
+          "id": "res_1790321466981i1x3",
+          "title": "Webinar",
+          "type": "link",
+          "value": "https://youtu.be/BRkZY9kQZEg?si=oHP8So3c7EOwyie6",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1790321494838tp35",
+          "title": "SBL InFocus webinar (M26) - Examiner's report unlocked",
+          "type": "link",
+          "value": "https://youtu.be/Fn4OBuZq-NI?si=2NAw1qBsGDBfTc1v",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1790321521647dwdw",
+          "title": "ACCA SBL examiner's report - SD25",
+          "type": "link",
+          "value": "https://youtu.be/xSLIM2A1Bj0?si=bv0kK8F-SMkBq2J_",
+          "description": "",
+          "items": []
         }
       ]
     },
@@ -2160,8 +2201,9 @@
           "id": "res_cat_sbr_ch1",
           "title": "📢 SBR Telegram Channel",
           "type": "link",
-          "value": "https://t.me/Finance_Ahmadillo",
-          "description": "SBR official Telegram channels & discussion groups"
+          "value": "https://t.me/P2StrategicBusinessReporting",
+          "description": "SBR official Telegram channels & discussion groups",
+          "items": []
         }
       ]
     },
@@ -2171,13 +2213,6 @@
       "parentId": "cat_sbr",
       "order": 2,
       "resources": [
-        {
-          "id": "res_cat_sbr_b1",
-          "title": "📖 SBR Kaplan Study Text & Revision Kit",
-          "type": "link",
-          "value": "https://t.me/Finance_Ahmadillo",
-          "description": "SBR Kaplan & BPP latest exam kits and textbooks"
-        },
         {
           "id": "res_1789379035909d8dk",
           "title": "SBR Exam Kit 2026-27 ISDC.pdf",
@@ -2191,20 +2226,6 @@
           "type": "file_id",
           "value": "BQACAgQAAxkBAAIOVmqnwdtl9yJazP1aZyYJS2ohZwUwAAIZHgAC0x85UaY8aA-TDux-PQQ",
           "description": ""
-        },
-        {
-          "id": "res_1789379035912x1x3",
-          "title": "SBL Exam Kit 2026-27 ISDC.pdf",
-          "type": "file_id",
-          "value": "BQACAgQAAxkBAAIOV2qnwdtSj5iTExRiZYuV06JBphVdAAIbHgAC0x85Ubm3b87y2TxLPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1789379035913cy3k",
-          "title": "SBL Study Text 2026-27 ISDC.pdf",
-          "type": "file_id",
-          "value": "BQACAgQAAxkBAAIOWGqnwdtpfDwQKXFYECq29HWlEdkGAAIeHgAC0x85UYMksoS-40HQPQQ",
-          "description": ""
         }
       ]
     },
@@ -2216,10 +2237,19 @@
       "resources": [
         {
           "id": "res_cat_sbr_v1",
-          "title": "🎥 SBR Complete Video Course",
+          "title": "ACCA Strategic Business Reporting",
           "type": "link",
-          "value": "https://youtube.com",
-          "description": "SBR comprehensive lecture series"
+          "value": "https://youtube.com/playlist?list=PLgHtGwL7RdKcYjV1xgS9O2DD-7MFfqOyf&si=9KFz_gZhuRuJZuhi",
+          "description": "SBR comprehensive lecture series",
+          "items": []
+        },
+        {
+          "id": "res_1790321615416nc3v",
+          "title": "ACCA Strategic Business Reporting",
+          "type": "link",
+          "value": "https://youtube.com/playlist?list=PLETfu1oU9uLwF29OeBj7WCZiCFsxAfv9r&si=izFyrfgA5ZtFsl_z",
+          "description": "",
+          "items": []
         }
       ]
     },
@@ -2231,10 +2261,35 @@
       "resources": [
         {
           "id": "res_cat_sbr_yt1",
-          "title": "🔍 SBR YouTube Channel",
+          "title": "Tom Clendon ACCA SBR",
           "type": "link",
-          "value": "https://youtube.com",
-          "description": "SBR recommended YouTube tutorial channels"
+          "value": "http://www.youtube.com/@tomclendonSBR",
+          "description": "SBR recommended YouTube tutorial channels",
+          "items": []
+        },
+        {
+          "id": "res_1790321646994rekj",
+          "title": "SBR webinars",
+          "type": "link",
+          "value": "https://youtube.com/playlist?list=PLRYOefFr48S2ZhjDw9iOqQ8F8-Kf35U74&si=w8G0IJ8iDJoss1QD",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_17903216604180mvp",
+          "title": "Strategic Business Reporting (SBR)",
+          "type": "link",
+          "value": "https://youtube.com/playlist?list=PLRYOefFr48S2gwmRSsfsQWFfLARa1d3R4&si=KYJ8CV6Td_J7bZNq",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_17903216710446eqz",
+          "title": "December 2021",
+          "type": "link",
+          "value": "https://youtu.be/B4jXgUOW9_A?si=7cahFH4u8yIFSaQo",
+          "description": "",
+          "items": []
         }
       ]
     },
@@ -2255,8 +2310,9 @@
           "id": "res_cat_p4_ch1",
           "title": "📢 P4 Telegram Channel",
           "type": "link",
-          "value": "https://t.me/Finance_Ahmadillo",
-          "description": "P4 official Telegram channels & discussion groups"
+          "value": "https://t.me/P4AdvancedFinancialManagmemt",
+          "description": "P4 official Telegram channels & discussion groups",
+          "items": []
         }
       ]
     },
@@ -2283,10 +2339,35 @@
       "resources": [
         {
           "id": "res_cat_p4_v1",
-          "title": "🎥 P4 Complete Video Course",
+          "title": "Advanced Financial Management (AFM)",
           "type": "link",
-          "value": "https://youtube.com",
-          "description": "P4 comprehensive lecture series"
+          "value": "https://youtube.com/playlist?list=PLRYOefFr48S25emNtcgoDOnmD_F_IFFwg&si=m1BDglYPoqeNG0Xc",
+          "description": "P4 comprehensive lecture series",
+          "items": []
+        },
+        {
+          "id": "res_1790321738276anav",
+          "title": "ACCA Advanced Financial Management",
+          "type": "link",
+          "value": "https://youtube.com/playlist?list=PLgHtGwL7RdKeu-s5wxm766FXm7jJ5f7Vx&si=blCv8tS0XG3pfehx",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1790321761244klwx",
+          "title": "ACCA Advanced Financial Management",
+          "type": "link",
+          "value": "https://youtube.com/playlist?list=PLYqDJLnc264_ou-EgoXTv7NYrIVjMe344&si=8sZ3iBjK-4y4PsvX",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_17903217745803416",
+          "title": "ACCA Advanced Financial Management (AFM) opentuition",
+          "type": "link",
+          "value": "https://youtube.com/playlist?list=PLETfu1oU9uLyrjb8_25VW5zw9f7jI58pC&si=V4UhYNSBCEVbvS37",
+          "description": "",
+          "items": []
         }
       ]
     },
@@ -2300,8 +2381,17 @@
           "id": "res_cat_p4_yt1",
           "title": "🔍 P4 YouTube Channel",
           "type": "link",
-          "value": "https://youtube.com",
-          "description": "P4 recommended YouTube tutorial channels"
+          "value": "http://www.youtube.com/@globalapconlinecourse",
+          "description": "P4 recommended YouTube tutorial channels",
+          "items": []
+        },
+        {
+          "id": "res_1790321815161seu4",
+          "title": "ACCA AFM",
+          "type": "link",
+          "value": "https://youtu.be/ABP2a-x6Lvs?si=zOKz__ED__zh4bdm",
+          "description": "",
+          "items": []
         }
       ]
     },
@@ -4439,6 +4529,92 @@
           "title": "Barcha videolar.zip",
           "type": "file_id",
           "value": "BQACAgIAAxkBAAIPLWqpN5Dax1RfEEf9JFIHeB3su_hbAAI4ogACr6pJSSzUmvc5mztiPQQ",
+          "description": ""
+        }
+      ],
+      "isFeedback": false
+    },
+    {
+      "id": "cat_1789542847095",
+      "title": "Buxgalteriya kitoblari",
+      "parentId": "cat_national_1c",
+      "order": 134,
+      "resources": [
+        {
+          "id": "res_1789542878639nxj0",
+          "title": "Buxgalteriya hisobi nazariyasi_Dusmuratov.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIPUmqqQd4ut5YcWFlr66HHMO0Os27EAAJIqgACxgZRSd_IR3hSJlVzPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789542878641uden",
+          "title": "Isroilov_B_,_Xolbekov_R_Buxgalteriya_hisobi_nazariyasi_2020_y_darslik.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIPU2qqQd56MqWhqzAO50QU7RtLfrzmAAIWDQAC1YbYSnVMO6EFct5CPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17895428786420wy5",
+          "title": "R.Dusmuratov - Buxgalteriya hisobi nazariyasi.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIPVGqqQd5z0JHIW4_Nadm9twW_tbR7AAJnBwACEcCpSV12tz09GVS2PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17895428786431fjr",
+          "title": "Banklarda+buxgalteriya+hisobi.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIPVWqqQd5Ly4qoRAI7sCQ8857_igVFAAKjCgACoheRSk4vGJHgZwN1PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789542878645kh8d",
+          "title": "Buxgalteriya hisobi va audit.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIPVmqqQd6pkdc3qYyiYyfx3vHi2XOmAALICQACJRjYSgABhYAE6w9iZj0E",
+          "description": ""
+        },
+        {
+          "id": "res_1789542878647qlic",
+          "title": "BIZNESDA BUXGALTERIYA HISOBI.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIPV2qqQd4IHKbfolzhvDLLETwiG-4DAALsAQACXe3wSIx9zBS63-W5PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789542878649bk6a",
+          "title": "R.Dusmuratov - Buxgalteriya hisobi nazariyasi.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIPVGqqQd5z0JHIW4_Nadm9twW_tbR7AAJnBwACEcCpSV12tz09GVS2PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789542878651drq2",
+          "title": "U.Inoyatov - Buxgalteriya hisobi.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIPWWqqQd57SohHjFT3J6GW3CKI4fzWAAJoBwACEcCpScqp8yGE7e0SPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789542878652kwdx",
+          "title": "Buxgalteriya_hisobi_2017_Moliya.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIPWmqqQd43SaTijw2nr1YdYOwTh-8DAAJRAwACMhIJSG35mMpQSXKpPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1789542878653apga",
+          "title": "K.B.Urazov Buxgalteriya hisobi va audit.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIPW2qqQd6ka3hVFWnE-QABsSG9Pac-rwACdg0AAl5-KEmMMjErS38mdD0E",
+          "description": ""
+        },
+        {
+          "id": "res_17895428786873cgd",
+          "title": "Buxgalteriya hisobi-2021y.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIPXGqqQd7pguor2-_GTjD2f-3KvUhRAALJGwAC1hlRSv-lVGqLezDkPQQ",
           "description": ""
         }
       ],
