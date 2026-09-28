@@ -1213,7 +1213,7 @@ function updateBulkActionBar() {
   if (!bar) return;
 
   // Always show bar if there are resources in current folder
-  const currentCat = allCategories.find(c => c.id === currentFolderId);
+  const currentCat = dbData.categories.find(c => c.id === currentFolderId);
   const hasFiles = currentCat && currentCat.resources && currentCat.resources.length > 0;
 
   if (selectedResourceIds.length > 0) {
@@ -1228,7 +1228,7 @@ function updateBulkActionBar() {
 }
 
 function selectAllResources() {
-  const cat = allCategories.find(c => c.id === currentFolderId);
+  const cat = dbData.categories.find(c => c.id === currentFolderId);
   if (!cat || !cat.resources) return;
   selectedResourceIds = cat.resources.map(r => r.id);
   // Update all checkboxes visually
