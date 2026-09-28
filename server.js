@@ -332,7 +332,7 @@ function initBot() {
     }
 
     currentBotToken = token;
-    bot = new TelegramBot(token, { polling: true });
+    bot = new TelegramBot(token, { polling: false }); // TEMPORARY PAUSE FOR MANYBOT
 
     bot.on('polling_error', (error) => {
       if (error && error.message && error.message.includes('409 Conflict')) {
@@ -447,6 +447,7 @@ function setupBotHandlers() {
     const db = getDb();
     const categories = db.categories
       .filter(c => (parentId === null ? !c.parentId : c.parentId === parentId))
+      .filter(c => !c.isHidden)
       .sort((a, b) => {
         if (a.isFeedback) return 1;
         if (b.isFeedback) return -1;
@@ -611,6 +612,7 @@ function setupBotHandlers() {
     const results = [];
 
     db.categories.forEach(cat => {
+      if (cat.isHidden) return;
       if (cat.resources) {
         cat.resources.forEach(r => {
           if (r.title.toLowerCase().includes(query) || (r.description && r.description.toLowerCase().includes(query)) || (cat.title && cat.title.toLowerCase().includes(query))) {
@@ -1850,8 +1852,8 @@ function setupBotHandlers() {
     const currentParentId = state.currentParentId;
     const matchedCategory = db.categories.find(c => {
       const matchParent = (currentParentId === null ? !c.parentId : c.parentId === currentParentId);
-      return matchParent && c.title.trim().toLowerCase() === text.toLowerCase();
-    }) || db.categories.find(c => c.title.trim().toLowerCase() === text.toLowerCase());
+      return matchParent && !c.isHidden && c.title.trim().toLowerCase() === text.toLowerCase();
+    }) || db.categories.find(c => !c.isHidden && c.title.trim().toLowerCase() === text.toLowerCase());
 
     if (matchedCategory) {
       if (matchedCategory.isFeedback) {
@@ -2275,6 +2277,20 @@ app.delete('/api/categories/:id', (req, res) => {
   saveDb(db);
   res.json({ success: true });
 });
+
+app.post('/api/categories/:id/toggle-visibility', (req, res) => {
+  const { id } = req.params;
+  const { isHidden } = req.body;
+  const db = getDb();
+
+  const cat = db.categories.find(c => c.id === id);
+  if (!cat) return res.status(404).json({ error: "Category not found" });
+
+  cat.isHidden = isHidden;
+  saveDb(db);
+  res.json({ success: true, isHidden });
+});
+
 
 app.post('/api/categories/:catId/resources', (req, res) => {
   const { catId } = req.params;

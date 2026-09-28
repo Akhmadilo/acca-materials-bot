@@ -508,10 +508,12 @@ function renderFileManager() {
     folderEl.innerHTML = `
       <div>
         <div class="folder-icon-title">
-          <i class="fa-solid ${folder.isFeedback ? 'fa-comment-dots' : 'fa-folder'} folder-icon"></i>
+          <i class="fa-solid ${folder.isFeedback ? 'fa-comment-dots' : 'fa-folder'} folder-icon" ${folder.isHidden ? 'style="color:#64748b;"' : ''}></i>
           <div>
-            <span class="folder-title-text">${folder.title}</span>
-            <small style="display:block; color:#94a3b8; font-size:0.8rem; margin-top:4px;">(Click to open folder ➔)</small>
+            <span class="folder-title-text" ${folder.isHidden ? 'style="color:#64748b; text-decoration:line-through;"' : ''}>${folder.title}</span>
+            <small style="display:block; color:#94a3b8; font-size:0.8rem; margin-top:4px;">
+              ${folder.isHidden ? '<span style="color:#ef4444; font-weight:bold;"><i class="fa-solid fa-eye-slash"></i> Hidden from Bot</span>' : '(Click to open folder ➔)'}
+            </small>
           </div>
         </div>
       </div>
@@ -520,6 +522,9 @@ function renderFileManager() {
           <i class="fa-solid fa-folder-open"></i> ${childFoldersCount > 0 ? childFoldersCount + ' subfolders' : resCount + ' items saved'}
         </span>
         <div style="display:flex; gap:4px;">
+          <button class="btn btn-sm ${folder.isHidden ? 'btn-success' : 'btn-warning'}" style="color:#fff;" onclick="event.stopPropagation(); toggleCategoryVisibility('${folder.id}', ${!folder.isHidden})" title="Toggle Visibility">
+            <i class="fa-solid ${folder.isHidden ? 'fa-eye' : 'fa-eye-slash'}"></i>
+          </button>
           <button class="btn btn-primary btn-sm" onclick="event.stopPropagation(); navigateToFolder('${folder.id}')">
             <i class="fa-solid fa-folder-open"></i> Open
           </button>
@@ -1097,6 +1102,23 @@ async function deleteCategory(id) {
     if (res.ok) loadData();
   } catch (err) {
     alert('Error deleting folder!');
+  }
+}
+
+async function toggleCategoryVisibility(id, isHidden) {
+  try {
+    const res = await fetch(`/api/categories/${id}/toggle-visibility`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ isHidden })
+    });
+    if (res.ok) {
+      loadData();
+    } else {
+      alert('Error updating folder visibility!');
+    }
+  } catch (err) {
+    alert('Network error!');
   }
 }
 
