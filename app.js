@@ -596,6 +596,7 @@ function renderFileManager() {
 
     container.appendChild(fileEl);
   });
+  updateBulkActionBar();
 }
 
 function renderSearchResults(query) {
@@ -1211,12 +1212,34 @@ function updateBulkActionBar() {
   const countText = document.getElementById('selectedCountText');
   if (!bar) return;
 
+  // Always show bar if there are resources in current folder
+  const currentCat = allCategories.find(c => c.id === currentFolderId);
+  const hasFiles = currentCat && currentCat.resources && currentCat.resources.length > 0;
+
   if (selectedResourceIds.length > 0) {
     bar.style.display = 'flex';
     countText.textContent = `${selectedResourceIds.length} item(s) selected`;
+  } else if (hasFiles) {
+    bar.style.display = 'flex';
+    countText.textContent = 'No items selected';
   } else {
     bar.style.display = 'none';
   }
+}
+
+function selectAllResources() {
+  const cat = allCategories.find(c => c.id === currentFolderId);
+  if (!cat || !cat.resources) return;
+  selectedResourceIds = cat.resources.map(r => r.id);
+  // Update all checkboxes visually
+  document.querySelectorAll('#fileContainer input[type="checkbox"]').forEach(cb => cb.checked = true);
+  updateBulkActionBar();
+}
+
+function deselectAllResources() {
+  selectedResourceIds = [];
+  document.querySelectorAll('#fileContainer input[type="checkbox"]').forEach(cb => cb.checked = false);
+  updateBulkActionBar();
 }
 
 function populateMoveTargetSelect() {
