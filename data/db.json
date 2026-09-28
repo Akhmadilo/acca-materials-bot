@@ -1,6 +1,6 @@
 {
   "settings": {
-    "bot_token": "8723520559:AAFM108x6EzYIMg_bsHtLShCEwCZKj3gb50",
+    "bot_token": "8762401198:AAFJNrjVBoqZB1vvcvj0SUMZg3sh1X3MGGY",
     "admin_password": "admin",
     "admin_ids": [
       557976703,
@@ -12,12 +12,13 @@
     "required_channel_link": "https://t.me/Finance_Ahmadillo",
     "webhook_url": "",
     "donation": {
-      "card_number": "8600 0000 0000 0000",
+      "card_number": "4916990337396060",
       "card_holder": "Ahmadillo Ibrohimov",
-      "bank_name": "Uzcard / Humo",
-      "note": "Loyiha va bot rivojiga hissa qo'shganingiz uchun rahmat!"
+      "bank_name": "Uzum card",
+      "note": ""
     },
-    "required_channels": []
+    "required_channels": [],
+    "web_admin_email": "admin@acca.com"
   },
   "subscribers": [
     {
@@ -75,6 +76,153 @@
       "last_name": "",
       "username": "SM281001",
       "joined_at": "2026-09-28T05:36:45.902Z"
+    },
+    {
+      "id": 7610885405,
+      "first_name": "Mr.Davron ⌚️",
+      "last_name": "",
+      "username": "Masterinacca",
+      "joined_at": "2026-09-28T07:44:57.844Z"
+    },
+    {
+      "id": 1300000113,
+      "first_name": "Фаррух",
+      "last_name": "Нормаматов",
+      "username": "Normamatov_Farrux",
+      "joined_at": "2026-09-28T07:46:09.533Z"
+    },
+    {
+      "id": 7984228398,
+      "first_name": "Zahidullah",
+      "last_name": "Hussainkhil",
+      "username": "",
+      "joined_at": "2026-09-28T07:46:37.002Z"
+    },
+    {
+      "id": 1180459848,
+      "first_name": "Ulug'bek Eshboyev",
+      "last_name": "",
+      "username": "Ulugbek_Eshboyev",
+      "joined_at": "2026-09-28T07:53:16.054Z"
+    },
+    {
+      "id": 1240753622,
+      "first_name": "M",
+      "last_name": "",
+      "username": "Tulyaganovam",
+      "joined_at": "2026-09-28T07:54:39.450Z"
+    },
+    {
+      "id": 507380697,
+      "first_name": "Albert",
+      "last_name": "Matkarimov",
+      "username": "Albert_Matkarimov",
+      "joined_at": "2026-09-28T07:56:35.876Z"
+    },
+    {
+      "id": 547631690,
+      "first_name": "Abdujalil",
+      "last_name": "",
+      "username": "Abdujalil_tohkirov",
+      "joined_at": "2026-09-28T07:56:51.103Z"
+    },
+    {
+      "id": 2048286350,
+      "first_name": "Muhammaddiyor",
+      "last_name": "Sotvoldiyev",
+      "username": "Muhammaddiyor_Sotvoldiyev",
+      "joined_at": "2026-09-28T07:57:30.449Z"
+    },
+    {
+      "id": 6411010692,
+      "first_name": "Vaxobova",
+      "last_name": "",
+      "username": "vaxobova_47",
+      "joined_at": "2026-09-28T07:59:13.320Z"
+    },
+    {
+      "id": 8877148091,
+      "first_name": "A",
+      "last_name": "",
+      "username": "",
+      "joined_at": "2026-09-28T08:00:42.183Z"
+    },
+    {
+      "id": 519004168,
+      "first_name": "Xushnud",
+      "last_name": "",
+      "username": "Narzulloyev_Xushnud",
+      "joined_at": "2026-09-28T08:01:06.625Z"
+    },
+    {
+      "id": 671073436,
+      "first_name": "Mirjalol Abdukarimov",
+      "last_name": "",
+      "username": "mma_1102",
+      "joined_at": "2026-09-28T08:05:58.323Z"
+    },
+    {
+      "id": 7665176329,
+      "first_name": "zenitsu",
+      "last_name": "agatsuma",
+      "username": "zenitsuagatsumathander",
+      "joined_at": "2026-09-28T08:07:46.834Z"
+    },
+    {
+      "id": 1615183001,
+      "first_name": "𝑅𝑢𝑧𝑖𝑘𝑢𝑙𝑜𝑣.ok",
+      "last_name": "",
+      "username": "Ruzikulov_ok",
+      "joined_at": "2026-09-28T08:08:49.135Z"
+    },
+    {
+      "id": 8058690880,
+      "first_name": "Azamat",
+      "last_name": "Ne'matov",
+      "username": "buxgalter10096",
+      "joined_at": "2026-09-28T08:12:29.900Z"
+    },
+    {
+      "id": 1717109305,
+      "first_name": "Шукруллох",
+      "last_name": "",
+      "username": "Useruzz",
+      "joined_at": "2026-09-28T08:15:16.356Z"
+    },
+    {
+      "id": 8350073872,
+      "first_name": "Navro'zbek",
+      "last_name": "",
+      "username": "",
+      "joined_at": "2026-09-28T08:18:21.395Z"
+    },
+    {
+      "id": 5471092805,
+      "first_name": "NARGIZA",
+      "last_name": "",
+      "username": "Nargiza34_04",
+      "joined_at": "2026-09-28T08:22:20.554Z"
+    },
+    {
+      "id": 5780722505,
+      "first_name": "Mohammad",
+      "last_name": "Ahmadzi",
+      "username": "",
+      "joined_at": "2026-09-28T08:26:39.351Z"
+    },
+    {
+      "id": 2074467119,
+      "first_name": "Ilhomjon",
+      "last_name": "",
+      "username": "iibrokhimov",
+      "joined_at": "2026-09-28T08:35:06.986Z"
+    },
+    {
+      "id": 647394538,
+      "first_name": "Umid",
+      "last_name": "Shomurodov",
+      "username": "umidshomurodov",
+      "joined_at": "2026-09-28T08:35:43.797Z"
     }
   ],
   "categories": [
@@ -150,67 +298,88 @@
       "order": 2,
       "resources": [
         {
-          "id": "res_1785394077211trnp",
-          "title": "FBT Practice questions.docx",
+          "id": "res_1790584486171r4wm",
+          "title": "F1 BT kaplan EXAM KIT ACCA TEXT.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIDE2pq85L0mh3xYKon7zskHwEGZC6_AAJClwACnBxIS9a-GhlMdMpjPQQ",
-          "description": "Directly published via Telegram Admin Mode"
+          "value": "BQACAgIAAxkBAAEBFr9quial2KFp6yzcVqXoJ6-pNjuE1QACY6IAAjzxiEgtomhuM67yhT0E",
+          "description": ""
         },
         {
-          "id": "res_1785394104591ectu",
-          "title": "BT Exam Kit 2024-25 ISDC.pdf",
+          "id": "res_17905844861732sj8",
+          "title": "BT_FBT Study text 25-26.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIDDGpq85KKprmv_XVEMUxa0remj2N0AAI6lwACnBxIS2p-3EdVv9mZPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "value": "BQACAgIAAxkBAAEBFsBquialbZ5SXZvFQRzgiyYAAX_WV7QAAkOaAALV7sBISGUf4S3KJNo9BA",
+          "description": ""
         },
         {
-          "id": "res_17853941045936twb",
-          "title": "BT STUDY HUB TEXT-1.pdf",
+          "id": "res_1790584486176wfue",
+          "title": "F1 Bpp Text 2020 .pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIDDWpq85L0VVDhugXMYJCDcYhF_0WWAAI7lwACnBxIS-tOE15gje6BPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "value": "BQACAgIAAxkBAAEBFsFquialFZdlFXKwMBc0HOavJ1W0lwACRZoAAtXuwEgsEoNx-pGLzT0E",
+          "description": ""
         },
         {
-          "id": "res_1785394104594i5n6",
-          "title": "BT Imp MCQs Compiled.pdf",
+          "id": "res_1790584486178r5tp",
+          "title": "BT STUDY HUB TEXT.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIDDmpq85K5X95j6JSBvvS56TKZFR_2AAI9lwACnBxIS3p1jR87QejiPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "value": "BQACAgIAAxkBAAEBFsJquialSKZ4wGElQ5kOuymH4E-ErQACFZ0AAm2XGUlxTmldlSevkD0E",
+          "description": ""
         },
         {
-          "id": "res_1785394104596aqud",
-          "title": "f1 Night before notes.pdf",
+          "id": "res_17905844861817l1z",
+          "title": "@accaleaks F1 BT Pocket Notes 2020-21.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIDD2pq85Ir97bXNBhtu2oaSgpolD7fAAI-lwACnBxIS3nTawTjYAU4PQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "value": "BQACAgIAAxkBAAEBFsNquialezMx2E4eSowG99HKxJW3LAACGZ0AAm2XGUnutpm8kwABfXo9BA",
+          "description": ""
         },
         {
-          "id": "res_1785394104597m5ke",
+          "id": "res_1790584486183xyk1",
+          "title": "F1 Bpp Study Text-1.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBFsRquialUoy23E3bW91Nbh67knOkHwACIJ0AAm2XGUmXhhs7hmwI_D0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584486185beix",
+          "title": "F1- BT ACCOUNTANCY HUB short notes.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBFsVquialP69Pg_YCJNuNUIXrfA07vwACAqIAAnHlaEkzf2xBrxam2D0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584486253erb1",
+          "title": "BTExamKit202526-1.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBFsZquial0dogEFze-N5lvhhKOKMqawACRKoAAnHlcEmel75zDB0N3z0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584486255zzyp",
           "title": "F1 BT Pokect Notes (1).pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIDEGpq85L5K_2juRZc10s_EoYhtJroAAI_lwACnBxIS3ZbiEzxiMGzPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "value": "BQACAgIAAxkBAAEBFsdquial4Z3dmVnZt2hEQLPqPCq42wACBqsAAuuqmUkG3gABskbQOvE9BA",
+          "description": ""
         },
         {
-          "id": "res_1785394104599shme",
-          "title": "F1- BT ACCOUNTANCY HUB short notes-1.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIDEWpq85K_kv_pbg1d_aWGQjeoQDIbAAJAlwACnBxIS0IU8idNs5saPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_1785394104600jf86",
+          "id": "res_1790584486258knff",
           "title": "F1 Full Book Notes-Summarized.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIDEmpq85KOjuuT3-IbqE1l78ZlNPaHAAJBlwACnBxIS5ql232r2opZPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "value": "BQACAgIAAxkBAAEBFshquialfncpHq0pSg6209kQS4RDFgACB6sAAuuqmUnjgmuK-DCTCD0E",
+          "description": ""
         },
         {
-          "id": "res_17853941046011lkx",
-          "title": "FBT Practice questions.docx",
+          "id": "res_179058448645129tg",
+          "title": "f1 Night before notes.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIDE2pq85L0mh3xYKon7zskHwEGZC6_AAJClwACnBxIS9a-GhlMdMpjPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "value": "BQACAgIAAxkBAAEBFslquialQbmhgyhi5LhVd9VCf_GVlwACCKsAAuuqmUnGil-nyz5ksD0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905844864535gqa",
+          "title": "F1 NOTES.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBFspquial2RBR7PexSCe5dzX591DpTwACCasAAuuqmUnDE_CSbZTNYT0E",
+          "description": ""
         }
       ]
     },
@@ -221,207 +390,704 @@
       "order": 3,
       "resources": [
         {
-          "id": "res_1785394442219og47",
+          "id": "res_179058462700069hw",
+          "title": "Introduction to the ACCA Accountant in Business (AB) exam - Syllabus and Exam Structure",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFxRquicxApel8IqAFOIMrLwunT09lwACuw8AApIeWUqnR4k6g_8dIj0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905846270020ei5",
+          "title": "The nature and structure of organisations - ACCA Accountant in Business (AB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFxVquicx_QaFBNljhpeyKvl8Dfi0SQACwQ8AApIeWUqHNgLVKTi4iT0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584627003ej6m",
+          "title": "An organisation’s environment  - ACCA Accountant in Business (AB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFxZquicxi-vmlykpfytYOb0CrVPcFwACxA8AApIeWUqzRIw5EtRxZj0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584627005muuj",
+          "title": "An organisation’s stakeholders - ACCA Accountant in Business (AB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFxdquicxhoDq3CfNs38Cl4vyEXLG6gACxw8AApIeWUrbHuUOMff9tD0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584627007uqc7",
+          "title": "Organisational culture - ACCA Accountant in Business (AB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFxhquicxLBlna09oW6bZKDMy58I_dwACyg8AApIeWUpmUj71lj7LNz0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584627012npj1",
           "title": "Corporate governance and ethical considerations - ACCA Accountant in Business (AB)",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAIDXGpq9QkXm19neQLE8fRIDGYbUPqzAALODwACkh5ZSqIws-pCdHB_PQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "value": "BAACAgIAAxkBAAEBFxlquicxh96PI5SFhrVf8FpBd_SOfwACzg8AApIeWUorQ_tD22lwEj0E",
+          "description": ""
         },
         {
-          "id": "res_1785394442221yd90",
+          "id": "res_1790584627014rc91",
           "title": "Some legal obligations - ACCA Accountant in Business (AB)",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAIDXWpq9QlLOhNU9wIx8b8GOUtHNRUCAALQDwACkh5ZSu5Wa8Hia17xPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "value": "BAACAgIAAxkBAAEBFxpquicxYvOEnmH7OEYzcuk_gEcxpwAC0A8AApIeWUosa1-fNcSMCz0E",
+          "description": ""
         },
         {
-          "id": "res_1785394442222zfy3",
+          "id": "res_1790584627051a3ir",
           "title": "Accountancy, accounts and auditors - ACCA Accountant in Business (AB)",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAIDXmpq9Qn9j2EVzHxsa77ZgXe4ilnyAALTDwACkh5ZSs_La1GHBsnVPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "value": "BAACAgIAAxkBAAEBFxtquicxbnKGu8ID8Z6F1YbNRBrdsQAC0w8AApIeWUogICOLdR9vaD0E",
+          "description": ""
         },
         {
-          "id": "res_1785394442230k9wc",
+          "id": "res_1790584627053k4gf",
           "title": "Internal control, fraud - ACCA Accountant in Business (AB)",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAIDX2pq9Qn-H-mCV5yTLM2omINmYSSrAALUDwACkh5ZStt_JZOJ0AhuPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "value": "BAACAgIAAxkBAAEBFxxquicxYAGTtiXEWbmprte--Mf9NQAC1A8AApIeWUpIfRjwuHqO1D0E",
+          "description": ""
         },
         {
-          "id": "res_1785394442232ec3o",
+          "id": "res_17905846270555n0q",
           "title": "Business use of computers and IT - ACCA Accountant in Business (AB)",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAIDYGpq9QmuB7K_8-CZj6H42_6GrhAHAALWDwACkh5ZSjg7JlXsZMu6PQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "value": "BAACAgIAAxkBAAEBFx1quicxbWFsMrD9EKns0IREfgZpUgAC1g8AApIeWUoms3Uo3-O0UT0E",
+          "description": ""
         },
         {
-          "id": "res_17853944422337bgz",
+          "id": "res_1790584627056lhfy",
           "title": "Management - ACCA Accountant in Business (AB)",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAIDYWpq9QljApjrrBkKvwU2K03IFux3AALbDwACkh5ZSjUen1j0GLb2PQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "value": "BAACAgIAAxkBAAEBFx5quicx89Jy7yx6aeIPveWp71wMAgAC2w8AApIeWUorVHq-31Fk3z0E",
+          "description": ""
         },
         {
-          "id": "res_1785394442235xogf",
+          "id": "res_1790584627058xb4q",
           "title": "Leadership - ACCA Accountant in Business (AB)",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAIDYmpq9QmJmjn2d09OAAFr8dkPdChj-AAC3Q8AApIeWUq3OgpJGtSCFz0E",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "value": "BAACAgIAAxkBAAEBFx9quicxhUq1Q4rChJ9WNaoqwJqL7AAC3Q8AApIeWUo-T71jdEvFuT0E",
+          "description": ""
         },
         {
-          "id": "res_1785394442236h1o0",
+          "id": "res_1790584627059ey7c",
+          "title": "Theories of motivation - ACCA Accountant in Business (AB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFyBquicx5lPg1jjg1qjiFZqjvlIIrQAC4Q8AApIeWUqwvjKKVsC3ID0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905846270625uep",
+          "title": "The nature of groups - ACCA Accountant in Business (AB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFyFquicxpVVxc5Jq_hUaqc-6zH4SSgAC4g8AApIeWUoMDuSgN96M_T0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584627063xoqn",
+          "title": "The recruitment and selection process - ACCA Accountant in Business (AB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFyJquicxqS5klmKykdqRt91tWuMjlgAC5Q8AApIeWUoyoDVhb0fG_j0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584627151wx4w",
+          "title": "How people learn - ACCA Accountant in Business (AB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFyNquicxN16Cqywm71w8DP-auLcGFAAC5g8AApIeWUoUM7obxEB2gD0E",
+          "description": ""
+        },
+        {
+          "id": "res_179058462715306wx",
+          "title": "How an individual can develop - ACCA Accountant in Business (AB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFyRquicxbPBiBlIDFxAab_xY8F8Q_QAC6w8AApIeWUpwIehHoQTehz0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584627155mw6k",
+          "title": "Performance and appraisal interviews - ACCA Accountant in Business (AB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFyVquicxWOgdjdARD7_t3C6D-wkTrQAC7g8AApIeWUqfDv3gl2qpkT0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584627157osuy",
+          "title": "The nature of communication - ACCA Accountant in Business (AB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFyZquicxL2sXlE0FHOptgTXmWYaZCgAC8Q8AApIeWUooPzXmOfjlgT0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905846271580zqd",
+          "title": "Macroeconomics - ACCA Accountant in Business (AB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFydquicxeFfBUgFw6l9t5K6gw5OQ-wAC9A8AApIeWUoqejPDgGA95T0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905846271602s87",
+          "title": "Microeconomics - ACCA Accountant in Business (AB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFyhquicx7exkGDmdUNb0I99GTQABjEMAAvcPAAKSHllKAZE5FTBuWsU9BA",
+          "description": ""
+        },
+        {
+          "id": "res_1790584627162v63h",
+          "title": "Marketing - ACCA Accountant in Business (AB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFylquicx9u8bxxtcqAbe2NXeshMEigAC_Q8AApIeWUpEPOSQhCYzrz0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905846271637mw8",
+          "title": "MACROECONOMICS (47.1MB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFypquicxt5LtHGbxqiewAAG0CNZtpnEAAk4TAALJy-hLBwVW3mwyiNw9BA",
+          "description": ""
+        },
+        {
+          "id": "res_1790584627165xlno",
+          "title": "MICROECONOMICS (48.4MB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFytquicxguFA70b9skxzWqclSS8qWAAC6RIAArLh6EtDmiytvhQr8T0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584627251w8sy",
+          "title": "ACCA F1 - 1 Introduction to F1, types of organisation",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFyxquicxpPqVIw0M_ytcykxtLmUVnAAC_xQAAvMrGEoGmmIHGVSFXz0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584627253iyaj",
+          "title": "ACCA F1 - 2 Planning, marketing, organisation structure",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFy1quicxpamaLoWrSyG5nZMDVjptkAACcBUAAj0WyUvagDmCqIgfpz0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584627255f47q",
+          "title": "ACCA F1 - 3 Span of control, scalar chain, (de) centralisation",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFy5quicxGJ2eHxn56UjpG_U2mWNMVwACghMAAkoIwUtK2vDV-XQ6rT0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584627257wyie",
+          "title": "ACCA F1 - 4 Culture",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFy9quicxH0xAWkPYWzxPEs-UnI8JlQACexcAAjT1wEuQGRyg7DRizD0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584627259uhpo",
+          "title": "ACCA F1 - 5 Stakeholders",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFzBquicxHka5QZNSyHRUpOhJ6JXRQAACMRoAAhazwUss79jr7rdaEz0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905846272619zfl",
+          "title": "ACCA F1 - 6 Committees",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFzFquicxB_xCauqYCa-K3o6_iypwwgAC3BYAAjDHwUuWv5nMTqwHpj0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584627263fst4",
+          "title": "ACCA F1 - 7 Information systems",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFzJquicxb4gE8r5ggBx1oEk-Rzd4QQACMhwAAutL0UjPe4-sDyV0gT0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584627356pnj6",
+          "title": "ACCA F1 - 8 Ethics and corporate governance",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFzNquicxyYEmYCE9BB8j2DfLTeiV6AAC3xsAAtoa0EhEKY0nEI5pbj0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905846273584x4c",
+          "title": "ACCA F1 - 9 Environmental influences",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFzRquicx8UQGwO9YLh6WIpyEOa-DCwACJR8AAr9K0EiWKRJ0D-sbPD0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584627361slbx",
+          "title": "ACCA F1 - 10 Role of accounting in business",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFzVquicxTU52-h7yQsngZHHLq5XHowACHh0AAp-K0EgLtNl02VNJjj0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584627364ixpf",
+          "title": "ACCA F1 - 11 Functions of accounting and internal control",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFzZquicx0O-fHTAAAUs0TlGMoZGax-IAAm8fAAJ-ENBIUWAxAgnSX2w9BA",
+          "description": ""
+        },
+        {
+          "id": "res_1790584627367kr2i",
+          "title": "ACCA F1 - 12 Leadership, management and teams",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFzdquicxcgo7d6Ego-hGtggbenqFNQAC_jwAAi8JWEhx_EPkIQpmyj0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584627369daj2",
+          "title": "ACCA F1 - 13 Motivating individuals and groups",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFzhquicxTuEI4df96Oug_nHirF4SUwAC20EAAujwUUi7mG4yg4h7Qz0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584627454ef5p",
+          "title": "ACCA F1 - 14 Recruitment and development",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFzlquicxsmMEySD_vn7yHqHLKsN2YwACTDsAAmeRUUjm8B5plHxXmD0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584627457ixtm",
+          "title": "Introduction to the ACCA Accountant in Business (AB) exam - Syllabus and Exam Structure",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFxRquicxApel8IqAFOIMrLwunT09lwACuw8AApIeWUqnR4k6g_8dIj0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584627652b1c4",
+          "title": "An organisation’s environment  - ACCA Accountant in Business (AB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFxZquicxi-vmlykpfytYOb0CrVPcFwACxA8AApIeWUqzRIw5EtRxZj0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584627655sf2h",
+          "title": "An organisation’s stakeholders - ACCA Accountant in Business (AB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFxdquicxhoDq3CfNs38Cl4vyEXLG6gACxw8AApIeWUrbHuUOMff9tD0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584627658338n",
+          "title": "Corporate governance and ethical considerations - ACCA Accountant in Business (AB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFxlquicxh96PI5SFhrVf8FpBd_SOfwACzg8AApIeWUorQ_tD22lwEj0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584627752hsqi",
+          "title": "Some legal obligations - ACCA Accountant in Business (AB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFxpquicxYvOEnmH7OEYzcuk_gEcxpwAC0A8AApIeWUosa1-fNcSMCz0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905846277558bn2",
+          "title": "Accountancy, accounts and auditors - ACCA Accountant in Business (AB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFxtquicxbnKGu8ID8Z6F1YbNRBrdsQAC0w8AApIeWUogICOLdR9vaD0E",
+          "description": ""
+        },
+        {
+          "id": "res_179058462775730vr",
+          "title": "Business use of computers and IT - ACCA Accountant in Business (AB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFx1quicxbWFsMrD9EKns0IREfgZpUgAC1g8AApIeWUoms3Uo3-O0UT0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905846278508r8e",
+          "title": "Management - ACCA Accountant in Business (AB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFx5quicx89Jy7yx6aeIPveWp71wMAgAC2w8AApIeWUorVHq-31Fk3z0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584627853lzww",
+          "title": "Leadership - ACCA Accountant in Business (AB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFx9quicxhUq1Q4rChJ9WNaoqwJqL7AAC3Q8AApIeWUo-T71jdEvFuT0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905846278563gma",
+          "title": "Theories of motivation - ACCA Accountant in Business (AB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFyBquicx5lPg1jjg1qjiFZqjvlIIrQAC4Q8AApIeWUqwvjKKVsC3ID0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584627859fld2",
+          "title": "The nature of groups - ACCA Accountant in Business (AB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFyFquicxpVVxc5Jq_hUaqc-6zH4SSgAC4g8AApIeWUoMDuSgN96M_T0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905846278618gzv",
+          "title": "The recruitment and selection process - ACCA Accountant in Business (AB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFyJquicxqS5klmKykdqRt91tWuMjlgAC5Q8AApIeWUoyoDVhb0fG_j0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584627862g7aj",
+          "title": "How people learn - ACCA Accountant in Business (AB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFyNquicxN16Cqywm71w8DP-auLcGFAAC5g8AApIeWUoUM7obxEB2gD0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584627864sf8b",
+          "title": "How an individual can develop - ACCA Accountant in Business (AB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFyRquicxbPBiBlIDFxAab_xY8F8Q_QAC6w8AApIeWUpwIehHoQTehz0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584627951krme",
+          "title": "Performance and appraisal interviews - ACCA Accountant in Business (AB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFyVquicxWOgdjdARD7_t3C6D-wkTrQAC7g8AApIeWUqfDv3gl2qpkT0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584627955z489",
+          "title": "The nature of communication - ACCA Accountant in Business (AB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFyZquicxL2sXlE0FHOptgTXmWYaZCgAC8Q8AApIeWUooPzXmOfjlgT0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584627957527v",
+          "title": "Macroeconomics - ACCA Accountant in Business (AB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFydquicxeFfBUgFw6l9t5K6gw5OQ-wAC9A8AApIeWUoqejPDgGA95T0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905846279597lxz",
+          "title": "Microeconomics - ACCA Accountant in Business (AB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFyhquicx7exkGDmdUNb0I99GTQABjEMAAvcPAAKSHllKAZE5FTBuWsU9BA",
+          "description": ""
+        },
+        {
+          "id": "res_1790584627962fbk3",
+          "title": "Marketing - ACCA Accountant in Business (AB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFylquicx9u8bxxtcqAbe2NXeshMEigAC_Q8AApIeWUpEPOSQhCYzrz0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584627964jvvd",
+          "title": "What is Inflation?",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBF01quicxqaucsYovCuYH56Y3aZrHcQACtxMAAo7e0UuWd6yw2kV5Jj0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584628052ojk3",
+          "title": "Consumer Price Inflation (Consumer Price Index/CPI) and Asset Price Inflation Compared in One Minute",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBF05quicxgsjkEY5ox7wUlDAOY2er6gAC_xMAAo7e0UvMIG47IwNLhT0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584628055pt2b",
+          "title": "Capitalism, Socialism and Communism Explained in One Minute",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBF09quicxbUsdLVVBmphHJYNg5b0sbgAC7hQAArcg2UtC6V-mUUbB7T0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584628057iu9b",
+          "title": "The Gross Domestic Product (GDP) and Government Revenue Explained in One Minute",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBF1BquicxCBkKGVsfgata3ugIM8b_kQACBRQAAo7e0UtciP8LqSOnNj0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584628059kd87",
+          "title": "Supply and Demand Explained in One Minute",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBF1FquicxyT28T12GrOqts4LnzWrvDwACBhQAAo7e0Us7i2R99TrfDT0E",
+          "description": ""
+        },
+        {
+          "id": "res_179058462806249cd",
+          "title": "Aggregate demand and Aggregate Supply in Macro and Micro Economy",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBF1JquicxOSsem74fXvGntJhQS5GwBQAC1hkAAnUl6UugUKQZa6fRnj0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584628064yoht",
+          "title": "MACROECONOMICS (47.1MB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFypquicxt5LtHGbxqiewAAG0CNZtpnEAAk4TAALJy-hLBwVW3mwyiNw9BA",
+          "description": ""
+        },
+        {
+          "id": "res_1790584628151kw5o",
+          "title": "MICROECONOMICS (48.4MB)",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBFytquicxguFA70b9skxzWqclSS8qWAAC6RIAArLh6EtDmiytvhQr8T0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584628154brdm",
+          "title": "Introduction to the ACCA BT Business and Technology Exam - Syllabus and Exam Structure",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAEBF1Vquicxp6sfqrRAaVGwxxFfH7iplAACLu4AArwVGVAgUYZyaFhqQj0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905846281561wp0",
+          "title": "The nature and structure of organisations  - ACCA Paper BT",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAEBF1ZquicxfPmGNy66ocgNHAVlRmPdIgACqSsAArwVIVBgUD3n9_Niuj0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584628158gb1y",
+          "title": "An organisation’s environment - ACCA Paper BT",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAEBF1dquicxc-A8NQFirbpjGdtRqlnc8gACYSsAArwVIVCg5dxtTcibCD0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584628161wrww",
           "title": "An organisation’s stakeholders - ACCA Paper BT",
           "type": "file_id",
-          "value": "BAACAgQAAxkBAAIDY2pq9Ql-wpmz4vILig1TK_bwsqviAAKCKwACvBUhUGD7IJA9yt6RPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "value": "BAACAgQAAxkBAAEBF1hquicxjo8lmRCpnJSFuuuJaR8Z8gACgisAArwVIVB27BMebBhHwD0E",
+          "description": ""
         },
         {
-          "id": "res_17853944422380ni0",
+          "id": "res_1790584628163l9dz",
           "title": "Organisational culture - ACCA Paper BT",
           "type": "file_id",
-          "value": "BAACAgQAAxkBAAIDZGpq9QkNBJb3TEBymoqTdb5FvePIAAJMKwACvBUhUCP1p0LWusJxPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "value": "BAACAgQAAxkBAAEBF1lquicxPmkit7NKN7Nfu9sBkosyuwACTCsAArwVIVB_4auJ0rq6bT0E",
+          "description": ""
         },
         {
-          "id": "res_1785394442243i0pc",
+          "id": "res_1790584628251w6l4",
           "title": "Corporate governance and ethical considerations - ACCA Paper BT",
           "type": "file_id",
-          "value": "BAACAgQAAxkBAAIDZWpq9QksL59tKfUQfs3gPPl8oQyPAAIrKwACvBUhUCp_AgNTKYJ5PQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "value": "BAACAgQAAxkBAAEBF1pquicxqjIc6vBZXqdWVR7Fn-7j5wACKysAArwVIVCea_ksyiFnhT0E",
+          "description": ""
         },
         {
-          "id": "res_17853944422442gt5",
+          "id": "res_17905846282540f6z",
           "title": "Some legal obligations - ACCA Paper BT",
           "type": "file_id",
-          "value": "BAACAgQAAxkBAAIDZmpq9Qm8a7a017EtUqKm28k5xSasAALoKgACvBUhUPF9jVsfHVZ6PQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "value": "BAACAgQAAxkBAAEBF1tquicxX7ttrGtASPePN5qXJ4zZvQAC6CoAArwVIVDaQ5dVWRXtnj0E",
+          "description": ""
         },
         {
-          "id": "res_17853944422466zuo",
+          "id": "res_17905846282569nm7",
           "title": "Accountancy, accounts and auditors - ACCA Paper BT",
           "type": "file_id",
-          "value": "BAACAgQAAxkBAAIDZ2pq9QnchvpJu7tt_QG2ZGP4B_dGAAIVKwACvBUhUGe91zHY08iqPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "value": "BAACAgQAAxkBAAEBF1xquicx4PTZp8l1mbHi8TT7yiQIWwACFSsAArwVIVBnWZRYIhnl8z0E",
+          "description": ""
         },
         {
-          "id": "res_1785394442247vhkj",
+          "id": "res_1790584628259csvt",
           "title": "Internal control, fraud - ACCA Paper BT",
           "type": "file_id",
-          "value": "BAACAgQAAxkBAAIDaGpq9QnWuaq08fq7v6N9Fp4bBGaWAAIb7wACvBUZUECCX6BStGkbPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "value": "BAACAgQAAxkBAAEBF11quicxHw8YA0LxxXAHKfqgxY-25gACG-8AArwVGVAkMDDIhh67sz0E",
+          "description": ""
         },
         {
-          "id": "res_1785394442332gizb",
-          "title": "ACCA F1 - 1 Introduction to F1, types of organisation✅",
+          "id": "res_1790584628262rcc8",
+          "title": "Business use of computers and IT - ACCA Paper BT",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAIDaWpq9Ql4Kd5hWc0lp-RyL74BTNaOAAIkBAACTmLZSPuxZ0TRC5EKPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload",
-          "items": []
+          "value": "BAACAgQAAxkBAAEBF15quicxetRz6oMwoc3SsjKFCEPXIgACdyoAArwVIVAgDvwtc1VZzz0E",
+          "description": ""
         },
         {
-          "id": "res_1785394442334mvc6",
-          "title": "ACCA F1 - 2 Planning, marketing, organisation structure✅",
+          "id": "res_17905846282649br1",
+          "title": "Management - ACCA Paper BT",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAIDampq9QmBqLReOELGVE-mLkQrvfMOAAJ-BQACax7QSNwzCTPonOI_PQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload",
-          "items": []
+          "value": "BAACAgQAAxkBAAEBF19quicxvmec0QH_AfEf-EYo3dP3TAACPSoAArwVIVBi2DtRgDdFBD0E",
+          "description": ""
         },
         {
-          "id": "res_1785394442336gt09",
-          "title": "ACCA F1 - 3 Span of control, scalar chain, (de) centralisation✅",
+          "id": "res_1790584628351ttwi",
+          "title": "Leadership - ACCA Paper BT",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAIDa2pq9QlzFD-rkc3ZYNi93dEj3lF2AAJfBAAC_0LYSA3QoKnguHwyPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload",
-          "items": []
+          "value": "BAACAgQAAxkBAAEBF2BquicxMCo4qpqm-5Eqa98Vej5jkwACICoAArwVIVD5MdFm-8XyUz0E",
+          "description": ""
         },
         {
-          "id": "res_1785394442337i2fb",
-          "title": "ACCA F1 - 4 Culture✅",
+          "id": "res_1790584628353nlut",
+          "title": "Theories of motivation - ACCA Paper BT",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAIDbGpq9QkhRr4TLyPfVP-GwWW9hMNHAAI4BAACTmLZSECVY_sSV5sEPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload",
-          "items": []
+          "value": "BAACAgQAAxkBAAEBF2Fquicx7VvH09WcTKCYUZqnWwXnuwAC9ikAArwVIVCR_dAnJHnDBj0E",
+          "description": ""
         },
         {
-          "id": "res_1785394442339463c",
-          "title": "ACCA F1 - 5 Stakeholders✅",
+          "id": "res_1790584628356vrox",
+          "title": "The nature of groups - ACCA Paper BT",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAIDbWpq9QnkxOL3cF-n9aUrTXL1qyszAAI5BAACTmLZSEwH2iFmAAE-1j0E",
-          "description": "Uploaded via Telegram Admin Direct Upload",
-          "items": []
+          "value": "BAACAgQAAxkBAAEBF2JquicxM0FqRlWHmbQZzxtA1b96xwACoykAArwVIVAYU_nODOLCXj0E",
+          "description": ""
         },
         {
-          "id": "res_1785394442341v7i1",
-          "title": "ACCA F1 - 6 Committees✅",
+          "id": "res_1790584628359tzba",
+          "title": "How people learn - ACCA Paper BT",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAIDbmpq9QmRy95UxqDZVs7jRlHLWCwqAAJ-BAACax7YSNEvjLVj3B-bPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload",
-          "items": []
+          "value": "BAACAgQAAxkBAAEBF2NquicxRR-2kALvVhSq5_gG7lWwogACaSkAArwVIVAtiNkffodbgj0E",
+          "description": ""
         },
         {
-          "id": "res_17853944423436782",
-          "title": "ACCA F1 - 7 Information systems✅",
+          "id": "res_17905846283616wug",
+          "title": "How an individual can develop - ACCA Paper BT",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAIDb2pq9QmCqDU3SYjilTQDUCMh6J5UAAJ_BAACax7YSCxcbNqSjYbtPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload",
-          "items": []
+          "value": "BAACAgQAAxkBAAEBF2RquicxayNnlqPrZ7diH8y2I47QxgACIPcAArwVGVARFKS1m0YbBz0E",
+          "description": ""
         },
         {
-          "id": "res_1785394442344fcnn",
-          "title": "ACCA F1 - 8 Ethics and corporate governance✅",
+          "id": "res_1790584628451lu7x",
+          "title": "Performance and appraisal interviews - ACCA Paper BT",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAIDcGpq9QkyYDYXud6qnrprLjwS3WIDAAJ2BAACTmLZSJtRkf582t1uPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload",
-          "items": []
+          "value": "BAACAgQAAxkBAAEBF2VquicxtiT4NaAC9jl0mM4xykeGbgACD_UAArwVGVCLRB3lXBH_Oj0E",
+          "description": ""
         },
         {
-          "id": "res_1785394442432gyt5",
-          "title": "ACCA F1 - 9 Environmental influences✅",
+          "id": "res_17905846284544lx4",
+          "title": "The nature of communication - ACCA Paper BT",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAIDcWpq9QkCxaMJFNNG5E1PQAkUjnfoAAJ3BAACTmLZSKz1uM46l7woPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload",
-          "items": []
+          "value": "BAACAgQAAxkBAAEBF2Zquicx7T3LLJxtYYRVkjO9JC_fSQACBPcAArwVGVBHs1b7F_qzXD0E",
+          "description": ""
         },
         {
-          "id": "res_1785394442434xxmu",
-          "title": "ACCA F1 - 10 Role of accounting in business✅",
+          "id": "res_1790584628553k4w8",
+          "title": "Macroeconomics - ACCA Paper BT",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAIDcmpq9Ql60dY2Doy-JlHjkoQOxBZRAAKGBAAC_0LYSPAfV91qLDyhPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload",
-          "items": []
+          "value": "BAACAgQAAxkBAAEBF2dquicxgzjnlUrXOEUrM_HB6cNbeQACz_YAArwVGVDDvd26FCJaRD0E",
+          "description": ""
         },
         {
-          "id": "res_1785394442436pabe",
-          "title": "ACCA F1 - 11 Functions of accounting and internal control✅",
+          "id": "res_1790584628651z5hz",
+          "title": "Microeconomics - ACCA Paper BT",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAIDc2pq9Qkt433ACf71uYXFiyhePDOKAAJ4BAACTmLZSGmFi-8RsRjXPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload",
-          "items": []
+          "value": "BAACAgQAAxkBAAEBF2hquicx5qS59K9S971zxVVV3HAXowACofYAArwVGVBsDJ0jvouiuT0E",
+          "description": ""
         },
         {
-          "id": "res_1785394442438zmdc",
-          "title": "ACCA F1 - 12 Leadership, management and teams✅",
+          "id": "res_1790584628653oder",
+          "title": "Marketing - ACCA Paper BT",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAIDdGpq9Qn6unWxutVMAAEekzbdPx-UtgACeQQAAk5i2UgWN5boj0WPPT0E",
-          "description": "Uploaded via Telegram Admin Direct Upload",
-          "items": []
+          "value": "BAACAgQAAxkBAAEBF2lquicxEMCn6-YoK62GlncmL9ppiAACZO8AArwVGVBCgGqmeHxOKj0E",
+          "description": ""
         },
         {
-          "id": "res_17853944424395bu8",
-          "title": "ACCA F1 - 13 Motivating individuals and groups✅",
+          "id": "res_1790584628656ynlb",
+          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 1 Introduction to F1, types of organisation\n\n✅",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAIDdWpq9QlC4psctYcBkekxWCTQP88QAAJ6BAACTmLZSAdLl2_pI-IbPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload",
-          "items": []
+          "value": "BAACAgIAAxkBAAEBF2pquicxSs889GPfQ0CAHQABYJ3fiIsAAiQEAAJOYtlIYefAkiAvdSM9BA",
+          "description": ""
         },
         {
-          "id": "res_1785394442441s9gh",
-          "title": "ACCA F1 - 14 Recruitment and development✅",
+          "id": "res_1790584628751s51y",
+          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 2 Planning, marketing, organisation structure\n\n✅",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAIDdmpq9QnP1PEYrk8LKg6q7P91e5L9AAKIBAAC_0LYSL8NGJ7HHHrqPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload",
-          "items": []
+          "value": "BAACAgIAAxkBAAEBF2tquicxXhMPlqIfXZZ0uVS1ONN1yAACfgUAAmse0Eh7i5ZUuHtHVz0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584628756ji0d",
+          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 3 Span of control, scalar chain, (de) centralisation\n\n✅",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBF2xquicxStlu98iSwpGy65v5NkkS8wACXwQAAv9C2EjIeq4NZ9KFJT0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905846287596jqd",
+          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 4 Culture\n\n✅",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBF21quicxpFnvstmnZcnUtJY6CyoYZQACOAQAAk5i2UhOf_WYNbaI-T0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905846288525fj1",
+          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 5 Stakeholders\n\n✅",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBF25quicx60XDutDblDoDficjGUK6OwACOQQAAk5i2UjKCMim0IS6tz0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584628855sd9m",
+          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 6 Committees\n\n✅",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBF29quicxwuh2-isNpFhvgXTh48U7GwACfgQAAmse2Ej-W9r4Etf40z0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584628858mi5z",
+          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 7 Information systems\n\n✅",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBF3BquicxKAVK5TN3bFeyHTNrovQm1QACfwQAAmse2EiSEGYnNJUgUz0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584628861zagu",
+          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 8 Ethics and corporate governance\n\n✅",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBF3FquicxiVUCabaDbLx5a6IzpGrJLQACdgQAAk5i2UhalO8n70nNXD0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584628863j34k",
+          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 9 Environmental influences\n\n✅",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBF3Jquicx-yNFYkoDibDulhPgomL05gACdwQAAk5i2UiZ3eFIJ5E6Fz0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584628951njd6",
+          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 10 Role of accounting in business\n\n✅",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBF3Nquicxem9vhqYxz-rV7AvjO393iAAChgQAAv9C2Ej1WkJbpeh4Dj0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584628953h4b7",
+          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 11 Functions of accounting and internal control\n\n✅",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBF3Rquicx6Oa6xjx4_K4rJJvHuzMpjAACeAQAAk5i2UhnrAhpITEHTj0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584628957qooz",
+          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 12 Leadership, management and teams\n\n✅",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBF3VquicxLMfN9WwJlDhahPrUbm8kjQACeQQAAk5i2Uia4UmG3TuCZD0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584628959pkun",
+          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 13 Motivating individuals and groups\n\n✅",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBF3Zquicx9lp1RJ8-v9p5EfrvOkiYrgACegQAAk5i2Ujcr_gNvSfIVD0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584628962mtx8",
+          "title": "#халкаро_бухгалтерия\n\nВидео: ACCA F1 - 14 Recruitment and development\n\n✅",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBF3dquicxn11YQmckbmYquWBTq_oR3gACiAQAAv9C2EgF_XOBkKGVzz0E",
+          "description": ""
         }
       ]
     },
@@ -468,85 +1134,7 @@
       "title": "📗 F2 Study Books",
       "parentId": "cat_f2",
       "order": 2,
-      "resources": [
-        {
-          "id": "res_17885236006227pz1",
-          "title": "F2 Bpp kit 2024.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIJvWqatB3_qvFQGPfvLqz_6TCw0WHUAAJdqgACfb9gSexY6YaZpDifPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_1788523600623oi07",
-          "title": "F2 Kaplan Kit 2025.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIJvmqatB31Gw5o9RFvHGrfz2jaawYbAAJeqgACfb9gSZYoIf5owoshPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_1788523600624xia2",
-          "title": "MA KAPLAN  POCKET NOTES.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIJv2qatB2cSLggdn0EOf9m9qYQNzPFAAJfqgACfb9gSWSP5nFpwUatPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_1788523600625ln94",
-          "title": "ACCA F2 marathon notes.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIJwGqatB3PV0sXIJK792TJ0L6nGavoAALWpgACuLa4SdBJp7xy7NdRPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_178852360062523vv",
-          "title": "FMA Practice Theoretical MCQs with answer key updated.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIJwWqatB2RdhHFlJJr6zaF3WW6a4JeAAJnnwACF2Y5So-7VLDjfv3NPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_1788523600627vfoq",
-          "title": "MA formula sheet and table wef S19.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIJwmqatB18gHPLxNgCvQ7USJjqIAtLAAJpnwACF2Y5SqBxefIYVRJePQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_1788523600628vphu",
-          "title": "MA KAPLAN  POCKET NOTES.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIJw2qatB0kl-idsw0en8HojHOnuebiAAJqnwACF2Y5SqeYAAGnlw46Dz0E",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_1788523600628n4ph",
-          "title": "MA EXAM KIT-KAPLAN (24-25) ISDC.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIJxGqatB10RXrMGBXQPgbJe5ggtcRwAAJrnwACF2Y5SjrcUEvVUFXVPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_1788523600629udnt",
-          "title": "MAFMA_ESSENTIALS_2024.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIJxWqatB2nHJzNHvqMsH4sTBpit48aAAKelgACRYXQSgcIDiSs9b7xPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_1788523600630o5r8",
-          "title": "F2 Marathon Revision Notes(StudyBuddies).pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIJxmqatB1E2OmbUaz40Y_bUepqozc3AAK7ngACwZjpSsL-j5NakAboPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_1788523600631m7lo",
-          "title": "F2 Kaplan Kit.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIJx2qatB36P7oCa459-eaEiNuf7k7bAAIqrgACB7PBSLi2e7eAk4yNPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        }
-      ]
+      "resources": []
     },
     {
       "id": "cat_f2_videos",
@@ -554,146 +1142,6 @@
       "parentId": "cat_f2",
       "order": 3,
       "resources": [
-        {
-          "id": "res_1788523684230ag30",
-          "title": "Session 1.1 - Introduction to Management Accounting",
-          "type": "file_id",
-          "value": "BAACAgIAAxkBAAIJ_WqatKPSquevmzCI82e2k0OCiYFYAALpJAAC2yrwS4v7cOnrb8QTPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_178852368423124fr",
-          "title": "Session 1.2 - Cost Classification And Cost Behaviour",
-          "type": "file_id",
-          "value": "BAACAgIAAxkBAAIJ_mqatKPVxizf_H4sUwS852WB8PU7AALqJAAC2yrwS3kQODhWTsh-PQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_1788523684232m3i6",
-          "title": "Session 2.2 - Labour Costs - Part 1",
-          "type": "file_id",
-          "value": "BAACAgIAAxkBAAIJ_2qatKPYTSouIUtegVLhaznliSBIAAK3JAAC2yrwSzzMdL5rQGdAPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_1788523684232x7u0",
-          "title": "Session 2.3 - Labour Costs - Part 2.flv",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIKAAFqmrSjqCnDs-j3fIiu_-BWvhJ-5wACwiQAAtsq8EsD2PUZp1Cj3j0E",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_178852368423366l9",
-          "title": "Session 3.1 - Overheads and Absorption Costing - Part 1 .flv",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIKAWqatKOoFNkjQhoIDyNaB-_kM-ByAALTJAAC2yrwSz2ZogAB6VIujj0E",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_178852368423462of",
-          "title": "Session 3.2 - Overheads and Absorption Costing - Part 2.flv",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIKAmqatKNGZonxx2FPH-qCTJxgUsqmAALXJAAC2yrwS9IgPnM_lJIOPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_17885236842340qzp",
-          "title": "Session 4.1 - Marginal Costing.flv",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIKA2qatKOZZLMJaewsyo1RR-qvMUsTAALaJAAC2yrwS9xcWnuoUN7-PQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_1788523684235gx72",
-          "title": "Session 4.2 - Decision Making - CVP (Breakeven analysis).flv",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIKBGqatKPmUaNKwaii53emKJIYyBpmAALcJAAC2yrwS6mq6GwU2DNSPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_1788523684236p0t4",
-          "title": "Session 5.1 - Business Math - part 1.flv",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIKBWqatKNxmcrRAbsAAXr4TT21gJCU3AAC4CQAAtsq8EvUaadWYigbuj0E",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_1788523684236rwww",
-          "title": "Session 5.2 - Business Math - part 2.flv",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIKBmqatKMazig6MUMkfKf_G5-DzDDJAALiJAAC2yrwS2-JdF6Qm87jPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_1788523684237oqy1",
-          "title": "Session 6.1 - Bookkeeping.flv",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIKB2qatKOX0TwUTuQ7g3r7y0Fej9mQAALuJAAC2yrwSzk1mZcB-8-KPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_1788523684238mcxc",
-          "title": "Session 6.2 - Process Costing - Costing Methods.flv",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIKCGqatKO7C5Qk8XJ3uwf_rScmU97rAALyJAAC2yrwS9ID20nk8ehlPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_1788523684238bhh8",
-          "title": "Session 7.1 - Process Costing - Work In Process.flv",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIKCWqatKPUaoCcCrNSiyYq9d1Mn1U0AAL0JAAC2yrwS8TSbgUok6v9PQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_1788523684239nebs",
-          "title": "Session_7_2_Process_Costing_Joint_Product,_By_product,_Service_costing.flv",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIKCmqatKObuaWfLJXHiiSnlK6RybNXAAL3JAAC2yrwS0E4FiqwNXkHPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_1788523684240hitg",
-          "title": "Session 8.1 - Budgeting 1 - Intro, and functional budget.flv",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIKC2qatKMs5pQXPCwe2YJuYQ9sdIUiAAL_JAAC2yrwS3ncZHgMTjDtPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_1788523684240dgsi",
-          "title": "Session 8.2 - Budgeting 2 - Flexible budget.flv",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIKDGqatKNF_5qrzhkMIjRzrXh4CujeAAMlAALbKvBL30vpIn1SUeI9BA",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_1788523684241636d",
-          "title": "Session_9_1_Decision_Making_Limiting_factor_and_liner_programming.flv",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIKDWqatKOnjdcUs2jPMhB17rHjPvDaAAIBJQAC2yrwS05-DsGZRmA9PQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_1788523684241887j",
-          "title": "Session_9_2_Decision_Making_Further_processing_decision_And_Relevant.flv",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIKDmqatKPCHf0HiLkHWNE1BAFSw6SbAAICJQAC2yrwS1ZaO9XTddF2PQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_178852368424283pp",
-          "title": "Session 10.1 - Variance 1.flv",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIKD2qatKPt5oqKki7Oop1I0mZBwh8KAAIDJQAC2yrwS0od4P3Z4XMzPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_17885236842438ejy",
-          "title": "Session 10.2 - Variance 2.flv",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIKEGqatKPO1KUDUnFqfjQfLqGqac_7AAIEJQAC2yrwS-2bhQLOfAG6PQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
         {
           "id": "res_1788526495330l8wq",
           "title": "ACCA Management Accountancy (MA/F2)",
@@ -725,6 +1173,153 @@
           "value": "https://youtube.com/playlist?list=PLSlzC-HFo7w7TwAnmyThgdTDL_M0xG1P6&si=DCXc0ntYyFOWJOYP",
           "description": "",
           "items": []
+        },
+        {
+          "id": "res_1790584816644z976",
+          "title": "Session 2.1 - Material, Labour and Stock Control",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBF9JquifwSGy-btVeBnmHfCRVvh2_SQACriQAAtsq8EuOp7PzcFXlgj0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905848166470cc8",
+          "title": "Session 2.2 - Labour Costs - Part 1",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBF9NquifwRWTI_Do8u-VEQ2kN76o9IQACtyQAAtsq8EuJ2Y2fR_hVlz0E",
+          "description": ""
+        },
+        {
+          "id": "res_179058481664955yw",
+          "title": "Session 2.3 - Labour Costs - Part 2",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBF9RquifwaEd59yAubm6idDin_Apx6gACwiQAAtsq8Ev1JueS7gnzQT0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584816651jq8z",
+          "title": "Session 3.1 - Overheads and Absorption Costing - Part 1",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBF9VquifwbjtO0hhhHQbhlI1sbC3asQAC0yQAAtsq8EvJwuLZ0IhcRj0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584816653vvtz",
+          "title": "Session 3.2 - Overheads and Absorption Costing - Part 2",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBF9ZquifwjjWGZys3Rp_dgMYlUHYYnAAC1yQAAtsq8EuvyoYdbhBFUT0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584816655oc4o",
+          "title": "Session 4.1 - Marginal Costing",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBF9dquifwq7-Dp8E7knSsrF4oEa8FQgAC2iQAAtsq8EtBcYt22Fyg9T0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584816657jnn2",
+          "title": "Session 4.2 - Decision Making - CVP (Breakeven analysis)",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBF9hquifwd-LYK93KqyS4E3sVszDPLQAC3CQAAtsq8EsHD9rcegcMmT0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584816659xk1p",
+          "title": "Session 5.1 - Business Math - part 1",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBF9lquifwI2NJARGExSll9yFrz4U92QAC4CQAAtsq8Ev4cByAfcKckz0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584816661w6pq",
+          "title": "Session 5.2 - Business Math - part 2",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBF9pquifwS_wP-P2QH5wneedlQ0RLdAAC4iQAAtsq8EsUs53l71_ALT0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584816663d79s",
+          "title": "Session 1.1 - Introduction to Management Accounting",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBF9tquifwLtYuXsYx7Ert09OWAAFud0MAAukkAALbKvBLGElIg402Dlo9BA",
+          "description": ""
+        },
+        {
+          "id": "res_1790584816664g1t8",
+          "title": "Session 1.2 - Cost Classification And Cost Behaviour",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBF9xquifwvwVvPdOrtDvzB3NUWptckgAC6iQAAtsq8EvguxMxQ9ROnD0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584816755p9iz",
+          "title": "Session 6.1 - Bookkeeping",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBF91quifwWUDKkUqytZaq2HG5MY2SQAAC7iQAAtsq8EtR5ATUZFq4Hz0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584816757c4es",
+          "title": "Session 6.2 - Process Costing - Costing Methods",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBF95quifwpbx6Z6NwO2X8xMSbc1_T3AAC8iQAAtsq8EvTiOGo6G0FdD0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584816851kdjh",
+          "title": "Session 7.1 - Process Costing - Work In Process",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBF99quifw4b0Fjgr7fu8vlBuno9jCowAC9CQAAtsq8EtoX5Kv_evNCz0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905848168549od2",
+          "title": "Session 7.2 - Process Costing - Joint Product, By product, Service costing",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBF-BquifwGzB7DQJTLofKmmYG6V7SWgAC9yQAAtsq8EtQWHAdU8MJuz0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584816957a0ry",
+          "title": "Session 8.1 - Budgeting 1 - Intro, and functional budget",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBF-FquifwhruY1eG6ESZNSBO3adzrfgAC_yQAAtsq8EspcYQfgyWNWD0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584816960lbvv",
+          "title": "Session 8.2 - Budgeting 2 - Flexible budget",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBF-JquifwlnJXz74h9XBdsp4PimTq1QADJQAC2yrwS5PbUm5vTavXPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790584817052kprc",
+          "title": "Session 9.1 - Decision Making - Limiting factor and liner programming",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBF-NquifwbULB3TAW6aI4LQODeMZYwAACASUAAtsq8EuVxP5cytFsFz0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584817055pitg",
+          "title": "Session 9.2 - Decision Making - Further processing decision And Relevant Cost",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBF-RquifwpPCuS9fHYqjhW2b921ZE9gACAiUAAtsq8EvJq_IrkgEUWj0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584817061t6yy",
+          "title": "Session 10.1 - Variance 1",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBF-VquifwBBJC9xoaYnbiqxqm4A83OQACAyUAAtsq8EtdVtcgEsOIsz0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790584817063d77d",
+          "title": "Session 10.2 - Variance 2",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBF-Zquifw_bqn1Z0s33FPCypvC611aAACBCUAAtsq8EvgKAHzWj60ID0E",
+          "description": ""
         }
       ]
     },
@@ -4322,34 +4917,6 @@
       "order": 2,
       "resources": [
         {
-          "id": "res_17894733100954xl8",
-          "title": "YaTT faoliyat turlari pdf.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOgWqpMh2mziBas26sH1uLjDpF803eAAIqpwAC7FBJSSiCuCA3b1JKPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1789473310688kzks",
-          "title": "Xususiy korxona to‘g‘risida pdf.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOg2qpMh4lgToqY2xzWnvNeGi_7rDaAAIrpwAC7FBJSV_IASHQEDzRPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_17894733144744zac",
-          "title": "Mas’uliyati_cheklangan_hamda_qo‘shimcha_mas’uliyatli_jamiyatlar.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOhWqpMiIQxnHtmHz0_cghaRTT-ljxAAIspwAC7FBJSZ2gnZkiQ_iKPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1789473314868nx20",
-          "title": "Oilaviy korxona.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOhmqpMiJZTLTwT-kC1GZHwJfqjt_WAAItpwAC7FBJSYCSeKT0Gmt7PQQ",
-          "description": ""
-        },
-        {
           "id": "res_1789473444826uzmd",
           "title": "1-son BHMS",
           "type": "link",
@@ -4532,6 +5099,34 @@
           "value": "https://lex.uz/Pages/GetAct.aspx?lact_id=1512384",
           "description": "",
           "items": []
+        },
+        {
+          "id": "res_1790583715205rl2e",
+          "title": "YaTT faoliyat turlari pdf.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBFdJquiOiTmTzb-SaRosQd4OgTBuHdAACb60AAu8O0UkU6adfZJzOKj0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790583715208qkq7",
+          "title": "Xususiy korxona to‘g‘risida pdf.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBFdNquiOiTfd2PYMgH30KbvvZN8SaSQACcK0AAu8O0UmXdYHF_KlzAj0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790583715211wwkj",
+          "title": "Oilaviy korxona.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBFdRquiOieLgkQguel0jApeKcvtpaoQACca0AAu8O0UlDc5EypSQDyz0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905837152140ouf",
+          "title": "Mas’uliyati_cheklangan_hamda_qo‘shimcha_mas’uliyatli_jamiyatlar.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBFdVquiOiFnQRLLUGh3taWxleu9vtMwACcq0AAu8O0UkiHtzU6Q0uCT0E",
+          "description": ""
         }
       ]
     },
@@ -5385,612 +5980,605 @@
       "order": 133,
       "resources": [
         {
-          "id": "res_17894744925270ryz",
+          "id": "res_1790583949985jcfe",
           "title": "1. Устав фондини шакиллантириш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOmWqpNrucwUp1PuZYxT69rV-KhP6_AAI0qQAC7_RJSTKtp54yUZOQPQQ",
+          "value": "BQACAgIAAxkBAAEBFfZquiSMgn5ol9Fdzj1V00SvH_VargACNKkAAu_0SUkJMF9DokCAQj0E",
           "description": ""
         },
         {
-          "id": "res_1789474492528fezo",
+          "id": "res_1790583949987mso0",
           "title": "1_Бошлангич_маълумотларни_киритиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOmmqpNruy5UZTv1R2fyT0XZvpxSFHAAI5qQAC7_RJSeu4VkdTlvquPQQ",
+          "value": "BQACAgIAAxkBAAEBFfdquiSMq6zD18Y9JpRx8TOXQlrIrAACOakAAu_0SUlb57hYeAp0-D0E",
           "description": ""
         },
         {
-          "id": "res_1789474492529hly4",
+          "id": "res_17905839499897tro",
           "title": "2. Материаллар номини киритиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOm2qpNrs7RMUswF2NvEtL7aLjWXcEAAI6qQAC7_RJSbp8AAHD9T2u9z0E",
+          "value": "BQACAgIAAxkBAAEBFfhquiSMVyWScB2KNBKtbsLxla196AACOqkAAu_0SUln35iL5C-hMD0E",
           "description": ""
         },
         {
-          "id": "res_1789474492531e171",
+          "id": "res_17905839499929ifu",
           "title": "3. Kонтрагентлар киритиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOnGqpNru6_wpLz_3EzifmLPZVB_CNAAI7qQAC7_RJSZcR8X0L-5YfPQQ",
+          "value": "BQACAgIAAxkBAAEBFflquiSM5MhgsYziYiH-dXmj4adJWAACO6kAAu_0SUnCBgABaw5sT7M9BA",
           "description": ""
         },
         {
-          "id": "res_17894744925339res",
+          "id": "res_17905839499932njc",
           "title": "4. Банкдан соликка пул чикариш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOnWqpNru4k5aLxxNGX21GvSqiSMtHAAI8qQAC7_RJSViifTQ1WytbPQQ",
+          "value": "BQACAgIAAxkBAAEBFfpquiSMMIETxlHiP5s1QFX1sIsIegACPKkAAu_0SUm6Bv5NMcsFPD0E",
           "description": ""
         },
         {
-          "id": "res_17894744925340kar",
+          "id": "res_1790583949995agj9",
           "title": "5. Банкдан хом ашёга пул чикариш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOnmqpNrsv2nHxzMhK0Z05WmR5ltRZAAI9qQAC7_RJSVj25PPMlIRGPQQ",
+          "value": "BQACAgIAAxkBAAEBFftquiSMLyKRcwLO1DlE_DDiqf5VwwACPakAAu_0SUkTT2-_B06xeD0E",
           "description": ""
         },
         {
-          "id": "res_1789474492535657c",
+          "id": "res_1790583949997sjx2",
           "title": "6_Банкдан_банк_хизмати_учун_пул_чикариш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOn2qpNrubfG0GN6PIIHLOBG-9_VjCAAI-qQAC7_RJScr0zYIjuIxSPQQ",
+          "value": "BQACAgIAAxkBAAEBFfxquiSMPsy_IN9TAlVX_pWCBhx2lAACPqkAAu_0SUlrrelMhNf9QD0E",
           "description": ""
         },
         {
-          "id": "res_17894744925367w2q",
+          "id": "res_17905839499999i3x",
           "title": "7. Банкдан кредит олиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOoGqpNrsDlYPsV-5W-DBxZyvAE_s9AAI_qQAC7_RJSQwzhjuKhsHkPQQ",
+          "value": "BQACAgIAAxkBAAEBFf1quiSMZKQzCNl2pXg3kwxv6y_XlAACP6kAAu_0SUm5j4kLct9lpj0E",
           "description": ""
         },
         {
-          "id": "res_1789474492537xj65",
+          "id": "res_179058395000052t5",
           "title": "8_Хужжатдан_нусха_олиб_ишни_давом_эттириш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOoWqpNrsHQlxh_aEUuzmkzRRB08FyAAJAqQAC7_RJSXPmQZsi4_OePQQ",
+          "value": "BQACAgIAAxkBAAEBFf5quiSM_1UKIq1tNJh_pBguKPZ_oAACQKkAAu_0SUkElY7_EqFGhz0E",
           "description": ""
         },
         {
-          "id": "res_1789474492538ncqr",
+          "id": "res_17905839500029gu8",
           "title": "9.Жисмоний шахс киритиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOomqpNrsT5Sx3yucJOWUYlFNWtkncAAJBqQAC7_RJSfGjzFuo2i1fPQQ",
+          "value": "BQACAgIAAxkBAAEBFf9quiSMsuHkghZLTsThiApOuEkgJgACQakAAu_0SUkZeBYzi0k-SD0E",
           "description": ""
         },
         {
-          "id": "res_1789474492539rvvi",
+          "id": "res_1790583950051qpcw",
           "title": "10. Сотрудникга олиб утиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOo2qpNrs8SV4KQ7Ki597P1S-yC9KAAAJCqQAC7_RJSZmtKVdKNnR3PQQ",
+          "value": "BQACAgIAAxkBAAEBFgABarokjDZE6oxpon-1gUsmmgJY2BMAAkKpAALv9ElJpKNelozQv-U9BA",
           "description": ""
         },
         {
-          "id": "res_1789474492540esnq",
+          "id": "res_1790583950054psjs",
           "title": "11. Должности киритиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOpGqpNruYM2CmpsBNqkuHPCmN30imAAJFqQAC7_RJSaiKuOAxv8WfPQQ",
+          "value": "BQACAgIAAxkBAAEBFgFquiSMbCdu-S63B1mEaqVXW1ugjwACRakAAu_0SUn8K4rwVQABxG49BA",
           "description": ""
         },
         {
-          "id": "res_17894744925412gir",
+          "id": "res_1790583950055yhya",
           "title": "12. Булимлар очиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOpWqpNrs4h_rfrDr0SDevnoag5yaeAAJGqQAC7_RJSXa6xZ6lWiubPQQ",
+          "value": "BQACAgIAAxkBAAEBFgJquiSMsjdUSRpNGkC7e3uJs3Im1AACRqkAAu_0SUlltTVdczwOcj0E",
           "description": ""
         },
         {
-          "id": "res_1789474492580yjw2",
+          "id": "res_179058395005853l3",
           "title": "13. Ишга кабул килиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOpmqpNruA6gvDy-4U0lIgCXHryn7nAAJHqQAC7_RJSf961T-315iBPQQ",
+          "value": "BQACAgIAAxkBAAEBFgNquiSMcG1h3-_jvSjNU3MDkJPxSAACR6kAAu_0SUnyhMqASdTLlD0E",
           "description": ""
         },
         {
-          "id": "res_178947449258179km",
+          "id": "res_1790583950059ejvo",
           "title": "14_Ишга_кабул_килиш_ойлик_белгилаш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOp2qpNru-QYVZn5Qwxc8srFWQyFkRAAJOqQAC7_RJSY8g4VfcazvkPQQ",
+          "value": "BQACAgIAAxkBAAEBFgRquiSMmXjmAnd1g3HZ-mW7OSd2KQACTqkAAu_0SUn1ELmjMiKpNz0E",
           "description": ""
         },
         {
-          "id": "res_1789474492582etm0",
+          "id": "res_1790583950151u2xd",
           "title": "15. Табель тузиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOqGqpNrvrrxFnjWg3fHAppu_Bz6LqAAJPqQAC7_RJSR4bj0RZKEe8PQQ",
+          "value": "BQACAgIAAxkBAAEBFgVquiSMHiSx8rWQyvMkS1x3MKTBkwACT6kAAu_0SUmp46ZDgqaGVT0E",
           "description": ""
         },
         {
-          "id": "res_1789474492583ekcy",
+          "id": "res_179058395015340hs",
           "title": "16_Иш_хаки_хисоблаш_ва_ведемость_тузиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOqWqpNrvSH-RSspKcNftAOTUBTuRYAAJQqQAC7_RJSbpFS5sVcqKIPQQ",
+          "value": "BQACAgIAAxkBAAEBFgZquiSMMR7pBBCRmU0w1GtHxpSgqgACUKkAAu_0SUkemHB21m-jNj0E",
           "description": ""
         },
         {
-          "id": "res_1789474492584ym6a",
+          "id": "res_1790583950156ie4l",
           "title": "17_Кассага_пул_кирим_килиш_ва_иш_хакига_тулаш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOqmqpNruqrXdGxBoyps7xB3M90zUwAAJRqQAC7_RJSZX6tatBN3w5PQQ",
+          "value": "BQACAgIAAxkBAAEBFgdquiSMQFHOYvPlm32xdS6elcjQ1gACUakAAu_0SUlyr166f8Xz9z0E",
           "description": ""
         },
         {
-          "id": "res_1789474492586c245",
+          "id": "res_17905839502504ad8",
           "title": "18. Хом ашёлар кирим килиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOq2qpNrv0SNYoyghdOrtHzrw-LokaAAJSqQAC7_RJSZsQvDewjmUQPQQ",
+          "value": "BQACAgIAAxkBAAEBFghquiSMzoPQX_iWgp4QpwJY7iCTwwACUqkAAu_0SUm00zIstqzd7T0E",
           "description": ""
         },
         {
-          "id": "res_1789474492587d298",
+          "id": "res_1790583950254bdtg",
           "title": "19.Сувни приход килиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOrGqpNrsjxQ8AAeE_IKv68Pa9CZtMmwACU6kAAu_0SUnFrcMblPsRdD0E",
+          "value": "BQACAgIAAxkBAAEBFglquiSM1h9oh_ofsBcCnDjpSRpoOQACU6kAAu_0SUmDrn3trReStj0E",
           "description": ""
         },
         {
-          "id": "res_17894744925881yon",
+          "id": "res_1790583950256qwwc",
           "title": "20. Электр энергия киритиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOrWqpNrst55m-TBKjNesewplSp9TaAAJYqQAC7_RJScKiChTmdfPSPQQ",
+          "value": "BQACAgIAAxkBAAEBFgpquiSMWUhkbvyjqabczSU2reT6HwACWKkAAu_0SUnzFia3iXNQbT0E",
           "description": ""
         },
         {
-          "id": "res_1789474492589i0w7",
+          "id": "res_1790583950451cz34",
           "title": "21. Спецификация киритиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOrmqpNrumdO1Ka_zt6syhgaLA1o4qAAJZqQAC7_RJScG0-ghhRHuvPQQ",
+          "value": "BQACAgIAAxkBAAEBFgtquiSMCSADtn9lFlruSCSvW932QgACWakAAu_0SUmjcZu2Nhe6OD0E",
           "description": ""
         },
         {
-          "id": "res_1789474492591hqew",
+          "id": "res_1790583950455qk6m",
           "title": "22. Ишлаб чикаришни ташкил этиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOr2qpNrsdjhYEj8oSNouA2DjftNkiAAJbqQAC7_RJSef8LaEeLguHPQQ",
+          "value": "BQACAgIAAxkBAAEBFgxquiSMNlpDtSlw76q2b5-J2L5kewACW6kAAu_0SUkpKNGBWcys-D0E",
           "description": ""
         },
         {
-          "id": "res_1789474492681dky1",
+          "id": "res_17905839505520st7",
           "title": "23. Уйга вазифа Махсулотни сотиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOsGqpNrumeU2j5BQ-_8iBBYDL4Y0TAALmoQACr6pJSaqXMSTgsN9lPQQ",
+          "value": "BQACAgIAAxkBAAEBFg1quiSMfzQ0Xn5QoYMuC7668vDjgwAC5qEAAq-qSUlNuTiLt3nw6j0E",
           "description": ""
         },
         {
-          "id": "res_17894744927797pai",
+          "id": "res_1790583950554y4o8",
           "title": "24_Асосий_воситани_номини_киритиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOsWqpNrtxQ4-d8HS9oXChKnArdL0FAALnoQACr6pJSRM_ZUgKe7n3PQQ",
+          "value": "BQACAgIAAxkBAAEBFg5quiSMRhAzYD9W33MOkRV3zK-NlQAC56EAAq-qSUnh3aIuvTHj5T0E",
           "description": ""
         },
         {
-          "id": "res_1789474492879rg9d",
+          "id": "res_1790583950556x5n9",
           "title": "25. Бинони кирим килиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOsmqpNrsQHzh_ihEf8HTLcH7yCYS4AALooQACr6pJScAq6suuoqvUPQQ",
+          "value": "BQACAgIAAxkBAAEBFg9quiSMtAd9hPDk7dWejR479Hk_owAC6KEAAq-qSUn5CCftMmePLD0E",
           "description": ""
         },
         {
-          "id": "res_17894744928817h8a",
+          "id": "res_1790583950558ruux",
           "title": "26. Асосий воситани учётга олиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOs2qpNrtVQGQMCG_Aco6JqGvsCl8oAALpoQACr6pJSWxvzJEJhMA_PQQ",
+          "value": "BQACAgIAAxkBAAEBFhBquiSMhJf-aIdoOHTSz7AkDaEHkwAC6aEAAq-qSUmRnsOBkDo23D0E",
           "description": ""
         },
         {
-          "id": "res_17894744928842i1i",
+          "id": "res_17905839505604ov5",
           "title": "27_Номоддий_активни_сотиб_олиш_ва_учетга_олиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOtGqpNrusJoM2i2tmybgVIie5YxVgAALqoQACr6pJSZovMq25PGq8PQQ",
+          "value": "BQACAgIAAxkBAAEBFhFquiSMLieXLJdtKk5WcYRksjVlkwAC6qEAAq-qSUk80Kj2BXPBPz0E",
           "description": ""
         },
         {
-          "id": "res_1789474492885u4lt",
+          "id": "res_179058395065064cr",
           "title": "28. Ускуналарни сотиб олиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOtWqpNrvbSWx9WT75oCkDDATxlOCyAALroQACr6pJSZmVCf1Bi2pyPQQ",
+          "value": "BQACAgIAAxkBAAEBFhJquiSMJbFyGB517a59zBgZkpYlMwAC66EAAq-qSUlKvOKWwI1qhD0E",
           "description": ""
         },
         {
-          "id": "res_1789474492979c00o",
+          "id": "res_1790583950653cjx2",
           "title": "29. Ускунани учётга олиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOtmqpNrs5BdwX8nlEiHmIXh2clHDSAALtoQACr6pJSUsOV9lg1KxkPQQ",
+          "value": "BQACAgIAAxkBAAEBFhNquiSMwePvi898Ipb5YuLnD0FomwAC7aEAAq-qSUmMIqIUTCtTID0E",
           "description": ""
         },
         {
-          "id": "res_1789474492981vgn3",
+          "id": "res_1790583950655x8v4",
           "title": "30_Автомашина_сотиб_олиш_ва_учётга_олиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOt2qpNrsLnO88UjvbBpwsMvSXIgs3AALuoQACr6pJSQH90tF1cXafPQQ",
+          "value": "BQACAgIAAxkBAAEBFhRquiSM2_UcSULNsLy-cy9WcVBy-QAC7qEAAq-qSUmYhHp91JT5Vj0E",
           "description": ""
         },
         {
-          "id": "res_17894744929827p2z",
+          "id": "res_1790583950657jl8n",
           "title": "31. Февраль ойига табель тузиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOuGqpNrtPh9sbW3IIuMG7Dt5gcopTAALvoQACr6pJSSxn8VHpwl47PQQ",
+          "value": "BQACAgIAAxkBAAEBFhVquiSMjahMX_1hcJkdVVvNvFVdcQAC76EAAq-qSUm8WCD3p8jwbz0E",
           "description": ""
         },
         {
-          "id": "res_1789474492983ukg5",
+          "id": "res_1790583950659ahrk",
           "title": "32. Кушимча иш хаки киритиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOuWqpNrvSePkut4tSdQId2N-rWJ-sAALwoQACr6pJSVSVbGKFPebWPQQ",
+          "value": "BQACAgIAAxkBAAEBFhZquiSME-qnSlDZpPtSwgPT11GZnAAC8KEAAq-qSUl9Xi3bIN7qyT0E",
           "description": ""
         },
         {
-          "id": "res_1789474492984mou8",
+          "id": "res_17905839506613p3i",
           "title": "33. Иш хакига ушланма куйиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOumqpNruOAvHLlmpAaloBwAMySIvsAALxoQACr6pJSSL9Jem_AubxPQQ",
+          "value": "BQACAgIAAxkBAAEBFhdquiSMXHbc7MabENVfEtsS-gABhy4AAvGhAAKvqklJdtSEJbck1Wo9BA",
           "description": ""
         },
         {
-          "id": "res_1789474492985pjm1",
+          "id": "res_17905839506633g69",
           "title": "34. Февраль ойи иш хаки хисоблаш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOu2qpNruvR3VksLN79Py2gmHH6MKOAALzoQACr6pJSciiNHN8IW7xPQQ",
+          "value": "BQACAgIAAxkBAAEBFhhquiSMAZ5vUy2gKCxyXo7UuBJiQwAC86EAAq-qSUk3LT9w9-AQ-T0E",
           "description": ""
         },
         {
-          "id": "res_1789474492986px61",
+          "id": "res_1790583950752pr9o",
           "title": "35. Иш хаки китобини текшириш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOvGqpNrsKuHuZsTl1NkplnGQpTHQwAAL1oQACr6pJSfEklmSLb8WEPQQ",
+          "value": "BQACAgIAAxkBAAEBFhlquiSM7XhQZHdo7W6lszYIm7dYZwAC9aEAAq-qSUkgKdDlan5Ffj0E",
           "description": ""
         },
         {
-          "id": "res_1789474492987h410",
+          "id": "res_17905839507539t57",
           "title": "36. Иш хаки пластик карта очиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOvWqpNrv0zdcjc70MRRHPwNau9sttAAL2oQACr6pJSepkgHELyWklPQQ",
+          "value": "BQACAgIAAxkBAAEBFhpquiSMr84_sDWAHopp4hytgBU5qgAC9qEAAq-qSUmADXYR_bZoAz0E",
           "description": ""
         },
         {
-          "id": "res_1789474492988cnih",
+          "id": "res_1790583950755ad9m",
           "title": "37_Иш_хакини_пластик_картага_тушириш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOvmqpNrtIWpFGjfS9qV-Jzn63sQrJAAL3oQACr6pJSSCHwHooG0SBPQQ",
+          "value": "BQACAgIAAxkBAAEBFhtquiSMV9KmzV9gK-rME-8ovHk9vgAC96EAAq-qSUkjP9_HSjNx_T0E",
           "description": ""
         },
         {
-          "id": "res_1789474492989ng6a",
+          "id": "res_1790583950756sfoz",
           "title": "38. Разряд буйича ишга кабул килиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOv2qpNrt2RQi-KfSbW6U8wOzcHUweAAL6oQACr6pJSax8z30Cj0j8PQQ",
+          "value": "BQACAgIAAxkBAAEBFhxquiSMWqfEqjnKHLsSVWkp2uV-uAAC-qEAAq-qSUmzSYiu5bbOTD0E",
           "description": ""
         },
         {
-          "id": "res_178947449299045s5",
+          "id": "res_17905839507581oyl",
           "title": "39_Иш_хакини_ойма_ой_ёпиш_проводкалари.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOwGqpNruFehrPZwFOrnyNvlDScV-oAAL7oQACr6pJSYSfwHZhsKc9PQQ",
+          "value": "BQACAgIAAxkBAAEBFh1quiSMWn6EEpGU0BsZdQABiUQYSGAAAvuhAAKvqklJ1WdbNID7cvg9BA",
           "description": ""
         },
         {
-          "id": "res_1789474492992i4pt",
+          "id": "res_1790583950759s41z",
           "title": "40_Соликка_даромад_солии_ва_ЯИТ_хисоботини_тайёрлаш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOwWqpNrs4VujEjl6nObqhFr1A0eDAAAL9oQACr6pJSVwbt1xn0s7YPQQ",
+          "value": "BQACAgIAAxkBAAEBFh5quiSMRjxtD4WifkDNf6iYKp0zxwAC_aEAAq-qSUmtaGl8TBNVSz0E",
           "description": ""
         },
         {
-          "id": "res_1789474492993t21y",
+          "id": "res_1790583950761kxap",
           "title": "41. Хисоботларни текшириш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOwmqpNrtyPrzsH1oj7UOKEjq1PIVZAAL-oQACr6pJSY7X3dOl6562PQQ",
+          "value": "BQACAgIAAxkBAAEBFh9quiSMR_bULjepA6GMRCZvHJIkjwAC_qEAAq-qSUk9_Yebw6wrFD0E",
           "description": ""
         },
         {
-          "id": "res_1789474492994viyh",
+          "id": "res_1790583950762dxw5",
           "title": "42_Молиёвий_ёрдам_тани_ва_фоизини_кайтариш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOw2qpNrtwmpJoXT5mYi_CqLyZJqivAAL_oQACr6pJSbKsZmwXYYv2PQQ",
+          "value": "BQACAgIAAxkBAAEBFiBquiSM77tZAuB6A-zq15FPzGIpWgAC_6EAAq-qSUn34vVdoM6STj0E",
           "description": ""
         },
         {
-          "id": "res_1789474493080pemd",
+          "id": "res_179058395076415lk",
           "title": "43. Соликка пул утказиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOxGqpNrtFI8-O7tAVJOI3Yqz2I0azAAOiAAKvqklJvbk6eV3kqbs9BA",
+          "value": "BQACAgIAAxkBAAEBFiFquiSMiOGQKqWefPj8h0DW62TawgADogACr6pJSX74W9pHc3f2PQQ",
           "description": ""
         },
         {
-          "id": "res_17894744930815edj",
+          "id": "res_17905839508518dol",
           "title": "44. Март ойи иш хакини хисоблаш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOxWqpNrvUzQJ0ihqd_40WEN6gxyivAAIBogACr6pJSaUXON3Q23YzPQQ",
+          "value": "BQACAgIAAxkBAAEBFiJquiSM-WjUmN5uCNzutIhj2FLpsAACAaIAAq-qSUl7yt32rND2vD0E",
           "description": ""
         },
         {
-          "id": "res_1789474493083h3o1",
+          "id": "res_1790583950853vl7o",
           "title": "45. Ер мулк ва сув солиги.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOxmqpNru1vGiJO5h61ZGmqUGkURmtAAICogACr6pJSUVUiyBEzMLLPQQ",
+          "value": "BQACAgIAAxkBAAEBFiNquiSM-LvaucycbmRVIWq4UokORwACAqIAAq-qSUkm-rQNBmCv2z0E",
           "description": ""
         },
         {
-          "id": "res_1789474493084b4eh",
+          "id": "res_179058395085415hw",
           "title": "46. Проведение бериш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOx2qpNrtAb3nDVyhmE3K38nF2n1QPAAIDogACr6pJSdBIWGP9m2QaPQQ",
+          "value": "BQACAgIAAxkBAAEBFiRquiSMv6wk93KG25Nok63POxGflQACA6IAAq-qSUk4PqQBqHw4vD0E",
           "description": ""
         },
         {
-          "id": "res_1789474493085u4di",
+          "id": "res_1790583950856ic0z",
           "title": "47. Ойни ёпиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOyGqpNrsCBLHxnC5t8B0nYnI4cPAfAAIEogACr6pJScN0Wh4R2ci2PQQ",
+          "value": "BQACAgIAAxkBAAEBFiVquiSMIC866aM_0LXKQvpTIWlCeAACBKIAAq-qSUkfb93Bk2TLgz0E",
           "description": ""
         },
         {
-          "id": "res_17894744930868v22",
+          "id": "res_1790583950857h9fx",
           "title": "48_Ягона_солик_хисоблаш_ва_отчёт_тайёрлаш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOyWqpNruc6saP-rgmJ-POm1cyxm1vAAIFogACr6pJSbsGXF87DY0-PQQ",
+          "value": "BQACAgIAAxkBAAEBFiZquiSM4kx3X4TJqITeFHaiW5f2gAACBaIAAq-qSUleGrp4DUw58j0E",
           "description": ""
         },
         {
-          "id": "res_1789474493087c17w",
+          "id": "res_1790583950859dy7e",
           "title": "49.  Ягона Соликка пул утказиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOymqpNrtuXtoZN5K1hxC7U3T0VnDAAAIGogACr6pJScDNHzzekTDOPQQ",
+          "value": "BQACAgIAAxkBAAEBFidquiSM8q79DtfbmtoRmdpKICJ-KwACBqIAAq-qSUkdcdig98qOnj0E",
           "description": ""
         },
         {
-          "id": "res_1789474493088zmh4",
+          "id": "res_1790583950860im3u",
           "title": "50_Ойни_ёпилиши_ва_счётларни_текшириш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOy2qpNrvLF0PFKgdjEE4DhDkCqqhlAAIHogACr6pJSfCDu5wAATBJqT0E",
+          "value": "BQACAgIAAxkBAAEBFihquiSM_t_nezSxoN1WN4AwEZn1QgACB6IAAq-qSUmjVcvYSuj7zj0E",
           "description": ""
         },
         {
-          "id": "res_1789474493089ph7z",
+          "id": "res_1790583950862crjv",
           "title": "51. Асосий воситани эскириши.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOzGqpNrubpAK3db-AxvoOmvbIeW7NAAIIogACr6pJSUOyBFdkrLlTPQQ",
+          "value": "BQACAgIAAxkBAAEBFilquiSMqiKDzttxO-VrUUowbEy_NgACCKIAAq-qSUkag2LSAaaA6z0E",
           "description": ""
         },
         {
-          "id": "res_1789474493090xasx",
+          "id": "res_1790583950863kwwz",
           "title": "52. Таннарх.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOzWqpNruxJOjDgJPG1Off2cNgYAeAAAIJogACr6pJSXyddpeMmhIOPQQ",
+          "value": "BQACAgIAAxkBAAEBFipquiSMgMHRTccm2psoGTyOWdnfygACCaIAAq-qSUkWqVepTQTQJD0E",
           "description": ""
         },
         {
-          "id": "res_1789474493092xb37",
+          "id": "res_1790583950865kw9e",
           "title": "53. Калькуляция.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOzmqpNrsaMB4CI0Uprok_1EwmigxkAAIKogACr6pJSd3866g9C5a8PQQ",
+          "value": "BQACAgIAAxkBAAEBFitquiSMiFdKeVmgPAaP3mfC04AXZwACCqIAAq-qSUkUg3_7-crfTT0E",
           "description": ""
         },
         {
-          "id": "res_1789474493093jr4g",
+          "id": "res_17905839509540603",
           "title": "54. Проводкаларни текшириш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOz2qpNrtCDEGX-flqsdevHpychXcRAAILogACr6pJScRKV_9hNQP3PQQ",
+          "value": "BQACAgIAAxkBAAEBFixquiSMWxUxYqProMg2cYABkt-OZgACC6IAAq-qSUl1k6oYYb86zz0E",
           "description": ""
         },
         {
-          "id": "res_17894744931808tms",
+          "id": "res_1790583950957w0o3",
           "title": "55_Инвентар_жихозларни_кирим_килиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIO0GqpNrtrin10a4Z5nAWE6qn2_3wfAAIMogACr6pJST2C2HvQOD2oPQQ",
+          "value": "BQACAgIAAxkBAAEBFi1quiSMG9OwNb_i1pSeFlzTKqCspgACDKIAAq-qSUk3GUxDsifhdj0E",
           "description": ""
         },
         {
-          "id": "res_1789474493181sf2g",
+          "id": "res_17905839509591hll",
           "title": "56. Инвентарларни списать килиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIO0WqpNrvsAAFpLH8tyUcpqZN4QUdbmwACDqIAAq-qSUkF9-4SjpNItj0E",
+          "value": "BQACAgIAAxkBAAEBFi5quiSM3Hjnc1QRNCCNaeOJRLX3ogACDqIAAq-qSUkWFsLcP9G9Zj0E",
           "description": ""
         },
         {
-          "id": "res_1789474493182ohif",
+          "id": "res_1790583950962tamj",
           "title": "57_Инвентарларни_балансдан_ташкари_014_счётга_олиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIO0mqpNruyev84xZmpljxUH5jAS-LaAAIPogACr6pJSZVTrf6Zoz85PQQ",
+          "value": "BQACAgIAAxkBAAEBFi9quiSMNW1e0UgscOPycCuDOf4oGAACD6IAAq-qSUk4JSraKTKMLT0E",
           "description": ""
         },
         {
-          "id": "res_1789474493183nlxt",
+          "id": "res_1790583950965g6yg",
           "title": "58. Долларга станок кирим килиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIO02qpNrtLNQ-a5t2bxyc6qufLPdV7AAIQogACr6pJSUDnigiScNOJPQQ",
+          "value": "BQACAgIAAxkBAAEBFjBquiSMOrs7AYPMIwnFQG4x0a6DTgACEKIAAq-qSUnltN7rFy4qWD0E",
           "description": ""
         },
         {
-          "id": "res_1789474493184f3dl",
+          "id": "res_1790583951051v4bl",
           "title": "59. Долларда пул чикариш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIO1GqpNruxgDI7PmZz8_IvmKTUHmTOAAIRogACr6pJSflTpbLm2BrHPQQ",
+          "value": "BQACAgIAAxkBAAEBFjFquiSMbobYdw0F38BhPJ414m-U5gACEaIAAq-qSUmHw_HlH-vWYD0E",
           "description": ""
         },
         {
-          "id": "res_1789474493185rx8w",
+          "id": "res_1790583951053prva",
           "title": "60_Спаркга_газ_балон_урнатиш_модернизация_килиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIO1WqpNrvycaNlXlpivu_HQdGfV0SdAAISogACr6pJSQPMy87w2wHMPQQ",
+          "value": "BQACAgIAAxkBAAEBFjJquiSMAeL1AxyJfpq0u9TeJjC_6gACEqIAAq-qSUkU_vd8zqzMzT0E",
           "description": ""
         },
         {
-          "id": "res_178947449318701e9",
+          "id": "res_179058395105585b5",
           "title": "61. Инвентаризация килиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIO1mqpNrsy7OSRV21qnuAUX8LCXPKwAAITogACr6pJSaaGBdyrpuFLPQQ",
+          "value": "BQACAgIAAxkBAAEBFjNquiSMgOjyWJqv04hO8AABWTln5E4AAhOiAAKvqklJ1SgFaxbuHcI9BA",
           "description": ""
         },
         {
-          "id": "res_1789474493188xxk8",
+          "id": "res_1790583951057n44a",
           "title": "62_Корпоратив_картага_пул_чикариш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIO12qpNrtDVqGAMk9VAlGTB3abzVnfAAIUogACr6pJSeNopl6rhTbzPQQ",
+          "value": "BQACAgIAAxkBAAEBFjRquiSM2To-ry5hfJd2YFtcvEidngACFKIAAq-qSUmKwFOpP98LbT0E",
           "description": ""
         },
         {
-          "id": "res_1789474493189eiq6",
+          "id": "res_1790583951059qwp0",
           "title": "63. Авансовый отчёт тайёрлаш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIO2GqpNrv89V3Ty9RMbxuvZkMZnlJRAAIVogACr6pJSZxeZWd94vZfPQQ",
+          "value": "BQACAgIAAxkBAAEBFjVquiSMpfvhMjw2djsrQdDrQbjyJwACFaIAAq-qSUky9wGFHZgI3D0E",
           "description": ""
         },
         {
-          "id": "res_1789474493190hc9e",
+          "id": "res_1790583951060d4cn",
           "title": "64. Командировкага пул чикариш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIO2WqpNrvwEkOweaa58NZkIuA4xBB4AAIWogACr6pJSWtP6pzc2NeDPQQ",
+          "value": "BQACAgIAAxkBAAEBFjZquiSMf0ysk3Me986rTFAzFi0aIQACFqIAAq-qSUlYoGKBzfrZjj0E",
           "description": ""
         },
         {
-          "id": "res_1789474493191yq55",
+          "id": "res_1790583951062m2wl",
           "title": "65_Камомад_аникланди_ва_иш_хакига_жарима_куйилди.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIO2mqpNrurzHcE56xrNffe01OlOVTIAAIXogACr6pJSaWobiHZ26tiPQQ",
+          "value": "BQACAgIAAxkBAAEBFjdquiSMpEr2cNdrOQktKcLofrHtjgACF6IAAq-qSUmkmUuKEJs-lD0E",
           "description": ""
         },
         {
-          "id": "res_1789474493192ofxi",
+          "id": "res_17905839512567it5",
           "title": "66. Асосий воситани сотилиши.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIO22qpNruq7mWYzYsismm7Ibjq1zvMAAIYogACr6pJSUZxa6vLDZucPQQ",
+          "value": "BQACAgIAAxkBAAEBFjhquiSMqel3Ow3Uproq2UZFNZcRwwACGKIAAq-qSUmJHGk13Q1Gvj0E",
           "description": ""
         },
         {
-          "id": "res_1789474493194490a",
+          "id": "res_1790583951258u2wk",
           "title": "67_Даромад_солигидан_имтиёз_куйиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIO3GqpNruI4f559l4EKVabOpeCzgkhAAIZogACr6pJSZ6TYAVJz7IiPQQ",
+          "value": "BQACAgIAAxkBAAEBFjlquiSMEQ6DV82Arij5riYHAm9FyQACGaIAAq-qSUn5JlsAAbyEbww9BA",
           "description": ""
         },
         {
-          "id": "res_1789474493280lp5k",
+          "id": "res_1790583951351v1ks",
           "title": "68_Асосий_воситаларни_кайта_бахолаш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIO3WqpNrsE06RePQABun27PV4Y2dnBFAACGqIAAq-qSUn2LMaY6jhRiT0E",
+          "value": "BQACAgIAAxkBAAEBFjpquiSMcIwNb_rQTA18CJ56xf7ccQACGqIAAq-qSUlivmYbJ4AvAj0E",
           "description": ""
         },
         {
-          "id": "res_1789474493281d116",
+          "id": "res_1790583951353l4qz",
           "title": "69. Иш хаки справка чикариш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIO3mqpNruAx78KLBSJPL6HWhoSiZ9kAAIbogACr6pJSWkPOEI6gSZvPQQ",
+          "value": "BQACAgIAAxkBAAEBFjtquiSML3Lk42zWtyD_W3ibIpLJGgACG6IAAq-qSUlHGLU_klZ8fj0E",
           "description": ""
         },
         {
-          "id": "res_17894744932839vl9",
+          "id": "res_1790583951359bpiw",
           "title": "70. Пулни кайтиб келиши.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIO32qpNruP9eWYKzdZtsNUBb7ojI6UAAIcogACr6pJSQWUiJo327dpPQQ",
+          "value": "BQACAgIAAxkBAAEBFjxquiSMAh6FfHFlw2Z1hwSsh4jXgAACHKIAAq-qSUmZeF1rmSvuBD0E",
           "description": ""
         },
         {
-          "id": "res_1789474493284zra9",
+          "id": "res_1790583951360lltn",
           "title": "71. Ишдан бушатиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIO4GqpNrvjKmj9CeQwEoj8z9yKVb9qAAIdogACr6pJSdT0-nSc-buePQQ",
+          "value": "BQACAgIAAxkBAAEBFj1quiSMDtP64a3KVeDoOv03CPaHtQACHaIAAq-qSUkNEciweFTpHz0E",
           "description": ""
         },
         {
-          "id": "res_1789474493285nbb3",
+          "id": "res_17905839514526s1h",
           "title": "72. Иш хакини ошириш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIO4WqpNrszyMHcqpEqLLtPaMmCOZsQAAIeogACr6pJSYU74aVVl96GPQQ",
+          "value": "BQACAgIAAxkBAAEBFj5quiSMgxm6iBpL7MEvXRqquAHOagACHqIAAq-qSUmX-01lnfoY3z0E",
           "description": ""
         },
         {
-          "id": "res_17894744932868wpo",
+          "id": "res_1790583951454sjhm",
           "title": "73. Командировкага чикариш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIO4mqpNrubQoK_NbOKKh9HtQO54pgkAAIfogACr6pJSQABzcj3kxw_wz0E",
+          "value": "BQACAgIAAxkBAAEBFj9quiSM_skoKkKVkOJaC_vc6TMsYQACH6IAAq-qSUksCh4Epcoc5j0E",
           "description": ""
         },
         {
-          "id": "res_1789474493287ec27",
+          "id": "res_1790583951455e0cc",
           "title": "74. Отпускага чикариш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIO42qpNrs4F6O_1kvseYwEn1lxQZx6AAIgogACr6pJSRlbtCW4MOChPQQ",
+          "value": "BQACAgIAAxkBAAEBFkBquiSMaky2HEmh3TbCpXc5lMQCmgACIKIAAq-qSUkjL6nV4oYIwT0E",
           "description": ""
         },
         {
-          "id": "res_1789474493288t4xj",
+          "id": "res_17905839514577mcq",
           "title": "75. Табельга больничный чикариш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIO5GqpNrsTERV2ggLNDbSJyVI1WupNAAIhogACr6pJSeKpA5W03YvfPQQ",
+          "value": "BQACAgIAAxkBAAEBFkFquiSMO0KlMCMJh5yKAeFXgaxMfAACIaIAAq-qSUk7nbHfdB91Oz0E",
           "description": ""
         },
         {
-          "id": "res_1789474493289g0p9",
+          "id": "res_1790583951459jnq3",
           "title": "76. Табельни текшириш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIO5WqpNruF2KJpD6AfAAEsu1sRdtxpWQACIqIAAq-qSUnoGdW5h75HXz0E",
+          "value": "BQACAgIAAxkBAAEBFkJquiSMAAETt4jA-sRU-qACWkCaYHkAAiKiAAKvqklJKgABnkahqQ_UPQQ",
           "description": ""
         },
         {
-          "id": "res_1789474493290al13",
+          "id": "res_1790583951460b4wb",
           "title": "77. Контракт (укиш) киритиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIO5mqpNrvxAAFHPmGpPwtgrIxYi2r_YwACI6IAAq-qSUm_lFG0S7I1Ej0E",
+          "value": "BQACAgIAAxkBAAEBFkNquiSM9aCxD0Kc6fIjYXBuiVpUlgACI6IAAq-qSUnDG7-xsxvXwT0E",
           "description": ""
         },
         {
-          "id": "res_1789474493381czki",
+          "id": "res_1790583951462ymkv",
           "title": "78. Уй-жой учун ушланма киритиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIO52qpNrvsrv4qDw2sDmxSOwPNNU5JAAIkogACr6pJSZyel4Lh2wEfPQQ",
+          "value": "BQACAgIAAxkBAAEBFkRquiSMavEy_OaennWFmltwd0ZyRAACJKIAAq-qSUmPWk_XhiDXHD0E",
           "description": ""
         },
         {
-          "id": "res_1789474493382tr2v",
+          "id": "res_1790583951550njul",
           "title": "79. Иш хаки имтиёзини текшириш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIO6GqpNrsP14x-H_aLyhPLQpvilHqhAAIlogACr6pJSW6wyR9WKMwFPQQ",
+          "value": "BQACAgIAAxkBAAEBFkVquiSMXyzDEYWJnbuorsWiSDXS-wACJaIAAq-qSUlFHKeFttGoPj0E",
           "description": ""
         },
         {
-          "id": "res_1789474493384wm2z",
+          "id": "res_1790583951552smlk",
           "title": "80_Тунги_навбатчилик_учун_кушимча_иш_хаки_киритиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIO6WqpNrs5uws6j-yEHgL0XEpPNkiaAAImogACr6pJSRq4Ag9rLv2bPQQ",
+          "value": "BQACAgIAAxkBAAEBFkZquiSMxDAJLENFdG8NveTfmskiDgACJqIAAq-qSUnM1J9rT9NsoT0E",
           "description": ""
         },
         {
-          "id": "res_1789474493385fwwh",
+          "id": "res_1790583951555x7qr",
           "title": "81. Выслуга лет киритиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIO6mqpNrsc9qIfywyBEwhyqR7cBvvvAAInogACr6pJSWiXR92pKUubPQQ",
+          "value": "BQACAgIAAxkBAAEBFkdquiSM3q7H5aMxcZ717s2wdmrHSwACJ6IAAq-qSUlADpTm0_wkZT0E",
           "description": ""
         },
         {
-          "id": "res_1789474493387v281",
+          "id": "res_1790583951556hw4m",
           "title": "82_Жисмоний_шахс_билан_мехнат_шартномаси_тузиш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIO62qpNruBmImeBSzeISsffqJLWWHvAAIoogACr6pJSXpbWAW4X6dfPQQ",
+          "value": "BQACAgIAAxkBAAEBFkhquiSMeS5XzdBQSghdiB6R96VEpQACKKIAAq-qSUkiW6IVAAGfo609BA",
           "description": ""
         },
         {
-          "id": "res_1789474493388wx94",
+          "id": "res_1790583951558frzo",
           "title": "83. Авансовый отчёт тайёрлаш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIO7GqpNruMFgSn89SrcGNznta_-eeAAAIpogACr6pJSV4sb0xBa9qLPQQ",
+          "value": "BQACAgIAAxkBAAEBFklquiSM_DQUgzMLDgABGWuaRBiWmIMAAimiAAKvqklJMtzZ6RxysB49BA",
           "description": ""
         },
         {
-          "id": "res_17894744933903qlt",
+          "id": "res_1790583951560219r",
           "title": "84. Иш хакини текшириш.wmv",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIO7WqpNrt05MgzzcwZ3Mfjqv1CR8xkAAIrogACr6pJSYTow1E8SU2pPQQ",
+          "value": "BQACAgIAAxkBAAEBFkpquiSMFGFyaqVaJsxPO7MZBZQTXgACK6IAAq-qSUmaZg6b0UzxYD0E",
           "description": ""
         },
         {
-          "id": "res_1789474624448c4xj",
-          "title": "1C buhgalteriya 8 qollanma.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIPK2qpN0DqKyfIYkxkYVqNuZ2uz5OAAALfAwACkERZSxwHWv0KcMJiPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_178947470459187fh",
+          "id": "res_1790583951562db4t",
           "title": "Barcha videolar.zip",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIPLWqpN5Dax1RfEEf9JFIHeB3su_hbAAI4ogACr6pJSSzUmvc5mztiPQQ",
+          "value": "BQACAgIAAxkBAAEBFktquiSM9rnENwERgUMITo8cxCaA9QACOKIAAq-qSUkbIG8pg62s0z0E",
           "description": ""
         }
       ],
@@ -6091,6 +6679,14 @@
       "username": "ahmadillo_o2",
       "message": "Rahmat admin",
       "date": "2026-08-12T11:26:37.648Z"
+    },
+    {
+      "id": "1790581684245",
+      "userId": 557976703,
+      "userName": "Ahmadillo",
+      "username": "ibrohimov_ahmadillo",
+      "message": "Salom",
+      "date": "2026-09-28T07:48:04.245Z"
     }
   ],
   "exams": [],
