@@ -5,6 +5,14 @@ document.addEventListener('DOMContentLoaded', () => {
       window.Telegram.WebApp.expand();
     } catch (e) {}
   }
+  
+  const passInput = document.getElementById('loginPassword');
+  if (passInput) {
+    passInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') attemptLogin();
+    });
+  }
+  
   initTabs();
   loadData();
   setupDropZone();
@@ -15,7 +23,7 @@ let currentFolderId = null;
 let uploadedFileUrl = "";
 
 // --- Auth Interceptor ---
-const originalFetch = window.fetch;
+const originalFetch = window.fetch.bind(window);
 window.fetch = async function() {
   let [resource, config] = arguments;
   if (typeof resource === 'string' && resource.startsWith('/api') && resource !== '/api/login') {
@@ -588,6 +596,7 @@ function renderFileManager() {
 
     container.appendChild(fileEl);
   });
+  updateBulkActionBar();
 }
 
 function renderSearchResults(query) {
@@ -675,8 +684,27 @@ function renderSearchResults(query) {
 }
 
 // RESTORE MASTER FULL DB
+async function downloadBackup() {
+  try {
+    const res = await fetch('/api/admin/export-db');
+    if (!res.ok) { alert('Failed to download backup!'); return; }
+    const blob = await res.blob();
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'db.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  } catch (err) {
+    alert('Error downloading backup: ' + err.message);
+  }
+}
+
 async function restoreFullMasterDb() {
   if (!confirm("Are you sure you want to restore and resync all 96 ACCA and CFA master category folders?")) return;
+
 
   try {
     const res = await fetch('/api/admin/restore-full-db', { method: 'POST' });
@@ -1077,10 +1105,15 @@ function renderSubscribers() {
   tbody.innerHTML = '';
   const subs = dbData.subscribers || [];
 
+  // Update badge count
+  const badge = document.getElementById('subscriberCountBadge');
+  if (badge) badge.textContent = subs.length.toLocaleString();
+
   if (subs.length === 0) {
     tbody.innerHTML = `<tr><td colspan="4" style="text-align:center; color:#94a3b8;">No registered subscribers yet</td></tr>`;
     return;
   }
+
 
   subs.forEach(sub => {
     const tr = document.createElement('tr');
@@ -1179,12 +1212,34 @@ function updateBulkActionBar() {
   const countText = document.getElementById('selectedCountText');
   if (!bar) return;
 
+  // Always show bar if there are resources in current folder
+  const currentCat = dbData.categories.find(c => c.id === currentFolderId);
+  const hasFiles = currentCat && currentCat.resources && currentCat.resources.length > 0;
+
   if (selectedResourceIds.length > 0) {
     bar.style.display = 'flex';
     countText.textContent = `${selectedResourceIds.length} item(s) selected`;
+  } else if (hasFiles) {
+    bar.style.display = 'flex';
+    countText.textContent = 'No items selected';
   } else {
     bar.style.display = 'none';
   }
+}
+
+function selectAllResources() {
+  const cat = dbData.categories.find(c => c.id === currentFolderId);
+  if (!cat || !cat.resources) return;
+  selectedResourceIds = cat.resources.map(r => r.id);
+  // Update all checkboxes visually
+  document.querySelectorAll('#fileContainer input[type="checkbox"]').forEach(cb => cb.checked = true);
+  updateBulkActionBar();
+}
+
+function deselectAllResources() {
+  selectedResourceIds = [];
+  document.querySelectorAll('#fileContainer input[type="checkbox"]').forEach(cb => cb.checked = false);
+  updateBulkActionBar();
 }
 
 function populateMoveTargetSelect() {
