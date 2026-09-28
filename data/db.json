@@ -68,6 +68,13 @@
       "last_name": "",
       "username": "Dilafroz_Mamajonova",
       "joined_at": "2026-09-24T13:26:58.539Z"
+    },
+    {
+      "id": 5324740715,
+      "first_name": "Sanjarbek",
+      "last_name": "",
+      "username": "SM281001",
+      "joined_at": "2026-09-28T05:36:45.902Z"
     }
   ],
   "categories": [
@@ -2328,6 +2335,111 @@
           "type": "link",
           "value": "https://t.me/Finance_Ahmadillo",
           "description": "P4 Kaplan & BPP latest exam kits and textbooks"
+        },
+        {
+          "id": "res_1790331155964h3dm",
+          "title": "AFMPocketNotes202526.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIQhWq2SROxw4geo-eAW-xV3nk673d_AAK6qAACx5RBSeOlyK42Y_1YPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790331155966tibs",
+          "title": "AFM Exam Kit 2026-27 ISDC_260905_165351.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIQhmq2SRNGi9UYoi00TkDwCWVzvzWUAAItpgACnWxhSayWMdI1U0yZPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790331155968xdj2",
+          "title": "ACCA_P4_Advanced_Financial_Management_AFM_Kaplan_Study_Text_2020.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIQh2q2SRMtBuQ2yRH6z0FMrwABHFLkngAC9agAAp1saUnhhJetJqcqvT0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790331155969u7ly",
+          "title": "ACCA_P4_Advanced_Financial_Management_AFM_Kaplan_Pocket_Notes_2020.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIQiGq2SRM2MluSP2mL1kI1nms29DIWAAL2qAACnWxpSV-A3W7zzNuEPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790331155972xj3s",
+          "title": "ACCA_P4_Advanced_Financial_Management_AFM_Kaplan_Exam_Kit_2023_24.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIQiWq2SRPqWX6B2l4cciA7_5f-6f4OAAIHqQACnWxpSZYg_dRIad8_PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790331155973aqxw",
+          "title": "AFM Kaplan Text 2025-26.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIQimq2SRPmE0ssDxL2njb2VFPS59lfAAIQqQACnWxpSaUDvYuiRzs3PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790331155974yibw",
+          "title": "AFM Pocket Notes 2020-21.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIQi2q2SROmxe8eRkLAHpGPZ709DBT8AAIRqQACnWxpSUwZ5A9Q2FkDPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790331155976rpas",
+          "title": "AFMStudyText202526.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIQjGq2SRO2Mjoo2bu-GqATQm_5VEVhAAIaqQACnWxpSTE-Ly0sZg4lPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790331155978r21k",
+          "title": "ACCA-AFM-S25-Notes.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIQjWq2SRO4JzItccI26Np9BeQLTaZEAAIcqQACnWxpSa99sC8_7-C_PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790331155980oidf",
+          "title": "Acca Fusion AFM Exam Kit 2026-27 .pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIQjmq2SRNJ9aP90iiGzFO59AAB1O9LxAACRakAAp1saUl9GlAiUU2KEj0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790331155982psdm",
+          "title": "Acca Fusion AFM Study Text 2026-27.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIQj2q2SRPB0HQ3aWyMW06xmWL8KZ3yAAJLqQACnWxpSS-UnXwMDtHCPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790331155983jr5v",
+          "title": "Acca Fusion AFM Study Text 2026-27.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIQkGq2SRNEHN3txDOwL5Hlt0hd5to3AALopAACURCZSW63ylfYDoBKPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790331155985bqc2",
+          "title": "AFM Exam Kit 2026-27 ISDC_260905_165351.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIQkWq2SRNVuXe-CJ6h2e_8OoMsyjV4AALspAACURCZSWwgUPkXjtSUPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790331156074yctl",
+          "title": "Acca Fusion AFM Exam Kit 2026-27 .pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIQkmq2SROiCaW9PkREE45axSAIpJzQAALtpAACURCZSWLEnTR5yc_aPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790331156075mklj",
+          "title": "Acca Fusion AFM Study Text 2026-27 (1).pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIQk2q2SRNbe0zDhhIvJe4X24PqCRPgAALvpAACURCZST7QmAWwRrNePQQ",
+          "description": ""
         }
       ]
     },
@@ -2412,8 +2524,9 @@
           "id": "res_cat_p5_ch1",
           "title": "📢 P5 Telegram Channel",
           "type": "link",
-          "value": "https://t.me/Finance_Ahmadillo",
-          "description": "P5 official Telegram channels & discussion groups"
+          "value": "https://t.me/apm_p5",
+          "description": "P5 official Telegram channels & discussion groups",
+          "items": []
         }
       ]
     },
@@ -2424,11 +2537,95 @@
       "order": 2,
       "resources": [
         {
-          "id": "res_cat_p5_b1",
-          "title": "📖 P5 Kaplan Study Text & Revision Kit",
-          "type": "link",
-          "value": "https://t.me/Finance_Ahmadillo",
-          "description": "P5 Kaplan & BPP latest exam kits and textbooks"
+          "id": "res_1790578990405t97u",
+          "title": "APM Study Text 2024-25 ISDC.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIQ6mq6ES4AAfm7s3rTTlCWn7Y5bbQINQAClhoAAvEeuVXv1yJ_TKp7jT0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905789904077urr",
+          "title": "APM Exam Kit 2024-25 ISDC.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIQ62q6ES6BFyV4LD3L7ue3D9qkRkKsAAKTGgAC8R65VfmuvONQCrZdPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790578990409q6oo",
+          "title": "ACCA-APM-BPP - Revision Kit.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIQ7Gq6ES6JGg4j4Z4d3lhOkGOmEFyxAAKcGgAC8R65VT5HVlZEP993PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790578990410u1tb",
+          "title": "ACCA-APM-BPP - Revision Kit.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIQ7Wq6ES4U9220gKRp11aXfbZkAyTUAAIqkgACydoJSQhIM-AhETLcPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790578990413j1u7",
+          "title": "ACCA-APM-Workbook.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIQ7mq6ES4QdZEGyyVwUyEBnCm_9ka3AAIskgACydoJSYq1UBbvWM2-PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790578990414xvyo",
+          "title": "APM Integrated Workbook STUDENT 2024-25_260227_080022.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIQ72q6ES6JTcg9Wq6hb5o26KLaiYDWAAItkgACydoJSa4LF3uAMMw_PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790578990416dqqo",
+          "title": "ACCA_APM_All_Formulas.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIQ8Gq6ES66kHu3ZR-b9AhRNYQBD7LdAAKinAACgD3JSfdd_3qALFFPPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790578990419y5xa",
+          "title": "APM Flashcards By Abdul-Ahad (StudyBuddies).pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIQ8Wq6ES7Qo62fr2vUWUTmyRbbacyOAAINHAACEDfoVSAizcWGHRj7PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790578990420yjfl",
+          "title": "APM Revision Notes By Abdul-Ahad .pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIQ8mq6ES6FYrukFWJcyPB7zs5ZEpdfAAIPHAACEDfoVdRg91TyC1_XPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790578990474d57n",
+          "title": "ACCA APM Notes for 2026-2027.pdf",
+          "type": "file_id",
+          "value": "BQACAgQAAxkBAAIQ82q6ES4zWUqFstC0Yizwr0e0OSBvAAKwHgACgJm5UO9ruC85ycXsPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790578990476d03b",
+          "title": "APM-Syllabus-Overview-2026-2027.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIQ9Gq6ES7KlwNBBnR7LHxT243UYYvaAAINlQACxFbBSMWjvxMlzwXqPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17905789904785xdb",
+          "title": "Apm vs mpm lecture notes.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIQ9Wq6ES7wkPSaUF_86X98O1cQL3XQAALkpwAClnU4SXPj2NyUzGgrPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790578990480jhri",
+          "title": "APM Exam Kit 2026-27 ISDC.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIQ9mq6ES4JzIxNFySD-HkwCld2jM1NAAKErQACSbNpSY041mPLFxzSPQQ",
+          "description": ""
         }
       ]
     },
@@ -2440,10 +2637,19 @@
       "resources": [
         {
           "id": "res_cat_p5_v1",
-          "title": "🎥 P5 Complete Video Course",
+          "title": "🎥ACCA Advanced Performance Management (APM) Lectures",
           "type": "link",
-          "value": "https://youtube.com",
-          "description": "P5 comprehensive lecture series"
+          "value": "https://youtube.com/playlist?list=PLETfu1oU9uLycJHfYIUCn24fUmD6y8JD9&si=SB1geOJb0ABAqZKC",
+          "description": "P5 comprehensive lecture series",
+          "items": []
+        },
+        {
+          "id": "res_17905789110820ch6",
+          "title": "Advanced Performance Management (APM)",
+          "type": "link",
+          "value": "https://youtube.com/playlist?list=PLRYOefFr48S3punyt15cWMK-k7LosBMpf&si=54HkratAGUXXvgw0",
+          "description": "",
+          "items": []
         }
       ]
     },
@@ -2454,11 +2660,12 @@
       "order": 4,
       "resources": [
         {
-          "id": "res_cat_p5_yt1",
-          "title": "🔍 P5 YouTube Channel",
+          "id": "res_1790578936680vwjf",
+          "title": "ACCA APM 2026/2027 | Essential Exam Tips",
           "type": "link",
-          "value": "https://youtube.com",
-          "description": "P5 recommended YouTube tutorial channels"
+          "value": "https://youtube.com/playlist?list=PLe5tzw2rRygQNtDB2BUryhj-9njPvAl8G&si=A6_fM4WvwMWIYcpb",
+          "description": "",
+          "items": []
         }
       ]
     },
@@ -2479,8 +2686,9 @@
           "id": "res_cat_p6_ch1",
           "title": "📢 P6 Telegram Channel",
           "type": "link",
-          "value": "https://t.me/Finance_Ahmadillo",
-          "description": "P6 official Telegram channels & discussion groups"
+          "value": "https://t.me/P6AdvancedTaxationn",
+          "description": "P6 official Telegram channels & discussion groups",
+          "items": []
         }
       ]
     },
@@ -2491,11 +2699,67 @@
       "order": 2,
       "resources": [
         {
-          "id": "res_cat_p6_b1",
-          "title": "📖 P6 Kaplan Study Text & Revision Kit",
-          "type": "link",
-          "value": "https://t.me/Finance_Ahmadillo",
-          "description": "P6 Kaplan & BPP latest exam kits and textbooks"
+          "id": "res_17905791359503a6t",
+          "title": "ATX_Revision_Notes_FA25.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRCGq6Eb8VMFy4YnVrArCUBJ8CF3GFAAIBowAC-z2BSDBIg9jkP4FQPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_179057913595122v0",
+          "title": "ATX_Revision_Notes_FA25.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRCWq6Eb8c6zIeMNCvfVTrC0qA6LYnAALMqwACoS05SRs5ZMI_soahPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790579135953dxtg",
+          "title": "ATX_Exam_Kit_FA25-2.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRCmq6Eb8_91grHt-J1dmxTHaObLXXAALQqwACoS05SU-2yoK0uhThPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17905791359558rjj",
+          "title": "ATX_FA_25_June_26_to_March_27_Notes_Compiled_by_Nishi_Malvi.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRC2q6Eb8hkxwycvMQcxBTusdkSIArAAKlpgAC3TpBSSmYuVYP8y0IPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790579135957hd7x",
+          "title": "TX_Exam_Kit_FA25.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRDGq6Eb-62gKR9GKIMIjOZebRTY3EAAKSqAACm0BZSUI-f9VVbCq4PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17905791359584h1z",
+          "title": "AC785C~1.PDF",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRDWq6Eb_uearrKd-dEXNI75ghP0RRAAKTqAACm0BZSQzK3iAprxBzPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_179057913596011rd",
+          "title": "ATX_Revision_Notes_FA25.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRDmq6Eb-cC7TpNn4AAeoorxbt1UmJywAClKgAAptAWUlaJsXME9f6sT0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790579135961zq2i",
+          "title": "ATX_Study_Text_FA25.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRD2q6Eb_M2GlLs1hYrR6r1FwxfFl9AAKVqAACm0BZSfXoy9Ah9EppPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_179057913596396vc",
+          "title": "ATX_Exam_Kit_FA25.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIREGq6Eb8a_0xT50GyR6mJ0IPa5thmAAKWqAACm0BZSUC_bUZyy1aAPQQ",
+          "description": ""
         }
       ]
     },
@@ -2507,10 +2771,11 @@
       "resources": [
         {
           "id": "res_cat_p6_v1",
-          "title": "🎥 P6 Complete Video Course",
+          "title": "🎥 Advanced Taxation (ATX)",
           "type": "link",
-          "value": "https://youtube.com",
-          "description": "P6 comprehensive lecture series"
+          "value": "https://youtube.com/playlist?list=PLRYOefFr48S3TaVqnFLGuXOuBJxEa-_1P&si=-Kmoyw8wZlgKwKqR",
+          "description": "P6 comprehensive lecture series",
+          "items": []
         }
       ]
     },
@@ -2522,10 +2787,11 @@
       "resources": [
         {
           "id": "res_cat_p6_yt1",
-          "title": "🔍 P6 YouTube Channel",
+          "title": "ACCA Advanced Taxation (ATX/P6)",
           "type": "link",
-          "value": "https://youtube.com",
-          "description": "P6 recommended YouTube tutorial channels"
+          "value": "https://youtube.com/playlist?list=PLWoTw-Fm_fzv9-0e0ptAYkjsSBO0to5D6&si=JcM-cSMVeScJKRwv",
+          "description": "P6 recommended YouTube tutorial channels",
+          "items": []
         }
       ]
     },
@@ -2546,8 +2812,9 @@
           "id": "res_cat_p7_ch1",
           "title": "📢 P7 Telegram Channel",
           "type": "link",
-          "value": "https://t.me/Finance_Ahmadillo",
-          "description": "P7 official Telegram channels & discussion groups"
+          "value": "https://t.me/P7AdvancedAuditandAssurance",
+          "description": "P7 official Telegram channels & discussion groups",
+          "items": []
         }
       ]
     },
@@ -2563,6 +2830,76 @@
           "type": "link",
           "value": "https://t.me/Finance_Ahmadillo",
           "description": "P7 Kaplan & BPP latest exam kits and textbooks"
+        },
+        {
+          "id": "res_1790579265042ai6g",
+          "title": "AAA Handout Dec 2025.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRJmq6EkCDCHjHU7I_ca1TMNtocbEIAAI9jAACQIEQS9QjHKP4QV_MPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_179057926504414b0",
+          "title": "ACCA AA_AAA substantive procedures by Alan Biju Palak ACCA.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRJ2q6EkARvHJzkl5UAoAQiT1-v3RBAAJRlQACA8sISUVvBzw-kYhJPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790579265045i081",
+          "title": "AAA (kit) 2025-26.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRKGq6EkAMppEtb5O7duuizeuDc2oJAAJOkQACqqdZSbqMrPAAAWEPRz0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790579265047qs1h",
+          "title": "AAA (text) 2025-26.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRKWq6EkAkN-XDRXCM3UGDsgdlr6AzAAJPkQACqqdZSfrluHBg3_KwPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790579265048lu1u",
+          "title": "AAA Kaplan (text) 2025-26.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRKmq6EkBRQWt39-nHzctQBGw8QmVBAAJUkQACqqdZSeN43cpeWimLPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790579265050wmdx",
+          "title": "ACCA-AAA-Topic-by-Topic-Quiz.pdf",
+          "type": "file_id",
+          "value": "BQACAgQAAxkBAAIRK2q6EkBGftraunPNejS8qmWdq276AALaHgACH9OoUYdbqmKrCw7tPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17905792844580igi",
+          "title": "ACCA PassPoint Risk Assessment made Easy by Sir Mahad.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRMmq6ElQGCZ1ryXaoDqXqL2ogzEfKAALNrAACK5NoSXNn8iPTLCKoPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790579284461lc74",
+          "title": "ACCA_AAA_&_AA_F8_Risk_&_Responses_Past_papers_by_ACCA_PassPoint.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRM2q6ElRcD0eCXatuYNzrON4xbjv1AALRrAACK5NoSXmV53Gdd5eQPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17905792844634z4q",
+          "title": "ACCA_AAA_&_F8_Super_Important_Procedures_by_ACCA_PassPoint.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRNGq6ElT67KTBJUVFjUFv38jctNHPAALWrAACK5NoScQ30lU4t8oRPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790579284464uysj",
+          "title": "IAS IFRS Standards for Revision by Acca PassPoint.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRNWq6ElRQw2ZRcUbbF1rLN786qKmcAALbrAACK5NoSWLpNehsMiFkPQQ",
+          "description": ""
         }
       ]
     },
@@ -2574,10 +2911,27 @@
       "resources": [
         {
           "id": "res_cat_p7_v1",
-          "title": "🎥 P7 Complete Video Course",
+          "title": "ACCA Advanced Audit and Assurance (AAA)",
           "type": "link",
-          "value": "https://youtube.com",
-          "description": "P7 comprehensive lecture series"
+          "value": "https://youtube.com/playlist?list=PLETfu1oU9uLxidg0BIewoBkSnaCcH1NEf&si=VbhmoHqnVUintkBa",
+          "description": "P7 comprehensive lecture series",
+          "items": []
+        },
+        {
+          "id": "res_17905792067710v4n",
+          "title": "ACCA 2026 Advanced Audit and Assurance (AAA) Course",
+          "type": "link",
+          "value": "https://youtube.com/playlist?list=PLgHtGwL7RdKec6AYsgzsKHXkQP83MvCIO&si=WHaVnqsl41Z1z6Km",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1790579219121h7h5",
+          "title": "Advanced Audit and Assurance (AAA)",
+          "type": "link",
+          "value": "https://youtube.com/playlist?list=PLRYOefFr48S2EYmwPbAnxAYiEH2oPmGR7&si=xPJAPmWTby4QxcM6",
+          "description": "",
+          "items": []
         }
       ]
     },
@@ -2589,10 +2943,11 @@
       "resources": [
         {
           "id": "res_cat_p7_yt1",
-          "title": "🔍 P7 YouTube Channel",
+          "title": "ACCA Ben Wilson AAA",
           "type": "link",
-          "value": "https://youtube.com",
-          "description": "P7 recommended YouTube tutorial channels"
+          "value": "http://www.youtube.com/@ACCABenWilsonAAA",
+          "description": "P7 recommended YouTube tutorial channels",
+          "items": []
         }
       ]
     },
@@ -2611,10 +2966,19 @@
       "resources": [
         {
           "id": "res_cat_cfa_l1_ch1",
-          "title": "📢 CFA Level 1 Telegram Channel",
+          "title": "CFA LEVEL 1",
           "type": "link",
-          "value": "https://t.me/Finance_Ahmadillo",
-          "description": "CFA Level 1 official Telegram channels & discussion groups"
+          "value": "https://t.me/+Coh0AhDFxxBiOWQy",
+          "description": "CFA Level 1 official Telegram channels & discussion groups",
+          "items": []
+        },
+        {
+          "id": "res_17905793580898zls",
+          "title": "CFA Level 1 Study Material",
+          "type": "link",
+          "value": "https://t.me/CFA_LEVEL1_STUDY_MATERIAL",
+          "description": "",
+          "items": []
         }
       ]
     },
@@ -2625,11 +2989,193 @@
       "order": 2,
       "resources": [
         {
-          "id": "res_cat_cfa_l1_b1",
-          "title": "📖 CFA Level 1 Kaplan Study Text & Revision Kit",
-          "type": "link",
-          "value": "https://t.me/Finance_Ahmadillo",
-          "description": "CFA Level 1 Kaplan & BPP latest exam kits and textbooks"
+          "id": "res_1790579848933b7ta",
+          "title": "CFA_LEVAL_1_BOOK 1 _2027.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRXGq6FIg-YRsQEp0-2jP3RvDQSz17AALmnQACBGvZSbf13G3Ty2TwPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790579848935gnz2",
+          "title": "CFA_LEVAL_1_BOOK_2__2027.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRXWq6FIhHWAg-isJzm88vbMNAClY-AALnnQACBGvZSdpEf4VwQobePQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790579848937zkc2",
+          "title": "CFA_LEVAL_1_BOOK_3__2027.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRXmq6FIhUVmAPQVJc1nCdM-2Yui4UAALonQACBGvZSVte-KyCvsHrPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790579848940a8sq",
+          "title": "CFA_LEVAL_1_BOOK_4__2027.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRX2q6FIjCAq4FEOL4kZwJ_Ioh68cwAALqnQACBGvZSc_iYqEnzkJ8PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790579886161x5yn",
+          "title": "L1 V1 Quant.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRZGq6FK1ktWJRj-nGK_gC-1XSGp8fAAIglgACPvOhSTbvlxtlLSOmPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790579886163fp67",
+          "title": "L1 V2 Economics.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRZWq6FK2y-jlzZgzodcrZYBbg7ipyAAIhlgACPvOhSfeAxTQz-nvXPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790579886164qm3x",
+          "title": "L1 V3 CI.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRZmq6FK3-hXGa7WNXi1H7T387DCKJAAIilgACPvOhSSY4EMcNQ0FdPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790579886166290n",
+          "title": "L1 V4 FSA.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRZ2q6FK1PU3jj3qvzdiQqkTTtUmVgAAIjlgACPvOhSUiCL3jzKUcQPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_179057988616883ly",
+          "title": "L1 V5 Equity.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRaGq6FK2ungiYzqr0GoqvcT_4NZVBAAIklgACPvOhSQeImG1f0nSqPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_179057988616958rk",
+          "title": "L1 V6 Fixed income.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRaWq6FK0Cgdnj0VtoQXRMEW8Q6aAuAAIllgACPvOhSf34VDsEWOWIPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790579886170ie36",
+          "title": "L1 V7 Derivaties.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRamq6FK39Q5QKypeLh6gQ_NkmOqpwAAImlgACPvOhSREUiW8PiyPjPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790579886172ikh8",
+          "title": "L1 V8 Alternate Investments.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRa2q6FK2MGfzF4OsuqK0_CM6ml8_CAAInlgACPvOhSa-XvtnUhTeBPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17905798861732rae",
+          "title": "L1 V9 PM.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRbGq6FK1eQGoksfg6i2v1emgOmzdQAAIolgACPvOhSQXRausMUPIXPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790579886174ybw4",
+          "title": "L1 V10 Ethics.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRbWq6FK3sKyhqHoqnKfdmD3dAB0R1AAIplgACPvOhSaybeUEgHl73PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790579886176mm9l",
+          "title": "Schweser 2025 AI, PM, Ethics.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRbmq6FK2O90L7N_M56pbwa_LlQ6jfAAIqlgACPvOhSWyTvZnQuTorPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790579886177alkx",
+          "title": "UWorld Question Bank Portfolio Management.zip",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRb2q6FK1_5npkDl9X9vIqP8kR2dNlAAIKYAACGhshSqV5Gq_A4JcCPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17905798861780lp7",
+          "title": "UWorld Question Bank Fixed Income.zip",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRcGq6FK1qXntXFUulTgllR7iNFHzVAAIMYAACGhshSqDiW9h4ljlfPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_179057988618085vd",
+          "title": "UWorld Question Bank Financial Statement Analysis.zip",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRcWq6FK1-ArnV8Rls1oEkehFi9so0AAINYAACGhshSpIjF6P4bDGrPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790579886181c0fa",
+          "title": "UWorld Question Bank Equity Investments.zip",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRcmq6FK3Y4mJiHm5nVaYUu-Pzn3x7AAIOYAACGhshSk48T9S_1Md0PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790579886183wkf2",
+          "title": "UWorld Question Bank Economics.zip",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRc2q6FK0KwcqGAp4pxkEVM_JSYvyFAAIPYAACGhshSprwhx3L2aw3PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790579886185szel",
+          "title": "UWorld Question Bank Corporate Issuers.zip",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRdGq6FK0QpqjRngVrvUL27-Uwb-wNAAIQYAACGhshSoVvsVvzInamPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790579886187ipe5",
+          "title": "UWorld Question Bank  Alter Investments.zip",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRdWq6FK0NPRuhAAEBpuEI4EVbTCHeugACEWAAAhobIUogRhAvS8iOSz0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790579886274luk6",
+          "title": "[Book]Financial Modelling (1).pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRdmq6FK1g4WN6OQ2tcl-jsigRUi-kAAIqYAACGhshSnY1Rru1CtpSPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17905798862761gr1",
+          "title": "CFA 2023 Level I 11th Hour Study Guide.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRd2q6FK3vG5i6dZXM6sHf0eQIYmO6AAJAYAACGhshSqKENfKdyaEfPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790579886277h22u",
+          "title": "DOC-20230310-WA0018..pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIReGq6FK1LrEWfkhhsKP46sxWA0yqjAAJGYAACGhshStiD9a397mKgPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790579886279ovsk",
+          "title": "CFA 2023 Level I - Schweser's Secret Sauce.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIReWq6FK3CYiHoiSD67bTMXNrnFMEvAAJIYAACGhshSoyTJ1HKeCEOPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790579886280qj26",
+          "title": "6. Equity Investments.zip",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRemq6FK2_DEe8ZfNlMGrYcQP5SXI0AAJXaAACOhJxSK2fO6S32D-KPQQ",
+          "description": ""
         }
       ]
     },
@@ -2640,11 +3186,74 @@
       "order": 3,
       "resources": [
         {
-          "id": "res_cat_cfa_l1_v1",
-          "title": "🎥 CFA Level 1 Complete Video Course",
-          "type": "link",
-          "value": "https://youtube.com",
-          "description": "CFA Level 1 comprehensive lecture series"
+          "id": "res_1790579589720wb4a",
+          "title": "1. Quantitative Methods.zip",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRRGq6E4XVU69puONz8oNaicwO7UHSAALebQACr3yJSahZuJlQeZBCPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790579589722ix99",
+          "title": "2. Economics.zip",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRRWq6E4WoVprCwt8cPBgi5Tjl1FaSAALubQACr3yJSbaBevJ97d0NPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790579589724ftk7",
+          "title": "3. Portfolio Management (Part One).zip",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRRmq6E4We4YqNmbtI-HzD2yHK07U1AAKSWgACr3yRSd3-rE-ZMPNvPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790579589727nd1b",
+          "title": "4. Corporate Issuers.zip",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRR2q6E4Vabp50KJbOz4qdzPJ7PjImAAKgWgACr3yRSThtbkBt-whdPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790579589728jhb6",
+          "title": "5. Financial Statement Analysis.zip",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRSGq6E4UCUfQ6GiTnHn7h5YKQ0kQdAALAWgACr3yRSQ-Fp-0dd4tmPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790579589731ui0w",
+          "title": "7. Fixed Income.zip",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRSWq6E4WVPQOMgbVJRht2F_voxiOrAALbWgACr3yRSaqBb5TUGdAmPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790579589732wwky",
+          "title": "8. Derivatives.zip",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRSmq6E4VTRFSkS-j7ue2HCt6ecGnYAALmWgACr3yRSWHZm_zeqIvoPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790579589734ajow",
+          "title": "9. Alternative Investments.zip",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRS2q6E4Xd2zmUiinRfcHSKbnSXA4XAALpWgACr3yRSetbM6FmTCKAPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790579589773wevw",
+          "title": "11.Ethical and professional standards.zip",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAIRTGq6E4X2WJXbPMADfe4NsFI2ngwfAALyWgACr3yRSTfzBq8qbBAaPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790579589776wf0z",
+          "title": "How to use BA II Plus Calculator",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAIRTWq6E4WvCbcZUC4wW6ZhqIKvWbkRAAIsYAACGhshSpJ1ThzNOvUwPQQ",
+          "description": ""
         }
       ]
     },
@@ -2656,10 +3265,27 @@
       "resources": [
         {
           "id": "res_cat_cfa_l1_yt1",
-          "title": "🔍 CFA Level 1 YouTube Channel",
+          "title": "Level I: CFA crash course | full course playlist 2026",
           "type": "link",
-          "value": "https://youtube.com",
-          "description": "CFA Level 1 recommended YouTube tutorial channels"
+          "value": "https://youtube.com/playlist?list=PLxAunyTa64uewhsyAF93FlJ9mMfd-DxO7&si=g9uFRrwsbDzNEqKW",
+          "description": "CFA Level 1 recommended YouTube tutorial channels",
+          "items": []
+        },
+        {
+          "id": "res_1790579529660x32v",
+          "title": "CFA® Level I Video Series offered by AnalystPrep",
+          "type": "link",
+          "value": "https://youtube.com/playlist?list=PLIYnk9FMYcks9DjrOD0tgOvWBZSJ1YsQ1&si=nzMf23G-M_Pe8K-S",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_179057954346885m5",
+          "title": "CFA Level 1 2026 - Quantitative Methods",
+          "type": "link",
+          "value": "https://youtube.com/playlist?list=PLzsMtRJ44d8wkMtJ5GBWqyKbPjYH96OlR&si=tJP5shHjo-PU2JTS",
+          "description": "",
+          "items": []
         }
       ]
     },
@@ -2678,10 +3304,19 @@
       "resources": [
         {
           "id": "res_cat_cfa_l2_ch1",
-          "title": "📢 CFA Level 2 Telegram Channel",
+          "title": "📢 CFA Level 2",
           "type": "link",
-          "value": "https://t.me/Finance_Ahmadillo",
-          "description": "CFA Level 2 official Telegram channels & discussion groups"
+          "value": "https://t.me/+ePzMziXClNJjZGZi",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1790579957703xipq",
+          "title": "CFA II",
+          "type": "link",
+          "value": "https://t.me/cfachannellevel2",
+          "description": "",
+          "items": []
         }
       ]
     },
@@ -2692,11 +3327,263 @@
       "order": 2,
       "resources": [
         {
-          "id": "res_cat_cfa_l2_b1",
-          "title": "📖 CFA Level 2 Kaplan Study Text & Revision Kit",
-          "type": "link",
-          "value": "https://t.me/Finance_Ahmadillo",
-          "description": "CFA Level 2 Kaplan & BPP latest exam kits and textbooks"
+          "id": "res_1790580250563eswp",
+          "title": "Understanding CFA Results.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIR1Wq6FhkhzN8zYhyGM-cKi6bzzUvCAALGEwACCPuBVmhixM6IL2PNPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580250567xivy",
+          "title": "Financial Analysis Mnemonics.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIR1mq6Fhmr7dnUnHh4v3oal6IpSpWOAALHEwACCPuBVkHe-GmrgfHlPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580250574z398",
+          "title": "CFA Level 2 Changes in 2025.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIR12q6FhnX7Oi6P1DaTccRiIysnYVsAAKSEwACnA4wVjTKwcb2kVGGPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_179058025057760kb",
+          "title": "CFA Level 2 Changes 2026.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIR2Gq6Fhll7yn4cDioTc7W_SjKtFlkAAIjGgACyVPxVP-Ef3jt5l9YPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17905802505796iq6",
+          "title": "Glossary.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIR2Wq6Fhk7tAHJrhDPlErhR1TgaiesAALeCQACpu5wV0G0fsC-t6mcPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580250584ca6a",
+          "title": "Volume 1 - Quantitative Methods and Economics.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIR2mq6FhlIy-s1c5EObLvVHaFT8uctAALfCQACpu5wV0umBUgAAeo-Xz0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790580250586iols",
+          "title": "Volume 2 - Financial Statement Analysis.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIR22q6FhlN2jkWWNOGWGK4Ly_6jgABOwAC4AkAAqbucFcX1qUKoGrZ7D0E",
+          "description": ""
+        },
+        {
+          "id": "res_179058025058854rt",
+          "title": "Volume 3 - Corporate Issuers and Equity Valuation.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIR3Gq6Fhkz5TGqmD3WlRVgAqJSCM_rAALhCQACpu5wV6_uiuEo5erLPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580250591qdfp",
+          "title": "Volume 4 - Equity Valuation and Fixed Income.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIR3Wq6FhkUrr7EtPblNcUQfYq-WCYtAALiCQACpu5wV99Ate5wZyKwPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580250677jg0x",
+          "title": "Volume_5_Derivatives,_Alternative_Investments,_and_Portfolio_Management.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIR3mq6Fhke906XGrZCd2qpsBI5QAP8AALjCQACpu5wV--or-Gmu_ZEPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580250679io0l",
+          "title": "Volume_6_Portfolio_Management_and_Ethical_and_Professional_Standards.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIR32q6Fhm1mSxqKVniYj5ZCIfkS-atAALkCQACpu5wV6AqIWxAgRMfPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580250688f71p",
+          "title": "2023-L2V1 EOC.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIR4Gq6Fhn1G3Obye8cG2nlboEDXpLcAALmCQACpu5wV9UU94JOTf__PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580250774m0qe",
+          "title": "2023-L2V2 EOC.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIR4Wq6FhlM19JjglvEhmuWw0F0gPQWAALnCQACpu5wVzt_ZxubKdBIPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580250785aq39",
+          "title": "2023-L2V3 EOC.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIR4mq6FhksxulVp5InRIgqYRYPVBSDAALoCQACpu5wV-2wu3hsAvc1PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580250875gtmx",
+          "title": "2023-L2V4 EOC.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIR42q6Fhm1yVGwcNGKJvi49cZ6aHFpAALpCQACpu5wV_Vl8V4E9z3gPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580250877dagy",
+          "title": "2023-L2V5 EOC.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIR5Gq6FhnNFfO85mkMO1SVmCZfrCAqAALqCQACpu5wV-9xytUSA3klPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_179058025088011b9",
+          "title": "2023-L2V6 EOC.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIR5Wq6FhkJQ96aCLuBKiTqdY0sRyMoAALrCQACpu5wV2VNe4lr2_enPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_179058025088305mn",
+          "title": "salt-cfa-level-2-formulasheet-2022.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIR5mq6FhleQOoIb_4T40pZ2Ly7hr49AALsCQACpu5wV77s09-jMeflPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17905802508854kaf",
+          "title": "1. QM Examples.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIR52q6FhmIcqo3LoIAAWjHJHcuuD3L5QACjgkAAjrHeFdc0iq9S1ZXnD0E",
+          "description": ""
+        },
+        {
+          "id": "res_179058025088715h8",
+          "title": "2. Economics Examples.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIR6Gq6FhkNs7RuprTY0-gGCnE_v6gnAAKPCQACOsd4V25LjtvdH5uPPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580250975jo5z",
+          "title": "3. Financial Statement Analysis Examples .pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIR6Wq6FhkOM3Y0dzq00q9n6J72_yA1AAKQCQACOsd4V8a1RGjSlmEPPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580250978h2i4",
+          "title": "4. Corporate Issuers Examples .pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIR6mq6FhmG9Lz0mX_OwDUGoLa8wQAB4AACkwkAAjrHeFeqcTQTReSDVT0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905802509818ubf",
+          "title": "5. Equity Valuation Examples.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIR62q6Fhl7arVBj7vCpi-fpcYwWx__AAKVCQACOsd4V__OlOcampvRPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580250984ewid",
+          "title": "6. Fixed Income Examples_.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIR7Gq6FhkqeO-OZz_qZhV2sXIgBmcBAAKWCQACOsd4V-Fz9mgXnj5qPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580250986zj0a",
+          "title": "7. Derivatives Examples.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIR7Wq6FhntV2fgduhvQDBHGr8whibFAAKXCQACOsd4V3nyyBNwzsy7PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580251073nqt4",
+          "title": "8. Alternative Investments Examples _.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIR7mq6Fhn4fr6SHxjiQDk31Al_zhtZAAKYCQACOsd4V7nLPhs30KrOPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17905802510754vpt",
+          "title": "9. Portfolio Management Examples_.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIR72q6FhkGbsHkeD6APUylf81O9HcnAAKZCQACOsd4V76NLu8TSuYrPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17905802510771sc4",
+          "title": "10. Examples Ethical and Professional Standards Part 1_.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIR8Gq6FhmfKxleXtHTG6awydfYO0dEAAKaCQACOsd4V6whaq3SmC4uPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580251079lxkk",
+          "title": "CFA_L2_2024_Volume2.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIR8Wq6FhmWeNkb1ePkvc6sj7SR3LO6AALrCgACUwjBVuIa_j02IUeZPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580251080oiws",
+          "title": "CFA_L2_2024_Volume3.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIR8mq6FhndLivtyYXvGAl9-6aDr5ZAAALsCgACUwjBVowTHyRmwBUUPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580251082w2w3",
+          "title": "CFA_L2_2024_Volume4.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIR82q6FhmoZ7Igzgs1807p4JnyODO4AALtCgACUwjBVsJakGzyUKuMPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580251084zu8k",
+          "title": "CFA_L2_2024_Volume5.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIR9Gq6FhkNI0nz7f7KoS29D2rmLAP4AALuCgACUwjBVs5iWX05KuR4PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580251085nd47",
+          "title": "CFA_L2_2024_Volume6.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIR9Wq6Fhn4ERWQ9rDFQwiKbu0MYdiDAALvCgACUwjBVsfsybsaZfL1PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580251087grt3",
+          "title": "CFA_L2_2024_SimpleSheets.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIR9mq6FhnysanTW2FGlfhmYyl1U6IhAALwCgACUwjBVvIH0KCbKCUIPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580251174sqod",
+          "title": "Uworld Questions Level 2 2024 .zip",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIR92q6FhkljXkczr5v6kVpL4iz6-s6AAL5CgACUwjBVsx0MSkH2M7gPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580251176e99f",
+          "title": "CURRICUM EOC QUESTIONS_L2 2024.zip",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIR-Gq6FhmMdpNhOpqNLkWyBLVan9y4AAIBCwACUwjBViyMdlSAAAGEKz0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790580251274cgvx",
+          "title": "Question Bank Level 2 @2024.zip",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIR-Wq6Fhm3bTCUa9pHkPEzoHs3ETxUAAIQCwACUwjBVqXkUiaa4t6uPQQ",
+          "description": ""
         }
       ]
     },
@@ -2707,11 +3594,172 @@
       "order": 3,
       "resources": [
         {
-          "id": "res_cat_cfa_l2_v1",
-          "title": "🎥 CFA Level 2 Complete Video Course",
-          "type": "link",
-          "value": "https://youtube.com",
-          "description": "CFA Level 2 comprehensive lecture series"
+          "id": "res_17905801344334q69",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIRlGq6FaYVxVmJ1eihdPMmrTkXw5tZAAIDEQACxTWhUCrN6pW-PXVxPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580134437sgf0",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIRlWq6FaZ-FsfmnjFxdlqVUmEiDo1tAAIEEQACxTWhUE0FbS7h7szmPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580134440cbqz",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIRlmq6FaZT0oOx_L20q_pEAsmgwn1bAAIJEQACxTWhUOBa9GEgne_ePQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580134445ag3g",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIRl2q6FaZcLvJCQrYx0ZzMKIghGNAyAAIKEQACxTWhUJSWVRkQGY_vPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17905801344486uu0",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIRmGq6FaaDCemKopx_ZJObx_ibPRREAAILEQACxTWhUJuRsRS4rOAUPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580134476qsnn",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIRmWq6FaaYdEN1R37ZF7C6EVdqZdezAAIMEQACxTWhUNzI6mNFl1pCPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580134479qdp4",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIRmmq6FaYUq49M07NOYH95dDiLYKOPAAINEQACxTWhUBZmtOFj48OYPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580134482w0pe",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIRm2q6Faagn8c14B1WoCs4P1ll29mFAAIOEQACxTWhUHF_N2lW7a0yPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580134485vw60",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIRnGq6FaaiausZ0tfwKTrYj1PaIHZVAAK_DQACYCq4UJXR-R3pN-zlPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580134488xeyj",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIRnWq6FaYsyGiCfl_779i9c8dT_1euAALADQACYCq4UKV0mAgjJ5IlPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580134576py7f",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIRnmq6FaaNpodI4izFi80_0dej-CgoAALBDQACYCq4UI8JpzOjiJFvPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580134579iy47",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIRn2q6Faa3lS1lNomc7v1orgwl-wxdAALCDQACYCq4UJVyFSh8kWJ0PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17905801345828137",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIRoGq6FaYEFwUjVYhPbwdM0Of4oHgRAALrDgAChSWIUTtM7G0rYbfnPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580134585u9xt",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIRoWq6FaYV43qa330XTynnW6lxH_-wAALGDwACSPg5Ui4YKMi8L0JjPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580134675phhq",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIRomq6FaYffcTXpfP357pFmXcqm1faAALHDwACSPg5UoeSenJTxKXwPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580134773gtxc",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIRo2q6FabkGR7DG-q4QcsvzeUNnQT2AALIDwACSPg5Uq6FefuZO5AMPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580134878lk0w",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIRpGq6FaZlbiqJWzAWGJlk25LgJ6sKAALJDwACSPg5Up5ddxWMN_ZiPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580134883nfgi",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIRpWq6Faawmg5d-NTgDKQPP-St00fyAALLDwACSPg5UpqrAc-xOSb_PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580134973x6o6",
+          "title": "Derivates.zip",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIRpmq6FaY8V74bEshUq48zCZQyNU9uAALNBwACueoQVIz3d_AFAAHuVz0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790580134974kpa2",
+          "title": "Ethics.zip",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIRp2q6FaYfYx1H0gOdQzI7-f7UidKSAALrBwACueoQVErSZN_CA0yPPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17905801349768qaa",
+          "title": "Equity Valuation 01.zip",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIRqGq6FabiWyyyVnce-EUQf20pTBlfAAIHCgACvxjxVfidzFINPfvOPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580134978bh2r",
+          "title": "Equity Valuation 02.zip",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIRqWq6FaYOjzb7wIsq53RohPa4hi88AAIICgACvxjxVdTM6ZaBKH3HPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580134980gz67",
+          "title": "Financial Reporting & Analysis 01.zip",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIRqmq6FaYjMgiAjOcg5wh_wVxpeZpUAAIMCgACvxjxVYq5-Jm0G7SxPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580134982bjl8",
+          "title": "Financial Reporting & Analysis 02.zip",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIRq2q6FaZK5IJhg149WnNFrdNSTUyaAAJiCgACvxjxVUmih_mafTCGPQQ",
+          "description": ""
         }
       ]
     },
@@ -2723,10 +3771,27 @@
       "resources": [
         {
           "id": "res_cat_cfa_l2_yt1",
-          "title": "🔍 CFA Level 2 YouTube Channel",
+          "title": "Let me explain",
           "type": "link",
-          "value": "https://youtube.com",
-          "description": "CFA Level 2 recommended YouTube tutorial channels"
+          "value": "http://www.youtube.com/@letmeexplaincfa",
+          "description": "CFA Level 2 recommended YouTube tutorial channels",
+          "items": []
+        },
+        {
+          "id": "res_1790580053033q4yz",
+          "title": "Financial Statement Analysis section of the 2026 CFA Level 2 Curriculum.",
+          "type": "link",
+          "value": "https://youtube.com/playlist?list=PLzsMtRJ44d8ya6NjVQ_UXzN8rHoL3x7dv&si=wmEXpOuF971cbjor",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1790580070013ruao",
+          "title": "CFA© Level II Video Series offered by AnalystPrep",
+          "type": "link",
+          "value": "https://youtube.com/playlist?list=PLIYnk9FMYcku_6fuLuZYfVEQx5goJKyU2&si=lHVUFVhTlHQ73dlA",
+          "description": "",
+          "items": []
         }
       ]
     },
@@ -2745,10 +3810,19 @@
       "resources": [
         {
           "id": "res_cat_cfa_l3_ch1",
-          "title": "📢 CFA Level 3 Telegram Channel",
+          "title": "📢 CFA Level 3",
           "type": "link",
-          "value": "https://t.me/Finance_Ahmadillo",
-          "description": "CFA Level 3 official Telegram channels & discussion groups"
+          "value": "https://t.me/+RKPhz-5hegMyNjBi",
+          "description": "CFA Level 3 official Telegram channels & discussion groups",
+          "items": []
+        },
+        {
+          "id": "res_1790580342024pktl",
+          "title": "CFA Level 3 All Resources",
+          "type": "link",
+          "value": "https://t.me/cfalevel3freebook",
+          "description": "",
+          "items": []
         }
       ]
     },
@@ -2759,11 +3833,228 @@
       "order": 2,
       "resources": [
         {
-          "id": "res_cat_cfa_l3_b1",
-          "title": "📖 CFA Level 3 Kaplan Study Text & Revision Kit",
-          "type": "link",
-          "value": "https://t.me/Finance_Ahmadillo",
-          "description": "CFA Level 3 Kaplan & BPP latest exam kits and textbooks"
+          "id": "res_179058053651062z6",
+          "title": "2024 L3 Book 4.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAISUWq6FzfJcw4XB5ytYIE77Ba_3isCAAJmCgACFJ14VGBST6Ied4_APQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580536512s8ui",
+          "title": "2024 L3 QS.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAISUmq6FzcbY6a-aWA5pQOrtSXG03BwAAJnCgACFJ14VPZ0kqGzm58bPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580536516y77z",
+          "title": "2024 L3 Book 5.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAISU2q6Fzf6YZe6IKsIw7pzeTToxvo7AAJoCgACFJ14VGKTKW00yFfePQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580536520m6t8",
+          "title": "2024 L3 Book 3.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAISVGq6FzfdtEmGrS3nWsu9cO4LBVVXAAJpCgACFJ14VNXFO2NC-Rf1PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580536522e7uk",
+          "title": "2024 L3 Book 2.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAISVWq6FzfZW-FphoYOImf5FZas7yh4AAJqCgACFJ14VGM4guFo1X4UPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580536524xjnr",
+          "title": "2024 L3 Book 1.pdf",
+          "type": "file_id",
+          "value": "BQACAgQAAxkBAAISVmq6FzcQkYfhj5eLfmNAg_92OzuZAAJBEwACUeHhU4Iukc48ZHBCPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17905805365754htl",
+          "title": "2025-l3-core-topics-combined.pdf",
+          "type": "file_id",
+          "value": "BQACAgQAAxkBAAISV2q6FzeGXx_dIgOwRMEeMp1dSVqyAAI-EgACxE8AAVCBxZMm2beYjj0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905805365770o0k",
+          "title": "CFA LEVEL III - PORTFOLIO MANAGEMNET PATHWAY.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAISWGq6FzcfIWdZNJ0mH2985Cey8kjKAAKQDwACt4IAAVRO1sNTBJ4DwD0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790580536579psjs",
+          "title": "CFA LEVEL III – PRIVATE MARKETS PATHWAY.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAISWWq6FzcYNaXlAe29Enj_WU7YhfrQAAK5DwACt4IAAVQFVzBNW-K9xT0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790580536582e6li",
+          "title": "CFA LEVEL III – PRIVATE WEALTH PATHWAY.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAISWmq6FzeF3JsU0Xf_cyWsNnMB5LEzAAKyFQACdO2AVOp74Bd1R4oKPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580536674cs5w",
+          "title": "2024 SS CFA L3.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAISW2q6Fzc-n0WW-AxGe9kBGC1O2H08AALoDgACYzRgVlTWvrFlg7azPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_179058053677992u5",
+          "title": "Exencial Research Partners Job Opening JD.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAISXGq6FzccfTJlmCobiv3xsyUKyWrAAAJLDgAC4B0QVRxcaZ0VbB_hPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580536874lwvv",
+          "title": "CFA 2025 L3 Schweser's Notes Book 1.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAISXWq6FzdsUSo8EHyWP1Zu_8EcdyduAAKvFAACpQi4Vl61LzD8Mtt1PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580536876uthd",
+          "title": "CFA 2025 L3 Schweser's Notes Book 2.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAISXmq6Fzc7z5izSdNCj3RRk0d2RMoOAAKpEQAC3rfAVigG3wABbKlqwj0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905805368772rpi",
+          "title": "TradingView_Expert_(Free).zip",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAISX2q6Fzek3RPBbwr-FR7HQc9uyhdUAAIMEQACr6MhVLe7LExm8rU9PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_179058053687962t0",
+          "title": "CFA Level 3 2025 An Overview of Private Wealth Management .pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAISYGq6FzeRh-bJ0XF0RAFLWzflW9wGAAJ3DwACy-2pVGawNs3TpsUkPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_179058053688011sw",
+          "title": "Campbell (1).zip",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAISYWq6FzcgXoX1bV8GXqw2lB_imKuxAAJ7EgAC6uPAVHaPdWEHxxzlPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580536973itpc",
+          "title": "2025 Schwesernotes Cfa Level 3  Portfolio Management.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAISYmq6Fzci4i8Csbn6eIod5zhBwRlAAAKeEAAClu7oVNZVtCXGVsbKPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580536976hhn8",
+          "title": "2025 Schwesernotes Cfa Level 3 Book 1 Asset Allocation.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAISY2q6Fzcnqdue02GTZ7VH6tGR711qAAKfEAAClu7oVPNcfmucpSP_PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17905805369781jgs",
+          "title": "2025_Schwesernotes_Cfa_Level_3_Book_2_Portfolio_Construction_and.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAISZGq6Fzdv6-o7fwlRFh1AIZbaMyiCAAKgEAAClu7oVLK68QXGPkbPPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580536980p1om",
+          "title": "2025_Schwesernotes_Cfa_Level_3_Book_3_Derivatives,_Risk_Management.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAISZWq6FzdFLI_IcS7RUYEssKzOi1fdAAKhEAAClu7oVGztMI4yWZA2PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580536982zz9h",
+          "title": "2025 Schwesernotes Cfa Level 3 Private Markets.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAISZmq6FzfJtWDuGFxHDl3SpTV1EMgKAAKiEAAClu7oVNcqzPjnzA1vPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580536984rfb0",
+          "title": "CFA Level 3 2025 Examples (Blue Boxes) Ethics .pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAISZ2q6FzfOSn3IlPfZOzN7oisoxscvAALuFAACx4sQVR-FE4PT9Sa4PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580536990re6d",
+          "title": "CFA Level 3 2025 EOC Questions Ethics.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAISaGq6Fzdkl-sSinhfpucQzw1zE6wuAALvFAACx4sQVVQQRbFKn4xtPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580537074jpvt",
+          "title": "CFA Level 3 2025 Materials  .zip",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAISaWq6FzdWM0vhAV9QnyyUQg2lzTarAAI9EgACx4sgVQsXx5WtpCnmPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580537077xm6w",
+          "title": "IFT HY 2025 NOTES.zip",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAISamq6FzeRcD-JjrdsK6aTGv7IRSuQAAIqGAACKHLwVL8LlTz78ZBjPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580537079w206",
+          "title": "CFA L3 Changes 2025.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAISa2q6FzfgU7C4H42MEbMtVf5HowRBAAKRGQACcWsBVTrt_kmuDmjPPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17905805370823i3r",
+          "title": "Standard IV cases (1).docx",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAISbGq6FzcEt59ual0eyz0XixoZyLrdAALwawACx2pRSkjs6J4_TLQaPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17905805370849ej7",
+          "title": "STUDY SCHEDULE L3 2025_SJ (1).pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAISbWq6FzdMM2yFY8syNA2yTd8xg1-GAAL6FwACZGRRV0p954vdffqoPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580537087lj7t",
+          "title": "Anushka's notes.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAISbmq6FzchyBxH4roAAcGEcNPFNAHzdwACAxgAAmRkUVfuwdgAAbWP4DA9BA",
+          "description": ""
+        },
+        {
+          "id": "res_1790580537175g9ap",
+          "title": "STUDY SCHEDULE L3 2025_SJ (1).pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAISb2q6FzcUWAWUTVje0aYw87PMb2R6AAKPFQAC9MZJVP8Gi8Po_zURPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580537178ilus",
+          "title": "CFA Chatgpt Prompt.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAIScGq6Fzf8fwIVG7PB1rWOqC1LPs5cAAKsFQACOoKwVtIOcgJerjkBPQQ",
+          "description": ""
         }
       ]
     },
@@ -2774,11 +4065,165 @@
       "order": 3,
       "resources": [
         {
-          "id": "res_cat_cfa_l3_v1",
-          "title": "🎥 CFA Level 3 Complete Video Course",
-          "type": "link",
-          "value": "https://youtube.com",
-          "description": "CFA Level 3 comprehensive lecture series"
+          "id": "res_1790580401483m4mz",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIRlGq6FaYVxVmJ1eihdPMmrTkXw5tZAAIDEQACxTWhUCrN6pW-PXVxPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580401485fv1f",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIRlWq6FaZ-FsfmnjFxdlqVUmEiDo1tAAIEEQACxTWhUE0FbS7h7szmPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_179058040148669uc",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIRlmq6FaZT0oOx_L20q_pEAsmgwn1bAAIJEQACxTWhUOBa9GEgne_ePQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580401488eo2y",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIRl2q6FaZcLvJCQrYx0ZzMKIghGNAyAAIKEQACxTWhUJSWVRkQGY_vPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_179058040148979ep",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIRmGq6FaaDCemKopx_ZJObx_ibPRREAAILEQACxTWhUJuRsRS4rOAUPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580401490iun8",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIRmWq6FaaYdEN1R37ZF7C6EVdqZdezAAIMEQACxTWhUNzI6mNFl1pCPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17905804014929cwc",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIRmmq6FaYUq49M07NOYH95dDiLYKOPAAINEQACxTWhUBZmtOFj48OYPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17905804014934qb5",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIRm2q6Faagn8c14B1WoCs4P1ll29mFAAIOEQACxTWhUHF_N2lW7a0yPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580401494eya4",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIRnGq6FaaiausZ0tfwKTrYj1PaIHZVAAK_DQACYCq4UJXR-R3pN-zlPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580401496d2ov",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIRnWq6FaYsyGiCfl_779i9c8dT_1euAALADQACYCq4UKV0mAgjJ5IlPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17905804014972474",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIRnmq6FaaNpodI4izFi80_0dej-CgoAALBDQACYCq4UI8JpzOjiJFvPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17905804014987bde",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIRn2q6Faa3lS1lNomc7v1orgwl-wxdAALCDQACYCq4UJVyFSh8kWJ0PQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17905804015748e7i",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAISLWq6FrG6RUabumJx_9HLMdqJ5xSZAALHDgACQ344UKZfTxOSk9ooPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580401576074w",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAISLmq6FrHzKaoDbqOndNITXNo6M1fcAAIdEgAC6J1xUQw4812H-kvgPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17905804015779lvn",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAISL2q6FrGcf8ttslZ7x9wlCFAtC7OZAAIfEgAC6J1xUXx88MqzWvrsPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580401579whmp",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAISMGq6FrFmUEFDM5O6hDjRefvsz4vGAALlDgAChSWIUZ9EzVZq5sjJPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580401580h79k",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAISMWq6FrETVYEugPCMqnua9xTQnoBXAALmDgAChSWIUWORb0LyI7ZRPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17905804015827e6u",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIRoGq6FaYEFwUjVYhPbwdM0Of4oHgRAALrDgAChSWIUTtM7G0rYbfnPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580401583sf0g",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIRoWq6FaYV43qa330XTynnW6lxH_-wAALGDwACSPg5Ui4YKMi8L0JjPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17905804015852ewc",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIRomq6FaYffcTXpfP357pFmXcqm1faAALHDwACSPg5UoeSenJTxKXwPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580401586pe9r",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIRo2q6FabkGR7DG-q4QcsvzeUNnQT2AALIDwACSPg5Uq6FefuZO5AMPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_17905804016745yh9",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIRpGq6FaZlbiqJWzAWGJlk25LgJ6sKAALJDwACSPg5Up5ddxWMN_ZiPQQ",
+          "description": ""
+        },
+        {
+          "id": "res_1790580401675y882",
+          "title": "Video Lesson",
+          "type": "file_id",
+          "value": "BAACAgQAAxkBAAIRpWq6Faawmg5d-NTgDKQPP-St00fyAALLDwACSPg5UpqrAc-xOSb_PQQ",
+          "description": ""
         }
       ]
     },
@@ -2790,10 +4235,27 @@
       "resources": [
         {
           "id": "res_cat_cfa_l3_yt1",
-          "title": "🔍 CFA Level 3 YouTube Channel",
+          "title": "CFA Level 3",
           "type": "link",
-          "value": "https://youtube.com",
-          "description": "CFA Level 3 recommended YouTube tutorial channels"
+          "value": "https://youtube.com/playlist?list=PLFq1pcy1P92feZNELDAvzr5g8SgYlmRWf&si=5EtRSkQjdo2eYs1v",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_17905804566467toh",
+          "title": "CFA© Level III Video Series offered by AnalystPrep",
+          "type": "link",
+          "value": "https://youtube.com/playlist?list=PLIYnk9FMYcks5znLSGNfS9AU4YRPLJYx0&si=1fmZ3FI-jl_k5aEG",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1790580469150xesa",
+          "title": "Let me explain",
+          "type": "link",
+          "value": "http://www.youtube.com/@letmeexplaincfa",
+          "description": "",
+          "items": []
         }
       ]
     },
