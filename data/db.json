@@ -223,6 +223,83 @@
       "last_name": "Shomurodov",
       "username": "umidshomurodov",
       "joined_at": "2026-09-28T08:35:43.797Z"
+    },
+    {
+      "id": 776960541,
+      "first_name": "Otajon",
+      "last_name": "Jurakulov",
+      "username": "econuzbek",
+      "joined_at": "2026-09-28T09:15:40.706Z"
+    },
+    {
+      "id": 746723151,
+      "first_name": "Jamshidxon Asatillayev",
+      "last_name": "",
+      "username": "jamshidasatillayev",
+      "joined_at": "2026-09-28T09:32:12.659Z"
+    },
+    {
+      "id": 7167711638,
+      "first_name": "Sardorbek",
+      "last_name": "Joʻraboyev",
+      "username": "Sard0rbek_05",
+      "joined_at": "2026-09-28T09:35:13.698Z"
+    },
+    {
+      "id": 8099602416,
+      "first_name": ".",
+      "last_name": "",
+      "username": "",
+      "joined_at": "2026-09-28T09:51:14.311Z"
+    },
+    {
+      "id": 5624704293,
+      "first_name": "Abdurazzoq",
+      "last_name": "Abdurazzoqov",
+      "username": "Abdurazzoq04",
+      "joined_at": "2026-09-28T10:15:00.500Z"
+    },
+    {
+      "id": 1709458072,
+      "first_name": "Миразиз",
+      "last_name": "Мирзалиев",
+      "username": "Miraziz_Mirzaliyev",
+      "joined_at": "2026-09-28T10:46:00.513Z"
+    },
+    {
+      "id": 7942285130,
+      "first_name": "masrurbek",
+      "last_name": "",
+      "username": "",
+      "joined_at": "2026-09-28T11:04:07.389Z"
+    },
+    {
+      "id": 8595037157,
+      "first_name": "Darksider",
+      "last_name": "",
+      "username": "Darksider_X",
+      "joined_at": "2026-09-28T11:13:14.367Z"
+    },
+    {
+      "id": 7055950881,
+      "first_name": "Begzod",
+      "last_name": "",
+      "username": "i_financier",
+      "joined_at": "2026-09-28T11:39:32.096Z"
+    },
+    {
+      "id": 5469997177,
+      "first_name": "Adii",
+      "last_name": "",
+      "username": "Lilladii",
+      "joined_at": "2026-09-28T11:47:33.986Z"
+    },
+    {
+      "id": 1655577759,
+      "first_name": "Madina",
+      "last_name": "Abdullayeva",
+      "username": "mdddnm",
+      "joined_at": "2026-09-28T11:58:23.147Z"
     }
   ],
   "categories": [
@@ -1134,7 +1211,43 @@
       "title": "📗 F2 Study Books",
       "parentId": "cat_f2",
       "order": 2,
-      "resources": []
+      "resources": [
+        {
+          "id": "res_1790587612365lu8o",
+          "title": "Top 100 MCQs Sanjay Kumar (4).pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGTZqujLcckbgL_XV-nGjb-jHDVyO4wACUqMAAhaOMEk2JE3CMfz0hj0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905876127645yiv",
+          "title": "MA Study Text 2024-25 ISDC.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGTdqujLcBEC4wI5skBTWWvLFVGM3zQACB60AAibdUUmsBvE9_aI1Oj0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905876127674m8u",
+          "title": "MA Examkit Kaplan 2026.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGThqujLc0stEBxo31omeXN2ZtcHw6QACCK0AAibdUUnvpRc5pGH1YD0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790587612770ktdj",
+          "title": "MAStudyText202526.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGTlqujLcqxDO2QcJ7pjFtknid5tqsgACDa0AAibdUUnwJ4ZhcINNiT0E",
+          "description": ""
+        },
+        {
+          "id": "res_179058761277382zg",
+          "title": "MA formula sheet and table wef S19.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGTpqujLcKKlpt61TjboJCkrmM-kmegACmacAAoPRYUm2u3OTjI9SRT0E",
+          "description": ""
+        }
+      ]
     },
     {
       "id": "cat_f2_videos",
@@ -1377,95 +1490,53 @@
       "order": 2,
       "resources": [
         {
-          "id": "res_17885270503408t79",
-          "title": "FA1 Kaplan kit.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIKb2qawcqGVlVSjCXs2v_420z0ypA2AAK3dAACZPHAS4_1jKaINBDiPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_1788527050341u9u8",
-          "title": "FA1 Kaplan Book (1).pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIKcGqawcpP0tMKDHv7gNT-zHItUSABAAK4dAACZPHAS5-vujac88yuPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_1788527050342wtvg",
-          "title": "FA1 Kaplan kit.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIKcWqawcrHDA05fvIKgEaR06yriNKcAAIVgQACmuKBSIhw8ebGUgHjPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_1788527050343hje7",
-          "title": "FA1_Summary_Notes NEW.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIKcmqawcowzXf4_EscEnyTxTWHxm9QAAIjgQACmuKBSBh30Ny4T7ItPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_17885270503430uw3",
-          "title": "FA2-BPP-KIT-pdf.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIKc2qawcqNS9m4pjnrWWxila8iGhNhAAJLgQACmuKBSPmflDZNM-xlPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_17885270503446lnw",
-          "title": "FA2-2023-2024-EK.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIKdGqawcrNXC6VEFAtngRnWGHKu4FLAAJMgQACmuKBSAmDl8E08vqjPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_1788527050345jwnn",
+          "id": "res_1790587801521pgrh",
           "title": "FA1; Bpp Kit.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIKdWqawcoYSF_tvC9fKWefQCbvjzHnAAKifAAC2YdhSXUkcFY4ea0FPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "value": "BQACAgIAAxkBAAEBGVFqujM9Flek4Y32Tvf1Wuk4l6uRvQAConwAAtmHYUnsYki8cjBwBz0E",
+          "description": ""
         },
         {
-          "id": "res_1788527050345ihxm",
+          "id": "res_1790587801525cd2q",
           "title": "3 FA1-Kaplan EXAM kit 2025.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIKdmqawcrYw2esXx_pAQttocO8LstlAAJPjwACjwhZSUHAty4HTAqzPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "value": "BQACAgIAAxkBAAEBGVJqujM97FH6ZmTnPby2HvGFYFEtTgACT48AAo8IWUmf0jjTC3Wv2z0E",
+          "description": ""
         },
         {
-          "id": "res_1788527050346gqg2",
+          "id": "res_1790587801528pxes",
           "title": "FA1;EXAM KIT;KAPLAN PUBLISHING.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIKd2qawcof2uac37OBLHZYWTkxIe8IAAKtfAAC2YdhSZt4ogil61h-PQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "value": "BQACAgIAAxkBAAEBGVNqujM99yaVdFUcRiRWZqBz8H4aCAACrXwAAtmHYUlVcds7CuaEKz0E",
+          "description": ""
         },
         {
-          "id": "res_1788527050347gsxv",
+          "id": "res_1790587801532mdwd",
           "title": "FA_FFA(kit)​  2025-26.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIKeGqawco0FGUVDHyAymnI3y52bnloAALwmwAC0_VYSfnASgxNZ0y1PQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "value": "BQACAgIAAxkBAAEBGVRqujM9imCCaOwOgoISFyd6cV5o6wAC8JsAAtP1WEkDLO3QgBUKtD0E",
+          "description": ""
         },
         {
-          "id": "res_1788527050347wotr",
+          "id": "res_1790587801537htl2",
           "title": "FA1 (kit).pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIKeWqawcprD2_W_koee9k8DM6MFKdnAALxmwAC0_VYSfl5jlvHWHrJPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "value": "BQACAgIAAxkBAAEBGVVqujM9XHepOkvvad4sdewf6G1mdgAC8ZsAAtP1WEklf0ek4REuYz0E",
+          "description": ""
         },
         {
-          "id": "res_178852705034818xr",
+          "id": "res_1790587801540wp0t",
           "title": "AA_Exam_Kit_2025-26_ISDC (1).pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIKemqawcq9-7gKVf7x3fG9N1Z1-J6-AALymwAC0_VYSfn35aSYOcf8PQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "value": "BQACAgIAAxkBAAEBGVZqujM9mCtKNU-Mb9s7vvlbMeyb_QAC8psAAtP1WEnn489AylFFvj0E",
+          "description": ""
         },
         {
-          "id": "res_1788527050349oenh",
+          "id": "res_1790587801543kj6d",
           "title": "Basics Accounting .pdf",
           "type": "file_id",
-          "value": "BQACAgUAAxkBAAIKe2qawcpXCgsekG_wTxH6PZN4atDWAAJwGQAClepgVQomrjZwkCuVPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "value": "BQACAgUAAxkBAAEBGVdqujM9ya6HX2Vho6eOJ9QdbEDBXQACcBkAApXqYFXcXTP8knzuPD0E",
+          "description": ""
         }
       ]
     },
@@ -1555,103 +1626,88 @@
       "order": 2,
       "resources": [
         {
-          "id": "res_cat_f4_b1",
-          "title": "📖 F4 Kaplan Study Text & Revision Kit",
-          "type": "link",
-          "value": "https://t.me/Finance_Ahmadillo",
-          "description": "F4 Kaplan & BPP latest exam kits and textbooks"
-        },
-        {
-          "id": "res_1788587465775qigp",
-          "title": "LW ST - Eng Kaplan.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAILLmqbrclbVYBEGG25IodPFvfplA7pAAJsogACIx_5SkUXEPPlKz-APQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_1788587465776y53r",
-          "title": "LW-ENG Kaplan Kit 2026",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAILL2qbrcmS4uoYDN7TxlJe9kDEiGNpAAJvogACIx_5Sjtfhg2IPIH_PQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload",
-          "items": []
-        },
-        {
-          "id": "res_17885874657772rns",
-          "title": "LW-ENG Kaplan Kit 2026.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAILMGqbrcnVFNa4bQg_WOC1voWvb0HFAAJQoQACZKNpSz2BDFWngBspPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_1788587465778su8g",
+          "id": "res_1790587943450mihi",
           "title": "ACCA F4 ENG Course Notes-1.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAILMWqbrck5-Sp5yWDQIix3W7lPo8KLAALopQACQyPoS5R5eERQegcIPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "value": "BQACAgIAAxkBAAEBGatqujQnBBAsbMwB2_20BJVBSuL8uAACTqAAAg0scEjj4nFOy6BRNz0E",
+          "description": ""
         },
         {
-          "id": "res_178858746577920jp",
-          "title": "F4 ENG POCKET NOTES.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAILMmqbrclPo3i7g62-bxR0wEBa32kZAALqpQACQyPoSzYvXWyvV8zHPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_1788587465780q9ps",
-          "title": "F4 ACCA study hub notes-1.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAILM2qbrcl3lIXe411AniEM_dBTrOMBAALrpQACQyPoSx4QggIjxzTSPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_17885874657811v9d",
-          "title": "LW_GLO_Study_Text_2025-26_ISDC.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAILNGqbrcli4R-YVyHJmUjF0wnTbGxPAALQngAC_EP4S5LI-hqMYVl4PQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_1788587465783kc67",
-          "title": "LW_GLO_Exam_Kit_2025-26_ISDC.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAILNWqbrcnASkc26k_m4uOlKAGx6HTGAALRngAC_EP4S6i_8tKDk9OOPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_17885874657844l1p",
-          "title": "ACCA F4 ENG Course Notes-1.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAILNmqbrckXu5469rHbXLoVYnuVmWQQAAJOoAACDSxwSFzDbw0l1fVhPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
-        },
-        {
-          "id": "res_1788587465785wpse",
+          "id": "res_1790587943453fi2g",
           "title": "F4 ACCA study hub notes.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAILN2qbrcnCRQwUYSVD23P-LoLvz-SHAAJPoAACDSxwSC-6_mCDiBtjPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "value": "BQACAgIAAxkBAAEBGaxqujQnRzvXT4Ld4MDtaMuEqLUupAACT6AAAg0scEi6zaqgkwZPxD0E",
+          "description": ""
         },
         {
-          "id": "res_1788587465786nzza",
+          "id": "res_1790587943456ivam",
           "title": "LW ST - Eng Kaplan.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAILOGqbrck1PuHn_HALJZFb0QekoYacAAJ7qgACs3J4SLESocg4YHCdPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "value": "BQACAgIAAxkBAAEBGa1qujQn0TPt8CFA1yTWnQABz3oHrFcAAnuqAAKzcnhI-0E5lTsMLbs9BA",
+          "description": ""
         },
         {
-          "id": "res_1788587465787bx55",
+          "id": "res_1790587943459jlhm",
           "title": "LW-ENG Kaplan Text 2026_260824_110950.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAILOWqbrckPUnMS34QiXSinGTfqNbjBAAJXqQACi9OQSIgthd4pe1ftPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "value": "BQACAgIAAxkBAAEBGa5qujQnlcVX7mNTG9rNoHyrLFGebAACV6kAAovTkEg3oeWUKSGX5T0E",
+          "description": ""
         },
         {
-          "id": "res_1788587465788l9zd",
+          "id": "res_1790587943462hhyg",
+          "title": "LW-ENG Kaplan Text 2026.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGa9qujQnDWkhzw-uDslNj5G2DWla0QACnpsAAvGzIUk6vMYiUlqI_D0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790587943535n5h3",
+          "title": "F4 BPP kit.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGbBqujQnUTB59rKP_thY6CJP0LWOVQACUrIAAjMFOUkuw_j8fNgVnj0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790587943538f0f5",
           "title": "F4_LW_Notes_Complete.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAILOmqbrcnFRiEPGpihF7dWk21dKyXDAAKulwACPDrASMU0Xu1FoF-yPQQ",
-          "description": "Uploaded via Telegram Admin Direct Upload"
+          "value": "BQACAgIAAxkBAAEBGbFqujQn9DvIhLIsFl-4MOFMXJFV_AACU7IAAjMFOUnDEbHV1zKHkT0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790587943541ie3q",
+          "title": "f4 question bank.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGbJqujQnqUYmjTAmzS3HG-ol5OrrqgACVLIAAjMFOUnldKLMloTUNz0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790587943544cdae",
+          "title": "F4 Owais Mirchawala Notes.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGbNqujQnP2ivIUKzcvGMhPhFK443HwACi6gAAsP4YUnJh67NR3onAz0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790587943634l02d",
+          "title": "LW_GLO_Study_Text_2025-26_ISDC.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGbRqujQnwGrvxGV4leCurWnILzM75AACeasAAsP4cUkZS6Yls_ztSD0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790587943638cz6r",
+          "title": "F4 LW (ENG) BPP Study text.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGbVqujQnqXdZEQue52qKNFsMzzP_6AACPrgAAhlykUk9mijskzAZbT0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790587943642dibc",
+          "title": "ACCA_F4_LW_GLO_variant_open_tuition_notes_valid_from_September_2025.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGbZqujQnphDLLu8ZfkXQudAS6kktPwACQrgAAhlykUmi__FoHuMxST0E",
+          "description": ""
         }
       ]
     },
@@ -1733,115 +1789,101 @@
       "order": 2,
       "resources": [
         {
-          "id": "res_1789062044433x342",
-          "title": "ACCA_F5_All_Formulas_Summary.pdf",
+          "id": "res_17905881201061hfk",
+          "title": "PM MUST PRACTICE QUESTIONS DEC 2023.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIMWWqi62zKy8YeptV2PO7GlLiXpEqKAAKbogACM45RSVWmu0FYRX_2PQQ",
+          "value": "BQACAgIAAxkBAAEBGhVqujTX5hWom6LltblFtRkJKm8IygACuaEAAnDyAUj2_6ZYsFPQ9T0E",
           "description": ""
         },
         {
-          "id": "res_1789062044437k5s4",
-          "title": "PMExamKit202526.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIMWmqi62zwiomc56UOlDKQIxQE4mEmAAKInAACM45hSb_qyZ7GTgjMPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_17890620444398f40",
-          "title": "PMStudyText202526.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIMW2qi62yRxS2kJbPshobe5WTzhnF8AAJZlwACLJ9gSTRIi31Z79afPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1789062044440zxq1",
-          "title": "PM ACCA STUDY HUB.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIMXGqi62zkiLnGFVCPCttmBbIPoy5jAAJxmgACLJ9gSfQSCvvjcbiaPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1789062044441vx8c",
-          "title": "PMStudyText202526.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIMXWqi62zBY1Bs_3z05xKV_YrTXenGAAIHmwACRcp4SWdpdcAe-3CoPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1789062044442l5n5",
-          "title": "PM_Exam_Kit_2025-26_ISDC_260307_152840.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIMXmqi62w-dWwIwn-EnwotzghToPENAAIImwACRcp4SfkSnscZgiaXPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1789062044444kyk5",
-          "title": "PMExamKit202526.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIMX2qi62z-BGgBumAsIStsfmsCcTZ0AAK9nAACcjH4ScsP5MMyAAGkOz0E",
-          "description": ""
-        },
-        {
-          "id": "res_17890620444459ux9",
-          "title": "BPP PM Kit.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIMYGqi62z2vK2xFnUtv_nUwWG66KAcAAKSrwAC11dgSjrAh2KxoeZHPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_178906204444784qq",
-          "title": "PMExamKit202526.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIMYWqi62wX4vFYDaPoCZaXeJeT06N6AAIimwAC_FqISuQLASnQ1EJDPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_17890620444507e39",
+          "id": "res_1790588120108gpnr",
           "title": "PM_Exam_Kit_2025-26_ISDC (1).pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIMYmqi62ygJWJZdL-TIOAu0OUJ3g8TAAJgrgACuQWoSh3oArgrS5H3PQQ",
+          "value": "BQACAgIAAxkBAAEBGhZqujTXlzIx0cA_yXPl2G24uTokPAACd6EAAnE_eUjKySEL0G7JCD0E",
           "description": ""
         },
         {
-          "id": "res_178906204445168rs",
+          "id": "res_1790588120110ljc0",
+          "title": "ACCA F5 - PM Examiner Report (Mar & Jun).pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGhdqujTX2Xt0cfkSD1O7VLDjes4KXAACeJ4AAleWwUg-ZotvdZ891j0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790588120113hxak",
           "title": "PM Kaplan Kit 2026.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIMY2qi62xfbC-kCTNJdZ7h1YFpM1GsAALLmQACtoPASjPHISF1vnDXPQQ",
+          "value": "BQACAgIAAxkBAAEBGhhqujTXDtCpE-a85PrVcWCXk8Ig6QAC8Z4AAleWwUhGBBPAQ097eT0E",
           "description": ""
         },
         {
-          "id": "res_17890620444686ab4",
-          "title": "PM Formula Sheet.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIMZGqi62yqZt5FHx7VrVUyuaRNHQJ2AAIMmgACtoPASrFJfp5nv_syPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1789062044469bn94",
-          "title": "PM Kaplan Kit 2026_260722_151949.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIMZWqi62zUVMX4CNg0tz9ITl70eplkAAKblwACTrsISwXScMwL5xVMPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1789062044471s3ev",
-          "title": "PM_Exam_Kit_2025-26_ISDC (1).pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIMZmqi62wcZS_cWkYfrt3RZpuVvyApAAJ3oQACcT95SKYhqOmP-X3aPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1789062044472mjgt",
-          "title": "PM Kaplan Kit 2026.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIMZ2qi62zwzWE4sugFAkyGVIQXNVBUAALxngACV5bBSEYsSxBCKsL5PQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1789062044474lgon",
+          "id": "res_179058812011512i8",
           "title": "PM_Study_Text_2025-26_ISDC.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIMaGqi62zCtLRoG7B4JPrHrj0Ee0PwAALyngACV5bBSM-4wfAIRy0RPQQ",
+          "value": "BQACAgIAAxkBAAEBGhlqujTXnw_51qCrbVgcBXvzAkuU3gAC8p4AAleWwUhnpoCdfWjHLD0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790588120117gwpd",
+          "title": "PM_Exam_Kit_2025-26_ISDC (1).pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGhpqujTXVv12QgY6FXj-hVZLB_kvHgACPrMAAjlHQUlEVeMtmzG-9D0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790588120119w74h",
+          "title": "PM Kaplan Study Text 25-26.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGhtqujTXjqa_mlvjGRzo9SxT7GXebwACR7MAAjlHQUlfSWEHBPEzfj0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790588120133ehjv",
+          "title": "ACCA F5 PM BPP Workbook.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGhxqujTXZ3uyv6UbcFtJtAeOs6ZgtAACSLMAAjlHQUnlkTbRHXepfD0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905881201358rva",
+          "title": "PM  STUDY HUB.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGh1qujTXcnDJkKWhNxptHMjyMCU94gACsq0AAsOtYEnB5Ly-fhRtvz0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790588120137ducf",
+          "title": "PM Complete PDF.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGh5qujTXH7B3CLvQJ_GBk0qUoUoqkAAC2KMAAsOtaEkxqCAaZW8RLz0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790588120139iayh",
+          "title": "PM Revision Summary By Rizwan Maniya.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGh9qujTXdlG8YHibyJokfg8jCY1rNgACNawAAsOtaElyAAE8ZHM_6F49BA",
+          "description": ""
+        },
+        {
+          "id": "res_1790588120141kbba",
+          "title": "PM Revision Notes By Abdul-Ahad (2).pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGiBqujTXUbYJ-lRnNIh1xnTMOPgyCQACN6wAAsOtaEnxx5MTwYIQOj0E",
+          "description": ""
+        },
+        {
+          "id": "res_179058812014304av",
+          "title": "PM Final Notes.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGiFqujTX1cQLQ3DW8krt5W7VZToygQACOKwAAsOtaElhPWLYAXFc1z0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905881201452cwd",
+          "title": "PM  Short Notes  (1).pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGiJqujTXvY30Lwl3SIy1IX9ZZDZB1QACOawAAsOtaElFqTvyGAABNvU9BA",
           "description": ""
         }
       ]
@@ -1857,7 +1899,7 @@
           "title": "🎥 Performance Management (PM)",
           "type": "link",
           "value": "https://youtube.com/playlist?list=PLRYOefFr48S2gLfuZD554hZm_5A-0bVR-&si=-iX_hqNgzLIpd3S9",
-          "description": "F5 comprehensive lecture series",
+          "description": "",
           "items": []
         },
         {
@@ -1940,157 +1982,227 @@
       "order": 2,
       "resources": [
         {
-          "id": "res_cat_f6_b1",
-          "title": "📖 F6 Kaplan Study Text & Revision Kit",
-          "type": "link",
-          "value": "https://t.me/Finance_Ahmadillo",
-          "description": "F6 Kaplan & BPP latest exam kits and textbooks"
-        },
-        {
-          "id": "res_1789203443695h2fs",
-          "title": "TX_Study_Text_FA25_260314_144248 (1).pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAINOGqlE_MpcP8GAhbpEjCu_7gmLc1ZAAIGoAACrT44Sh22Z0AfO3XXPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_17892034436973jvs",
-          "title": "TX_Exam_Kit_FA25 (1).pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAINOWqlE_Mwtq6e-fyB7wiSqP_-2nwWAAIHoAACrT44Surmp4XWQ6wLPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1789203443699jigb",
+          "id": "res_1790588218110bifn",
           "title": "TX_Exam_Kit_FA25.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAINOmqlE_OIdy8iV7xZBvVfFebX_agMAAI2nAACrT5ASrThYuvLkus3PQQ",
+          "value": "BQACAgIAAxkBAAEBGk9qujU5JusheaPF-rz94ulqmYjwOgACXaUAAh27UUsgvBJZMvUg8T0E",
           "description": ""
         },
         {
-          "id": "res_1789203443700w2ob",
-          "title": "TX_Study_Text_FA25.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAINO2qlE_MUvPYHHhsItOFVttUcwp8-AAKomwACQ2uoSjEQFst2scUWPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1789203443701v2kr",
-          "title": "TX-UK Exam Kit-1.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAINPGqlE_OnKGuUiM2fn6UOSDa1pMDiAALrqAACRTzoSmT6ecnzpjoiPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1789203443702am6b",
-          "title": "FA 25 TX Notes.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAINPWqlE_M_9ey6GY0Y7i9c8g46L5rSAAJBpQACHbtRS-hlYUZ4oEUePQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1789203443704670a",
-          "title": "TX-FA2025-Dates-Penalties-Card.docx",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAINPmqlE_Pih0hUckAiS72KQDZeKk6OAAJCpQACHbtRS2xCLRL6Pg4uPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1789203443705jwwq",
+          "id": "res_1790588218110v86t",
           "title": "TX_Exam_Kit_FA25.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAINP2qlE_PeKuv2HZkCkCq-AAG_4P6x0wACXaUAAh27UUtqnXTwWsi_fz0E",
+          "value": "BQACAgIAAxkBAAEBGlBqujU5-WsXlghgXuFneoiSzN0HzAACcLAAAh27WUtxn_efBRAScz0E",
           "description": ""
         },
         {
-          "id": "res_1789203443707chbj",
-          "title": "TX_Exam_Kit_FA25.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAINQGqlE_OXUVLmbXwEjOby0ZgkR7DSAAJwsAACHbtZS9rKjPwu36chPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1789203443708c3tv",
+          "id": "res_1790588218111j1wr",
           "title": "TX Exam Kit FA25 BPP.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAINQWqlE_PPgfakpG6P4hRW6KOoSHRuAAJ1sAACHbtZS0su9LEyXjkYPQQ",
+          "value": "BQACAgIAAxkBAAEBGlFqujU5mqQpvSk-KGFIegXIr2Ar3gACdbAAAh27WUvpD4smTT1fUT0E",
           "description": ""
         },
         {
-          "id": "res_1789203443709qzfd",
+          "id": "res_1790588218111kgdd",
           "title": "TX Exam Kit FA25 BPP.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAINQmqlE_O2zXYG7-jroi8IfxT6rPHtAALxpAACX7doS6HwuK8PtXQTPQQ",
+          "value": "BQACAgIAAxkBAAEBGlJqujU5aopHfqQzGyyzOuywn1xUAgAC8aQAAl-3aEtHewYyRMYPij0E",
           "description": ""
         },
         {
-          "id": "res_1789203443711cfc2",
+          "id": "res_1790588218111ep7k",
           "title": "TX Kaplan Kit FA25 June 2027.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAINQ2qlE_Mjr2G6SGZoM_brC3RwlmGqAAKppQACX7doS2oUlRm1noHRPQQ",
+          "value": "BQACAgIAAxkBAAEBGlNqujU54MPo49Za6vJse7J74XGXrgACqaUAAl-3aEs8o9EKdfsAAcI9BA",
           "description": ""
         },
         {
-          "id": "res_1789203443712gogt",
+          "id": "res_1790588218111kikc",
           "title": "TAX bpp kit 2425.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAINRGqlE_NrBOHRWR_gNFFUNJgO1l-gAAIqpQAC5-XwS1zAFk1Jt_KLPQQ",
+          "value": "BQACAgIAAxkBAAEBGlRqujU5U5lUic_UpSkCGaFBMSXRAQACKqUAAufl8EvD1vN-D_v2hj0E",
           "description": ""
         },
         {
-          "id": "res_1789203443714dkyu",
+          "id": "res_1790588218111jp04",
           "title": "TX_Exam_Kit_FA25.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAINRWqlE_PmtPc7gpi8TFsuQKY6l9zdAAIvpQAC5-XwS2pogU9ZAjJ6PQQ",
+          "value": "BQACAgIAAxkBAAEBGlVqujU5VUBeiUqzMQPdB4dHQY5-zwACL6UAAufl8EvHnCVuIAbaQT0E",
           "description": ""
         },
         {
-          "id": "res_178920344371534qc",
+          "id": "res_1790588218111cn9i",
           "title": "TX_Exam_Kit_FA25.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAINRmqlE_NRuAFkDs9W1tQoOQm8TX6yAAKDqAACeux5SPQfU4U9ZJBGPQQ",
+          "value": "BQACAgIAAxkBAAEBGlZqujU5ThPunDjBwkSI7kDPbRvoJwACg6gAAnrseUihtIA_OltCkT0E",
           "description": ""
         },
         {
-          "id": "res_1789203443717xvax",
+          "id": "res_1790588218111j1qb",
           "title": "TX Exam Kit FA25 BPP.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAINR2qlE_NfbNhMOwiCIlm0trD4Ja-1AAKFqAACeux5SHkL6VQrHGgjPQQ",
+          "value": "BQACAgIAAxkBAAEBGldqujU5ySG2jv4Friv-sJd0IYl-VwAChagAAnrseUirGP22Ul5ApT0E",
           "description": ""
         },
         {
-          "id": "res_1789203443719ruiy",
-          "title": "Corporation_Tax_Summary_Notes.docx",
+          "id": "res_1790588218113xizw",
+          "title": "TX_UK_Dates_Deadlines_Reference updated.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAINSGqlE_PEOU4gYzdQ9hRAhykPni_6AAKQrwACAh3ASGJkBSTs-OhkPQQ",
+          "value": "BQACAgIAAxkBAAEBGlhqujU5QN0LEk6Sm35mMKtDvldGOwACk68AAgIdwEhGhH9iky83Uj0E",
           "description": ""
         },
         {
-          "id": "res_1789203443720x7vo",
+          "id": "res_1790588218113z7hi",
           "title": "TX Exam Kit FA25 BPP.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAINSWqlE_OfvUuvgBEaJyqTs9xbhDAiAAJgrgAC3OMBSbB517UYY6MDPQQ",
+          "value": "BQACAgIAAxkBAAEBGllqujU5VZoj7Rek6ZsGSIPqDT38swACYK4AAtzjAUnwn78QPUwYdj0E",
           "description": ""
         },
         {
-          "id": "res_1789203443722resf",
-          "title": "TX Revision Shortnotes.pdf",
+          "id": "res_1790588218113rtay",
+          "title": "TX_Exam_Kit_FA25.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAINSmqlE_MqBthYEZLAiKQK0iy_dsG9AAJJoQACjwQZSdVxf7alR8oAAT0E",
+          "value": "BQACAgIAAxkBAAEBGlpqujU5JBRPq5iP1VaxB-1fK_X33wACtqUAAo8EGUmHTAfi4J9EOj0E",
           "description": ""
         },
         {
-          "id": "res_1789203443723o5ad",
+          "id": "res_179058821811397jc",
+          "title": "Kaplan Kit Mapping Income Tax and CGT .pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGltqujU55sgcSbse2k4AAb8777ergaIAAgOqAAICoUFJebX2EZdc8tk9BA",
+          "description": ""
+        },
+        {
+          "id": "res_17905882181139swt",
           "title": "ACCA_TX_Last_Minute_Revision_Notes.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAINS2qlE_PdZNZhT8EdJO2yH91EXKD4AAK6pQACjwQZSUxQ5O7S9Wt7PQQ",
+          "value": "BQACAgIAAxkBAAEBGlxqujU5XL5656bmhfPgHGblSl3n4wACTqoAAgKhQUkRw-MeXs3gND0E",
           "description": ""
         },
         {
-          "id": "res_17892034438059ha9",
-          "title": "TX Kaplan Text FA25 June 2027",
+          "id": "res_1790588218113nu02",
+          "title": "TX Exam Kit FA25 BPP.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAINTGqlE_PO1EAeQ2PAewa6HbZIc6FsAALCpQACjwQZSdWwv1VvHaPiPQQ",
+          "value": "BQACAgIAAxkBAAEBGl1qujU544Ev2hJCggFFEtMDgMe2WwACSqsAAgKhQUnAnb-sjuWmGj0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790588218114z9zw",
+          "title": "BPP Study Text.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGl5qujU5c-Z_ZvaaK6_5DtoWzWGSQgACRaUAAuUEkEk2qDPiKT2KRj0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790588278814xvtt",
+          "title": "TX_Exam_Kit_FA25.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGk9qujU5JusheaPF-rz94ulqmYjwOgACXaUAAh27UUsgvBJZMvUg8T0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790588278814jbgj",
+          "title": "TX_Exam_Kit_FA25.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGlBqujU5-WsXlghgXuFneoiSzN0HzAACcLAAAh27WUtxn_efBRAScz0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905882788159ew8",
+          "title": "TX Exam Kit FA25 BPP.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGlFqujU5mqQpvSk-KGFIegXIr2Ar3gACdbAAAh27WUvpD4smTT1fUT0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905882788159b2y",
+          "title": "TX Exam Kit FA25 BPP.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGlJqujU5aopHfqQzGyyzOuywn1xUAgAC8aQAAl-3aEtHewYyRMYPij0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790588278815zk3a",
+          "title": "TX Kaplan Kit FA25 June 2027.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGlNqujU54MPo49Za6vJse7J74XGXrgACqaUAAl-3aEs8o9EKdfsAAcI9BA",
+          "description": ""
+        },
+        {
+          "id": "res_1790588278815aecn",
+          "title": "TAX bpp kit 2425.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGlRqujU5U5lUic_UpSkCGaFBMSXRAQACKqUAAufl8EvD1vN-D_v2hj0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905882788164u5v",
+          "title": "TX_Exam_Kit_FA25.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGlVqujU5VUBeiUqzMQPdB4dHQY5-zwACL6UAAufl8EvHnCVuIAbaQT0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790588278816c89s",
+          "title": "TX_Exam_Kit_FA25.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGlZqujU5ThPunDjBwkSI7kDPbRvoJwACg6gAAnrseUihtIA_OltCkT0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790588278816dxbd",
+          "title": "TX Exam Kit FA25 BPP.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGldqujU5ySG2jv4Friv-sJd0IYl-VwAChagAAnrseUirGP22Ul5ApT0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905882788163ejk",
+          "title": "TX_UK_Dates_Deadlines_Reference updated.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGlhqujU5QN0LEk6Sm35mMKtDvldGOwACk68AAgIdwEhGhH9iky83Uj0E",
+          "description": ""
+        },
+        {
+          "id": "res_179058827881672yx",
+          "title": "TX Exam Kit FA25 BPP.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGllqujU5VZoj7Rek6ZsGSIPqDT38swACYK4AAtzjAUnwn78QPUwYdj0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905882788166svm",
+          "title": "TX_Exam_Kit_FA25.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGlpqujU5JBRPq5iP1VaxB-1fK_X33wACtqUAAo8EGUmHTAfi4J9EOj0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905882788169nvr",
+          "title": "Kaplan Kit Mapping Income Tax and CGT .pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGltqujU55sgcSbse2k4AAb8777ergaIAAgOqAAICoUFJebX2EZdc8tk9BA",
+          "description": ""
+        },
+        {
+          "id": "res_1790588278816tgpj",
+          "title": "ACCA_TX_Last_Minute_Revision_Notes.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGlxqujU5XL5656bmhfPgHGblSl3n4wACTqoAAgKhQUkRw-MeXs3gND0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790588278817bty8",
+          "title": "TX Exam Kit FA25 BPP.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGl1qujU544Ev2hJCggFFEtMDgMe2WwACSqsAAgKhQUnAnb-sjuWmGj0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790588278817u1ap",
+          "title": "BPP Study Text.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGl5qujU5c-Z_ZvaaK6_5DtoWzWGSQgACRaUAAuUEkEk2qDPiKT2KRj0E",
           "description": ""
         }
       ]
@@ -2172,101 +2284,94 @@
       "order": 2,
       "resources": [
         {
-          "id": "res_cat_f7_b1",
-          "title": "📖 F7 Kaplan Study Text & Revision Kit",
-          "type": "link",
-          "value": "https://t.me/Finance_Ahmadillo",
-          "description": "F7 Kaplan & BPP latest exam kits and textbooks"
-        },
-        {
-          "id": "res_1789203730243y1m9",
-          "title": "FR BPPCourseBook 24-25.pdf",
+          "id": "res_1790588589310u6rv",
+          "title": "Документ от M",
           "type": "file_id",
-          "value": "BQACAgQAAxkBAAINZWqlFRIn4azfFjsrDMdbPATSp_5jAAJvFAACXpOgUjL-zw_1f7eQPQQ",
+          "value": "BQACAgIAAxkBAAEBGrpqujatJRJHbh2ARI4VUnFwyfgk7QACe60AAmgqWEmYMjJgeV1KbT0E",
           "description": ""
         },
         {
-          "id": "res_1789203730245b8nz",
-          "title": "Financial Ratio best material.pdf",
-          "type": "file_id",
-          "value": "BQACAgQAAxkBAAINZmqlFRKWSYZf58DoVGlrSxgH23lVAAL8EgAClIzRUJhJiTA69HxxPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_17892037302462iri",
-          "title": "list of standards.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAINZ2qlFRK-nPutFBZRtiFH7yV1aDvnAAIxdQAC9paASZ6cU-11fAyQPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1789203730247eouf",
-          "title": "ACCA FR Capsule by CA Vishal Jain-1.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAINaGqlFRJky1aAsBe4BWZyLK5Z4GnHAAJFdQAC9paASRJ8hhGhATaNPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1789203730249s5w2",
-          "title": "FR Bpp kit 2026 .pdf",
-          "type": "file_id",
-          "value": "BQACAgUAAxkBAAINaWqlFRJRLa_ruKLRA77Xnm5WjeyaAAJhGwACjDrhV5cU2EEzufVgPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1789203730250xyjx",
-          "title": "ACCA_FR_Super_Detailed_Revision_Notes.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAINamqlFRIuGhurlgQOq01sx-Rc4S44AAIUjQAC-FUJSQ5LTVKrpVkNPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1789203730252tv6r",
-          "title": "FR (kit)​ 2025-2026.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAINa2qlFRKQVcFdqOIQeAsjhBXJCTvZAAK5kwAC-FUJSeAUhlOFaAEZPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_17892037302534h0m",
-          "title": "F7 Study hub text.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAINbGqlFRJNqUAEBoepaRVyAQuGHCqSAAJPjgACYaogSYao6MYymN9RPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_17892037302541mxs",
+          "id": "res_1790588589314tkhe",
           "title": "FR Study Text September 2025 - Aug 2026.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAINbWqlFRIcW7IEjivWCIBnGMr9469xAAI4jAACpmRQSZD3Qc0QPo4kPQQ",
+          "value": "BQACAgIAAxkBAAEBGrtqujat-O9wTImC8oidW3XHAAFCndEAApWtAAJoKlhJAlHAgndaxWE9BA",
           "description": ""
         },
         {
-          "id": "res_17892037756454k4b",
-          "title": "ACCA FR (F7) Course Notes.pdf",
+          "id": "res_1790588589317u172",
+          "title": "FR (kit)​ 2025-2026.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAINd2qlFT8u7Bb1idVVPThv6ZgdMTBhAAIYpQACDrqISJWhaFLegtEGPQQ",
+          "value": "BQACAgIAAxkBAAEBGrxqujatvqFztuRLNZ-KucyrHXOJOwAClq0AAmgqWEmLDMT8WTTRaD0E",
           "description": ""
         },
         {
-          "id": "res_1789203775646kfde",
-          "title": "F7 Kaplan Kit old edition.pdf",
+          "id": "res_1790588589321hg1w",
+          "title": "FR BPP KIt 2025-26.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAINeGqlFT-7LXwUEzYr3KDexlF_P1RVAAJHpQACDrqISCZzmFCN2yNBPQQ",
+          "value": "BQACAgIAAxkBAAEBGr1qujatW-mXpnv9fWicBLzJX2861wACmq0AAmgqWEkUPCh90SdJqj0E",
           "description": ""
         },
         {
-          "id": "res_1789203775648r1zl",
-          "title": "FR Kaplan Text 2026.pdf",
+          "id": "res_1790588589323vxdg",
+          "title": "Документ от M",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAINeWqlFT9FI5kS-ZzbhzrPCVRs3UvOAAKppgACrhDISKwkfPP08QgPPQQ",
+          "value": "BQACAgIAAxkBAAEBGr5qujatkqG3wvplH8NPJpXGtKY9BgACob0AAkDJYEm0Py5c9SMhXD0E",
           "description": ""
         },
         {
-          "id": "res_17892037756494iln",
-          "title": "FR (kit)_ 2025-2026 (2).pdf",
+          "id": "res_1790588589336skz0",
+          "title": "Документ от M",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAINemqlFT_2RLFl2WcduWDLQqbIIPAFAAKspgACrhDISCh0wRJgpprcPQQ",
+          "value": "BQACAgIAAxkBAAEBGr9qujatgSWIvumvHON11HM-DK3wKQACs70AAkDJYEnU5qlHPSv_aj0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790588589338oz8s",
+          "title": "Latest Imp. FR_F7 Questions by Sir Asif Imran FCCA.xlsx",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGsBqujatkXvreJ1DVAABXvf73Kj36lMAAiK-AAJAyWBJV1139ZSNCks9BA",
+          "description": ""
+        },
+        {
+          "id": "res_1790588589341z7do",
+          "title": "Acca Fusion FR Study Text 2026-27  (1).pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGsFqujatb6ZktxlNjuAu5an4WvuhQAACQaIAAg7gmUmJQOoIuGyuFj0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790588589343ferg",
+          "title": "Документ от M",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGsJqujatIeodPJUwbHnl0oTqH_o3XAAC4qIAAg7gmUl3i8O1XMobNz0E",
+          "description": ""
+        },
+        {
+          "id": "res_179058858943472gg",
+          "title": "Документ от M",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGsNqujatKu6oAotm2_ldiTrzbQ5pYAAC5KIAAg7gmUkqgISVhc2KQj0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790588589535ubv6",
+          "title": "Документ от M",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGsRqujatJz7Xqx5ZxYsEnDqWm7M_FwAC7aIAAg7gmUl-dj2qrXbJVz0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790588589538cqb4",
+          "title": "IFRS Practical Cases_260207_145736.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGsVqujatVT54yr8tsCzp0Cd7DPFCqwACT5sAAkn2sEhj5DggLdyC_z0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790588589636m5b8",
+          "title": "IFRS-IAS summary notes.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGsZqujatKNyP3gc0P4byqa4pZaZogwACh1IAAuq12UhrSnMCsgjQpj0E",
           "description": ""
         }
       ]
@@ -2357,52 +2462,94 @@
       "order": 2,
       "resources": [
         {
-          "id": "res_cat_f8_b1",
-          "title": "📖 F8 Kaplan Study Text & Revision Kit",
-          "type": "link",
-          "value": "https://t.me/Finance_Ahmadillo",
-          "description": "F8 Kaplan & BPP latest exam kits and textbooks"
-        },
-        {
-          "id": "res_1789204073264waem",
-          "title": "AA_Study_Text_2025-26_ISDC.pdf",
+          "id": "res_1790588659018swah",
+          "title": "AA Theory Ques Ahmad Shafi .pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAINjGqlFmn6TncC6k_t-XtXx0Z-ch0TAAJNewACZRKASIe_PM6dnI0cPQQ",
+          "value": "BQACAgIAAxkBAAEBGuRqujbyEFweOdRB0eIG2hYoSyxHOgACeqUAAtgzOUmn5kSSphDJij0E",
           "description": ""
         },
         {
-          "id": "res_17892040732662phv",
+          "id": "res_179058865902073wf",
+          "title": "Top 100 MCQs Sanjay Kumar.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGuVqujby-59DAw6qyc9aipnMX8suJgACtaUAAtgzOUlxXzUdj4paQz0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905886590221eda",
           "title": "AA_Exam_Kit_2025-26_ISDC.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAINjWqlFmkrYslUcSxfhGtDbmwQE2pIAAJOewACZRKASN5ej9rp3yqfPQQ",
+          "value": "BQACAgIAAxkBAAEBGuZqujbyjWCMb0MUWKTaQCUWt7S9BwACNqgAAmEpWEk9HjvwgZto0z0E",
           "description": ""
         },
         {
-          "id": "res_1789204073267zpwg",
-          "title": "AA_Notes_25-26 (1).pdf",
+          "id": "res_1790588659024y76o",
+          "title": "AA Kaplan Pocket Notes 25-26.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAINjmqlFmmdRQABQwsMCRObWfobVRyH-QAC6IkAArrnAUiM6h5I8ZqdVD0E",
+          "value": "BQACAgIAAxkBAAEBGudqujbyN_UZ0BfradLSOTqsl_mqogACOKgAAmEpWEm6kKqfcJABlT0E",
           "description": ""
         },
         {
-          "id": "res_1789204073268q19v",
-          "title": "AA Full Syllabus Notes.pdf",
+          "id": "res_1790588659026xj9v",
+          "title": "MM-AA TEST OF CONTROLS (2).pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAINj2qlFmmdj8VdFiQBYWrdm_Yu0DLQAALpiQACuucBSJD-yr0kwGbiPQQ",
+          "value": "BQACAgIAAxkBAAEBGuhqujbyU5d4MrPCJvN53tuHZ2iE4QACOagAAmEpWEk-z5fAnSILBj0E",
           "description": ""
         },
         {
-          "id": "res_17892040732699cy0",
-          "title": "AA NOTES.docx",
+          "id": "res_1790588659029c85w",
+          "title": "AA_Study_Text_2025-26_ISDC.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAINkGqlFmmPecAbPCPUAuBJDEhT_1u1AALqiQACuucBSHLf1MuRYc5FPQQ",
+          "value": "BQACAgIAAxkBAAEBGulqujbyu7_wjX7WByazh0MTNQFMNgACRKgAAmEpWEkwJbP8F-JAtz0E",
           "description": ""
         },
         {
-          "id": "res_1789204073270qemn",
-          "title": "AA_Pocket_Notes_2025-26 (1).pdf",
+          "id": "res_17905886590308w2w",
+          "title": "Substantive procedures sheet.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAINkWqlFmnZVuakYtSNTkSjuBXgjuyGAALriQACuucBSEyHf1KfzYRQPQQ",
+          "value": "BQACAgIAAxkBAAEBGupqujbyrzJ0XPMBnDieL6Igc7tCMgACRqgAAmEpWElJapiO63ZDiD0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790588659035k8l9",
+          "title": "f8 skans notes .pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGutqujbyLF1niac4cQyoN-5JtmbMEAACPrEAAiSFYEk2Jvlxy_BPXj0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790588659037fx9a",
+          "title": "AA_Exam_Kit_2025-26_ISDC.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGuxqujbyTzdtsEkOhemiOcWv_epDAgACNbAAAiSFcEl8OGo3m5XDOT0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905886590396prf",
+          "title": "AA_Exam_Kit_2025-26_ISDC (1).pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGu1qujbyvi2doZXfQ3Q_x38SRB7bbgACNrAAAiSFcEmwT15vHBuvwT0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790588659041yj98",
+          "title": "AA_Study_Text_2025-26_ISDC.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGu5qujbyauRoP6y4mhr3-f1eU9ibqgACOLAAAiSFcEmrWiSsdmdb9j0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790588659045qk74",
+          "title": "ACCA_AAA_&_F8_Super_Important_Procedures_by_ACCA_PassPoint.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGu9qujby7m5tAVYT3ij5yQ6HEWxb1AACPbAAAiSFcEmV4Fq6gjnvbj0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905886590475ar0",
+          "title": "Audit Assurance ACCA.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGvBqujbyH_DfBdOIU-y3PWN9fAPZvgAC5agAAoT2mUkbO6uyHyvrWT0E",
           "description": ""
         }
       ]
@@ -2493,66 +2640,87 @@
       "order": 2,
       "resources": [
         {
-          "id": "res_1789378461163ji2s",
+          "id": "res_1790588738788gczq",
           "title": "FM kaplan Study Text 25-26.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOP2qnv5zQAAFa3C8r24Hf3_4z9nl4ZAAC6p8AApikIUnVC9E-BeNgPD0E",
+          "value": "BQACAgIAAxkBAAEBGyBqujdCKMr6hY_FTcWiAZlKlMyiugACOq8AAi9saUlCQAnwLm180T0E",
           "description": ""
         },
         {
-          "id": "res_1789378461164yrkl",
-          "title": "FM Kaplan Text 2026.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOQGqnv5wjAAFiWFERuXLgD5qh615yXwACAqAAApikIUlHvi7wVHziiT0E",
-          "description": ""
-        },
-        {
-          "id": "res_1789378461165ar3k",
-          "title": "FM Kaplan Text 2026.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOQWqnv5w_twM7VfKxxI8ymMCWGF2PAALGrQACzHA4SVHGICSZK4n4PQQ",
-          "description": ""
-        },
-        {
-          "id": "res_17893784611674kxr",
-          "title": "FM kaplan Study Text 25-26.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOQmqnv5wiUu4uG4HZhZQ1S0PoIRSAAALHrQACzHA4Sd7MvZ47S36oPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1789378461168b3ab",
-          "title": "THEORY FM ACCA (1).pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOQ2qnv5xBA73noH40fhrPdy-W-ledAALIrQACzHA4SQAB4nDpJT82Bz0E",
-          "description": ""
-        },
-        {
-          "id": "res_1789378461170dqze",
-          "title": "FM kaplan Study Text 25-26 (1).pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIORGqnv5y2VjFe79EX5zmmukfrnDa2AALNrQACzHA4Sar2e1e5EgKYPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1789378461171wf6q",
+          "id": "res_1790588738791jg8i",
           "title": "FM Kaplan Kit 2026.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIORWqnv5z3e-qfp8AVduWxlNuOfD4zAAIXrgACzHA4SWGLhEPBIzsRPQQ",
+          "value": "BQACAgIAAxkBAAEBGyFqujdCX5a3NmA2feh9MnxGCfOF-AACPK8AAi9saUnYovQ09cdPGj0E",
           "description": ""
         },
         {
-          "id": "res_1789378461172rmrc",
+          "id": "res_1790588738794363m",
+          "title": "Top 50 Mcqs Solved (StudyBuddies).pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGyJqujdCzEa-7xaUpSm9WEQKoBT-5AACM6UAAh9BmUk3RBauwB0ZwT0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905887387976z2n",
+          "title": "THEORY FM ACCA.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGyNqujdC9OobDJqa_325gpI9RxJNtAACNKUAAh9BmUnu70pbLr4oSj0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790588738800pmzz",
+          "title": "Theory (Part 2).pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGyRqujdCdLCkimHKGxumGJNjf-YidgACNqUAAh9BmUl_GUa-uSoNsT0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790588738834mr9q",
+          "title": "Theory (Part 1).pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGyVqujdCzF1e_5tEjISiH8s4319HuwACN6UAAh9BmUlc0DXzp7ryqT0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790588738837t2ut",
+          "title": "SIR SANJAY TOP 20 OTQS KEY.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGyZqujdCdKS2C-1hSUxcMuBZzW7X5gACOaUAAh9BmUnr55mRZbArCD0E",
+          "description": ""
+        },
+        {
+          "id": "res_179058873884118xu",
+          "title": "Past Papers Question.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGydqujdCJ9p8szSI11Ecr46w4U5s6wACPqUAAh9BmUmHhXOOEbM3PD0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790588738844tnjp",
+          "title": "FM kaplan Study Text 25-26.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGyhqujdCEEjQdyCguHtpfLVnuLKeuQACQ6UAAh9BmUmnRN3Pn-wK0z0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790588738846q1bg",
+          "title": "FM Kaplan Kit 2026.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGylqujdCWkJpd0azz11gIeD9H1el8QACRaUAAh9BmUlenbZQ62k7fD0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790588738935c2es",
           "title": "FM Kaplan Text 2026.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIORmqnv5wqpxNxCFF1QebTDyT08J3aAAIYrgACzHA4SQJvI3OWxDEYPQQ",
+          "value": "BQACAgIAAxkBAAEBGypqujdCsp0iIBNxEWvb0Q1QlfK6uAACSaUAAh9BmUnQx4g6-CuuTj0E",
           "description": ""
         },
         {
-          "id": "res_17893784611739wii",
-          "title": "NOTES OF FM BY SKANS.pdf",
+          "id": "res_1790588738938yo1s",
+          "title": "FM Exam Kit 2026-27 ISDC.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOR2qnv5yLVhNaEgQ6UvBCRpR9cDyQAAIbrgACzHA4SX9xzQdmoa0gPQQ",
+          "value": "BQACAgIAAxkBAAEBGytqujdCVxJm1fa63h8cGpyMHNoGMAACZqUAAh9BmUnQDwtS0nKGjD0E",
           "description": ""
         }
       ]
@@ -2651,73 +2819,87 @@
       "order": 2,
       "resources": [
         {
-          "id": "res_cat_sbl_b1",
-          "title": "📖 SBL Kaplan Study Text & Revision Kit",
-          "type": "link",
-          "value": "https://t.me/Finance_Ahmadillo",
-          "description": "SBL Kaplan & BPP latest exam kits and textbooks"
-        },
-        {
-          "id": "res_1789471885804mbsm",
-          "title": "SBL kaplan Exam Kit 25-26.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIObWqpLI3XdSlldqnsz4h_CQHGtPJ3AAJyogACUZXRSGHHLpYmWgtnPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1789471885806ruvt",
-          "title": "SBR Exam Kit 2026-27 ISDC.pdf",
-          "type": "file_id",
-          "value": "BQACAgQAAxkBAAIObmqpLI1Fm2aAkkHlUJyVAAFsbpqUDAACFx4AAtMfOVGwbEJ-3JUppj0E",
-          "description": ""
-        },
-        {
-          "id": "res_1789471885806eeox",
-          "title": "SBR Study Text 2026-27 ISDC.pdf",
-          "type": "file_id",
-          "value": "BQACAgQAAxkBAAIOb2qpLI0hdUELmdJdGrFW7v1IUKx9AAIZHgAC0x85UaY8aA-TDux-PQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1789471885807w2xp",
-          "title": "SBL Exam Kit 2026-27 ISDC.pdf",
-          "type": "file_id",
-          "value": "BQACAgQAAxkBAAIOcGqpLI3I_3awv5C0TD0Wh1z-MdZzAAIbHgAC0x85Ubm3b87y2TxLPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1789471885808seil",
-          "title": "SBL Study Text 2026-27 ISDC.pdf",
-          "type": "file_id",
-          "value": "BQACAgQAAxkBAAIOcWqpLI0nPCinuMXdQ6nQhf06PSWZAAIeHgAC0x85UYMksoS-40HQPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1789471885810r2n6",
-          "title": "SBL Hassan dosani.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOcmqpLI2sg60Brz5qn-nMR9Y8C7_TAAKuoAACVZk5SXG1qgcH_cvGPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1789471885811ahym",
-          "title": "SBL Kaplan Exam Kit 2025-26.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOc2qpLI0kF3GOuvzmVo8_vyqxTXCqAAKvoAACVZk5SXS4WWfvLmgzPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1789471885812dy4l",
+          "id": "res_1790588931580lh7r",
           "title": "ACCA SBL FORMATS-1.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOdGqpLI1zrHsPLQM5_uJrf6_A8xsaAAJurAACAzhBSUh1RljHUYhSPQQ",
+          "value": "BQACAgIAAxkBAAEBG0pqujgDUUKKGN2bx8e0WQABLCPaZa8AAm6sAAIDOEFJAAFN0qhGhWqjPQQ",
           "description": ""
         },
         {
-          "id": "res_1789471885814x0co",
+          "id": "res_179058893158274eq",
           "title": "ACCA-SBL-S25-Notes 25-26.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIOdWqpLI26Jrrf7iMJnAxdUFi9leGzAAKQpwACAzhJSVUv1eMtvxrZPQQ",
+          "value": "BQACAgIAAxkBAAEBG0tqujgDBAIVQpHle6vp-IVR0vVEIAACkKcAAgM4SUkKXtJ-J3IZtT0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905889315850189",
+          "title": "Acca Fusion SBL Exam Kit 2026-27.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBG0xqujgDfnDZ2if3C6XYYYb7pRdf0AACRKUAApJwYUlV8jYd6ldLej0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905889315873snn",
+          "title": "Acca Fusion SBL Study Text 2026-27.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBG01qujgDmfp7n77OB3coyavzjD27TgACRaUAApJwYUkB5S89pux2aT0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790588931589mcdw",
+          "title": "ACCA P1 and P3 SBL Kaplan study text 2025-26..pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBG05qujgDvayDgif8vxyBsH7QKhy7lQACvaoAApJwaUmKJ_s0oyhO9T0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790588931591muzt",
+          "title": "ACCA P1 and P3 SBL Kaplan pocket notes 2024-25..pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBG09qujgDE2-mj9q6RfnJOMIPA3FwawACvqoAApJwaUnvIwparg9GUT0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790588931593ddha",
+          "title": "SBL kaplan Exam Kit 25-26.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBG1BqujgDSjkztG8ushTSfsNbpYHtCAACwKoAApJwaUn9coF9QJ-EyD0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790588931634a91r",
+          "title": "Acca Fusion SBL Study Text 2026-27.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBG1FqujgDjCRoaeSTGiJ16HhkPAABVc4AAvOqAAKScGlJhIMID6RjeVA9BA",
+          "description": ""
+        },
+        {
+          "id": "res_1790588931637089d",
+          "title": "Acca Fusion SBL Exam Kit 2026-27.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBG1JqujgDWzb_3eDyI4k5SUX-GOFKdAAC9KoAApJwaUnpzBI-U5ihLz0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790588931639t3tt",
+          "title": "New Cheat sheet Sep 2026 compiled.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBG1NqujgDNMuZK9RV6b4O5bCA9d34WQAC9aoAApJwaUnntGIWCftQBz0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790588931641psig",
+          "title": "Sep_2026_Pre_Seen_Mock_By_Sir_Shaikh_Bilal_Haque_TASK_FINALpdf.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBG1RqujgDp53LY7cDTwipOeP_bwSAOAACbKsAApJwaUkSF5AjLfJ8xz0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790588931643ut7i",
+          "title": "Sep_2026_Pre_Seen_Mock_By_Sir_Shaikh_Bilal_Haque_Exhibits_Final.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBG1VqujgDX3_WQCkCC1tmZEUPNpbG1QACbqsAApJwaUmW4SZRj5opwj0E",
           "description": ""
         }
       ]
@@ -2816,17 +2998,115 @@
       "order": 2,
       "resources": [
         {
-          "id": "res_1789379035909d8dk",
-          "title": "SBR Exam Kit 2026-27 ISDC.pdf",
+          "id": "res_179058909479478lg",
+          "title": "ACCA SBR Ethics Situations.pdf",
           "type": "file_id",
-          "value": "BQACAgQAAxkBAAIOVWqnwdtX3x4AAYqRz9-p4oYzTypyTAACFx4AAtMfOVGwbEJ-3JUppj0E",
+          "value": "BQACAgIAAxkBAAEBG3pqujimhd8NP0K0RL72mIoNGBKDWAACpbAAAq_j2Uj6w1E-aDNGOD0E",
           "description": ""
         },
         {
-          "id": "res_1789379035911s5tj",
-          "title": "SBR Study Text 2026-27 ISDC.pdf",
+          "id": "res_1790589094797j9fv",
+          "title": "IFRS-S2 Climate Risk for SBR and AAA.pdf",
           "type": "file_id",
-          "value": "BQACAgQAAxkBAAIOVmqnwdtl9yJazP1aZyYJS2ohZwUwAAIZHgAC0x85UaY8aA-TDux-PQQ",
+          "value": "BQACAgIAAxkBAAEBG3tqujimw9bB_Uk--xdG4fDTdBHiegACp7AAAq_j2UiXCDfpCQeV2D0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790589094799qw1y",
+          "title": "SBR Exam Kit 2026-27 ISDC.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBG3xqujimtdCRT16GZiv-JRyvvYNsEAACU64AAtzjAUkLEUq6t-epKD0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790589094803u8k6",
+          "title": "SBR Exam Kit 2026-27 ISDC.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBG31qujimBBZ32kalqbhUaJ5Kls5K4QACVq4AAtzjAUmzdMmhjkDi2T0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905890948061qbr",
+          "title": "SBR-INT March_June 2026 (25_26 syllabus) (1).pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBG35qujimq_Jukv0gPTRBBS3IuXnWagACvbUAApS8OEm1IPes-DGzeD0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790589094837a0js",
+          "title": "All IFRS Short Notes.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBG39qujimBAF2jrr6wBqqvG5NMI-waQACkbUAAphxYEky6oBVHkXkOj0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790589094840j5im",
+          "title": "IFRS-IAS summary notes_260224_070841.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBG4BqujimRmB44-jRhozBIDjwUbs6LQAClbUAAphxYElXBKBBh1xJOz0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790589094843molz",
+          "title": "SBR Cheatsheets Combined.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBG4Fqujim9vtXicoUbf8ethqqvb-R6wAClrUAAphxYElsWVFuQfei5D0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790589094846l9rz",
+          "title": "SBR Exam Kit 2026-27 ISDC.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBG4JqujimB4K7mZo6jL850_Kw4xDgLwACI6kAAphxaEnGswGSS86_bz0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790589094934dkqg",
+          "title": "SBR Exam Kit 2026-27 ISDC (1).pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBG4Nqujim8E-E_hDn7FaRZFAfR1xYfwACJKkAAphxaEk8yJqDNgg8kz0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790589094937u585",
+          "title": "SBR Final Book By ZUBAIR SALEEM-1.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBG4Rqujim273jIqUHrk18s0YsCzZXZAACUqkAAphxaEnap5hQFFq-4D0E",
+          "description": ""
+        },
+        {
+          "id": "res_179058909494013nu",
+          "title": "SBR prepopulated key to pass by TG.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBG4VqujimZ4fhXBYi2i12UwYQwTOZGQACU6kAAphxaEmPfAUEE-y4cj0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790589094942u5i3",
+          "title": "Smart Study Plan for SBR.xlsx",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBG4Zqujim7Lg6boHHo8e49Cv0YSPTNgACjakAAphxaEmQR6SdV5twbT0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790589094945mi3u",
+          "title": "SBR bpp_ST.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBG4dqujimuyJnnWwyy-r_S7qxUwWbfwACEaUAAqwbmUnZn5gCnZijPz0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790589094948uygi",
+          "title": "IFRS Practical Cases_260207_145736.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGsVqujatVT54yr8tsCzp0Cd7DPFCqwACT5sAAkn2sEhj5DggLdyC_z0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905890950352zew",
+          "title": "IFRS-IAS summary notes.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBGsZqujatKNyP3gc0P4byqa4pZaZogwACh1IAAuq12UhrSnMCsgjQpj0E",
           "description": ""
         }
       ]
@@ -2925,115 +3205,87 @@
       "order": 2,
       "resources": [
         {
-          "id": "res_cat_p4_b1",
-          "title": "📖 P4 Kaplan Study Text & Revision Kit",
-          "type": "link",
-          "value": "https://t.me/Finance_Ahmadillo",
-          "description": "P4 Kaplan & BPP latest exam kits and textbooks"
-        },
-        {
-          "id": "res_1790331155964h3dm",
-          "title": "AFMPocketNotes202526.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIQhWq2SROxw4geo-eAW-xV3nk673d_AAK6qAACx5RBSeOlyK42Y_1YPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1790331155966tibs",
-          "title": "AFM Exam Kit 2026-27 ISDC_260905_165351.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIQhmq2SRNGi9UYoi00TkDwCWVzvzWUAAItpgACnWxhSayWMdI1U0yZPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1790331155968xdj2",
-          "title": "ACCA_P4_Advanced_Financial_Management_AFM_Kaplan_Study_Text_2020.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIQh2q2SRMtBuQ2yRH6z0FMrwABHFLkngAC9agAAp1saUnhhJetJqcqvT0E",
-          "description": ""
-        },
-        {
-          "id": "res_1790331155969u7ly",
+          "id": "res_1790590567742xc3t",
           "title": "ACCA_P4_Advanced_Financial_Management_AFM_Kaplan_Pocket_Notes_2020.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIQiGq2SRM2MluSP2mL1kI1nms29DIWAAL2qAACnWxpSV-A3W7zzNuEPQQ",
+          "value": "BQACAgIAAxkBAAEBHClquj5nUf7g1w80mTaDeXfIKlnuUQAC9qgAAp1saUldIpXmZEwxbz0E",
           "description": ""
         },
         {
-          "id": "res_1790331155972xj3s",
+          "id": "res_1790590567744q5bt",
           "title": "ACCA_P4_Advanced_Financial_Management_AFM_Kaplan_Exam_Kit_2023_24.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIQiWq2SRPqWX6B2l4cciA7_5f-6f4OAAIHqQACnWxpSZYg_dRIad8_PQQ",
+          "value": "BQACAgIAAxkBAAEBHCpquj5nOhrnSBr41fVBchNONMWJiAACB6kAAp1saUkr_P_c_OGhUT0E",
           "description": ""
         },
         {
-          "id": "res_1790331155973aqxw",
+          "id": "res_1790590567746seot",
           "title": "AFM Kaplan Text 2025-26.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIQimq2SRPmE0ssDxL2njb2VFPS59lfAAIQqQACnWxpSaUDvYuiRzs3PQQ",
+          "value": "BQACAgIAAxkBAAEBHCtquj5nW3BnpTr2UQYJkOiyzooNywACEKkAAp1saUnPHuPnVolqej0E",
           "description": ""
         },
         {
-          "id": "res_1790331155974yibw",
+          "id": "res_1790590567748x3i5",
           "title": "AFM Pocket Notes 2020-21.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIQi2q2SROmxe8eRkLAHpGPZ709DBT8AAIRqQACnWxpSUwZ5A9Q2FkDPQQ",
+          "value": "BQACAgIAAxkBAAEBHCxquj5nrlDwfJGfepYYs9ZgbOrfuAACEakAAp1saUnqtMBXFdVSUT0E",
           "description": ""
         },
         {
-          "id": "res_1790331155976rpas",
+          "id": "res_1790590567750ax81",
           "title": "AFMStudyText202526.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIQjGq2SRO2Mjoo2bu-GqATQm_5VEVhAAIaqQACnWxpSTE-Ly0sZg4lPQQ",
+          "value": "BQACAgIAAxkBAAEBHC1quj5nuGCKtwXnSIIIvCzNbiO7SQACGqkAAp1saUnqJwGATZ5Iwz0E",
           "description": ""
         },
         {
-          "id": "res_1790331155978r21k",
+          "id": "res_1790590567752jzou",
           "title": "ACCA-AFM-S25-Notes.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIQjWq2SRO4JzItccI26Np9BeQLTaZEAAIcqQACnWxpSa99sC8_7-C_PQQ",
+          "value": "BQACAgIAAxkBAAEBHC5quj5nNp8y4xeEzjCnxf_AZsewMwACHKkAAp1saUkXzuy6hoZtBD0E",
           "description": ""
         },
         {
-          "id": "res_1790331155980oidf",
+          "id": "res_1790590567753g2l9",
           "title": "Acca Fusion AFM Exam Kit 2026-27 .pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIQjmq2SRNJ9aP90iiGzFO59AAB1O9LxAACRakAAp1saUl9GlAiUU2KEj0E",
+          "value": "BQACAgIAAxkBAAEBHC9quj5na-czwW6cM2os9b_20Im-eAACRakAAp1saUl2lilGMb80WD0E",
           "description": ""
         },
         {
-          "id": "res_1790331155982psdm",
+          "id": "res_179059056775561wh",
           "title": "Acca Fusion AFM Study Text 2026-27.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIQj2q2SRPB0HQ3aWyMW06xmWL8KZ3yAAJLqQACnWxpSS-UnXwMDtHCPQQ",
+          "value": "BQACAgIAAxkBAAEBHDBquj5nuN6Goka5O4frfTlNjXV0_QACS6kAAp1saUkMyydfaTfvBj0E",
           "description": ""
         },
         {
-          "id": "res_1790331155983jr5v",
+          "id": "res_179059056783574xr",
           "title": "Acca Fusion AFM Study Text 2026-27.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIQkGq2SRNEHN3txDOwL5Hlt0hd5to3AALopAACURCZSW63ylfYDoBKPQQ",
+          "value": "BQACAgIAAxkBAAEBHDFquj5ntUqcq2j9HkIq7CPM_abKPQAC6KQAAlEQmUmj86jq3VQJHT0E",
           "description": ""
         },
         {
-          "id": "res_1790331155985bqc2",
+          "id": "res_1790590567838xsxm",
           "title": "AFM Exam Kit 2026-27 ISDC_260905_165351.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIQkWq2SRNVuXe-CJ6h2e_8OoMsyjV4AALspAACURCZSWwgUPkXjtSUPQQ",
+          "value": "BQACAgIAAxkBAAEBHDJquj5nJTPJZnLzvoaqQZKNoEq7sgAC7KQAAlEQmUlBhOCvUyMB_j0E",
           "description": ""
         },
         {
-          "id": "res_1790331156074yctl",
+          "id": "res_17905905678401qmk",
           "title": "Acca Fusion AFM Exam Kit 2026-27 .pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIQkmq2SROiCaW9PkREE45axSAIpJzQAALtpAACURCZSWLEnTR5yc_aPQQ",
+          "value": "BQACAgIAAxkBAAEBHDNquj5naK2IXQ8WWjua49Jxm4FFYQAC7aQAAlEQmUlmjyqyaLYGPz0E",
           "description": ""
         },
         {
-          "id": "res_1790331156075mklj",
+          "id": "res_1790590567842l1t4",
           "title": "Acca Fusion AFM Study Text 2026-27 (1).pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIQk2q2SRNbe0zDhhIvJe4X24PqCRPgAALvpAACURCZST7QmAWwRrNePQQ",
+          "value": "BQACAgIAAxkBAAEBHDRquj5n-M4FoBIkWMgcFM-TV2evjgAC76QAAlEQmUk3yGl5Urpnbj0E",
           "description": ""
         }
       ]
@@ -3132,94 +3384,101 @@
       "order": 2,
       "resources": [
         {
-          "id": "res_1790578990405t97u",
+          "id": "res_1790590814372putb",
+          "title": "APM.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAEBHHpquj9eT41X43vsDvZp9iHlioSiCAACjhoAAvEeuVXQmDIAAbNxlcE9BA",
+          "description": ""
+        },
+        {
+          "id": "res_1790590814375w447",
+          "title": "APM Pocket Notes 2024 -25.pdf",
+          "type": "file_id",
+          "value": "BQACAgUAAxkBAAEBHHtquj9egc-7HrFmTAU3au_5tXI6SAACkhoAAvEeuVUaQpTseliEgj0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905908143774kxe",
           "title": "APM Study Text 2024-25 ISDC.pdf",
           "type": "file_id",
-          "value": "BQACAgUAAxkBAAIQ6mq6ES4AAfm7s3rTTlCWn7Y5bbQINQAClhoAAvEeuVXv1yJ_TKp7jT0E",
+          "value": "BQACAgUAAxkBAAEBHHxquj9eblrtZUEseZ5RK0pcdLiA7AAClhoAAvEeuVV-9qxloNNYJD0E",
           "description": ""
         },
         {
-          "id": "res_17905789904077urr",
+          "id": "res_179059081437927pq",
           "title": "APM Exam Kit 2024-25 ISDC.pdf",
           "type": "file_id",
-          "value": "BQACAgUAAxkBAAIQ62q6ES6BFyV4LD3L7ue3D9qkRkKsAAKTGgAC8R65VfmuvONQCrZdPQQ",
+          "value": "BQACAgUAAxkBAAEBHH1quj9e5Yyn9Ke53B7b3c5bAj9BSQACkxoAAvEeuVUwwcQ4HfL7pz0E",
           "description": ""
         },
         {
-          "id": "res_1790578990409q6oo",
-          "title": "ACCA-APM-BPP - Revision Kit.pdf",
+          "id": "res_179059081438198lf",
+          "title": "ACCA-APM-notes for revision.pdf",
           "type": "file_id",
-          "value": "BQACAgUAAxkBAAIQ7Gq6ES6JGg4j4Z4d3lhOkGOmEFyxAAKcGgAC8R65VT5HVlZEP993PQQ",
+          "value": "BQACAgUAAxkBAAEBHH5quj9eG29pQ4SDIeJ_x5mJx580KQACjxoAAvEeuVWoLeA9ZqL_Hj0E",
           "description": ""
         },
         {
-          "id": "res_1790578990410u1tb",
-          "title": "ACCA-APM-BPP - Revision Kit.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIQ7Wq6ES4U9220gKRp11aXfbZkAyTUAAIqkgACydoJSQhIM-AhETLcPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1790578990413j1u7",
+          "id": "res_1790590814384s9x9",
           "title": "ACCA-APM-Workbook.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIQ7mq6ES4QdZEGyyVwUyEBnCm_9ka3AAIskgACydoJSYq1UBbvWM2-PQQ",
+          "value": "BQACAgUAAxkBAAEBHH9quj9e-e95X38_Ki7EjS3vl-oKNgAClRoAAvEeuVW6P6qk5pVbaT0E",
           "description": ""
         },
         {
-          "id": "res_1790578990414xvyo",
-          "title": "APM Integrated Workbook STUDENT 2024-25_260227_080022.pdf",
+          "id": "res_1790590814386pupi",
+          "title": "ACCA-APM-BPP - Revision Kit.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIQ72q6ES6JTcg9Wq6hb5o26KLaiYDWAAItkgACydoJSa4LF3uAMMw_PQQ",
+          "value": "BQACAgUAAxkBAAEBHIBquj9ee7p5P_ZcI7vEo9x4E4nYnwACnBoAAvEeuVWGbuDrMukN1j0E",
           "description": ""
         },
         {
-          "id": "res_1790578990416dqqo",
-          "title": "ACCA_APM_All_Formulas.pdf",
+          "id": "res_1790590814388bttc",
+          "title": "ACCA-APM-BPP - Revision Kit.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIQ8Gq6ES66kHu3ZR-b9AhRNYQBD7LdAAKinAACgD3JSfdd_3qALFFPPQQ",
+          "value": "BQACAgIAAxkBAAEBHIFquj9ewjCHdYGHdGswvWgbyJRM_AACKpIAAsnaCUlKSOlcAdc-Jj0E",
           "description": ""
         },
         {
-          "id": "res_1790578990419y5xa",
+          "id": "res_1790590814434vx7s",
+          "title": "ACCA-APM-Workbook.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBHIJquj9ewjQuN5BDHTovo3LjFd8qHAACLJIAAsnaCUmjrf6KE-tVfT0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790590814437z12m",
           "title": "APM Flashcards By Abdul-Ahad (StudyBuddies).pdf",
           "type": "file_id",
-          "value": "BQACAgUAAxkBAAIQ8Wq6ES7Qo62fr2vUWUTmyRbbacyOAAINHAACEDfoVSAizcWGHRj7PQQ",
+          "value": "BQACAgUAAxkBAAEBHINquj9erlgeUgnAFpVvAwT6kVMCPgACDRwAAhA36FU_0mse6gUW0D0E",
           "description": ""
         },
         {
-          "id": "res_1790578990420yjfl",
-          "title": "APM Revision Notes By Abdul-Ahad .pdf",
-          "type": "file_id",
-          "value": "BQACAgUAAxkBAAIQ8mq6ES6FYrukFWJcyPB7zs5ZEpdfAAIPHAACEDfoVdRg91TyC1_XPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1790578990474d57n",
+          "id": "res_1790590814439ekc7",
           "title": "ACCA APM Notes for 2026-2027.pdf",
           "type": "file_id",
-          "value": "BQACAgQAAxkBAAIQ82q6ES4zWUqFstC0Yizwr0e0OSBvAAKwHgACgJm5UO9ruC85ycXsPQQ",
+          "value": "BQACAgQAAxkBAAEBHIRquj9ei_N0eVPR60tsIVeN4cKBAwACsB4AAoCZuVCMtQII-WWuMT0E",
           "description": ""
         },
         {
-          "id": "res_1790578990476d03b",
+          "id": "res_1790590814442pfr5",
           "title": "APM-Syllabus-Overview-2026-2027.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIQ9Gq6ES7KlwNBBnR7LHxT243UYYvaAAINlQACxFbBSMWjvxMlzwXqPQQ",
+          "value": "BQACAgIAAxkBAAEBHIVquj9eiucqWvj2dP69RT3pSKWdMwACDZUAAsRWwUhxko5ImcI9jj0E",
           "description": ""
         },
         {
-          "id": "res_17905789904785xdb",
+          "id": "res_1790590814444ce9g",
           "title": "Apm vs mpm lecture notes.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIQ9Wq6ES7wkPSaUF_86X98O1cQL3XQAALkpwAClnU4SXPj2NyUzGgrPQQ",
+          "value": "BQACAgIAAxkBAAEBHIZquj9eJnq-KMPohpgNCjoPq1KPdAAC5KcAApZ1OEmz8JRPPuKCUD0E",
           "description": ""
         },
         {
-          "id": "res_1790578990480jhri",
+          "id": "res_17905908144468dm0",
           "title": "APM Exam Kit 2026-27 ISDC.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIQ9mq6ES4JzIxNFySD-HkwCld2jM1NAAKErQACSbNpSY041mPLFxzSPQQ",
+          "value": "BQACAgIAAxkBAAEBHIdquj9e4dGw7QWsIzzvgE0anPKpNQAChK0AAkmzaUk4TidiG0h8yz0E",
           "description": ""
         }
       ]
@@ -3294,66 +3553,73 @@
       "order": 2,
       "resources": [
         {
-          "id": "res_17905791359503a6t",
+          "id": "res_17905963842857akp",
           "title": "ATX_Revision_Notes_FA25.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIRCGq6Eb8VMFy4YnVrArCUBJ8CF3GFAAIBowAC-z2BSDBIg9jkP4FQPQQ",
+          "value": "BQACAgIAAxkBAAEBHcFqulUgyPdgENIxmodQJaOXHaaLRwACzKsAAqEtOUkPlPQH-u_drD0E",
           "description": ""
         },
         {
-          "id": "res_179057913595122v0",
-          "title": "ATX_Revision_Notes_FA25.pdf",
+          "id": "res_1790596384314x7s6",
+          "title": "ATX-UK Pre-September 2026 Mock Exam.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIRCWq6Eb8c6zIeMNCvfVTrC0qA6LYnAALMqwACoS05SRs5ZMI_soahPQQ",
+          "value": "BQACAgIAAxkBAAEBHcJqulUgZN06sXeE2s1GwB-1wKo5MQACzqsAAqEtOUkE9Y9NpWp0bT0E",
           "description": ""
         },
         {
-          "id": "res_1790579135953dxtg",
+          "id": "res_1790596384318px29",
+          "title": "ATX-UK Pre-September 2026 Mock Exam Complete Question.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBHcNqulUgN90Hii9P9qInWSTP4EIF6gACz6sAAqEtOUl8yt_xUUaAqj0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790596384320jfb1",
           "title": "ATX_Exam_Kit_FA25-2.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIRCmq6Eb8_91grHt-J1dmxTHaObLXXAALQqwACoS05SU-2yoK0uhThPQQ",
+          "value": "BQACAgIAAxkBAAEBHcRqulUgztRktYqJKTtRmDAQV8jhnAAC0KsAAqEtOUn7HdY_SQ5h1j0E",
           "description": ""
         },
         {
-          "id": "res_17905791359558rjj",
+          "id": "res_17905963843234mja",
+          "title": "ATX-UK Pre-September 2026 Mock Exam.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBHcVqulUgNFtYISH2gdQGkUbpn61AYAAC0asAAqEtOUll---TDlztFT0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790596384335y78z",
           "title": "ATX_FA_25_June_26_to_March_27_Notes_Compiled_by_Nishi_Malvi.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIRC2q6Eb8hkxwycvMQcxBTusdkSIArAAKlpgAC3TpBSSmYuVYP8y0IPQQ",
+          "value": "BQACAgIAAxkBAAEBHcZqulUg5cr3BskdQQLga9tOhwyWhgACpaYAAt06QUnoHaeW75C28j0E",
           "description": ""
         },
         {
-          "id": "res_1790579135957hd7x",
+          "id": "res_17905963843377g9r",
           "title": "TX_Exam_Kit_FA25.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIRDGq6Eb-62gKR9GKIMIjOZebRTY3EAAKSqAACm0BZSUI-f9VVbCq4PQQ",
+          "value": "BQACAgIAAxkBAAEBHcdqulUg5svyrdtlhGnjnKflS_2-pQACkqgAAptAWUnBX0P4BNHyRT0E",
           "description": ""
         },
         {
-          "id": "res_17905791359584h1z",
-          "title": "AC785C~1.PDF",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIRDWq6Eb_uearrKd-dEXNI75ghP0RRAAKTqAACm0BZSQzK3iAprxBzPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_179057913596011rd",
+          "id": "res_1790596384339w3gm",
           "title": "ATX_Revision_Notes_FA25.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIRDmq6Eb-cC7TpNn4AAeoorxbt1UmJywAClKgAAptAWUlaJsXME9f6sT0E",
+          "value": "BQACAgIAAxkBAAEBHchqulUgbATM4wXjBHGYL8ZP2iFykQAClKgAAptAWUnEoHiW2N5DBT0E",
           "description": ""
         },
         {
-          "id": "res_1790579135961zq2i",
+          "id": "res_1790596384341nnb5",
           "title": "ATX_Study_Text_FA25.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIRD2q6Eb_M2GlLs1hYrR6r1FwxfFl9AAKVqAACm0BZSfXoy9Ah9EppPQQ",
+          "value": "BQACAgIAAxkBAAEBHclqulUgAaKzGXiml2o4-OoJI8mNywAClagAAptAWUmTRYYagQxDlj0E",
           "description": ""
         },
         {
-          "id": "res_179057913596396vc",
+          "id": "res_1790596384344fl3f",
           "title": "ATX_Exam_Kit_FA25.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIREGq6Eb8a_0xT50GyR6mJ0IPa5thmAAKWqAACm0BZSUC_bUZyy1aAPQQ",
+          "value": "BQACAgIAAxkBAAEBHcpqulUgVUYNkziAKCqpH_ApRwpnlQAClqgAAptAWUkQc2yKQONyMD0E",
           "description": ""
         }
       ]
@@ -3420,80 +3686,73 @@
       "order": 2,
       "resources": [
         {
-          "id": "res_cat_p7_b1",
-          "title": "📖 P7 Kaplan Study Text & Revision Kit",
-          "type": "link",
-          "value": "https://t.me/Finance_Ahmadillo",
-          "description": "P7 Kaplan & BPP latest exam kits and textbooks"
-        },
-        {
-          "id": "res_1790579265042ai6g",
-          "title": "AAA Handout Dec 2025.pdf",
+          "id": "res_17905965089716s2k",
+          "title": "ACCA_AAA_ISSA_5000_Sustainability_made_easy_by_ACCA_PassPoint.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIRJmq6EkCDCHjHU7I_ca1TMNtocbEIAAI9jAACQIEQS9QjHKP4QV_MPQQ",
+          "value": "BQACAgIAAxkBAAEBHg1qulWcAiAQO3NXUDgaNLeBNQjVuAACyJgAAksu4UjxifO796RW2D0E",
           "description": ""
         },
         {
-          "id": "res_179057926504414b0",
-          "title": "ACCA AA_AAA substantive procedures by Alan Biju Palak ACCA.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIRJ2q6EkARvHJzkl5UAoAQiT1-v3RBAAJRlQACA8sISUVvBzw-kYhJPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1790579265045i081",
-          "title": "AAA (kit) 2025-26.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIRKGq6EkAMppEtb5O7duuizeuDc2oJAAJOkQACqqdZSbqMrPAAAWEPRz0E",
-          "description": ""
-        },
-        {
-          "id": "res_1790579265047qs1h",
-          "title": "AAA (text) 2025-26.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIRKWq6EkAkN-XDRXCM3UGDsgdlr6AzAAJPkQACqqdZSfrluHBg3_KwPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1790579265048lu1u",
-          "title": "AAA Kaplan (text) 2025-26.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIRKmq6EkBRQWt39-nHzctQBGw8QmVBAAJUkQACqqdZSeN43cpeWimLPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1790579265050wmdx",
-          "title": "ACCA-AAA-Topic-by-Topic-Quiz.pdf",
-          "type": "file_id",
-          "value": "BQACAgQAAxkBAAIRK2q6EkBGftraunPNejS8qmWdq276AALaHgACH9OoUYdbqmKrCw7tPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_17905792844580igi",
-          "title": "ACCA PassPoint Risk Assessment made Easy by Sir Mahad.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIRMmq6ElQGCZ1ryXaoDqXqL2ogzEfKAALNrAACK5NoSXNn8iPTLCKoPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1790579284461lc74",
+          "id": "res_1790596508975eqbk",
           "title": "ACCA_AAA_&_AA_F8_Risk_&_Responses_Past_papers_by_ACCA_PassPoint.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIRM2q6ElRcD0eCXatuYNzrON4xbjv1AALRrAACK5NoSXmV53Gdd5eQPQQ",
+          "value": "BQACAgIAAxkBAAEBHg5qulWcJUL6lBjpkVcl2xo7V-X8swACypgAAksu4UiF62JKOGDeTz0E",
           "description": ""
         },
         {
-          "id": "res_17905792844634z4q",
+          "id": "res_17905965089784ym3",
+          "title": "ACCA AAA & F8 Crash Course by PassPoint.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBHg9qulWcdgABzWs5bSaGDgHHE9F4SdgAAsuYAAJLLuFIzaiyC1uEWb49BA",
+          "description": ""
+        },
+        {
+          "id": "res_1790596508981yocr",
+          "title": "AAA (kit) 2025-26.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBHhBqulWcyCul8o3Tc6Hx5al9Yp2QcAACZrIAAiuTYEmTKnWaopSVqT0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790596508983dwvn",
+          "title": "AAA (kit) 2025-26.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBHhFqulWcMceYOGI6MtvE8ZR8Z14D0AACFqwAAiuTaEmVvFKpG68O-D0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790596508986r3ck",
+          "title": "ACCA_AAA_&_AA_F8_Risk_&_Responses_Past_papers_by_ACCA_PassPoint.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBHhJqulWcXDcohrw_eUcSw6KcqFrxogAC0awAAiuTaElHX1X15bPZKT0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905965090388psk",
           "title": "ACCA_AAA_&_F8_Super_Important_Procedures_by_ACCA_PassPoint.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIRNGq6ElT67KTBJUVFjUFv38jctNHPAALWrAACK5NoScQ30lU4t8oRPQQ",
+          "value": "BQACAgIAAxkBAAEBHhNqulWc8cTWUEocAalJJdbnTWdY2AAC1qwAAiuTaEmzQvgkPiAbIT0E",
           "description": ""
         },
         {
-          "id": "res_1790579284464uysj",
+          "id": "res_1790596509041l9er",
           "title": "IAS IFRS Standards for Revision by Acca PassPoint.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIRNWq6ElRQw2ZRcUbbF1rLN786qKmcAALbrAACK5NoSWLpNehsMiFkPQQ",
+          "value": "BQACAgIAAxkBAAEBHhRqulWcYaQxf3vE5ei919bG5wdDHQAC26wAAiuTaEn0iTbjzyoPuj0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790596509043g22u",
+          "title": "ACCA AAA Revision Notes by Sir Mahad (ACCA PassPoint).pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBHhVqulWcNp2QGSQHZQPhxGIPqu9YoAAC3awAAiuTaElc0joB80oAAes9BA",
+          "description": ""
+        },
+        {
+          "id": "res_1790596509048zhbn",
+          "title": "AAA (kit) 2025-26.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBHhZqulWcpqwxZssYOFu98kgL9q5A4AACTqkAAq9ymEl5zPVEZ5hX_z0E",
           "description": ""
         }
       ]
@@ -3583,34 +3842,6 @@
       "parentId": "cat_cfa_l1",
       "order": 2,
       "resources": [
-        {
-          "id": "res_1790579848933b7ta",
-          "title": "CFA_LEVAL_1_BOOK 1 _2027.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIRXGq6FIg-YRsQEp0-2jP3RvDQSz17AALmnQACBGvZSbf13G3Ty2TwPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1790579848935gnz2",
-          "title": "CFA_LEVAL_1_BOOK_2__2027.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIRXWq6FIhHWAg-isJzm88vbMNAClY-AALnnQACBGvZSdpEf4VwQobePQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1790579848937zkc2",
-          "title": "CFA_LEVAL_1_BOOK_3__2027.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIRXmq6FIhUVmAPQVJc1nCdM-2Yui4UAALonQACBGvZSVte-KyCvsHrPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1790579848940a8sq",
-          "title": "CFA_LEVAL_1_BOOK_4__2027.pdf",
-          "type": "file_id",
-          "value": "BQACAgIAAxkBAAIRX2q6FIjCAq4FEOL4kZwJ_Ioh68cwAALqnQACBGvZSc_iYqEnzkJ8PQQ",
-          "description": ""
-        },
         {
           "id": "res_1790579886161x5yn",
           "title": "L1 V1 Quant.pdf",
@@ -3841,13 +4072,6 @@
           "title": "11.Ethical and professional standards.zip",
           "type": "file_id",
           "value": "BQACAgIAAxkBAAIRTGq6E4X2WJXbPMADfe4NsFI2ngwfAALyWgACr3yRSTfzBq8qbBAaPQQ",
-          "description": ""
-        },
-        {
-          "id": "res_1790579589776wf0z",
-          "title": "How to use BA II Plus Calculator",
-          "type": "file_id",
-          "value": "BAACAgIAAxkBAAIRTWq6E4WvCbcZUC4wW6ZhqIKvWbkRAAIsYAACGhshSpJ1ThzNOvUwPQQ",
           "description": ""
         }
       ]
@@ -4189,171 +4413,171 @@
       "order": 3,
       "resources": [
         {
-          "id": "res_17905801344334q69",
+          "id": "res_1790596901354yjj2",
           "title": "Video Lesson",
           "type": "file_id",
-          "value": "BAACAgQAAxkBAAIRlGq6FaYVxVmJ1eihdPMmrTkXw5tZAAIDEQACxTWhUCrN6pW-PXVxPQQ",
+          "value": "BAACAgQAAxkDAAEBEwFquhVjmki5Qf3cXsQdTTgDqiw2PwACAxEAAsU1oVDrDaOmOfsT4j0E",
           "description": ""
         },
         {
-          "id": "res_1790580134437sgf0",
+          "id": "res_1790596901356rmk0",
           "title": "Video Lesson",
           "type": "file_id",
-          "value": "BAACAgQAAxkBAAIRlWq6FaZ-FsfmnjFxdlqVUmEiDo1tAAIEEQACxTWhUE0FbS7h7szmPQQ",
+          "value": "BAACAgQAAxkDAAEBEwJquhVjT3rAZ7GXKIgunE8JugxFQAACBBEAAsU1oVB_mg-MTciXFz0E",
           "description": ""
         },
         {
-          "id": "res_1790580134440cbqz",
+          "id": "res_1790596901358g9io",
           "title": "Video Lesson",
           "type": "file_id",
-          "value": "BAACAgQAAxkBAAIRlmq6FaZT0oOx_L20q_pEAsmgwn1bAAIJEQACxTWhUOBa9GEgne_ePQQ",
+          "value": "BAACAgQAAxkDAAEBEwNquhVjjk4W2sg0BLo0OlU5FvnNAwACCREAAsU1oVAtrz4rZvEtTT0E",
           "description": ""
         },
         {
-          "id": "res_1790580134445ag3g",
+          "id": "res_179059690136230jb",
           "title": "Video Lesson",
           "type": "file_id",
-          "value": "BAACAgQAAxkBAAIRl2q6FaZcLvJCQrYx0ZzMKIghGNAyAAIKEQACxTWhUJSWVRkQGY_vPQQ",
+          "value": "BAACAgQAAxkDAAEBEwRquhVjmKKQzZ7ledUXvo2mA-F58QACChEAAsU1oVBRs2pTLeEs0T0E",
           "description": ""
         },
         {
-          "id": "res_17905801344486uu0",
+          "id": "res_1790596901364uab2",
           "title": "Video Lesson",
           "type": "file_id",
-          "value": "BAACAgQAAxkBAAIRmGq6FaaDCemKopx_ZJObx_ibPRREAAILEQACxTWhUJuRsRS4rOAUPQQ",
+          "value": "BAACAgQAAxkDAAEBEwVquhVjwZSM6E8xusRx8YmVxwqJDQACCxEAAsU1oVBXfxfPnrvDjD0E",
           "description": ""
         },
         {
-          "id": "res_1790580134476qsnn",
+          "id": "res_1790596901367dcgg",
           "title": "Video Lesson",
           "type": "file_id",
-          "value": "BAACAgQAAxkBAAIRmWq6FaaYdEN1R37ZF7C6EVdqZdezAAIMEQACxTWhUNzI6mNFl1pCPQQ",
+          "value": "BAACAgQAAxkDAAEBEwZquhVj9TrM3XWjPyiQvZ-lFfErKQACDBEAAsU1oVC-dsJBHfGVOz0E",
           "description": ""
         },
         {
-          "id": "res_1790580134479qdp4",
+          "id": "res_1790596901434lnpo",
           "title": "Video Lesson",
           "type": "file_id",
-          "value": "BAACAgQAAxkBAAIRmmq6FaYUq49M07NOYH95dDiLYKOPAAINEQACxTWhUBZmtOFj48OYPQQ",
+          "value": "BAACAgQAAxkDAAEBEwdquhVjJDhQS4NZVram-Fpza_UpGAACDREAAsU1oVBCSVQeGiOLhz0E",
           "description": ""
         },
         {
-          "id": "res_1790580134482w0pe",
+          "id": "res_1790596901437tczi",
           "title": "Video Lesson",
           "type": "file_id",
-          "value": "BAACAgQAAxkBAAIRm2q6Faagn8c14B1WoCs4P1ll29mFAAIOEQACxTWhUHF_N2lW7a0yPQQ",
+          "value": "BAACAgQAAxkDAAEBEwhquhVj6yZCKVphbAABAxxQjwkMDlIAAg4RAALFNaFQQdCRzkc2f2Y9BA",
           "description": ""
         },
         {
-          "id": "res_1790580134485vw60",
+          "id": "res_1790596901438kple",
           "title": "Video Lesson",
           "type": "file_id",
-          "value": "BAACAgQAAxkBAAIRnGq6FaaiausZ0tfwKTrYj1PaIHZVAAK_DQACYCq4UJXR-R3pN-zlPQQ",
+          "value": "BAACAgQAAxkDAAEBEwlquhVjYA36-K0UxOKn0aM7ovaoVwACvw0AAmAquFBvFdp142zvQj0E",
           "description": ""
         },
         {
-          "id": "res_1790580134488xeyj",
+          "id": "res_17905969014401yzg",
           "title": "Video Lesson",
           "type": "file_id",
-          "value": "BAACAgQAAxkBAAIRnWq6FaYsyGiCfl_779i9c8dT_1euAALADQACYCq4UKV0mAgjJ5IlPQQ",
+          "value": "BAACAgQAAxkDAAEBEwpquhVjt-781cvthFi9cues21wzjgACwA0AAmAquFBhEdHOVjsXLD0E",
           "description": ""
         },
         {
-          "id": "res_1790580134576py7f",
+          "id": "res_1790596901442zag2",
           "title": "Video Lesson",
           "type": "file_id",
-          "value": "BAACAgQAAxkBAAIRnmq6FaaNpodI4izFi80_0dej-CgoAALBDQACYCq4UI8JpzOjiJFvPQQ",
+          "value": "BAACAgQAAxkDAAEBEw1quhVxTkJwIr2_3FTGLk2KhgP6CQACwQ0AAmAquFCMJfQSqe9bAAE9BA",
           "description": ""
         },
         {
-          "id": "res_1790580134579iy47",
+          "id": "res_1790596901444v26f",
           "title": "Video Lesson",
           "type": "file_id",
-          "value": "BAACAgQAAxkBAAIRn2q6Faa3lS1lNomc7v1orgwl-wxdAALCDQACYCq4UJVyFSh8kWJ0PQQ",
+          "value": "BAACAgQAAxkDAAEBEw5quhVyB7rRKHN9uY316U3y8ty-7wACwg0AAmAquFCpsNdxKjdzHj0E",
           "description": ""
         },
         {
-          "id": "res_17905801345828137",
+          "id": "res_1790596901445xace",
           "title": "Video Lesson",
           "type": "file_id",
-          "value": "BAACAgQAAxkBAAIRoGq6FaYEFwUjVYhPbwdM0Of4oHgRAALrDgAChSWIUTtM7G0rYbfnPQQ",
+          "value": "BAACAgQAAxkDAAEBEw9quhVytShxiick1CIfJeHMoxEiyAAC6w4AAoUliFFEaSv6IfyzKz0E",
           "description": ""
         },
         {
-          "id": "res_1790580134585u9xt",
+          "id": "res_17905969014477rx7",
           "title": "Video Lesson",
           "type": "file_id",
-          "value": "BAACAgQAAxkBAAIRoWq6FaYV43qa330XTynnW6lxH_-wAALGDwACSPg5Ui4YKMi8L0JjPQQ",
+          "value": "BAACAgQAAxkDAAEBExBquhVysgsjMrtrxe6aldCfaFHtFgACxg8AAkj4OVJqSYPC_rOLdz0E",
           "description": ""
         },
         {
-          "id": "res_1790580134675phhq",
+          "id": "res_1790596901535j48y",
           "title": "Video Lesson",
           "type": "file_id",
-          "value": "BAACAgQAAxkBAAIRomq6FaYffcTXpfP357pFmXcqm1faAALHDwACSPg5UoeSenJTxKXwPQQ",
+          "value": "BAACAgQAAxkDAAEBExFquhVyg8nOMNiW3r4wmnqYxPBpkwACxw8AAkj4OVLUlv-rPIM4sT0E",
           "description": ""
         },
         {
-          "id": "res_1790580134773gtxc",
+          "id": "res_1790596901537r4qv",
           "title": "Video Lesson",
           "type": "file_id",
-          "value": "BAACAgQAAxkBAAIRo2q6FabkGR7DG-q4QcsvzeUNnQT2AALIDwACSPg5Uq6FefuZO5AMPQQ",
+          "value": "BAACAgQAAxkDAAEBExJquhVyWgHMxG-38nBIxK_zdzuN3AACyA8AAkj4OVIKcwEQ9G8aED0E",
           "description": ""
         },
         {
-          "id": "res_1790580134878lk0w",
+          "id": "res_1790596901539r4ga",
           "title": "Video Lesson",
           "type": "file_id",
-          "value": "BAACAgQAAxkBAAIRpGq6FaZlbiqJWzAWGJlk25LgJ6sKAALJDwACSPg5Up5ddxWMN_ZiPQQ",
+          "value": "BAACAgQAAxkDAAEBExNquhVyfPG7oBnlXF-8ruLsQC6RQgACyQ8AAkj4OVLqcB8SWBODfj0E",
           "description": ""
         },
         {
-          "id": "res_1790580134883nfgi",
+          "id": "res_17905969015419c9p",
           "title": "Video Lesson",
           "type": "file_id",
-          "value": "BAACAgQAAxkBAAIRpWq6Faawmg5d-NTgDKQPP-St00fyAALLDwACSPg5UpqrAc-xOSb_PQQ",
+          "value": "BAACAgQAAxkDAAEBExRquhVyoLiHlB1_eyRRHLGCb6K7mAACyw8AAkj4OVKnd4RvvPZ9wz0E",
           "description": ""
         },
         {
-          "id": "res_1790580134973x6o6",
+          "id": "res_1790596901543qb96",
           "title": "Derivates.zip",
           "type": "file_id",
-          "value": "BQACAgUAAxkBAAIRpmq6FaY8V74bEshUq48zCZQyNU9uAALNBwACueoQVIz3d_AFAAHuVz0E",
+          "value": "BQACAgUAAxkDAAEBExVquhVyfUZfYoYZ1NSS0HMVHF-MVgACzQcAArnqEFQkoGH3-Wcmpz0E",
           "description": ""
         },
         {
-          "id": "res_1790580134974kpa2",
+          "id": "res_1790596901545gwmr",
           "title": "Ethics.zip",
           "type": "file_id",
-          "value": "BQACAgUAAxkBAAIRp2q6FaYfYx1H0gOdQzI7-f7UidKSAALrBwACueoQVErSZN_CA0yPPQQ",
+          "value": "BQACAgUAAxkDAAEBExZquhVyeaaTSH-AhAsrGOwrbFHJygAC6wcAArnqEFST644jOzI8GT0E",
           "description": ""
         },
         {
-          "id": "res_17905801349768qaa",
+          "id": "res_1790596901634rtcd",
           "title": "Equity Valuation 01.zip",
           "type": "file_id",
-          "value": "BQACAgUAAxkBAAIRqGq6FabiWyyyVnce-EUQf20pTBlfAAIHCgACvxjxVfidzFINPfvOPQQ",
+          "value": "BQACAgUAAxkDAAEBExlquhVz0KP2E_slj27Q-bTcATkUNAACBwoAAr8Y8VVIqFPlppV_FD0E",
           "description": ""
         },
         {
-          "id": "res_1790580134978bh2r",
+          "id": "res_1790596901637m1ar",
           "title": "Equity Valuation 02.zip",
           "type": "file_id",
-          "value": "BQACAgUAAxkBAAIRqWq6FaYOjzb7wIsq53RohPa4hi88AAIICgACvxjxVdTM6ZaBKH3HPQQ",
+          "value": "BQACAgUAAxkDAAEBExpquhVzCBXFjeKDriCVKDtli2Q81wACCAoAAr8Y8VViBdYZkSMR4z0E",
           "description": ""
         },
         {
-          "id": "res_1790580134980gz67",
+          "id": "res_1790596901638jkuo",
           "title": "Financial Reporting & Analysis 01.zip",
           "type": "file_id",
-          "value": "BQACAgUAAxkBAAIRqmq6FaYjMgiAjOcg5wh_wVxpeZpUAAIMCgACvxjxVYq5-Jm0G7SxPQQ",
+          "value": "BQACAgUAAxkDAAEBExtquhV03i6yc-ZfFyAjNOW2AWV93AACDAoAAr8Y8VW0PsKWFixYKz0E",
           "description": ""
         },
         {
-          "id": "res_1790580134982bjl8",
+          "id": "res_1790596901640gsqf",
           "title": "Financial Reporting & Analysis 02.zip",
           "type": "file_id",
-          "value": "BQACAgUAAxkBAAIRq2q6FaZK5IJhg149WnNFrdNSTUyaAAJiCgACvxjxVUmih_mafTCGPQQ",
+          "value": "BQACAgUAAxkDAAEBExxquhV0G6lQB9pVdFHrBeouybWu_AACYgoAAr8Y8VXiYFP-S9_GTT0E",
           "description": ""
         }
       ]
@@ -5612,136 +5836,136 @@
       "order": 129,
       "resources": [
         {
-          "id": "res_17886209328838757",
+          "id": "res_1790587996711ja48",
           "title": "FRM2023-Study-Guide.pdf",
           "type": "file_id",
-          "value": "BQACAgUAAxkBAAILhmqcMIQkVPbv0NQVYyIQLaLd9SPtAAILBwACLh2YVGy70_3-rb1pPQQ",
+          "value": "BQACAgUAAxkBAAEBGdNqujRcDe1p9gc5h24z37Q1GUfelgACCwcAAi4dmFReFzMZMBWEkT0E",
           "description": ""
         },
         {
-          "id": "res_1788620932884wys2",
+          "id": "res_17905879967136tge",
           "title": "FRM2023-Learning-Objectives.pdf",
           "type": "file_id",
-          "value": "BQACAgUAAxkBAAILh2qcMIR9YROK9v-GOe4HadzB9qY8AAIMBwACLh2YVMZtuyZr0NpUPQQ",
+          "value": "BQACAgUAAxkBAAEBGdRqujRcAAFzCR3iPLr1JNitDFbqhqgAAgwHAAIuHZhU9o69jqJ8XJc9BA",
           "description": ""
         },
         {
-          "id": "res_17886209328844301",
+          "id": "res_1790587996715l9ci",
           "title": "FRM 2023 Level 1 - Book 1.pdf",
           "type": "file_id",
-          "value": "BQACAgUAAxkBAAILiGqcMISdtqE0K-aR0LK_Z7pEvx8-AAJMBgACu9ioVl4EFpobfT03PQQ",
+          "value": "BQACAgUAAxkBAAEBGdVqujRckymZJY6TQEFLRwxctw4NIAACTAYAArvYqFbiIswCcSqQ0D0E",
           "description": ""
         },
         {
-          "id": "res_178862093288419e1",
+          "id": "res_1790587996718wsug",
           "title": "FRM 2023 Level 1  - Book 2.pdf",
           "type": "file_id",
-          "value": "BQACAgUAAxkBAAILiWqcMIQAAZ-1jx5yuQvXse71nlFNqQACTQYAArvYqFY5U_BMdXuIOT0E",
+          "value": "BQACAgUAAxkBAAEBGdZqujRcolch_1QYmXtLnmeqISvofAACTQYAArvYqFbQM6L38b0U2T0E",
           "description": ""
         },
         {
-          "id": "res_1788620932884otfe",
+          "id": "res_17905879967210cc2",
           "title": "FRM 2023 Level 1 - Book 3.pdf",
           "type": "file_id",
-          "value": "BQACAgUAAxkBAAILimqcMIQtsiaEUb9zFbXZOHxqju6QAAJOBgACu9ioViwf8XvOMDEqPQQ",
+          "value": "BQACAgUAAxkBAAEBGddqujRcfICcaT9pj9eAVAgDLb6s8QACTgYAArvYqFY8YvHZLFcKGz0E",
           "description": ""
         },
         {
-          "id": "res_1788620932884ojcg",
+          "id": "res_1790587996723loja",
           "title": "FRM 2023 Level 1 - Book 4.pdf",
           "type": "file_id",
-          "value": "BQACAgUAAxkBAAILi2qcMIR1INy-XhVsQzL-OtlxaUD9AAJPBgACu9ioVkMVY6eI3y5XPQQ",
+          "value": "BQACAgUAAxkBAAEBGdhqujRcVZHqpYSfafWwssLcO5DMsgACTwYAArvYqFbxXDZQ1ocb1z0E",
           "description": ""
         },
         {
-          "id": "res_1788620932884wehq",
+          "id": "res_17905879967330djb",
           "title": "GARP 2023 FRM PART I-Book 3 - Financial Markets and Products.pdf",
           "type": "file_id",
-          "value": "BQACAgUAAxkBAAILjGqcMIT92Mbz8NmuTKQFspRm0N40AALOBwACPuwpVQNdFFej3yDbPQQ",
+          "value": "BQACAgUAAxkBAAEBGdlqujRc1oJnHVInjPGw1WDJ7PbROQACzgcAAj7sKVUMAAFdm4F7bF89BA",
           "description": ""
         },
         {
-          "id": "res_1788620932885fjbi",
+          "id": "res_17905879967354gpv",
           "title": "GARP 2023 FRM PART I-Book 4 - Valuation and Risk Models.pdf",
           "type": "file_id",
-          "value": "BQACAgUAAxkBAAILjWqcMITqxPSbHQOHH9CymgcJ8hm1AALPBwACPuwpVQHfdL3Nz3nnPQQ",
+          "value": "BQACAgUAAxkBAAEBGdpqujRczYRSfyxeIdmq9YgB_aUwFQACzwcAAj7sKVVOaUcIogWqUD0E",
           "description": ""
         },
         {
-          "id": "res_1788620932885aex4",
+          "id": "res_1790587996737hlqk",
           "title": "GARP 2023 FRM PART I-Book 1 - Foundations of Risk Management.pdf",
           "type": "file_id",
-          "value": "BQACAgUAAxkBAAILjmqcMIQ2uJF8O8IvUwhS-Cz9sOMoAAK2CQACyneYVXJzINb6jj5VPQQ",
+          "value": "BQACAgUAAxkBAAEBGdtqujRcUstxDlINmH5NQQ1ahZL3TgACtgkAAsp3mFXpPuVX1NUOwT0E",
           "description": ""
         },
         {
-          "id": "res_1788620932885p5o7",
+          "id": "res_1790587996739moxt",
           "title": "GARP 2023 FRM PART I-Book 2 - Quantitative Analysis.pdf",
           "type": "file_id",
-          "value": "BQACAgUAAxkBAAILj2qcMISpA2oFAR2yUt2LKUYHzOxtAAK3CQACyneYVS3VUPJiUTgWPQQ",
+          "value": "BQACAgUAAxkBAAEBGdxqujRc6Vn3YjLxyxQTVhji4Lm_tQACtwkAAsp3mFVlSwEGJaWiGD0E",
           "description": ""
         },
         {
-          "id": "res_1788620932886w150",
+          "id": "res_1790587996741nrfp",
           "title": "2025_FRM_Exam_Part_II_4_Liquidity_and_Treasury_Risk_Measurement.pdf",
           "type": "file_id",
-          "value": "BQACAgUAAxkBAAILkGqcMIQeoX8-BGyraapK19eLSEqbAAIeFAACUoAAAVRVSjXjAAEOEws9BA",
+          "value": "BQACAgUAAxkBAAEBGd1qujRck1oFcLlxwmhYOm9ixyunWgACHhQAAlKAAAFURLUeZ7yfn0w9BA",
           "description": ""
         },
         {
-          "id": "res_1788620932886hz2p",
+          "id": "res_1790587996743qnd4",
           "title": "2025_FRM_Exam_Part_II_5_Risk_Management_and_Investment_Management.pdf",
           "type": "file_id",
-          "value": "BQACAgUAAxkBAAILkWqcMIQGUsvy_mG9HbWXlNXygc89AAIhFAACUoAAAVRvfE68KX9G7j0E",
+          "value": "BQACAgUAAxkBAAEBGd5qujRc7N36JoGX-lYiU5Of5FZgIgACIRQAAlKAAAFUiNWkz9eeFf89BA",
           "description": ""
         },
         {
-          "id": "res_17886209328866wkg",
+          "id": "res_1790587996745eaxl",
           "title": "2025 FRM Exam Part II - 3. Operational Risk and Resilience.pdf",
           "type": "file_id",
-          "value": "BQACAgUAAxkBAAILkmqcMIRoDFqagi4VZkMmgRfZz12XAAIlFAACUoAAAVTFzu_ILe47Ij0E",
+          "value": "BQACAgUAAxkBAAEBGd9qujRcw26FnrF2cu_XXRB2RfuNqAACJRQAAlKAAAFUWx-b7hx8WaY9BA",
           "description": ""
         },
         {
-          "id": "res_1788620932886u7cc",
+          "id": "res_1790587996746io4l",
           "title": "2025_FRM_Exam_Part_II_1_Market_Risk_Measurement_and_Management_1.pdf",
           "type": "file_id",
-          "value": "BQACAgUAAxkBAAILk2qcMIR1NdyYI-LSLU5grPfEO6ODAAItFAACUoAAAVRvyflfLO2jaT0E",
+          "value": "BQACAgUAAxkBAAEBGeBqujRciNkyo8iDG2PVlTM36jZAFwACLRQAAlKAAAFU6Dm9n8B8Yw49BA",
           "description": ""
         },
         {
-          "id": "res_1788620932887ksb4",
+          "id": "res_1790587996834bx5w",
           "title": "2025_FRM_Exam_Part_II_2_Credit_Risk_Measurement_and_Management_1.pdf",
           "type": "file_id",
-          "value": "BQACAgUAAxkBAAILlGqcMIRg_Pk73rjpXmJD1gQ4_V0mAAIuFAACUoAAAVTqhozq7Nhobz0E",
+          "value": "BQACAgUAAxkBAAEBGeFqujRcwJ9RQf8UYipOOBmFmwEm2wACLhQAAlKAAAFU5CGDtiTjBjI9BA",
           "description": ""
         },
         {
-          "id": "res_17886209328879i6f",
+          "id": "res_1790587996837eimy",
           "title": "2025 FRM Part 1 Book 2 - Quantitative Analysis (Kevin Sheppard, Chris Brooks etc.) (Z-Library).pdf",
           "type": "file_id",
-          "value": "BQACAgUAAxkBAAILlWqcMISTjMXk3x9TkxFM2YKjBi1zAAISFQACN-XAVK7zfSctUn7vPQQ",
+          "value": "BQACAgUAAxkBAAEBGeJqujRcD60jZ-bAZwZXfjGEetJAtgACEhUAAjflwFQBBbmBqdM43D0E",
           "description": ""
         },
         {
-          "id": "res_1788620932887iv5o",
+          "id": "res_1790587996839hbwl",
           "title": "2025 FRM Part 1 Book 1 - Foundations of Risk Management (Frank J. Fabozzi, Michel Crouhy, Robert Mark etc.) (Z-Library).pdf",
           "type": "file_id",
-          "value": "BQACAgUAAxkBAAILlmqcMISOTR88NYyuMCzNBRYUMbGVAAKREwACN-XIVMoGll4RgmcjPQQ",
+          "value": "BQACAgUAAxkBAAEBGeNqujRcXOG7TdIsCF44PiVt1h9_4AACkRMAAjflyFSdKaz9T5JFiz0E",
           "description": ""
         },
         {
-          "id": "res_17886209328889zeq",
+          "id": "res_1790587996842d0wg",
           "title": "2025 FRM Part 1 Book 4 - Valuation and Risk Models (John C. Hull) (Z-Library).pdf",
           "type": "file_id",
-          "value": "BQACAgUAAxkBAAILl2qcMIQ-yJoFl8rukIOaKIF_zsfAAAIGFgACyU_IVKcswk8t9JB0PQQ",
+          "value": "BQACAgUAAxkBAAEBGeRqujRc3kbqvfbBG5cUFeAxyOqfJQACBhYAAslPyFQKZM8hF9jAID0E",
           "description": ""
         },
         {
-          "id": "res_17886209328880g03",
+          "id": "res_1790587996843trqt",
           "title": "2025 FRM Part 1 Book 3 - Financial Markets and Products (John C. Hull etc.) (Z-Library).pdf",
           "type": "file_id",
-          "value": "BQACAgUAAxkBAAILmGqcMIRdLZQhhk7oOsgGZ1qsRr09AAIHFgACyU_IVJ2kx8JEcfhUPQQ",
+          "value": "BQACAgUAAxkBAAEBGeVqujRcZSpaY0Kx4bMd2zvrYlo6gQACBxYAAslPyFQsVjo5X5_ajz0E",
           "description": ""
         }
       ],
@@ -5803,162 +6027,234 @@
       "order": 131,
       "resources": [
         {
-          "id": "res_1789204691438mbry",
+          "id": "res_1790590948759qs0u",
           "title": "1-Dars. Aktiv va Passiv.",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAINm2qlGNIn13ZazdKfiUloRV9g82VJAAIoCAACp04QSXK4XkVTy2v0PQQ",
+          "value": "BAACAgIAAxkBAAEBHKxquj_kPkL5nWiNmBULLqrBUwsYbgACKAgAAqdOEEnrbXCRIT22tj0E",
           "description": "",
           "items": []
         },
         {
-          "id": "res_17892046914404951",
+          "id": "res_1790590948763gwmk",
           "title": "1-bo'lim. 2-dars. Aktiv=Passiv, Debitorlik & Kreditorlik qarzlari.",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAINnGqlGNKSTPSeFtip3bzszoWbgbJ2AAJxCAACpwUwSR2bgOrKliznPQQ",
+          "value": "BAACAgIAAxkBAAEBHK1quj_kbfocLOGwHV8XkQABUDzNjJgAAnEIAAKnBTBJ_Qii7Fvhzjs9BA",
           "description": "",
           "items": []
         },
         {
-          "id": "res_1789204691441gcfi",
+          "id": "res_1790590948766y5a3",
           "title": "1-bo'lim. 3-dars. Daromad va Xarajat.",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAINnWqlGNKny2rvpwsqkbXpv-yCJrw1AAJ8BwAC0G45SS1RmsiUeefAPQQ",
+          "value": "BAACAgIAAxkBAAEBHK5quj_kikxbRlT5IqU511BRQgWzhAACfAcAAtBuOUlyXlNyqwhvaz0E",
           "description": "",
           "items": []
         },
         {
-          "id": "res_1789204691442bxow",
+          "id": "res_1790590948770mena",
           "title": "2-bo'lim. 1-dars. Ikkiyoqlama yozuv.",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAINnmqlGNLBZ0mBQ7NSZbmpe8ksTFlMAALmBgAC96NZSfvDtBwFv8khPQQ",
+          "value": "BAACAgIAAxkBAAEBHK9quj_kH9Mdh_nsogSbmZ2ZWhOuagAC5gYAAvejWUlpdZYKm-whpT0E",
           "description": "",
           "items": []
         },
         {
-          "id": "res_1789204691444eset",
+          "id": "res_17905909487733eg5",
           "title": "2-bo'lim. 2-dars. Ikkiyoqlama yozuv 2. Debet va Kredit.",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAINn2qlGNJzYqK1dlsfoX3bYFCEAAFmogACSAcAAvejWUns8xVluLhihj0E",
+          "value": "BAACAgIAAxkBAAEBHLBquj_k5Ugn1Um3oCbYvnuLJVZz6QACSAcAAvejWUkrJuuhfgM4vj0E",
           "description": "",
           "items": []
         },
         {
-          "id": "res_17892046914462och",
+          "id": "res_1790590948835bjn3",
           "title": "2-bo'lim. 3-dars. Debit&Kredit vazifa.",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAINoGqlGNJGvQ80N2Id4w98W5GkDM6aAAIaBQAC81hwSU7hPjih16wPPQQ",
+          "value": "BAACAgIAAxkBAAEBHLFquj_kOuqBA_dL4bVWzlNpO0-SggACGgUAAvNYcEkiUW-x-5wSFT0E",
           "description": "",
           "items": []
         },
         {
-          "id": "res_1789204691447p7gv",
+          "id": "res_17905909488371065",
           "title": "2-bo'lim. 4-dars. Schetlar rejasi.",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAINoWqlGNKMu6dhhGm1UV_gbjDicqnPAAIbBQAC81hwSZNUQJaZWKKfPQQ",
+          "value": "BAACAgIAAxkBAAEBHLJquj_kb4XGKX_1by58rCx7NEbOcwACGwUAAvNYcElxgFv4VNEZnj0E",
           "description": "",
           "items": []
         },
         {
-          "id": "res_1789204691449rizn",
+          "id": "res_17905909488398u5x",
           "title": "2-bo'lim. 7-dars. Balansdan balansgacha 2. Shaxmatka",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAINomqlGNLUS8vwpIKCN9sTwmO5bhdlAAIYBwACw5LBSRp0K1uWFLN5PQQ",
+          "value": "BAACAgIAAxkBAAEBHLNquj_kjatFiQ8c3evNKjd3stStjgACGAcAAsOSwUkWl3k_fBQP5D0E",
           "description": "",
           "items": []
         },
         {
-          "id": "res_1789204691450587k",
+          "id": "res_1790590948841jccm",
           "title": "2-bo'lim. 8-dars. Aylanma Saldo Vedmost. Oborot",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAINo2qlGNKKFPE98G-ZQEO5czTC1M8VAAKLBQACDjVxS1jlIM5UAW5GPQQ",
+          "value": "BAACAgIAAxkBAAEBHLRquj_k3UWfOTOPzRygXlANhWtTHwACiwUAAg41cUucFS_nUhVD9j0E",
           "description": "",
           "items": []
         },
         {
-          "id": "res_1789204691453gqgl",
+          "id": "res_17905909488434bag",
           "title": "2-bo'lim. 9-dars. Buxgalteriya balansi.",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAINpGqlGNIFOGyK_D3Q0cRijdZPz9e0AAIGCAACMpGAS9KKzgABoEMuMT0E",
+          "value": "BAACAgIAAxkBAAEBHLVquj_ku5cbAbjWplF1CBU1CG-IfwACBggAAjKRgEtwN7SCXt6eMj0E",
           "description": "",
           "items": []
         },
         {
-          "id": "res_1789204691505kg4g",
+          "id": "res_1790590948845r41v",
           "title": "3-bo'lim. 1-dars. Buxgalteriya balansi. Forma 1.",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAINpWqlGNI-h9RAdO7Ny__iZwlg2VyAAAJbQQACWjfBS8m2TBuJ9-SvPQQ",
+          "value": "BAACAgIAAxkBAAEBHLZquj_kM-Pp3juCcodQ-g9Lck1tTAACW0EAAlo3wUsbbe4C0XPTIz0E",
           "description": "",
           "items": []
         },
         {
-          "id": "res_1789204691506eb8v",
+          "id": "res_1790590948847jvdd",
           "title": "3-bo'lim. 2-dars. Forma 1 davomi.4-bo'lim. 1-dars. Pul mablag'lari hisobi. Kassa",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAINpmqlGNLlFaYbBkZOmg6GwMr6f3glAAJ_BgACKQzpSyHYrm4u1T62PQQ",
+          "value": "BAACAgIAAxkBAAEBHLdquj_kmcMGp3skKG4TtP5WamtT1wACfwYAAikM6UttS4E5JdivjD0E",
           "description": "",
           "items": []
         },
         {
-          "id": "res_17892046915070ch6",
+          "id": "res_17905909489356qyp",
           "title": "4-bo'lim. 2-dars. Kassa operatsiyalari. Provodkalar",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAINp2qlGNLRoYkb416hcn6hs6ZPCAABXQACVwcAApCUAUhqaYwGynSQNT0E",
+          "value": "BAACAgIAAxkBAAEBHLhquj_kaqrx0tWQRihEDg1Y07fVCgACVwcAApCUAUjFQeEIpjwVDT0E",
           "description": "",
           "items": []
         },
         {
-          "id": "res_1789204691508pr8n",
+          "id": "res_1790590948938xi6k",
           "title": "4-bo'lim. 3-dars. Asosiy h/r. Bank operatsiyalari. Provodkalar",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAINqGqlGNKewkkIwDwXmRf8Tm9xK2GLAAKcBwACzQABUUiR0mqFdEZtSz0E",
+          "value": "BAACAgIAAxkBAAEBHLlquj_k2kkpTxA3afXRnR8pFVs5ZgACnAcAAs0AAVFI84o-U0Am8WY9BA",
           "description": "",
           "items": []
         },
         {
-          "id": "res_1789204691509ub54",
+          "id": "res_1790590948940iamz",
           "title": "4-bo'lim. 4-dars. Valyuta operatsiyalari.",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAINqWqlGNKUuc4EuKmDKlED_WXxVKnqAALWBgACLHRZSEv-20WDEHu6PQQ",
+          "value": "BAACAgIAAxkBAAEBHLpquj_k2PqnaAqXGHBJ5muqv5a67QAC1gYAAix0WUg7GINtAXTeBD0E",
           "description": "",
           "items": []
         },
         {
-          "id": "res_178920469151000m1",
+          "id": "res_1790590948943w8zf",
           "title": "4-bo'lim. 5-dars. Valyutada xarid qilish & sotish.",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAINqmqlGNK_m_qTjCthTb0f4IqU0kQ9AAKlBwACDn1wSCCKzsVFwG-_PQQ",
+          "value": "BAACAgIAAxkBAAEBHLtquj_kW-c7zITflugyCujWdrpWxwACpQcAAg59cEhx_ju91FMePj0E",
           "description": "",
           "items": []
         },
         {
-          "id": "res_1789204691511g1nt",
+          "id": "res_179059094913506cu",
           "title": "4-bo'lim. 6-dars. Bankdagi boshqa schetlar.",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAINq2qlGNKqHj7aAAGAwDUSYEv3gKnsLwAC_wYAAh0OeUjRm2br7_zRRD0E",
+          "value": "BAACAgIAAxkBAAEBHLxquj_kDn792g8RvvPup61gxEvgHAAC_wYAAh0OeUjEtw4aV3PGJz0E",
           "description": "",
           "items": []
         },
         {
-          "id": "res_1789204691512xpnm",
+          "id": "res_1790590949138bre3",
           "title": "5-bo'lim. 1-dars. Mehnat haqi hisobi. Mehnatga haq to'lash shakllari",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAINrGqlGNIxqGacm-eP9T1GcGM8oT2FAALABgACq3-ISDXlE_XHMEqlPQQ",
+          "value": "BAACAgIAAxkBAAEBHL1quj_kwHgTDrAlQ_5e7gmPr3iyLAACwAYAAqt_iEj7gcyAGlIuED0E",
           "description": "",
           "items": []
         },
         {
-          "id": "res_1789204691513y4f4",
+          "id": "res_1790590949235dfeg",
           "title": "5-bo'lim. 2-dars. Mehnat haqi hisobi. Ish haqi provodkalar va ushlanmalar",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAINrWqlGNJRXAp0PRkby7OGweoPB8bMAAKeCAACX6OQSFk3rRwmjZ4SPQQ",
+          "value": "BAACAgIAAxkBAAEBHL5quj_kCYfdnXR0DA7TdLzCv6izigACnggAAl-jkEhBAcf1b1qzEz0E",
           "description": "",
           "items": []
         },
         {
-          "id": "res_1789204691514vffg",
+          "id": "res_1790590949238r2x6",
           "title": "5-bo'lim. 3-dars. Mehnat haqi hisobi. Mehnatga layoqatsizlik hisobi (Bolnichniy)",
           "type": "file_id",
-          "value": "BAACAgIAAxkBAAINrmqlGNKp8vYxOkEatpXIZo9q338JAAI0CAACX6OgSAOGrg-_32E5PQQ",
+          "value": "BAACAgIAAxkBAAEBHL9quj_kge459a2jmd66qlA1B8LtogACNAgAAl-joEgAAYCayUlqY7o9BA",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_179059094924409wy",
+          "title": "1С Бухгалтерия дарслиги 1-дарс",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBHMBquj_kmKIFzOoKWdlLewGUrvG4qwACgwYAAviQEUuKDsSTeNH20D0E",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1790590949335lkqr",
+          "title": "1С Бухгалтерия дарслиги 2-дарс",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBHMFquj_kA3JUdjGtyIBxLQlb8MMlDQACQQcAAk5NmUi92P37XUajPT0E",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1790590949338ynb7",
+          "title": "1С Бухгалтерия дарслиги 5-дарс",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBHMJquj_kZTyUApvHL3JgbvmewNtYGgACRgcAAk5NmUhItl9jnNcVdD0E",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_17905909493416x4e",
+          "title": "1С Бухгалтерия дарслиги 6-дарс",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBHMNquj_kZtuMIav0bAABEWqBGyc-7tsAAkgHAAJOTZlIn8z-IiPmU9k9BA",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1790590949434ddi3",
+          "title": "1С Бухгалтерия дарслиги 4-дарс",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBHMRquj_k8_-ueAfU6SrrYZQ-2UNa3gACRAcAAk5NmUj_Q_lYy9w8KD0E",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1790590949436dyyt",
+          "title": "1С Бухгалтерия дарслиги 7-дарс",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBHMVquj_k-vmvnKENnSoBRkM3JbvHsQACSgcAAk5NmUgNLPkFKirdCj0E",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1790590949439pz0u",
+          "title": "1С Бухгалтерия дарслиги 8-дарс",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBHMZquj_kF8vXteLs3s9AcsYJIQl-WwACSwcAAk5NmUjBA00Q93gRID0E",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1790590949441s92k",
+          "title": "1С Бухгалтерия дарслиги 9-дарс",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBHMdquj_kaerkBAABEkqy4uM1uWU4QM0AAk4HAAJOTZlIfQTCsBpG59M9BA",
+          "description": "",
+          "items": []
+        },
+        {
+          "id": "res_1790590949443un8z",
+          "title": "1С Бухгалтерия дарслиги 3-дарс",
+          "type": "file_id",
+          "value": "BAACAgIAAxkBAAEBHMhquj_kmav-zdyrmxW6JKJTkcjA_QACQwcAAk5NmUjnN0i751uxTz0E",
           "description": "",
           "items": []
         }
@@ -6591,80 +6887,129 @@
       "order": 134,
       "resources": [
         {
-          "id": "res_1789542878639nxj0",
+          "id": "res_17905913756634u0y",
+          "title": "buxgalteriya hisobi nazariyasi (2).pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBHPNqukGPvmQ5ItjGOMBDgZlDMBgBegACKKoAAsYGUUlbMHu9EjX2Dj0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790591375666fry6",
+          "title": "1.buxgalteriya hisobi nazariyasi.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBHPRqukGPluNrwiQ_XysUGNXEW8VvDgACOKoAAsYGUUnjlRaOcd8TGT0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790591375668tqmh",
           "title": "Buxgalteriya hisobi nazariyasi_Dusmuratov.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIPUmqqQd4ut5YcWFlr66HHMO0Os27EAAJIqgACxgZRSd_IR3hSJlVzPQQ",
+          "value": "BQACAgIAAxkBAAEBHPVqukGPDQgclEWF7h0zaJxUnzX2jAACSKoAAsYGUUkC1CfbOLKdCD0E",
           "description": ""
         },
         {
-          "id": "res_1789542878641uden",
+          "id": "res_1790591375671o5by",
           "title": "Isroilov_B_,_Xolbekov_R_Buxgalteriya_hisobi_nazariyasi_2020_y_darslik.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIPU2qqQd56MqWhqzAO50QU7RtLfrzmAAIWDQAC1YbYSnVMO6EFct5CPQQ",
+          "value": "BQACAgIAAxkBAAEBHPZqukGPnt-7Ok-8Bwb7SsDFeTDoAwACFg0AAtWG2EqE051_zGCqED0E",
           "description": ""
         },
         {
-          "id": "res_17895428786420wy5",
+          "id": "res_17905913756740let",
           "title": "R.Dusmuratov - Buxgalteriya hisobi nazariyasi.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIPVGqqQd5z0JHIW4_Nadm9twW_tbR7AAJnBwACEcCpSV12tz09GVS2PQQ",
+          "value": "BQACAgIAAxkBAAEBHPdqukGPHUnQzKqUEMNbseIRtidilAACZwcAAhHAqUn8BuwCaBeBcT0E",
           "description": ""
         },
         {
-          "id": "res_17895428786431fjr",
+          "id": "res_1790591375678wi18",
           "title": "Banklarda+buxgalteriya+hisobi.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIPVWqqQd5Ly4qoRAI7sCQ8857_igVFAAKjCgACoheRSk4vGJHgZwN1PQQ",
+          "value": "BQACAgIAAxkBAAEBHPhqukGP5v4kOEfWy6mhrNOIUB7HoAACowoAAqIXkUqs-12VPOdA3z0E",
           "description": ""
         },
         {
-          "id": "res_1789542878645kh8d",
+          "id": "res_1790591375736j59t",
           "title": "Buxgalteriya hisobi va audit.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIPVmqqQd6pkdc3qYyiYyfx3vHi2XOmAALICQACJRjYSgABhYAE6w9iZj0E",
+          "value": "BQACAgIAAxkBAAEBHPlqukGP6voTB15MIxRWqJ7hUO7oRgACyAkAAiUY2EqB6by7jJEgNT0E",
           "description": ""
         },
         {
-          "id": "res_1789542878647qlic",
+          "id": "res_1790591375739vc88",
           "title": "BIZNESDA BUXGALTERIYA HISOBI.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIPV2qqQd4IHKbfolzhvDLLETwiG-4DAALsAQACXe3wSIx9zBS63-W5PQQ",
+          "value": "BQACAgIAAxkBAAEBHPpqukGPq9eDs3b10NTPVGqQ6M2vIQAC7AEAAl3t8Ei2by5fcMpwFz0E",
           "description": ""
         },
         {
-          "id": "res_1789542878649bk6a",
+          "id": "res_1790591375741iywo",
           "title": "R.Dusmuratov - Buxgalteriya hisobi nazariyasi.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIPVGqqQd5z0JHIW4_Nadm9twW_tbR7AAJnBwACEcCpSV12tz09GVS2PQQ",
+          "value": "BQACAgIAAxkBAAEBHPdqukGPHUnQzKqUEMNbseIRtidilAACZwcAAhHAqUn8BuwCaBeBcT0E",
           "description": ""
         },
         {
-          "id": "res_1789542878651drq2",
+          "id": "res_1790591375744isqw",
           "title": "U.Inoyatov - Buxgalteriya hisobi.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIPWWqqQd57SohHjFT3J6GW3CKI4fzWAAJoBwACEcCpScqp8yGE7e0SPQQ",
+          "value": "BQACAgIAAxkBAAEBHPxqukGPtbcUbvAMeaenBprhC1cTJwACaAcAAhHAqUmhNB_kjA0kDD0E",
           "description": ""
         },
         {
-          "id": "res_1789542878652kwdx",
+          "id": "res_1790591375747zh1t",
           "title": "Buxgalteriya_hisobi_2017_Moliya.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIPWmqqQd43SaTijw2nr1YdYOwTh-8DAAJRAwACMhIJSG35mMpQSXKpPQQ",
+          "value": "BQACAgIAAxkBAAEBHP1qukGPjYg8OIimxOi79_bmX1MbfgACUQMAAjISCUiPlJFyYPObhD0E",
           "description": ""
         },
         {
-          "id": "res_1789542878653apga",
+          "id": "res_1790591375749u01j",
           "title": "K.B.Urazov Buxgalteriya hisobi va audit.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIPW2qqQd6ka3hVFWnE-QABsSG9Pac-rwACdg0AAl5-KEmMMjErS38mdD0E",
+          "value": "BQACAgIAAxkBAAEBHP5qukGPs9O_dNhy5BPBNiGRcDZTkwACdg0AAl5-KEnaIEzUCHfqsz0E",
           "description": ""
         },
         {
-          "id": "res_17895428786873cgd",
+          "id": "res_1790591375836xi0i",
           "title": "Buxgalteriya hisobi-2021y.pdf",
           "type": "file_id",
-          "value": "BQACAgIAAxkBAAIPXGqqQd7pguor2-_GTjD2f-3KvUhRAALJGwAC1hlRSv-lVGqLezDkPQQ",
+          "value": "BQACAgIAAxkBAAEBHP9qukGPhxeZcwKv6R7whx-rVe0UVQACyRsAAtYZUUqWJD1zA8pOKz0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790591375840cxqg",
+          "title": "Biznesda buxgalteriya hisobi_Isroilov B. I..pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBHQABarpBj6vCDxjS4LhgyheC_La4LDsAAgmqAALGBllJEIico1rdfcw9BA",
+          "description": ""
+        },
+        {
+          "id": "res_1790591375843zpnh",
+          "title": "Moliyaviy texnologiyalar_Tashmuradova_2025y.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBHQFqukGPrZxa27yXNCeR1UoNY0Uy6wACeYwAAvwvoUrM9ojwDH_gcz0E",
+          "description": ""
+        },
+        {
+          "id": "res_1790591375847yyst",
+          "title": "Moliya bozori va moliyaviy texnologiyalar_.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBHQJqukGPNmWtzXCIgUaWDSrYo9wjWQACk4wAAvwvoUoR_GzYM9dXRj0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905913759361jfx",
+          "title": "Buxgalteriya_hisobi_2017_Moliya.pdf",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBHP1qukGPjYg8OIimxOi79_bmX1MbfgACUQMAAjISCUiPlJFyYPObhD0E",
+          "description": ""
+        },
+        {
+          "id": "res_17905913759391nv2",
+          "title": "Moliya bozori va birja ishi.PDF",
+          "type": "file_id",
+          "value": "BQACAgIAAxkBAAEBHQRqukGPbQthbyxHAaDJc3nlPVlq3gAC8QoAAiY9mUiUhOjcejhpmT0E",
           "description": ""
         }
       ],
