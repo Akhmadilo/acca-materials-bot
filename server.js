@@ -332,7 +332,7 @@ function initBot() {
     }
 
     currentBotToken = token;
-    bot = new TelegramBot(token, { polling: false }); // TEMPORARY PAUSE FOR MANYBOT
+    bot = new TelegramBot(token, { polling: true });
 
     bot.on('polling_error', (error) => {
       if (error && error.message && error.message.includes('409 Conflict')) {
